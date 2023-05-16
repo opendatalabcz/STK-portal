@@ -1,4 +1,4 @@
-,Kod,Popis,Typ
+,Code,Description,Type
 0,0.1.1,"Vozidlo, které podléhá registraci, není opatřeno předepsaným počtem tabulek registračních značek.",B
 1,0.1.2.1,"Uchycení tabulky registrační značky je uvolněné, ale nehrozí bezprostředně její upadnutí nebo zhoršení podmínek její čitelnosti.",A
 2,0.1.2.2,"Uchycení tabulky registrační značky není spolehlivé, takže tabulka registrační značky může upadnout.",B
