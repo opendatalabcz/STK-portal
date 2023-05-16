@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:14
+    restart: unless-stopped
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      # - ./storage/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+    networks:
+      - backend
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD?Postgres password}
+      POSTGRES_USER: ${POSTGRES_USER?Postgres username}
+      POSTGRES_DB: ${POSTGRES_DB?Postgres DB name}
+      # # Variables for the init script.
+      # POSTGREST_USER: ${POSTGREST_USER?PostgREST authenticator username}
+      # POSTGREST_PASSWORD: ${POSTGREST_PASSWORD?PostgREST authenticator password}
+      # POSTGREST_ANON_ROLE: ${POSTGREST_ANON_ROLE?PostgREST anon role}
+    healthcheck:
+      test: pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"
+      interval: 15s
+      timeout: 2s
+      retries: 10
+
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - 5050:80
+    networks:
+      - backend
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL?PgAdmin email}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD?PgAdmin password}
+
+volumes:
+  postgres:
+  pgadmin:
+
+networks:
+  backend:
