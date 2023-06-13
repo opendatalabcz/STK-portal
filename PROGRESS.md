@@ -1,74 +1,122 @@
 # Progress tracker
-- Hlavní stránka
-    - [#B] Statistiky databáze
-    - [#C] Chytrý vyhledávač, který akceptuje VIN a detaily stanic (číslo, PSČ, ...)
-- Stanice
-    - [#A] Vyhledávač stanic (vč. mapy a seznamu)
-    - [#B] Průměrný výsledek prohlídky
-    - [#C] Kapacita stanic (podle počtu kontrol za den, rozdělení do skupin 1-10, 11-50, ...)
-    - [#A] Anomální prohlídky
-        - Podíl anomálních a normálních kontrol
-        - Rozdělení podle typů anomálních prohlídek? **Je nejdřív třeba zjistit, co to jsou anomální prohlídky**
-    - Detail stanice
-        - [#C] Scraping aktuálních dat (otevírací doba, ev. ceny)
-        - [#B] Statistiky kontrol
-            - Vytíženost
-            - Kontrolovaná vozidla
-                - Typy vozidel
-                - Rozdělení značek
-                - Rozdělení modelů
-        - [#A] Anomální prohlídky
-            - Podíl anomálních a normálních kontrol
-            - Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
-        - [#C] Závislost úspěšnosti průchodu prohlídkou na dni v týdnu, měsíci v roce
-- Vozidla
-    - [#A] Vyhledávač vozidel
-        - Klasické vyhledávání
-        - VIN scanner pro mobilní web
-    - [#B] Proměny vozového parku v čase (vždy aktuální hodnota a vývoj, např. stacked area chart)
-        - Průměrné stáří
-        - Typ pohonu (mj. odpověd na "kolik elektromobilů se kupuje?")
-        - Podíl značek a modelů
-        - Popularita barev
-    - [#B] Nájezdy
-        - Průměrný nájezd (mapa pro osobní/nákladní auta podle okresů (heatmap))
-        - Celkový nájezd (tj. kde se toho najezdí nejvíc, tj. kde to smrdí)
-    - [#C] Ekologie
-        - Poměr nájezdů podle paliva, asi jako pie charty (s velikostí podle abs. objemu) na mapě podle okresů či jen krajů
-        - Heatmapa znečištění podle nájezdů dle paliva – taková analýza by mohla být dokonce přesnější než podle místa registrace
-    - [#B] Závady
-        - Filtr typů závad?
-        - Mapy podle okresů
-        - Nejčastější závady (závady a k nim procento vozidel, kterých se týká, případně třeba i průměrný věk, kdy se poprvé objevuje - **tedy ukazuje průměrný stav vozidel, vůči kterému se porovnávají vozidla v detailu**)
-    - [#C] Migrace – kde bylo auto přihlášené a kde se pak kontroluje; dotažení ze zahraničí
-    - [#C] Kolik bylo vybouraných motorkářů - na základě motorek zaniklých záhy po (první) registraci
-    - Detail vozidla
-        - [#A] Základní informace o vozidle
-        - [#C] Náhled vozidla nebo alespoň značky
-        - [#A] Historie kontrol
-        - [#A] Najeté kilometry a jejich predikce (pozor na Covid) (podle podobných aut stejného a většího stáří (nejspíš stejné značky a modelu))
-            - Pokud jsou kilometry výrazně vyšší, nějaký badge s upozorněním? Nebo je to spíš záležitost [[((64282248-c6c3-4d62-8601-3d17c7b15a46))][srovnání vozidel]]?
-        - [#A] Závady a jejich predikce (seznam aktuálních závad a předpokládaných spolu s věkem, kdy se projeví)
-        - [#A] Srovnání dosavadní poruchovosti ("teploměry" porovnávající počet závad s průměrem u **podobných** vozidel pro každou kategorii)
-        - [#A] Příslušnost do flotily
-        - [#C] Periody, kdy mělo vypršelou technickou, může to indikovat lajdáckého majitele
-        - [#C] Vizualizace migrace po republice
-- [#A] Srovnání a výběr
-    - Pozn. Bude nutné pro analýzu lépe **ořezat číselné hodnoty**, podle kterých se auta porovnávají, aby např. nevyhrál osobák, který může vozit padesátitunový přívěs, což je ale nesmysl.
-    - Výběr vozidel ke srovnání
-        - Umožnit srovnání i částečně vyplněného formuláře? Slo by, prostě se jen zahrne větší skupina vozidel do dané položky pro on-demand analýzu.
-        - Srovnání buď skupiny vozidel (modelu nebo částečně vyplněného) anebo konkrétních vozidel podle VIN
-    - Popularita (celkový počet, podíl na vozovém parku celkově a v rámci svojí **kategorie**)
-    - Srovnání parametrů (na základě průměrných či $n$ nejčastějších hodnot, např. pokud by byla vybrána celá značka)
-    - Srovnání spolehlivosti **doplnit**
-        - Časté vady a věk jejich projevu
-    - [#C] Finální verdikt
-- [#C] Kam umístit?
-    - Spolehlivost modelů a značek
-    - Fun facts
-        - Je 1.9 TDI opravdu tak spolehlivé?
-        - Jsou Japonci odolnější?
-        - Kolik zbývá zelených trabantů?
-        - Tesly hoří?
-        - Subaru bouchají motory?
-        - Francouzi umí akorát pít víno?
+
+## Zpracování dat
+- [X] Kontroly na STK
+- [X] Registr vozidel
+- [X] Číselník závad
+- [ ] Vzniklá a zaniklá vozidla
+- [ ] Provozní informace o stanicích TK
+
+## Analýza dat
+- [ ] Stanice
+    - [ ] Průměrný výsledek prohlídky
+    - [ ] Kapacita stanic
+    - [ ] Anomální prohlídky
+    - [ ] Detail stanice
+        - [ ] Statistiky kontrol
+            - [ ] Vytíženost
+            - [ ] Kontrolovaná vozidla
+                - [ ] Typy vozidel
+                - [ ] Rozdělení značek
+                - [ ] Rozdělení modelů
+        - [ ] Anomální prohlídky
+            - [ ] Podíl anomálních a normálních kontrol
+            - [ ] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
+        - [ ] Závislost úspěšnosti průchodu prohlídkou na dni v týdnu, měsíci v roce
+- [ ] Vozidla
+    - [ ] Proměny vozového parku v čase
+        - [X] Průměrné stáří
+        - [X] Typ pohonu
+        - [ ] Podíl značek a modelů
+        - [X] Popularita barev
+    - [ ] Nájezdy
+        - [ ] Průměrný nájezd
+        - [ ] Celkový nájezd
+    - [ ] Ekologie
+        - [ ] Poměr nájezdů podle paliva
+        - [ ] Heatmapa znečištění podle nájezdů dle paliva
+    - [ ] Závady
+        - [ ] Mapy podle okresů
+        - [ ] Nejčastější závady
+    - [ ] Migrace
+    - [ ] Kolik bylo vybouraných motorkářů
+    - [ ] Detail vozidla
+        - [ ] Najeté kilometry a jejich predikce
+        - [ ] Závady a jejich predikce
+        - [ ] Srovnání dosavadní poruchovosti
+        - [ ] Příslušnost do flotily
+        - [ ] Periody, kdy mělo vypršelou technickou
+        - [ ] Vizualizace migrace po republice
+- [ ] Srovnání a výběr
+    - [ ] Popularita
+    - [ ] Srovnání parametrů
+    - [ ] Srovnání spolehlivosti
+    - [ ] Finální verdikt
+
+## Funkce webu
+- [ ] Hlavní stránka
+    - [ ] Statistiky databáze
+    - [ ] Chytrý vyhledávač, který akceptuje VIN a detaily stanic (číslo, PSČ, ...)
+- [ ] Stanice
+    - [ ] Vyhledávač stanic
+    - [ ] Průměrný výsledek prohlídky
+    - [ ] Kapacita stanic
+    - [ ] Anomální prohlídky
+    - [ ] Detail stanice
+        - [ ] Scraping aktuálních dat (otevírací doba, ev. ceny)
+        - [ ] Statistiky kontrol
+            - [ ] Vytíženost
+            - [ ] Kontrolovaná vozidla
+                - [ ] Typy vozidel
+                - [ ] Rozdělení značek
+                - [ ] Rozdělení modelů
+        - [ ] Anomální prohlídky
+            - [ ] Podíl anomálních a normálních kontrol
+            - [ ] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
+        - [ ] Závislost úspěšnosti průchodu prohlídkou na dni v týdnu, měsíci v roce
+- [ ] Vozidla
+    - [ ] Vyhledávač vozidel
+        - [ ] Klasické vyhledávání
+        - [ ] VIN scanner pro mobilní web
+    - [ ] Proměny vozového parku v čase
+        - [ ] Průměrné stáří
+        - [ ] Typ pohonu
+        - [ ] Podíl značek a modelů
+        - [ ] Popularita barev
+    - [ ] Nájezdy
+        - [ ] Průměrný nájezd
+        - [ ] Celkový nájezd
+    - [ ] Ekologie
+        - [ ] Poměr nájezdů podle paliva
+        - [ ] Heatmapa znečištění podle nájezdů dle paliva
+    - [ ] Závady
+        - [ ] Mapy podle okresů
+        - [ ] Nejčastější závady
+    - [ ] Migrace
+    - [ ] Kolik bylo vybouraných motorkářů
+    - [ ] Detail vozidla
+        - [ ] Základní informace o vozidle
+        - [ ] Náhled vozidla nebo alespoň značky
+        - [ ] Historie kontrol
+        - [ ] Najeté kilometry a jejich predikce
+        - [ ] Závady a jejich predikce
+        - [ ] Srovnání dosavadní poruchovosti
+        - [ ] Příslušnost do flotily
+        - [ ] Periody, kdy mělo vypršelou technickou
+        - [ ] Vizualizace migrace po republice
+- [ ] Srovnání a výběr
+    - [ ] Výběr vozidel ke srovnání
+    - [ ] Popularita
+    - [ ] Srovnání parametrů
+    - [ ] Srovnání spolehlivosti
+    - [ ] Finální verdikt
+
+## Ostatní
+- Spolehlivost modelů a značek
+- Fun facts
+    - Je 1.9 TDI opravdu tak spolehlivé?
+    - Jsou Japonci odolnější?
+    - Kolik zbývá zelených trabantů?
+    - Tesly hoří?
+    - Subaru bouchají motory?
+    - Francouzi umí akorát pít víno?
