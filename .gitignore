@@ -1,9 +1,11 @@
 __pycache__
 .ipynb_checkpoints
 .venv
+catboost_info
 
 nosync
 *old
+/misc/**
 
 .env
 
