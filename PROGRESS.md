@@ -24,10 +24,10 @@
             - [ ] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
         - [ ] Závislost úspěšnosti průchodu prohlídkou na dni v týdnu, měsíci v roce
 - [ ] Vozidla
-    - [ ] Proměny vozového parku v čase
+    - [X] Proměny vozového parku v čase
         - [X] Průměrné stáří
         - [X] Typ pohonu
-        - [ ] Podíl značek a modelů
+        - [x] Podíl značek a modelů
         - [X] Popularita barev
     - [ ] Nájezdy
         - [ ] Průměrný nájezd
