@@ -29,9 +29,9 @@
         - [X] Typ pohonu
         - [x] Podíl značek a modelů
         - [X] Popularita barev
-    - [ ] Nájezdy
-        - [ ] Průměrný nájezd
-        - [ ] Celkový nájezd
+    - [X] Nájezdy
+        - [X] Průměrný nájezd
+        - [X] Celkový nájezd
     - [ ] Ekologie
         - [ ] Poměr nájezdů podle paliva
         - [ ] Heatmapa znečištění podle nájezdů dle paliva
