@@ -1,15 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { ReactNode } from "react";
+import { Rubik } from "next/font/google";
+
+const rubik = Rubik({ subsets: ["latin"] });
 
 export default function Header() {
   return (
-    <header className="flex flex-row items-baseline px-4 py-3 bg-gray-100 text-slate-600">
-      <div className="flex flex-row items-baseline pr-12 space-x-4">
+    <header
+      className={`flex flex-row items-baseline px-4 py-3 bg-gray-100 text-slate-600 ${rubik.className}`}
+    >
+      <div className="flex flex-row items-baseline pr-16 space-x-4">
         <Image
           src="./logo.svg"
           alt="logo"
-          width="28"
-          height="28"
+          width="26"
+          height="26"
           className="self-center"
         ></Image>
         <Link href="/">
@@ -30,7 +38,7 @@ export function HeaderLink({
   children,
 }: {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <Link href={href} className="text-lg hover:text-slate-900">
