@@ -1,0 +1,387 @@
+,StationId,NUTS3
+0,3102,Hlavní město Praha
+1,3103,Hlavní město Praha
+2,3104,Hlavní město Praha
+3,3105,Hlavní město Praha
+4,3106,Hlavní město Praha
+5,3107,Hlavní město Praha
+6,3108,Hlavní město Praha
+7,3109,Hlavní město Praha
+8,3110,Hlavní město Praha
+9,3112,Hlavní město Praha
+10,3113,Hlavní město Praha
+11,3114,Hlavní město Praha
+12,3115,Hlavní město Praha
+13,3116,Hlavní město Praha
+14,3117,Hlavní město Praha
+15,3118,Hlavní město Praha
+16,3119,Hlavní město Praha
+17,3120,Hlavní město Praha
+18,3121,Hlavní město Praha
+19,3122,Hlavní město Praha
+20,3123,Hlavní město Praha
+21,3124,Hlavní město Praha
+22,3125,Hlavní město Praha
+23,3126,Hlavní město Praha
+24,3127,Hlavní město Praha
+25,3128,Hlavní město Praha
+26,3130,Hlavní město Praha
+27,3131,Hlavní město Praha
+28,3132,Hlavní město Praha
+29,3201,Středočeský kraj
+30,3202,Středočeský kraj
+31,3203,Středočeský kraj
+32,3204,Středočeský kraj
+33,3205,Středočeský kraj
+34,3206,Středočeský kraj
+35,3207,Středočeský kraj
+36,3208,Středočeský kraj
+37,3209,Středočeský kraj
+38,3210,Středočeský kraj
+39,3211,Středočeský kraj
+40,3212,Středočeský kraj
+41,3213,Středočeský kraj
+42,3214,Středočeský kraj
+43,3215,Středočeský kraj
+44,3216,Středočeský kraj
+45,3217,Středočeský kraj
+46,3218,Středočeský kraj
+47,3219,Středočeský kraj
+48,3220,Středočeský kraj
+49,3221,Středočeský kraj
+50,3222,Středočeský kraj
+51,3223,Středočeský kraj
+52,3224,Středočeský kraj
+53,3225,Středočeský kraj
+54,3226,Středočeský kraj
+55,3227,Středočeský kraj
+56,3228,Středočeský kraj
+57,3229,Středočeský kraj
+58,3230,Středočeský kraj
+59,3231,Středočeský kraj
+60,3232,Středočeský kraj
+61,3233,Středočeský kraj
+62,3234,Středočeský kraj
+63,3235,Středočeský kraj
+64,3236,Středočeský kraj
+65,3237,Středočeský kraj
+66,3238,Středočeský kraj
+67,3239,Středočeský kraj
+68,3240,Středočeský kraj
+69,3241,Středočeský kraj
+70,3242,Středočeský kraj
+71,3243,Středočeský kraj
+72,3244,Středočeský kraj
+73,3245,Středočeský kraj
+74,3246,Středočeský kraj
+75,3247,Středočeský kraj
+76,3248,Středočeský kraj
+77,3249,Středočeský kraj
+78,3301,Jihočeský kraj
+79,3302,Jihočeský kraj
+80,3303,Jihočeský kraj
+81,3304,Jihočeský kraj
+82,3305,Jihočeský kraj
+83,3306,Jihočeský kraj
+84,3307,Jihočeský kraj
+85,3308,Jihočeský kraj
+86,3309,Jihočeský kraj
+87,3310,Jihočeský kraj
+88,3311,Vysočina
+89,3312,Jihočeský kraj
+90,3313,Jihočeský kraj
+91,3314,Jihočeský kraj
+92,3315,Jihočeský kraj
+93,3316,Vysočina
+94,3317,Jihočeský kraj
+95,3318,Jihočeský kraj
+96,3319,Jihočeský kraj
+97,3320,Jihočeský kraj
+98,3321,Jihočeský kraj
+99,3322,Jihočeský kraj
+100,3323,Jihočeský kraj
+101,3324,Jihočeský kraj
+102,3325,Jihočeský kraj
+103,3326,Jihočeský kraj
+104,3327,Jihočeský kraj
+105,3328,Jihočeský kraj
+106,3401,Plzeňský kraj
+107,3402,Karlovarský kraj
+108,3403,Plzeňský kraj
+109,3404,Plzeňský kraj
+110,3406,Plzeňský kraj
+111,3407,Plzeňský kraj
+112,3408,Plzeňský kraj
+113,3409,Karlovarský kraj
+114,3410,Karlovarský kraj
+115,3411,Plzeňský kraj
+116,3412,Plzeňský kraj
+117,3413,Plzeňský kraj
+118,3414,Plzeňský kraj
+119,3415,Plzeňský kraj
+120,3416,Karlovarský kraj
+121,3417,Karlovarský kraj
+122,3418,Plzeňský kraj
+123,3419,Plzeňský kraj
+124,3420,Karlovarský kraj
+125,3421,Karlovarský kraj
+126,3422,Plzeňský kraj
+127,3423,Plzeňský kraj
+128,3424,Plzeňský kraj
+129,3425,Plzeňský kraj
+130,3427,Plzeňský kraj
+131,3428,Karlovarský kraj
+132,3429,Karlovarský kraj
+133,3430,Plzeňský kraj
+134,3431,Plzeňský kraj
+135,3432,Plzeňský kraj
+136,3433,Plzeňský kraj
+137,3434,Karlovarský kraj
+138,3501,Ústecký kraj
+139,3502,Ústecký kraj
+140,3503,Ústecký kraj
+141,3504,Liberecký kraj
+142,3505,Ústecký kraj
+143,3506,Ústecký kraj
+144,3507,Ústecký kraj
+145,3508,Ústecký kraj
+146,3509,Ústecký kraj
+147,3510,Ústecký kraj
+148,3511,Ústecký kraj
+149,3512,Liberecký kraj
+150,3513,Ústecký kraj
+151,3514,Ústecký kraj
+152,3515,Ústecký kraj
+153,3516,Ústecký kraj
+154,3517,Liberecký kraj
+155,3518,Liberecký kraj
+156,3519,Liberecký kraj
+157,3520,Ústecký kraj
+158,3521,Ústecký kraj
+159,3522,Liberecký kraj
+160,3523,Ústecký kraj
+161,3524,Ústecký kraj
+162,3525,Liberecký kraj
+163,3526,Liberecký kraj
+164,3527,Ústecký kraj
+165,3528,Liberecký kraj
+166,3529,Liberecký kraj
+167,3530,Liberecký kraj
+168,3531,Ústecký kraj
+169,3532,Ústecký kraj
+170,3533,Ústecký kraj
+171,3534,Ústecký kraj
+172,3535,Ústecký kraj
+173,3536,Ústecký kraj
+174,3537,Ústecký kraj
+175,3601,Královéhradecký kraj
+176,3603,Vysočina
+177,3604,Pardubický kraj
+178,3605,Pardubický kraj
+179,3606,Královéhradecký kraj
+180,3607,Královéhradecký kraj
+181,3608,Královéhradecký kraj
+182,3609,Královéhradecký kraj
+183,3610,Pardubický kraj
+184,3611,Královéhradecký kraj
+185,3612,Pardubický kraj
+186,3613,Pardubický kraj
+187,3614,Královéhradecký kraj
+188,3615,Královéhradecký kraj
+189,3616,Pardubický kraj
+190,3617,Liberecký kraj
+191,3618,Královéhradecký kraj
+192,3619,Pardubický kraj
+193,3620,Pardubický kraj
+194,3621,Liberecký kraj
+195,3622,Pardubický kraj
+196,3623,Královéhradecký kraj
+197,3624,Královéhradecký kraj
+198,3625,Pardubický kraj
+199,3626,Vysočina
+200,3627,Královéhradecký kraj
+201,3628,Pardubický kraj
+202,3629,Vysočina
+203,3630,Královéhradecký kraj
+204,3631,Královéhradecký kraj
+205,3632,Pardubický kraj
+206,3633,Pardubický kraj
+207,3634,Pardubický kraj
+208,3635,Královéhradecký kraj
+209,3636,Královéhradecký kraj
+210,3637,Liberecký kraj
+211,3638,Královéhradecký kraj
+212,3639,Královéhradecký kraj
+213,3640,Královéhradecký kraj
+214,3641,Královéhradecký kraj
+215,3642,Pardubický kraj
+216,3643,Pardubický kraj
+217,3644,Pardubický kraj
+218,3645,Královéhradecký kraj
+219,3646,Pardubický kraj
+220,3647,Pardubický kraj
+221,3648,Královéhradecký kraj
+222,3649,Vysočina
+223,3701,Vysočina
+224,3702,Olomoucký kraj
+225,3703,Zlínský kraj
+226,3706,Vysočina
+227,3707,Jihomoravský kraj
+228,3709,Vysočina
+229,3710,Jihomoravský kraj
+230,3711,Vysočina
+231,3712,Zlínský kraj
+232,3713,Zlínský kraj
+233,3714,Vysočina
+234,3715,Jihomoravský kraj
+235,3716,Jihomoravský kraj
+236,3717,Jihomoravský kraj
+237,3718,Jihomoravský kraj
+238,3719,Zlínský kraj
+239,3720,Jihomoravský kraj
+240,3721,Jihomoravský kraj
+241,3722,Jihomoravský kraj
+242,3723,Olomoucký kraj
+243,3724,Vysočina
+244,3725,Jihomoravský kraj
+245,3726,Jihomoravský kraj
+246,3727,Zlínský kraj
+247,3728,Jihomoravský kraj
+248,3729,Zlínský kraj
+249,3730,Vysočina
+250,3731,Jihomoravský kraj
+251,3732,Zlínský kraj
+252,3733,Vysočina
+253,3734,Jihomoravský kraj
+254,3735,Jihomoravský kraj
+255,3736,Jihomoravský kraj
+256,3737,Jihomoravský kraj
+257,3738,Zlínský kraj
+258,3739,Zlínský kraj
+259,3740,Jihomoravský kraj
+260,3741,Vysočina
+261,3742,Olomoucký kraj
+262,3743,Zlínský kraj
+263,3744,Zlínský kraj
+264,3745,Zlínský kraj
+265,3746,Vysočina
+266,3747,Jihomoravský kraj
+267,3748,Jihomoravský kraj
+268,3749,Jihomoravský kraj
+269,3751,Jihomoravský kraj
+270,3752,Vysočina
+271,3753,Vysočina
+272,3754,Jihomoravský kraj
+273,3755,Vysočina
+274,3756,Jihomoravský kraj
+275,3757,Jihomoravský kraj
+276,3758,Jihomoravský kraj
+277,3759,Jihomoravský kraj
+278,3760,Jihomoravský kraj
+279,3761,Jihomoravský kraj
+280,3762,Jihomoravský kraj
+281,3763,Vysočina
+282,3764,Vysočina
+283,3765,Vysočina
+284,3766,Jihomoravský kraj
+285,3767,Zlínský kraj
+286,3768,Zlínský kraj
+287,3769,Jihomoravský kraj
+288,3770,Jihomoravský kraj
+289,3771,Zlínský kraj
+290,3772,Jihomoravský kraj
+291,3773,Jihomoravský kraj
+292,3774,Vysočina
+293,3801,Olomoucký kraj
+294,3802,Olomoucký kraj
+295,3803,Olomoucký kraj
+296,3804,Olomoucký kraj
+297,3805,Moravskoslezský kraj
+298,3806,Olomoucký kraj
+299,3807,Olomoucký kraj
+300,3808,Moravskoslezský kraj
+301,3809,Moravskoslezský kraj
+302,3810,Moravskoslezský kraj
+303,3811,Moravskoslezský kraj
+304,3812,Olomoucký kraj
+305,3813,Olomoucký kraj
+306,3814,Moravskoslezský kraj
+307,3815,Moravskoslezský kraj
+308,3816,Moravskoslezský kraj
+309,3817,Zlínský kraj
+310,3818,Olomoucký kraj
+311,3819,Zlínský kraj
+312,3820,Moravskoslezský kraj
+313,3821,Moravskoslezský kraj
+314,3822,Moravskoslezský kraj
+315,3823,Moravskoslezský kraj
+316,3824,Moravskoslezský kraj
+317,3825,Moravskoslezský kraj
+318,3826,Olomoucký kraj
+319,3827,Moravskoslezský kraj
+320,3828,Moravskoslezský kraj
+321,3829,Moravskoslezský kraj
+322,3830,Moravskoslezský kraj
+323,3831,Moravskoslezský kraj
+324,3832,Moravskoslezský kraj
+325,3833,Moravskoslezský kraj
+326,3834,Moravskoslezský kraj
+327,3835,Olomoucký kraj
+328,3836,Olomoucký kraj
+329,3837,Moravskoslezský kraj
+330,3838,Moravskoslezský kraj
+331,3839,Olomoucký kraj
+332,3840,Moravskoslezský kraj
+333,3841,Moravskoslezský kraj
+334,3842,Moravskoslezský kraj
+335,3843,Olomoucký kraj
+336,3844,Olomoucký kraj
+337,3845,Zlínský kraj
+338,3846,Olomoucký kraj
+339,3847,Olomoucký kraj
+340,3848,Moravskoslezský kraj
+341,3849,Moravskoslezský kraj
+342,3850,Moravskoslezský kraj
+343,3851,Olomoucký kraj
+344,3852,Moravskoslezský kraj
+345,3853,Moravskoslezský kraj
+346,3854,Moravskoslezský kraj
+347,3855,Moravskoslezský kraj
+348,6203,Středočeský kraj
+349,6204,Středočeský kraj
+350,6250,Středočeský kraj
+351,6302,Jihočeský kraj
+352,6304,Jihočeský kraj
+353,6305,Jihočeský kraj
+354,6309,Jihočeský kraj
+355,6401,Plzeňský kraj
+356,6409,Plzeňský kraj
+357,6511,Ústecký kraj
+358,6512,Ústecký kraj
+359,6514,Liberecký kraj
+360,6515,Ústecký kraj
+361,6603,Královéhradecký kraj
+362,6604,Pardubický kraj
+363,6614,Královéhradecký kraj
+364,6616,Pardubický kraj
+365,6617,Královéhradecký kraj
+366,6701,Zlínský kraj
+367,6711,Vysočina
+368,6714,Jihomoravský kraj
+369,6717,Vysočina
+370,6721,Vysočina
+371,6723,Jihomoravský kraj
+372,6725,Vysočina
+373,6732,Jihomoravský kraj
+374,6738,Zlínský kraj
+375,6740,Jihomoravský kraj
+376,6741,Jihomoravský kraj
+377,6742,Zlínský kraj
+378,6743,Jihomoravský kraj
+379,6744,Vysočina
+380,6801,Olomoucký kraj
+381,6802,Olomoucký kraj
+382,6811,Olomoucký kraj
+383,6813,Olomoucký kraj
+384,6814,Olomoucký kraj
+385,6815,Moravskoslezský kraj

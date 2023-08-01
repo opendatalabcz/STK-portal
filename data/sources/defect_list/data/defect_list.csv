@@ -1,0 +1,1196 @@
+,Code,Description,Type
+0,0.1.1,"Vozidlo, které podléhá registraci, není opatřeno předepsaným počtem tabulek registračních značek.",B
+1,0.1.2.1,"Uchycení tabulky registrační značky je uvolněné, ale nehrozí bezprostředně její upadnutí nebo zhoršení podmínek její čitelnosti.",A
+2,0.1.2.2,"Uchycení tabulky registrační značky není spolehlivé, takže tabulka registrační značky může upadnout.",B
+3,0.1.2.3,Způsob uchycení tabulky registrační značky neodpovídá požadavkům nebo snižuje její čitelnost.,B
+4,0.1.3.1,"Poškození některého písmenného nebo číselného znaku registrační značky, které částečně snižuje její čitelnost.",A
+5,0.1.3.2,"Poškození některého písmenného nebo číselného znaku registrační značky, které snižuje její čitelnost nebo poškození, či deformace (např. ohnutí) tabulky registrační značky, které snižují její čitelnost.",B
+6,0.1.3.3,Nepovolená úprava (např. zmenšení rozměrů) tabulky registrační značky.,B
+7,0.1.4,Údaje uvedené na tabulce registrační značky neodpovídají údajům uvedeným v předložených dokladech od vozidla.,B
+8,0.1.5.1,Neschválená úprava umístění tabulky registrační značky na vozidle vzhledem k minimální nebo maximální výšce nad vozovkou nebo umístění tabulky registrační značky vzhledem k podélné střední rovině vozidla neodpovídá požadavkům a tyto změny umístění u vozidel kategorie L nejsou zapsány v technickém průkazu vozidla.,B
+9,0.1.5.2,Tabulka registrační značky není umístěná kolmo k podélné střední rovině vozidla (vychýlení do boku) nebo není její spodní hrana přibližně vodorovná s vozovkou nebo úhly naklopení tabulky registrační značky (od vozovky nebo k vozovce) překračují povolené hodnoty.,B
+10,0.1.5.3,Poloha umístění registrační značky na vozidle nebo dodatečné úpravy na vozidle zapříčiňují nedostatečnou viditelnost tabulky registrační značky v některém z vymezených úhlů geometrické viditelnosti.,B
+11,0.1.6,Použití neschválené tabulky registrační značky (vlastní výroba).,B
+12,0.2.1.1,"Vyražené identifikační číslo / výrobní číslo vozidla nebo výměnného samostatného technického celku (výměnná nástavba, pracovní stroj nesený) chybí, nebo je nelze najít.",B
+13,0.2.1.2,Identifikační číslo / výrobní číslo je neúplné nebo nečitelné nebo vyrezlé nebo jinak poškozené.,B
+14,0.2.1.3,"Identifikační číslo / výrobní číslo neodpovídá údajům uvedeným v dokladech vozidla nebo v dokladech výměnného samostatného technického celku (výměnná nástavba, pracovní stroj nesený).",B
+15,0.2.1.4.1,"Ve struktuře vyraženého identifikačního čísla / výrobního čísla nebo v jeho okolí, jsou patrné změny (např. přeražení jiného čísla, navaření části karoserie z jiného vozidla) svědčící o jeho pozměnění.",B
+16,0.2.1.4.2,"Identifikační číslo / výrobní číslo je vyraženo neschváleným, neoriginálním způsobem nebo způsob ražby nebo umístění ražby zjevně neodpovídá provedení výrobce vozidla nebo výměnného samostatného technického celku, přičemž v dokladech vozidla nebo dokladech od výměnného samostatného technického celku chybí zápis správního úřadu o obnovení původního VIN náhradní technologií nebo o vyražení přiděleného úředního čísla.",B
+17,0.2.1.4.3,"Velikost znaků, způsob ražby nebo umístění ražby obnoveného původního VIN náhradní technologií nebo přiděleného úředního čísla neodpovídá požadavkům nebo údajům, uvedeným v dokladech vozidla nebo v dokladech výměnného samostatného technického celku (výměnná nástavba, pracovní stroj nesený).",B
+18,0.2.2.1.2,"Povinný štítek výrobce, je-li vyžadován, chybí (u vozidla uvedeného do provozu od 01. 01.2002).",B
+19,0.2.2.1.3,"Povinný štítek výrobce je nečitelný nebo předepsané údaje na štítku chybí (vyžaduje se vždy alespoň označení výrobce vozidla, VIN/ výrobní číslo podvozku).",B
+20,0.2.2.1.4,"Vyznačené údaje na povinném štítku výrobce (v případě označení výrobce vozidla, VIN/výrobní číslo podvozku) neodpovídají údajům, uvedeným v dokumentaci vozidla nebo samostatného technického celku (výměnná nástavba, pracovní stroj nesený), nestanoví-li výrobce jinak.",B
+21,0.2.2.2,"Způsob upevnění, provedení nebo způsob vyznačení údajů na povinném štítku výrobce svědčí o jeho pozměnění.",B
+22,0.3.1.1,"Změna nebo úprava vozidla, která neodpovídá schválenému provedení nebo údajům, uvedeným v předložené dokumentaci k vozidlu (neschválená přestavba - pracovní stroj nesený, změna nástavby, karosérie, typ motoru, druh pohonu, změna hmotnosti nebo rozměru vozidla apod.).",B
+23,0.3.1.2,"Je-li vyžadováno, není změna nebo úprava vozidla vyznačena v dokumentaci k vozidlu (dodatečná montáž tažného zařízení nebo ochranného rámu apod.).",B
+24,0.3.2,V rozporu s požadavky zákona byla na počítadle ujeté vzdálenosti provedena změna záznamu o celkové ujeté vzdálenosti vozidla.,B
+25,0.3.3,"Vozidlo je vybaveno poklicemi kol, které brání v provedení předepsaných kontrolních úkonů.",B
+26,1.1.1.1.1,"U motocyklu je ruční páka brzdy obtížně pohyblivá, zjevně překračuje stanovené hodnoty pro jeho ovládání (maximální ovládací sílu).",B
+27,1.1.1.1.2,Ovládací prvek provozní brzdy není zjevně pohyblivý.,C
+28,1.1.1.2,Nadměrné opotřebení nebo nadměrná vůle v ovládacím prvku provozní brzdy.,B
+29,1.1.2.1.1,Nadměrná vůle na počátku zdvihu ovládacího prvku brzdy (mrtvý chod).,B
+30,1.1.2.1.2,Nedostatečná vůle na počátku zdvihu ovládacího prvku kapalinové brzdy.,B
+31,1.1.2.1.3,Nedostatečná vzdálenost od podlahy (rezerva) na konci zdvihu ovládacího prvku kapalinové brzdy.,B
+32,1.1.2.1.4,K vyvolání brzdného účinku je nutné opakované sešlápnutí / zmáčknutí ovládacího prvku provozní brzdy (např. při zavzdušnění).,C
+33,1.1.2.2.1,Ovládací prvek provozní brzdy se po odbrzdění správně neuvolňuje.,B
+34,1.1.2.2.2,Ovládací prvek provozní brzdy se po odbrzdění nevrací do původní polohy a kolo trvale přibrzďuje (je zablokováno).,C
+35,1.1.2.3,"Protiskluzové pokrytí pedálu provozní brzdy chybí, je volné nebo opotřebené tak, že neplní svou funkci.",B
+36,1.1.2.4,"U traktoru, který je vybaven zdvojeným brzdovým pedálem, chybí zařízení pro jeho spojení nebo zařízení není funkční.",B
+37,1.1.2.5.1,U motocyklu na konci páky ruční brzdy chybí předepsané bezpečnostní zaoblení.,B
+38,1.1.2.5.2,"Ovladač provozní brzdy (nožní pedál, ruční páka) deformovaný, ale brzda lze ovládat.",B
+39,1.1.2.5.3,"Ovladač provozní brzdy (nožní pedál, ruční páka) naprasklý nebo ulomený nebo se nedá brzda spolehlivě ovládat.",C
+40,1.1.2.5.4,"U motocyklu nelze nastavitelnou páčku nebo pedál provozní brzdy aretovat v požadované poloze, ale brzda lze ovládat.",B
+41,1.1.2.5.5,U motocyklu nelze nastavitelnou páčku nebo pedál provozní brzdy aretovat v požadované poloze a provozní brzda nelze ovládat.,C
+42,1.1.2.6.1,"Systém ovládání provozní brzdy vozidla neodpovídá požadavkům (např. u motocyklů kat. L5, L6, L7).",B
+43,1.1.2.6.2,Některé předepsané ovládací prvky provozní brzdy chybí nebo byly z vozidla demontovány (např. u motocyklu).,C
+44,1.1.3.1.1,Tlak vzduchu / podtlak je nedostatečný k zajištění nejméně 4 brždění po vstupu výstražného zařízení v činnost nebo je ručička manometru v poli nebezpečí.,B
+45,1.1.3.1.2,Tlak vzduchu / podtlak je nedostatečný k zajištění nejméně 2 brždění po vstupu výstražného zařízení v činnost nebo je ručička manometru v poli nebezpečí.,C
+46,1.1.3.2,Čas pro dosažení tlaku / podtlaku potřebného pro bezpečné účinné brždění je podle požadavků příliš dlouhý.,B
+47,1.1.3.3.1,Víceokruhový jistící ventil nebo přetlakový ventil brzdové soustavy není funkční.,B
+48,1.1.3.4.1,Slyšitelný únik vzduchu z kompresoru nebo víceokruhového jistícího ventilu nebo přetlakového ventilu.,B
+49,1.1.3.4.2,"Únik vzduchu z kompresoru nebo víceokruhového jistícího ventilu nebo přetlakového ventilu, způsobuje znatelný pokles tlaku vzduchu v brzdovém systému.",C
+50,1.1.3.5.1,"Vnější poškození kompresoru nebo víceokruhového jistícího ventilu nebo přetlakového ventilu nebo jejich uchycení, které může ovlivnit funkci brzdového systému.",B
+51,1.1.3.5.2,"Vnější poškození kompresoru nebo víceokruhového jistícího ventilu nebo přetlakového ventilu nebo jejich uchycení, které bezprostředně ohrožuje funkci brzdového systému.",C
+52,1.1.3.5.3,Nedostatečný účinek nouzového brždění.,C
+53,1.1.3.6,"Nepovolená změna spočívající v odběru tlaku vzduchu pro vedlejší spotřebiče z potrubí nebo ze zařízení, které je umístěné před víceokruhovým jistícím ventilem nebo odběr tlaku vzduchu z některého brzdového okruhu.",B
+54,1.1.4.1.1,"Některý manometr je vadný, avšak výstražná signalizace nízkého tlaku vzduchuje plně funkční.",B
+55,1.1.4.1.2,"Optická kontrolka signalizace nízkého tlaku vzduchu se při ověření funkčnosti neuvede v činnost (např. vadná žárovka), ale akustická signalizace, je-li instalována, je plně funkční nebo naopak.",B
+56,1.1.4.1.3,Signalizace nízkého tlaku vzduchu se při ověření funkčnosti neuvede v činnost nebo nefunguje správně nebo některý manometr je vadný či chybí a signalizace nízkého tlaku vzduchu nefunguje.,C
+57,1.1.5.1,"Ovládací prvky ručně ovládaného brzdiče parkovací brzdy jsou poškozené nebo prasklé, nebo nadměrně opotřebené.",B
+58,1.1.5.2.1,Ovládání ručně ovládaného brzdiče parkovací brzdy není spolehlivé nebo ručně ovládaný brzdič není spolehlivý.,B
+59,1.1.5.2.2,Ovládání ručně ovládaného brzdiče parkovací brzdy je obtížné nebo ovládací prvky brzdiče jsou pro řidiče obtížně přístupné (nepovolená úprava).,B
+60,1.1.5.3.1,U ručně ovládaného brzdiče parkovací brzdy slyšitelný únik vzduchu ze systému.,B
+61,1.1.5.3.2,Únik vzduchu zručně ovládaného brzdiče parkovací brzdy způsobuje znatelný pokles tlaku vzduchu v brzdovém systému.,C
+62,1.1.5.4,Ručně ovládaný brzdič parkovací brzdy není funkční.,B
+63,1.1.5.5,Montáž nebo upevnění ručně ovládaného brzdiče parkovací brzdy na vozidle je uvolněné nebo není spolehlivé nebo neodpovídá požadavkům.,B
+64,1.1.5.6,"Ručně ovládaný brzdič parkovací brzdy, je-li vyžadován, chybí (je demontován).",B
+65,1.1.6.1.1,Parkovací brzda se nesnadno odjišťuje,A
+66,1.1.6.1.2,"Západka nearetuje správně, ovládací páku parkovací brzdy nelze spolehlivě zajistit v pracovní poloze.",B
+67,1.1.6.2.1,"Opotřebení v převodu ovladače parkovací brzdy nebo západkového mechanismu, které však nemá vliv na spolehlivost nebo funkci ovládání parkovací brzdy.",A
+68,1.1.6.2.2,"Nadměrné opotřebení v převodu ovladače parkovací brzdy nebo západkového mechanismu, které má vliv na spolehlivost nebo funkci ovládání parkovací brzdy.",B
+69,1.1.6.3.1,"Maximální brzdný účinek je dosažen až po více jak 2/3 celkového zdvihu ovladače parkovací brzdy, pokud výrobce nestanoví jinak.",B
+70,1.1.6.3.2,Nedostatečná rezerva zdvihu ovladače parkovací brzdy.,B
+71,1.1.6.4.1,Ovládací prvek parkovací brzdy (např. klika se šroubem) je obtížně pohyblivý.,B
+72,1.1.6.4.2,Po odbrzdění se převod parkovací brzdy nevrací do původní polohy.,B
+73,1.1.6.4.3,"Ovládací prvek parkovací brzdy (např. klika se šroubem) je v natolik zhoršeném technickém stavu (např. zkorodovaný, poškozený nebo nadměrně opotřebený), že není funkční.",B
+74,1.1.6.4.4,"Ovládací prvek parkovací brzdy (např. klika se šroubem, páka) nebo některé ovládací prvky (lana, páky apod.) parkovací brzdy byly z vozidla nebo z nápravy zjevně demontovány (nepřípustný zásah do brzdového systému).",C
+75,1.1.6.5.1,Výstražná signalizace činnosti parkovací brzdy nefunguje.,B
+76,1.1.6.5.2,Výstražné signalizace parkovací brzdy signalizuje nesprávnou funkci parkovací brzdy.,B
+77,1.1.7.1.1,"Vnější poškození brzdového ventilu, které nemá vliv na jeho funkci nebo spolehlivost.",A
+78,1.1.7.1.2,"Vnější poškození brzdového ventilu, které může ovlivňovat funkci nebo spolehlivost brzdového systému.",B
+79,1.1.7.1.3,Slyšitelný únik vzduchu z brzdového ventilu.,B
+80,1.1.7.1.4,"Vnější poškození brzdového ventilu, které bezprostředně ovlivňuje funkci brzdového systému vozidla.",C
+81,1.1.7.1.5,"Únik vzduchu z brzdového ventilu, způsobuje znatelný pokles tlaku vzduchu v brzdovém systému vozidla.",C
+82,1.1.7.2.1,Brzdový ventil (vyfukovací část) je nadměrně znečištěný olejem z kompresoru.,A
+83,1.1.7.2.2,Množství oleje z kompresoru způsobuje u brzdového ventilu (vyfukovací část) odkapávání oleje na vozovku.,B
+84,1.1.7.3.1,Upevnění brzdového ventiluje uvolněné nebo není spolehlivé.,B
+85,1.1.7.3.2,"Vadná montáž nebo upevnění brzdového ventilu bezprostředně ohrožuje funkci, těsnost nebo spolehlivost brzdové soustavy vozidla.",C
+86,1.1.7.4.1,Vytékání brzdové kapaliny z nízkotlaké části kapalinových brzd (např. okolo nádobky na brzdovou kapalinu).,B
+87,1.1.7.4.2,"Netěsnost u vysokotlaké části kapalinových brzd (např. brzdové válečky, zátěžové regulátory).",C
+88,1.1.8.1.1,"Spojková hlavice je částečně opotřebená (obroušená), ale tato závada nemá vliv na její spolehlivost nebo těsnost.",A
+89,1.1.8.1.2,"Vnější poškození pneumatického propojovacího vedení (hadice), které nemá vliv na jeho spolehlivost či těsnost.",A
+90,1.1.8.1.3,Nevhodná délka pneumatického propojovacího vedení (hadice příliš krátké / dlouhé) nebo způsob vedení mezi vozidly může způsobit poškození spojovacího vedení.,A
+91,1.1.8.1.4,Spojková hlavice je poškozená nebo nadměrně opotřebená nebo mechanismus spojení hlavic je vadný nebo není spolehlivý.,B
+92,1.1.8.1.5,Automatický uzavírací ventil spojkové hlavice je vadný.,B
+93,1.1.8.1.6,"Vnější poškození pneumatického propojovacího vedení (hadice), které má vliv na jeho spolehlivost či těsnost nebo použité pneumatické propojovací vedení neodpovídá požadavkům.",B
+94,1.1.8.2.1,"Vnější poškození izolace elektrického ovládacího vedení (elektrický kabel) systému ABS / EBS / ESC, které nemá vliv na jeho funkci či spolehlivost.",A
+95,1.1.8.2.2,Nevhodná délka elektrického ovládacího vedení systému ABS / EBS / ESC (kabel příliš krátký / dlouhý) nebo způsob vedení mezi vozidly může způsobit jeho poškození.,A
+96,1.1.8.2.3,"Vnější poškození elektrického konektoru systému ABS/EBS/ESC, které však nemá vliv na jeho funkci či spolehlivost nebo bezpečnostní pojistka pro spojení konektorů je deformovaná, avšak funkční.",A
+97,1.1.8.2.4,"Vnější poškození izolace elektrického ovládacího vedení (elektrický kabel) systému ABS /EBS /ESC, které může ovlivňovat jeho funkci či spolehlivost nebo použité elektrické ovládací vedení neodpovídá požadavkům.",B
+98,1.1.8.2.5,"Vnější poškození elektrického konektoru systému ABS/EBS/ESC, které může ovlivňovat jeho funkci či spolehlivost nebo bezpečnostní pojistka pro spojení konektorů není funkční nebo chybí.",B
+99,1.1.8.3.1,Spojení spojkové hlavice s pneumatickým propojovacím vedením (hadicí) je uvolněné nebo poškozené avšak nemá vliv na těsnost nebo spolehlivost spojení.,A
+100,1.1.8.3.2,Spojení elektrického konektoru ABS / EBS / ESC s elektrickým ovládacím vedením (elektrickým kabelem) je uvolněné nebo poškozené avšak nemá vliv na spolehlivost přenosu dat.,A
+101,1.1.8.3.3,Spojková hlavice je vadně namontovaná k pneumatickému propojovacímu vedení nebo k vozidlu nebo spojení spojkové hlavice s pneumatickým propojovacím vedením (hadicí) není spolehlivé.,B
+102,1.1.8.3.4,Elektrický konektor ABS /EBS je zjevně vadně namontován k elektrickému ovládacímu vedení (kabelu) nebo k vozidlu nebo spojení konektoru s kabelem není spolehlivé.,B
+103,1.1.8.4.1,Slyšitelný únik vzduchu ze spojovacích prvků pneumatického ovládacího vedení mezi tažným a taženým vozidlem.,B
+104,1.1.8.4.2,Únik vzduchu ze spojovacích prvků pneumatického ovládacího vedení mezi tažným a taženým vozidlem způsobuje znatelný pokles tlaku vzduchu v brzdovém systému.,C
+105,1.1.8.5.1,"Použití nevhodného elektrického ovládacího vedení (propojovacího kabelu) určeného pro systém ABS (konektor s počtem pinů 5), k ovládání přípojného vozidla, které je vybaveno systémem EBS (konektor s počtem pinů 7).",B
+106,1.1.8.5.2,Propojení pneumatického ovládacího vedení (hadice) mezi tažným a taženým vozidlem chybí nebo není funkční (úmyslné vyřazení vzduch. brzd z provozu).,C
+107,1.1.8.6.1,Nebezpečná úprava některého prvku pneumatického propojovacího vedení (hadice / spojková hlavice).,B
+108,1.1.8.6.2,Nebezpečná úprava některého prvku elektrického ovládacího vedení systému ABS / EBS / ESC (konektor / kabel).,B
+109,1.1.8.6.3,"Nebezpečná úprava prvků pneumatického propojovacího vedení, která bezprostředně ohrožuje bezpečnost jízdy jízdní soupravy (hadice / spojková hlavice).",C
+110,1.1.9.1.1,"Povrchová koroze / oxidace vzduchojemu, která nemá vliv na jeho těsnost nebo spolehlivost.",A
+111,1.1.9.1.2,"Vzduchojem je nadměrně zkorodovaný nebo poškozený tak, že může být ohrožena jeho těsnost nebo spolehlivost.",B
+112,1.1.9.1.3,Slyšitelný únik vzduchu ze vzduchojemu nebo spojů.,B
+113,1.1.9.1.4,Únik vzduchu ze vzduchojemu nebo spojů způsobuje znatelný pokles tlaku vzduchu v brzdovém systému.,C
+114,1.1.9.2.1,"Dálkové ovládání odkalovacího zařízení vzduchojemu, je-li vyžadováno, chybí nebo není funkční (autobusy).",A
+115,1.1.9.2.2,Odkalovací zařízení není umístěno ve spodní části vzduchojemu nebo není snadno přístupné nebo po použití nelze uzavřít a slyšitelně zněj uniká vzduch.,B
+116,1.1.9.2.3,"Odkalovací zařízení vzduchojemu není přístupné, chybí nebo není funkční nebo po použití nelze uzavřít a způsobuje znatelný pokles tlaku vzduchu v brzdovém systému vozidla.",C
+117,1.1.9.3.1,Uchycení vzduchojemu je uvolněné nebo neodpovídá požadavkům nebo jeho způsob montáže neodpovídá požadavkům.,B
+118,1.1.9.3.2,"Vzduchojem je upevněn nespolehlivě a hrozí jeho upadnutí, které může vyřadit část brzdového systému z činnosti.",C
+119,1.1.10.1.1,"Posilovač brzd je poškozený, ale ovládací síla na brzdový pedál nepřekračuje stanovenou maximální hodnotu.",B
+120,1.1.10.1.2,Činnost posilovače brzd narušuje odstupňovatelnost brzdného účinku.,B
+121,1.1.10.1.3,"Posilovač brzd je neúčinný, ovládací síla na brzdový pedál překračuje stanovenou maximální hodnotu (neposiluje).",C
+122,1.1.10.2.1,"Při trvalém sešlápnutí brzdového pedálu znatelné propadávání pedálu k podlaze (vnitřní netěsnost), pokud výrobce nestanoví jinak.",B
+123,1.1.10.2.2,"Hlavní brzdový válec je vadný nebo netěsný, nelze vyvolat předepsaný brzdný účinek.",C
+124,1.1.10.3.1,Uchycení hlavního brzdového válce uvolněné nebo některý prvek uchycení je poškozený nebo chybí.,B
+125,1.1.10.3.2,"Hlavní brzdový válec nespolehlivě namontovaný nebo část vozidla, určená pro montáž hlavního brzdového válce, se deformuje nebo pohybuje při sešlápnutí brzdového pedálu.",C
+126,1.1.10.4.1,Množství brzdové kapaliny pod vyznačenou značkou MIN.,B
+127,1.1.10.4.2,Množství brzdové kapaliny nelze zkontrolovat (nepřístupná nádobka).,B
+128,1.1.10.4.3,V nádobce není brzdová kapalina.,C
+129,1.1.10.6.1,"Chybí víčko nádržky brzdové kapaliny, avšak nehrozí bezprostřední znečištění brzdové kapaliny (např. pod kapotou).",B
+130,1.1.10.6.2,Chybí víčko nádržky brzdové kapaliny a brzdová kapalina je bezprostředně vystavena znečištění a úniku (např. u vzduchokapalinových strojních brzd užitkových vozidel).,C
+131,1.1.10.7,"Výstražná signalizace hladiny brzdové kapaliny signalizuje závadu nebo je-li vyžadována, chybí nebo je zjevně vadná.",B
+132,1.1.10.8,"Zařízení pro indikaci poklesu hladiny brzdové kapaliny je poškozené, neúplné nebo chybí nebo zjevně nefunguje nebo nefunguje správně.",B
+133,1.1.11.1,Bezprostřední riziko závady nebo prasknutí brzdového potrubí.,C
+134,1.1.11.2.1,Slyšitelný únik vzduchu z brzdového potrubí nebo spojů.,B
+135,1.1.11.2.2,Únik vzduchu z brzdového potrubí nebo spojů působící znatelný pokles tlaku v brzdovém systému.,C
+136,1.1.11.2.3,Z brzdového potrubí nebo spojů únik brzdové kapaliny.,C
+137,1.1.11.3.1,Mírná povrchová koroze / oxidace brzdového potrubí.,A
+138,1.1.11.3.2,Brzdové potrubí nebo spojovací prvky jsou poškozeny nebo deformovány nebojsou nadměrně zkorodovány (tzv. hloubková koroze).,B
+139,1.1.11.3.3,PA brzdové potrubí zkroucené nebo zmáčknuté nebo se vzájemně odírá nebo nese známky zalomení nebo jiného poškození.,B
+140,1.1.11.3.4,PA brzdové potrubí zalomeno.,C
+141,1.1.11.4.1,"Některá část uchycení brzdového potrubí uvolněná, ale tato závada nemůže způsobit jeho poškození.",A
+142,1.1.11.4.2,"Brzdové potrubí nesprávně uchycené nebo vedené, takže může dojít k jeho poškození nebo minimální poloměr ohybu nebo minimální vzdálenost od tepelného zdroje u PA brzdového potrubí neodpovídá požadavkům a zvyšuje riziko jeho poškození.",B
+143,1.1.12.1,Bezprostřední riziko závady nebo prasknutí brzdové hadice.,C
+144,1.1.12.2.1,"Brzdová hadice na povrchu odřená, popraskaná, ale není poškozena (vidět) druhá spodní vrstva hadice.",A
+145,1.1.12.2.2,"Brzdová hadice zkroucená, popraskaná nebo odřená tak, že je zasažena (vidět) druhá spodní vrstva hadice.",B
+146,1.1.12.2.3,Poškození brzdové hadice z důvodu chybného umístění nebo uchycení nebo nevhodné délky (příliš krátké / dlouhé) nebo malého poloměru ohybu.,B
+147,1.1.12.3.1,Slyšitelný únik vzduchu z brzdové hadice nebo spojů.,B
+148,1.1.12.3.2,Únik vzduchu z brzdové hadice nebo spojů působící znatelný pokles tlaku v brzdovém systému.,C
+149,1.1.12.3.3,Z brzdové hadice nebo spojů únik brzdové kapaliny.,C
+150,1.1.12.4,Objemová deformace (vyboulení) brzdové hadice pod plným tlakem.,C
+151,1.1.12.5.1,Brzdová hadice pórovitá nebo narušená od působení ropných látek (rozleptaná).,B
+152,1.1.12.5.2,"Značné narušení brzdové hadice od působení ropných látek (rozleptaní), které bezprostředně ovlivňuje její spolehlivost (těsnost).",C
+153,1.1.12.6,Způsob montáže nebo uchycení brzdových hadic neodpovídá požadavkům.,A
+154,1.1.13.1.1,Brzdové obložení nebo brzdové destičky jsou poškozené nebo zjevně nadměrně opotřebované nebo indikátory opotřebení signalizují opotřebení pod minimální hodnotu stanovenou výrobcem.,B
+155,1.1.13.1.2,"Brzdové obložení nebo brzdové destičky poškozené nebo opotřebované natolik, že kolo zjevně nedosahuje požadovaný brzdný účinek.",C
+156,1.1.13.2.1,"Zjevné povrchové znečištění brzdových destiček nebo brzdového obložení (olejem, tukem apod.) - zjevně snížený brzdný účinek kola.",B
+157,1.1.13.2.2,"Zjevné povrchové znečištění brzdových destiček nebo brzdového obložení (olejem, tukem apod.) - kolo zjevně nebrzdí.",C
+158,1.1.13.3,Některé brzdové obložení nebo brzdová destička chybí nebo není zjevně v souladu s požadavky výrobce.,C
+159,1.1.14.1.1,"Brzdový kotouč nadměrně zkorodovaný (hloubková koroze) - poškozená funkční plocha zjevně nepřesahuje 1/5 její šířky nebo brzdový kotouč s rýhami zjevně nepřesahující hloubku rýhy 1,5 mm.",A
+160,1.1.14.1.2,Brzdový kotouč nadměrně zkorodovaný (hloubková koroze) - poškozená funkční plocha zjevně přesahuje 1/5 její šířky.,B
+161,1.1.14.1.3,Brzdový buben nebo kotouč zjevně nadměrně opotřebený (zeslabený).,B
+162,1.1.14.1.4,"Brzdový kotouč s rýhami zjevně přesahující hloubku rýhy 1,5 mm.",B
+163,1.1.14.1.5,"Brzdový kotouč s lomem (trhlinou) ve funkční části kotouče, který zasahuje do jeho okraje, nebo trhlina v délce přesahující zjevně 2/3 šířky funkční plochy kotouče nebo trhlina o šířce nebo hloubce přesahující zjevně 1,5 mm",B
+164,1.1.14.1.6,"Brzdový kotouč s jakoukoliv trhlinou na upevňovací přírubě brzdového kotouče nebo s chybějící (ulomenou nebo opotřebenou) částí kotouče nebo s nadměrnými lomy (trhlinami) ve funkční části kotouče, které zasahují do jeho okraje, které vzhledem k rozsahu poškození brzdového kotouče bezprostředně ohrožují bezpečnost provozu (např. nebezpečí roztrhnutí kotouče).",C
+165,1.1.14.1.7,Brzdový buben zjevně s lomy (prasklý).,C
+166,1.1.14.2.1,"Brzdový buben nebo kotouč zjevně znečištěný (olejem, tukem apod.).",B
+167,1.1.14.2.2,"Brzdový buben nebo kotouč zjevně znečištěný (olejem, tukem apod.), narušený brzdný účinek.",C
+168,1.1.14.3,Některý brzdový buben nebo brzdový kotouč chybí.,C
+169,1.1.14.4,"Brzdový štít, je-li vyžadován, chybí nebo chybí jeho část nebo není spolehlivě uchycen nebo je poškozen tak, že neplní svoji funkci.",B
+170,1.1.14.5.1,Brzdový třmen uvolněný.,B
+171,1.1.14.5.2,Brzdový třmen chybí nebo je vyřazen z provozu.,C
+172,1.1.14.6.1,Brzdový kotouč uvolněný (např. u brzdového kotouče motocyklu uvolněné nosné čepy).,B
+173,1.1.14.6.2,Brzdový kotouč uvolněný a tato závada bezprostředně ohrožuje bezpečnost jízdy vozidla (např. u brzdového kotouče motocyklu uvolněné nosné čepy).,C
+174,1.1.15.1.1,"Brzdové lano poškozené, popraskané, zkorodované nebo zauzlované.",B
+175,1.1.15.1.2,"Brzdové lano chybí nebo je v tak zhoršeném technickém stavu (např. nadměrně zkorodované, poškozené nebo popraskané), že není funkční nebo spolehlivé.",C
+176,1.1.15.2.1,"Brzdové vodící kladky, pákoví nebo táhla nadměrně zkorodované, opotřebované nebo zdeformované.",B
+177,1.1.15.2.2,"Brzdové vodící kladky, pákoví nebo táhla jsou v tak zhoršeném technickém stavu (např. nadměrně zkorodované, opotřebované nebo zdeformované), že nejsou funkční nebo spolehlivé.",C
+178,1.1.15.3.1,"Uchycení lanovodů nebo spojení brzdových lan, táhel nebo pákoví je uvolněné, poškozené nebo spojení či zajištění spojení neodpovídá požadavkům.",B
+179,1.1.15.3.2,"Uchycení lanovodů nebo spojení brzdových lan, táhel nebo pákoví je natolik nespolehlivé, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+180,1.1.15.4.1,"Vnější poškození lanovodů (bowdenů), které nemá vliv na jeho funkci.",A
+181,1.1.15.4.2,"Lanovody (bowdeny) vadné nebo poškozeny tak, že mají vliv na jejich funkci.",C
+182,1.1.15.5.1,"Omezení volného pohybu brzdových lan, lanovodů, táhel nebo pák brzdového systému.",B
+183,1.1.15.5.2,"Omezení volného pohybu brzdových lan, lanovodů, táhel nebo pák brzdového systému, které má za následek malou účinnost brzd nebo které způsobuje trvalé přibrzďování.",C
+184,1.1.15.6.1,Pohyby pák / táhel brzdového systému svědčící o nadměrném opotřebení nebo o nesprávném seřízení.,B
+185,1.1.15.6.2,"Pohyby pák / táhel brzdového systému svědčící o nadměrném opotřebení nebo o nesprávném seřízení, které má za následek malou účinnost brzd nebo které způsobuje trvalé přibrzďování.",C
+186,1.1.16.1.1,"Brzdový válec poškozený, prasklý (např. upevňovací úchyty) nebo nadměrně zkorodovaný.",B
+187,1.1.16.1.2,"Brzdový válec je vyřazen z provozu nebo chybí nebo je v tak zhoršeném technickém stavu, že není funkční.",C
+188,1.1.16.2.1,Slyšitelný únik vzduchu z brzdového válce.,B
+189,1.1.16.2.2,"Únik vzduchu z brzdového válce, působící znatelný pokles tlaku v brzdovém systému.",C
+190,1.1.16.2.3,Únik brzdové kapaliny z hydraulického brzdového válečku.,C
+191,1.1.16.3.1,"Montáž některého ze spojovacích prvků uchycení brzdového válce / válečku je nespolehlivá, některý spojovací prvek uchycení brzdového válce / válečku je uvolněný nebo chybí nebo je prasklý úchyt (lože) brzdového válce.",B
+192,1.1.16.3.2,Brzdový válec je utržený nebo je prasklý úchyt (lože) a bezprostředně hrozí upadnutí brzdového válce.,C
+193,1.1.16.4.1,Nadměrný zdvih pístu nebo membrány brzdového válce není v souladu s požadavky.,B
+194,1.1.16.4.2,Zdvih pístu nebo membrány je nadměrný a neumožňuje vyvinout dostatečnou brzdnou sílu na kole.,C
+195,1.1.16.4.3,Nedostatečný zdvih pístu nebo membrány brzdového válce způsobuje trvalé přibrzďování kola.,C
+196,1.1.16.5.1,"Některá prachovka brzdového válce / válečkuje poškozená, ale plní svoji funkci.",A
+197,1.1.16.5.2,"Některá prachovka brzdového válce / válečku chybí nebo je poškozená tak, že neplní svoji funkci.",B
+198,1.1.16.6,"Některá vratná pružina brzdového válce, je-li vyžadována, chybí nebo je vadná (např. prasklá, vytahaná).",B
+199,1.1.17.1.1,"Ovládací páky, lana nebo pružiny AZR / omezovače brzdného účinku jsou poškozené nebo nadměrně zkorodované.",B
+200,1.1.17.1.2,"Spojení táhel, lan nebo pákoví AZR / omezovače brzdného účinku a jejich zajištění je poškozené, uvolněné nebo není spolehlivé nebo spojení neodpovídá požadavkům.",B
+201,1.1.17.1.3,"Ovládací lano AZR / omezovače brzdného účinku je přetržené nebo lano, páky nebo pružiny jsou natolik poškozeny nebo zkorodovány, že AZR / omezovač brzdného účinku neplní svoji funkci.",C
+202,1.1.17.2.1,"U vozidla vybaveného funkčním systémem ABS, které není určeno k tažení přípojných vozidel (mimo kategorii 02), nesprávně seřízené pákoví AZR / omezovače brzdného účinku způsobuje nedostatečný nebo nadměrný brzdný účinek kol nápravy / náprav u vozidla.",B
+203,1.1.17.2.2,Nesprávně seřízené pákoví AZR / omezovače brzdného účinku v závislosti na zatížení vozidla způsobuje nedostatečný nebo nadměrný brzdný účinek kol nápravy / náprav.,C
+204,1.1.17.3.1,"U vozidla vybaveného funkčním systémem ABS, které není určeno k tažení přípojných vozidel (mimo kategorii 02), nefunkční AZR (páka zadřená v poloze pro naložené vozidlo) způsobuje nadměrný brzdný účinek kol nápravy / náprav u vozidla v nenaloženém stavu.",B
+205,1.1.17.3.2,Ručně ovládaný zátěžový regulátor přípojného vozidla traktoru nelze ovládat.,B
+206,1.1.17.3.3,AZR / omezovač brzdného účinku není zjevně funkční.,C
+207,1.1.17.4,AZR/omezovač brzdného účinku zjevně demontován - nepřípustný zásah do brzdového systému.,C
+208,1.1.17.5,"Štítek s údaji pro seřízení AZR, je-li vyžadován, chybí.",A
+209,1.1.17.6,Údaje na štítku pro seřízení AZR nečitelné nebo nejsou v souladu s požadavky.,A
+210,1.1.18.1.1,Mechanismus ovládání pák brzdových klíčů poškozený nebo nadměrně opotřebený.,B
+211,1.1.18.1.2,Po odbrzdění se nevrací některý brzdový klíč na nápravě do původní polohy (výrazný rozdíl).,B
+212,1.1.18.1.3,"Zadření mechanismu ovládání pák brzdových klíčů způsobuje, že po odbrzdění se nevrací některý brzdový klíč do původní polohy a kolo trvalé přibrzďuje.",C
+213,1.1.18.2,Výrazný rozdíl zdvihu pák brzdových klíčů na nápravě nebo seřízení zdvihu pák brzdových klíčů neodpovídá požadavkům výrobce.,B
+214,1.1.18.3.1,Mechanismus zařízení k automatickému seřizování pák brzdových klíčů je nadměrně opotřebený.,B
+215,1.1.18.3.2,"Zařízení k automatickému seřizování pák brzdových klíčů jev natolik zhoršeném technickém stavu, (např. nadměrně opotřebené, poškozené), že není funkční nebo nefunguje správně.",C
+216,1.1.18.4.1,"Uchycení, spojení a zajištění jednotlivých částí mechanismu ovládání pák brzdových klíčů vadné nebo není spolehlivé nebo neodpovídá požadavkům.",B
+217,1.1.18.4.2,Nesprávná montáž nebo změna mechanismu ovládání pák brzdových klíčů nebo zařízení k automatickému seřizování má vliv na brzdný účinek.,B
+218,1.1.19.1.1,"V systému odlehčovací brzdy některý spoj uvolněný, ale tato závada nemá vliv na funkci nebo spolehlivost systému.",A
+219,1.1.19.1.2,Montáž systému odlehčovací brzdy vadná nebo některý spoj v systému odlehčovací brzdy uvolněný a tato závada má vliv na funkci nebo spolehlivost systému.,B
+220,1.1.19.2,"Systém odlehčovací brzdy je zjevně vadný nebo je-li vyžadován, chybí.",B
+221,1.1.20.1,Brzda přípojného vozidla se automaticky neuvede v činnost po rozpojení spojení.,C
+222,1.1.21.1.1,"Vnější poškození jiných zařízení brzdového systému (protizámrazové čerpadlo, vysoušeč vzduchu apod.) nebo povrchová koroze, která nemá vliv na funkci nebo spolehlivost brzdového systému.",A
+223,1.1.21.1.2,"Poškození jiných zařízení brzdového systému (protizámrazové čerpadlo, vysoušeč vzduchu apod.) nebo nadměrná koroze, které může nepříznivě ovlivnit funkci nebo spolehlivost brzdového systému.",B
+224,1.1.21.1.3,"Poškození jiných zařízení brzdového systému (protizámrazové čerpadlo, vysoušeč vzduchu apod.), které bezprostředně ohrožuje funkci brzdového systému.",C
+225,1.1.21.2.1,Únik nemrznoucí směsi.,A
+226,1.1.21.2.2,"Slyšitelný únik vzduchu z jiných zařízení brzdového systému (protizámrazové čerpadlo, vysoušeč vzduchu apod.).",B
+227,1.1.21.2.3,"Únik vzduchu z jiných zařízení brzdového systému (protizámrazové čerpadlo, vysoušeč vzduchu apod.), který způsobuje znatelný pokles tlaku vzduchu v brzdovém systému.",C
+228,1.1.21.3,"Uchycení jiných zařízení brzdového systému (protizámrazové čerpadlo, vysoušeč vzduchu apod.), je uvolněné nebo poškozené nebo neodpovídá požadavkům.",B
+229,1.1.21.4.1,"Nebezpečná úprava jakékoli součásti brzdového systému, která není v souladu s požadavky výrobce.",B
+230,1.1.21.4.2,"Jakýkoliv nepovolený zásah do brzdového systému (demontáž, vyřazení z činnosti apod.) nebo neschválená změna brzdového systému.",C
+231,1.1.22.1,"Přípojky pro kontrolu tlaku v brzdové soustavě, jsou-li vyžadovány, chybí nebo neodpovídají požadavkům.",B
+232,1.1.22.2,Přípojky pro kontrolu tlaku v brzdové soustavě poškozené nebo nepoužitelné nebo netěsné.,B
+233,1.1.23.1,"Nájezdová brzda je natolik poškozená, že není funkční.",C
+234,1.1.23.2,Nedostatečná účinnost nájezdové brzdy.,B
+235,1.2.1.1.1,Nedostatečná brzdná síla na jednom nebo více kolech.,B
+236,1.2.1.1.2,Žádná brzdná síla na jednom nebo více kolech,C
+237,1.2.1.2.2,Rozdíl brzdných sil (při brždění nebo odbrzdění) na kolech téže nápravy je větší než 30 %. V případě jízdní zkoušky se vozidlo nadměrně vychyluje z přímého směru.,C
+238,1.2.1.3.1,Účinek brzd není spojitě odstupňovaný.,B
+239,1.2.1.3.2,"Vadná odstupňovatelnost brzd ovlivňuje jízdní vlastnosti vozidla natolik, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+240,1.2.1.4,Nadměrná prodleva brzdného účinku na některém kole.,B
+241,1.2.1.5,Kolísání brzdné síly v průběhu každého úplného otočení kola na válcové zkušebně brzd přesahuje o více jak ± 10 % střední hodnoty brzdné síly odečtené z brzdové charakteristiky brzdy.,B
+242,1.2.2.1,Vozidlo nedosahuje předepsaného brzdného účinku pro provozní brždění.,C
+243,1.2.2.2,Nelze ověřit předepsaný brzdný účinek pro provozní brždění (předčasný blok některého kola nápravy z důvodu nedostatečného zatížení vozidla).,B
+244,1.3.1.1.1,Nedostatečná brzdná síla na jednom nebo více kolech.,B
+245,1.3.1.1.2,Žádná brzdná síla na jednom nebo více kolech,C
+246,1.3.1.2.2,Rozdíl brzdných sil (při brždění nebo odbrzdění) na kolech téže nápravy je větší než 30 %. V případě jízdní zkoušky se vozidlo nadměrně vychyluje z přímého směru.,C
+247,1.3.1.3.1,Účinek nouzové brzdy není spojitě odstupňovaný.,B
+248,1.3.1.3.2,"Vadná odstupňovatelnost nouzové brzdy ovlivňuje jízdní vlastnosti vozidla natolik, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+249,1.3.2.1.1,Nelze ověřit předepsaný brzdný účinek pro nouzové brždění (předčasný blok některého kola nápravy z důvodu nedostatečného zatížení vozidla).,B
+250,1.3.2.1.2,Vozidlo nedosahuje předepsaného brzdného účinku pro nouzové brždění (50 % provozního brždění).,C
+251,1.4.1.1.1,Parkovací brzda na některém z kol vozidla není funkční.,B
+252,1.4.1.1.2,"Žádné z kol vozidla, ovládané parkovací brzdou není funkční.",C
+253,1.4.2.1.1,"Některé z kol vozidla, ovládané parkovací brzdou, nedosahuje požadovaného brzdného účinku.",B
+254,1.4.2.1.2,"Žádné z kol vozidla, ovládané parkovací brzdou, nedosahuje požadovaného brzdného účinku.",C
+255,1.5.1,Účinek systému odlehčovací brzdy nelze odstupňovat.,B
+256,1.5.2,Systém odlehčovací brzdy nefunguje.,B
+257,1.6.1,Vadná funkce výstražné signalizace systému ABS.,B
+258,1.6.2,Výstražná signalizace ukazuje nesprávnou funkci systému ABS.,B
+259,1.6.3,"Čidlo otáčení kol systému ABS nevhodně uchycené nebo poškozené tak, že neplní svoji funkci (např. přetržený elektrický kabel) nebo chybí.",B
+260,1.6.4,"Elektrické kabely systému ABS jsou poškozené tak, že nejsou funkční nebo chybí.",B
+261,1.6.5,"Jiné části systému ABS chybí nebojsou poškozené tak, zeje systém ABS nefunkční nebo byl systém ABS z vozidla demontován.",B
+262,1.6.6,Elektrické ovládací vedení (propojení) systému ABS mezi tažným a přípojným vozidlem chybí nebo nefunguje nebo spojení vozidel neodpovídá požadavkům na zapojení vozidel do jízdních souprav s ohledem na kompatibilitu mezi tažným a přípojným vozidlem z hlediska sdělování dat (ABS).,B
+263,1.7.1,Vadná funkce výstražné signalizace systému EBS.,B
+264,1.7.2,Výstražná signalizace ukazuje nesprávnou funkci systému EBS.,B
+265,1.7.3,"Je-li přípojné vozidlo vybaveno systémem EBS, chybí propojení systému EBS mezi tažným a přípojným vozidlem nebo elektrické ovládací vedení zjevně nefunguje.",C
+266,1.8.1,Brzdová kapalina znečištěna nebo zakalena.,B
+267,1.8.2,"Brzdová kapalina znečištěna nebo zakalena, bezprostřední riziko závady.",C
+268,2.1.1.1.1,"Přenos ovládací síly v převodce řízení není rovnoměrný v celém rozsahu rejdu, v některé poloze natočení volantu (např. krajní) zjevně zvýšený odpor.",B
+269,2.1.1.1.2,"Zvýšený odpor v převodu převodky řízení, ovládací síla na volant, která je nutná k natočení kol, zjevně překračuje stanovené hodnoty.",B
+270,2.1.1.2,Opotřebené drážkování hřídele převodky řízení nebo jakákoliv vůle ve spojení hřídele převodky řízení s hlavní pákou řízení.,C
+271,2.1.1.3.1,V převodu převodky řízení vůle větší než provozní.,B
+272,2.1.1.3.2,"V převodu převodky řízení jsou natolik velké vůle, že je bezprostředně ohroženo bezpečné ovládání vozidla.",C
+273,2.1.1.3.3,"Převod převodky řízení je v natolik zhoršeném technickém stavu (např. váznutí, přeskakování nebo převod není funkční v celém rozsahu rejdu), zeje bezprostředně ohroženo bezpečné ovládání vozidla.",C
+274,2.1.1.4.1,V uložení hřídele (ložiska) nebo v uložení hřebenových tyčí (pouzdra) převodky řízení vůle větší než provozní.,B
+275,2.1.1.4.2,"V uložení hřídele (ložiska) nebo v uložení ozubených tyčí (pouzdra) převodky řízení jsou natolik velké vůle, že je bezprostředně ohroženo bezpečné ovládání vozidla.",C
+276,2.1.1.5.1,Netěsnost převodky řízení.,A
+277,2.1.1.5.2,"Prachovka převodky řízení je prasklá, avšak nedochází k úniku maziva.",A
+278,2.1.1.5.3,"Prachovka převodky řízení chybí nebo je chybně uchycená nebo poškozená tak, že neplní svoji funkci a dochází k úniku maziva.",B
+279,2.1.1.5.4,Z převodky řízení odkapává mazivo.,B
+280,2.1.1.6.1,"Kloubové nebo pružné spojení hřídele volantu s hřídelí převodky řízení je nadměrně opotřebované, nebo poškozené nebo spojovací prvky, je-li vyžadováno, nejsou viditelně zajištěny.",B
+281,2.1.1.6.2,"Kloubové nebo pružné spojení hřídele volantu s hřídelí převodky řízení je v natolik zhoršeném technickém stavu (např. opotřebované nebo poškozené), zeje bezprostředně ohroženo bezpečné ovládání vozidla.",C
+282,2.1.1.7.1,Nebezpečná úprava převodky řízení nebo spojení převodky řízení s hřídelí volantu nebo s hlavní pákou řízení.,B
+283,2.1.1.7.2,"Nebezpečná úprava a převodky řízení nebo spojení převodky řízení s hřídelí volantu nebo s hlavní pákou řízení, která bezprostředně ohrožuje bezpečné ovládání vozidla.",C
+284,2.1.2.1.1,Některý spoj upevnění převodky řízení je uvolněný.,B
+285,2.1.2.1.2,Některý spoj upevnění převodky řízení je uvolněný a v důsledku toho se převodka řízení pohybuje.,C
+286,2.1.2.2.1,Některý montážní otvor pro upevnění převodky řízení na podvozku nebo karosérii je zjevně vymačkaný nebo vytlučený.,B
+287,2.1.2.2.2,Na podvozku nebo na karosérii je místo pro uložení převodky řízení prasklé (lože) a převodka řízení se v důsledku toho pohybuje.,C
+288,2.1.2.3.1,Chybějící nebo utržený upevňovací šroub převodky řízení.,B
+289,2.1.2.3.2,Chybějící nebo utržený upevňovací šroub a převodka řízení se v důsledku toho pohybuje.,C
+290,2.1.2.4.1,Některý úchyt skříně převodky řízení je prasklý.,B
+291,2.1.2.4.2,Některý úchyt skříně převodky řízení je prasklý a převodka řízení se v důsledku toho pohybuje.,C
+292,2.1.3.1.1,"V pohyblivém spoji pákového mechanismu řízení (např. kulový čep, kloub, pouzdro) je větší vůle než montážní.",B
+293,2.1.3.1.2,"V pohyblivém spoji pákového mechanismu řízení (např. kulový čep, kloub, pouzdro) jsou natolik velké vůle, že je bezprostředně ohrožena bezpečnost jízdy vozidla (nebezpečí rozpojení).",C
+294,2.1.3.1.3,Vícenásobný počet větších vůlí (větší než montážní) v pohyblivých spojích pákového mechanismu řízení v konečném důsledku bezprostředně ohrožuje bezpečnost jízdy vozidla.,C
+295,2.1.3.2.1,"Uvolněné nebo opotřebené spoje (např. uchycení čepu, spojení na spojovací nebo řídící tyči), které mají vliv na spolehlivost pákového mechanismu řízení.",B
+296,2.1.3.2.2,Otvor pro uchycení čepu pákového mechanismu řízení zjevně vymačkaný.,B
+297,2.1.3.2.3,"Uvolněné nebo nadměrně opotřebené spoje pákového mechanismu řízení (např. uchycení čepu, spojení na řídící nebo spojovací tyči), které bezprostředně ohrožují bezpečnost jízdy vozidla.",C
+298,2.1.3.3.1,Zjevné ohnutí řídící nebo spojovací tyče řízení.,B
+299,2.1.3.3.2,"Praskliny u jakékoli části pákového mechanismu řízení (čepy, páky, řídící nebo spojovací tyče) nebo deformace jakékoli části pákového mechanismu řízení (řídící nebo spojovací tyče), které bezprostředně ohrožují bezpečnost jízdy.",C
+300,2.1.3.4,"Viditelné zajištění spojů u pákového mechanismu řízení, je-li vyžadováno, chybí nebo není funkční nebo není spolehlivé.",B
+301,2.1.3.5,"Zjevně nesprávné seřízení částí pákového mechanismu řízení (např. příčné nebo podélné spojovací tyče řízení), které má vliv na provozní vlastnosti vozidla (jen u silniční kontroly).",B
+302,2.1.3.6.1,"Nebezpečná úprava pákového mechanismu řízení, která má vliv na provozní vlastnosti vozidla nebo spolehlivost mechanismu řízení.",B
+303,2.1.3.6.2,"Nebezpečná úprava pákového mechanismu řízení, která bezprostředně ohrožuje bezpečnost jízdy vozidla.",C
+304,2.1.3.7.1,Prachovky pohyblivých spojů pákového mechanismu řízení jsou poškozené.,A
+305,2.1.3.7.2,"Prachovky u pohyblivých spojů pákového mechanismu řízení chybí nebo jsou ve výrazně zhoršeném stavu, takže neplní svoji funkci.",B
+306,2.1.4.1,Pákový mechanismus řízení drhne (naráží) při pohybu o pevnou část podvozku.,B
+307,2.1.4.2,"Doraz řízení chybně seřízen nebo chybí, řízená kola se v krajní poloze dotýkají pákoví nebo podvozku vozidla.",B
+308,2.1.5.1.1,Netěsnost posilovače řízení.,A
+309,2.1.5.1.2,Únik média (kapalina / vzduch) z posilovače řízení.,B
+310,2.1.5.1.3,Nadměrný únik média (kapalina / vzduch) z posilovače řízení.,C
+311,2.1.5.2.1,U posilovače řízení množství kapaliny pod vyznačenou značkou MIN.,A
+312,2.1.5.2.2,Nedostatečné množství kapaliny ovlivňuje funkci posilovače řízení.,B
+313,2.1.5.3.1,Posilovač řízení nefunguje v plném rozsahu rejdu.,B
+314,2.1.5.3.2,Posilovač řízení nefunguje a tato závada bezprostředně ohrožuje bezpečné ovládání vozidla.,C
+315,2.1.5.4.1,"Vnější poškození mechanismu posilovače řízení (pístnice, páky, tyče), které má vliv na provozní vlastnosti vozidla nebo spolehlivost mechanismu řízení.",B
+316,2.1.5.4.2,"Mechanismus posilovače řízení má praskliny nebo je poškozen natolik, že není spolehlivý a tato závada bezprostředně ohrožuje bezpečné ovládání vozidla.",C
+317,2.1.5.5.1,"Drhnutí částí mechanismu posilovače řízení o sebe (pístnice, páky, tyče).",B
+318,2.1.5.5.2,"Nesprávné seřízení mechanismu posilovače řízení, bezprostředně ohrožuje bezpečné ovládání vozidla.",C
+319,2.1.5.6.1,"Nebezpečná úprava mechanismu posilovače řízení, která má vliv na jeho spolehlivost nebo funkci.",B
+320,2.1.5.6.2,"Nebezpečná úprava mechanismu posilovače řízení, která bezprostředně ohrožuje bezpečné ovládání vozidla.",C
+321,2.1.5.7.1,"Trubky nebo hadice posilovače řízení jsou poškozené, nebo nadměrně zkorodované.",B
+322,2.1.5.7.2,Bezprostřední riziko prasknutí trubky nebo hadice posilovače řízení.,C
+323,2.1.5.8,"Uchycení mechanismu posilovače řízení, není-li součástí převodky řízení (pístnice, páky, tyče), je uvolněné nebo je spojení nadměrně opotřebované (pouzdro/čep pístnice) a tato závada má vliv na spolehlivé ovládání vozidla.",B
+324,2.2.1.1.1,Vůle v uchycení volantu k volantové hřídeli a tato závada má vliv na spolehlivé ovládání vozidla,B
+325,2.2.1.1.2,Uvolněné nebo nespolehlivé uchycení volantu k volantové hřídeli nebo uvolněné uchycení řídítek k vidlici nebo čepu řízení bezprostředně ovlivňuje bezpečné ovládání vozidla.,C
+326,2.2.1.2.1,"Mechanismus výškového nebo úhlového nastavení polohy volantu, nelze spolehlivě aretovat v některé nastavené poloze.",B
+327,2.2.1.2.2,"Mechanismus výškového nebo úhlového nastavení polohy volantu je vadný, nastavení nelze spolehlivě aretovat v jakékoliv nastavené poloze a tato závada bezprostředně ohrožuje spolehlivé a bezpečné ovládání vozidla.",C
+328,2.2.1.3.1,"Poškození volantu nebo řídítek (konstrukce), které má vliv na spolehlivé a bezpečné ovládání vozidla.",B
+329,2.2.1.3.2,"Prasklá řídítka nebo nosník čepu řízení nebo poškození volantu nebo řídítek (konstrukce), které bezprostředně ohrožuje spolehlivé a bezpečné ovládání vozidla.",C
+330,2.2.1.4,Nebezpečná úprava nebo neschválená změna volantu / řídítek.,B
+331,2.2.1.5.1,"Poškození volantu, které může způsobit poranění řidiče.",B
+332,2.2.1.5.2,"Krytka náboje volantu chybí, nebo je poškozená (např. vystřelený airbag) nebo neodpovídá požadavkům na bezpečnost.",B
+333,2.2.1.5.3,Použití koule na volant u vozidel s konstrukční rychlostí přesahující 40km/h.,B
+334,2.2.2.1,Nadměrná pohyblivost středu volantu směrem nahoru nebo dolů (axiální vůle).,B
+335,2.2.2.2,Nadměrná pohyblivost horní části sloupku radiálně od osy sloupku (vůle v uložení).,B
+336,2.2.2.3,"Zhoršený stav pružných spojů (např. hardy spojka) nebo universálních kloubů na volantové hřídeli, který ovlivňuje spolehlivost a funkci spojeni.",B
+337,2.2.2.4.1,Sloupek řízení uvolněný.,B
+338,2.2.2.4.2,U motocyklu nadměrná nebo nedostatečná provozní vůle v uložení vidlice předního kola ovlivňující jízdní vlastnosti vozidla.,B
+339,2.2.2.4.3,"Stav sloupku řízení je v tak zhoršeném stavu nebo jeho uchycení je natolik nespolehlivé, že je bezprostředně ohroženo bezpečné ovládání vozidla.",C
+340,2.2.2.4.4,U motocyklu deformovaná nebo prasklá vidlice řízení předního kola.,C
+341,2.2.2.5,"Nebezpečná úprava sloupku řízení / vidlice, která bezprostředně ohrožuje bezpečné ovládání vozidla.",C
+342,2.3.1,"U vozidel schválených před 1. 1. 2002, nestanoví-li výrobce jinak, mechanická obvodová vůle volantu, přesahuje při nastavení kol do přímého směru: • 36° u vozidel s konstrukční rychlostí do 40 km/h",C
+343,2.4.1,Seřízení sbíhavosti (rozbíhavosti) kol řízené nápravy přesahuje povolené tolerance.,A
+344,2.4.2,"Odklon kol řízené nápravy přesahuje povolené tolerance nebo je vozidlo vybaveno poklicemi kol, které brání v provedení předepsaných kontrolních úkonů.",B
+345,2.5.1.1,"Konstrukční část otočného spojení (točnice) řízené nápravy s rámem vozidla je prasklá, poškozená (deformovaná) nebo nadměrně zkorodovaná.",B
+346,2.5.1.2,"Konstrukční část otočného spojení (točnice) řízené nápravy s rámem vozidla je v natolik zhoršeném technickém stavu (např. popraskaná nebo nadměrně zkorodovaná), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+347,2.5.2.1,Nadměrně opotřebené otočné spojení (točnice) řízené nápravy s rámem vozidla.,B
+348,2.5.2.2,"Otočné spojení (točnice) řízené nápravy šrámem vozidla je natolik opotřebované, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+349,2.5.3.1,"Některé upevňovací prvky na otočném spojení (točnice) řízené nápravy s rámem vozidla jsou uvolněné, prasklé nebo chybí.",B
+350,2.5.3.2,"Spojovací prvky otočného spojení (točnice) řízené nápravy s rámem vozidla jsou natolik nespolehlivé (např. spojovací prvky uvolněné, prasklé nebo chybí), zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+351,2.6.1,Kontrolka vadné funkce elektronického posilovače řízení signalizuje poruchu systému.,B
+352,2.6.2.1,Elektronický posilovač řízení nefunguje.,B
+353,2.6.2.2,Elektronický posilovač řízení nefunguje a bezprostředně ovlivňuje bezpečnost řízení (neshoda mezi úhlem natočení volantu a úhlem natočení kol).,C
+354,2.6.3,Systém signalizuje závadu přes elektronické rozhraní vozidla.,B
+355,3.1.1.1,"Překážka v poli přímého výhledu řidiče směrem dopředu v úhlu 180°, která narušuje jeho výhled dopředu či do stran nebo sledování zařízení pro nepřímý výhled.",B
+356,3.1.2.1,"Clona proti slunci čelního okna u spolujezdce, je-li instalována, chybí je poškozená tak, že neplní svoji funkci nebo nelze nastavit v požadované poloze nebo neodpovídá požadavkům.",A
+357,3.1.2.2,"Clona proti slunci čelního okna před řidičem chybí, je poškozená tak, že neplní svoji funkci nebo ji nelze nastavit v požadované poloze nebo neodpovídá požadavkům.",B
+358,3.2.1.2,"Poškození zasklení (praskliny, neprůhledné nebo poškrábané sklo) o velikosti nejvíce 1/3 výšky průhledné části zasklení, které se nachází v poli výhledu řidiče směrem dopředu, mimo vymezenou část stírané plochy čelního skla nebo poškození o velikosti menší než 20 mm, které se nachází ve vymezené části stírané plochy čelního skla.",A
+359,3.2.1.3,"Poškození zasklení (praskliny, neprůhledné nebo poškrábané zasklení), o velikosti větší než 1/3 výšky průhledné části zasklení na výšku, které se nachází v poli výhledu řidiče směrem dopředu, mimo vymezenou část stírané plochy čelního skla nebo poškození zasklení o velikosti větší než 20 mm, které se nachází ve vymezené části stírané plochy čelního skla.",B
+360,3.2.1.4,"V některém okně, mimo čelního okna, chybí zasklení.",B
+361,3.2.1.5,"Poškození skla zasklení snižuje výhled řidiče natolik, že je bezprostředně ohrožena bezpečnost jízdy vozidla nebo způsob upevnění nebo stav poškození zasklení ohrožuje přepravované osoby.",C
+362,3.2.1.6,V čelním okně schází zasklení.,C
+363,3.2.1.8,"Poškození skla zasklení (např. praskliny, poškrábání nebo zastříkání barvou) mimo pole výhledu řidiče, které vzhledem k rozsahu svého poškození, negativně ovlivňuje celkovou pevnost zasklení nebo znemožňuje přiměřeně výhled z vozidla.",B
+364,3.2.2.1,V poli výhledu řidiče směrem dopředu (v úhlu 180°) je celkový prostup světla přes zasklení nižší než 70 %.,B
+365,3.2.2.2,V poli výhledu řidiče směrem dozadu je celkový prostup světla přes zasklení nižší než 70 % a vozidlo není vybaveno funkčními vnějšími zrcátky na levé a pravé straně.,B
+366,3.2.3.1,"U vozidla, není-li stanoveno jinak, použito nehomologované bezpečnostní zasklení nebo u vozidla schváleného po 1. 1. 2002 není na jeho použití (např. DOT) udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+367,3.2.3.2,"Způsob montáže zasklívacího materiálu ve vozidle je vadný nebo neodpovídá požadavkům (např. původnímu provedení výrobce), nebo příslušné části karoserie pro upevnění zasklení jsou zkorodovány v celé tloušťce stěny, v souhrnné délce větší než 1/5 největší délky okna.",B
+368,3.2.3.3,"Ochrana zasklení proti náhodnému poškození přepravovaným nákladem, je-li vyžadována, chybí nebo je poškozena tak, že neplní svůj účel nebo neodpovídá požadavkům.",B
+369,3.2.4.1,"Jakákoliv dodatečná úprava čelního okna, vyjma použití schválené folie pro čelní okno opatřené povinným štítkem s předepsanými údaji (označení výrobce, typ výrobku, schvalovací značka ATEST 8 SD XXXX a text „JEN NA ČELNÍ OKNO“).",B
+370,3.2.4.2,"Použití neschválené fólie nebo způsob montáže dodatečné úpravy neodpovídá požadavkům (zakrytí střední brzdové svítilny) nebo poškozená fólie (změna zabarvení, trhliny nebo vznik vzduchových bublin mezi nalepenou fólií a sklem) omezuje nebo zkresluje výhled řidiče.",B
+371,3.2.4.3,"Dodatečně povrchově upravené zasklení není opatřeno povinným štítkem s předepsanými údaji (označení výrobce, typ výrobku, schvalovací číslo ATEST 8 SD XXXX).",B
+372,3.2.4.4,Oprava stanoveného zasklení omezuje nebo zkresluje výhled řidiče nebo oprava zasklení některého okna vozidla zjevně snižuje pevnost zasklení nebo může způsobit ohrožení bezpečnosti.,B
+373,3.2.5.1,"Některé okno, je-li otevíratelné, nelze otevřít.",A
+374,3.2.5.2,Některé okno nelze zavřít či bezpečně zajistit v zavřené poloze.,B
+375,3.2.6.1,U motocyklu čelní překryt (větrný štít) prasklý nebo zjevně demontovaný.,A
+376,3.2.6.2,"U motocyklu horní hrana čelního překrytu (větrný štít) nemá předepsané zaoblení (rádius) nebo je překryt neúplný, nadměrně popraskaný nebo nedostatečně upevněný.",B
+377,3.2.6.3,U motocyklu stav poškození nebo upevnění čelního překrytu (větrný štít) snižuje výhled směrem dopředu nebo vzniká nebezpečí poranění osob a tím je bezprostředně ohrožena bezpečnost jízdy vozidla.,C
+378,3.3.1.2,"Vozidlo není vybaveno, popřípadě není povinně dovybaveno, předepsaným počtem zařízení pro nepřímý výhled dané třídy nebo rozměru nebo bylo zařízení z vozidla zjevně demontováno.",B
+379,3.3.1.3,"U vozidla, není-li stanoveno jinak, použito neschválené / nehomologované zařízením pro nepřímý výhled nebo u vozidla schváleného po 1. 1. 2002 není na jeho použití (např. DOT) udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+380,3.3.2.1,"Zařízení, umožňující vychýlení po nárazu, není funkční.",A
+381,3.3.2.2,"Uvolněné, nespolehlivé nebo poškozené uchycení zařízení pro nepřímý výhled nebo nemožnost aretace v seřízené poloze neumožňuje řidiči poskytovat jasný výhled z vozidla předepsaným směrem.",B
+382,3.3.2.3,Způsob montáže zařízení pro nepřímý výhled na vozidle neodpovídá požadavkům.,B
+383,3.3.3.2,"Některé povinné zařízení pro nepřímý výhled, při sezení na místě řidiče v normální jízdní poloze, nezajišťuje předepsané pole výhledu směrem dozadu nebo do strany popřípadě před vozidlo nebo zařízení kamera -monitor nefunguje správně nebo není funkční.",B
+384,3.3.3.3,"Dodatečná úprava karosérie vozidla (např. dostavba nebo přestavba), která omezuje předepsané pole výhledu pro jednotlivé třídy zpětných zrcátek (krátké držáky).",B
+385,3.3.4.1,"Poškození zařízení pro nepřímý výhled, které však umožňuje plnit jeho funkci nebo poškození konstrukce (ochranné pouzdro) zařízení pro nepřímý výhled, které je umístěno 2 m nad vozovkou.",A
+386,3.3.4.2,"Nepřípustné úpravy (např. nálepky) nebo poškození zařízení pro nepřímý výhled, které neumožňuje řidiči poskytovat tímto zařízením předepsaný nebo jasný výhled z vozidla směrem dozadu nebo do strany popřípadě před vozidlo.",B
+387,3.3.4.3,"Poškození nebo nepovolená úprava (např. u motocyklu) zařízení pro nepřímý výhled, které se nachází níže než 2 m nad vozovkou, při kterých jsou na povrchu konstrukce (ochranné pouzdro) ostré hrany, které mohou způsobit zachycení nebo zranění osob.",B
+388,3.4.1.1,Stěrač zadního skla nelze uvést v činnost.,A
+389,3.4.1.2,Stěrače čelního skla nelze uvést v činnost nebo některý stěrač nefunguje.,B
+390,3.4.2.1,Stěrač zadního skla chybí nebo ramínko dostatečně nestírá v celé ploše.,A
+391,3.4.2.2,"Některý stěrač čelního skla, je-li vyžadován, chybí nebo ramínko stěrače dostatečně nestírá v celé ploše tak, aby zajistilo dostatečnou viditelnost řidiče čelním sklem.",B
+392,3.4.2.3,"Některý stěrač skla je neúplný nebo poškozený tak, že poškozuje stírané sklo.",B
+393,3.4.3.1,Hřídel stěrače není opatřena ochranným pouzdrem (nebezpečné vnější výčnělky).,A
+394,3.4.3.2,Uvolněné uchycení stěrače nebo způsob jeho montáže (seřízení) má vliv na chybnou funkci stírání nebo způsobuje poškození stíraného skla.,B
+395,3.5.1.1,"Ostřikovač zadního skla, je-li instalován, nefunguje nebo chybí.",A
+396,3.5.1.2,Ostřikovač čelního skla neostřikuje dostatečně stíranou plochu před spolujezdcem (seřízení).,A
+397,3.5.1.3,Některý ostřikovač čelního skla nefunguje nebo chybí nebo neostřikuje dostatečně stíranou plochu před řidičem (seřízení).,B
+398,3.6.1.1,Ovládačem systému odmlžování čelního skla nelze plynule měnit výkon odmlžování (např. otáčky ventilátoru a teplota).,A
+399,3.6.1.2,"Systém odmlžování čelního skla nefunguje nebo je poškozen tak, že zjevně neplní svoji funkci.",B
+400,3.6.2.1,Ovladačem systému odmrazování čelního skla nelze plynule měnit výkon odmrazování.,A
+401,3.6.2.2,"Systém odmrazování čelního skla nefunguje nebo je poškozen tak, že zjevně neplní svoji funkci.",B
+402,3.6.3.1,Nevyhovujícím stavem systému odmrazování nebo odmlžování čelního skla vozidla (např. netěsnost nebo nadměrná koroze potrubí) hrozí nebezpečí pronikání emisí jedovatých či výfukových plynů do prostoru pro cestující.,B
+403,3.6.3.2,Systémem odmlžování nebo odmrazování čelního skla vozidla se dostávají do prostoru pro cestující emise výfukových nebo jiných jedovatých plynů.,C
+404,4.1.1.1.1,Nesvítí některý nepovinný (volitelný) světlomet.,A
+405,4.1.1.1.2,"Vpotkávacím světlometu nesvítí doplňkový zdroj světla, který však nevytváří hlavní potkávací světlo (k posílení světla do zatáčky).",A
+406,4.1.1.1.3,Nesvítí některý povinný světlomet.,B
+407,4.1.1.1.4,"U potkávacího světlometu zdroj světla vadný, předepsaná kresba nemá osvětlenou plochu jasně ohraničenou nebo celistvou (tmavé plochy).",A
+408,4.1.1.1.5,"U potkávacího nebo dálkového světlometu zdroj světla ve světlometu chybně upevněn nebo je vadný, takže nesplňuje fotometrické vlastnosti (nevytváří požadovanou kresbu) nebo způsobuje oslnění.",B
+409,4.1.1.1.6,Světlo / zdroj světlaje vadný nebo chybí.,B
+410,4.1.1.1.7,Jediné světlo / zdroj světla; v případě LED viditelnost závažně narušena.,B
+411,4.1.1.1.8,Na vozidle nesvítí žádný potkávací světlomet nebo na straně do vozovky nesvití potkávací světlomet ani přední obrysová svítilna,C
+412,4.1.1.2.1,"Vnější krycí sklo, těleso nebo optický systém potkávacího světlometu nebo dálkového světlometu poškozený, ale stav poškození zjevně neovlivňuje jeho fotometrické vlastnosti (např. intenzita vyzařovaného světla, kresba) nebo možnost jeho seřízení.",A
+413,4.1.1.2.2,"Vnější krycí sklo, těleso nebo optický systém potkávacího světlometu nebo dálkového světlometu poškozený tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat jeho funkci nebo fotometrické vlastnosti (např. intenzita vyzařovaného světla, kresba) nebo možnost jeho seřízení.",B
+414,4.1.1.3,Některý úchyt potkávacího nebo dálkového světlometu uvolněný nebo prasklý nebo chybí a tento stav má vliv na seřízení světlometu (např. způsobuje blikání světlometu za jízdy) nebo se světlomet může za jízdy uvolnit nebo způsob uchycení světlometu neodpovídá požadavkům.,B
+415,4.1.2.1.1,Výškové seřízení sklonu rozhraní potkávacího světlometu neodpovídá požadavkům.,B
+416,4.1.2.1.2,Stranové seřízení rozhraní potkávacího světlometu neodpovídá požadavkům.,B
+417,4.1.2.1.3,"Natočení obrazu rozhraní potkávacího světlometu chybné, ale nezpůsobuje oslnění.",A
+418,4.1.2.1.4,Natočení obrazu rozhraní potkávacího světlometu neodpovídá požadavkům.,B
+419,4.1.2.1.5,Seřízení dálkového světlometu neodpovídá požadavkům.,B
+420,4.1.2.1.6,Systém vykazuje závadu přes elektronické rozhraní vozidla.,B
+421,4.1.3.1.1,Potkávací nebo dálkový světlomet nebo potkávací nebo dálkové světlomety nelze uvést v činnost.,B
+422,4.1.3.1.2,"Nepovinné (volitelné) dálkové světlomety, jsou-li zapojeny, nelze uvést v činnost.",B
+423,4.1.3.1.3,Systém vykazuje závadu přes elektronické rozhraní vozidla.,B
+424,4.1.3.2.1,Přepnutí z potkávacích světlometů na dálkové světlomety nebo naopak není funkční.,B
+425,4.1.3.2.2,Při přepnutí potkávacích světlometů na dálkové světlomety nebo naopak vzniká časová prodleva (nedostatečné osvětlení vozovky).,B
+426,4.1.3.3.1,Povinná kontrolka činnosti / zapojení obvodu dálkového světlometu chybí.,B
+427,4.1.3.3.2,"Povinná kontrolka činnosti / poruchy / zapojení obvodu potkávacího světlometu, je-li vyžadována, chybí.",B
+428,4.1.4.1.1,Vozidlo není vybaveno předepsaným potkávacím nebo dálkovým světlometem (popřípadě párem předepsaných světlometů).,B
+429,4.1.4.1.2,Skutečný stav zapojených světlometů neodpovídá předepsanému / povolenému počtu typu světlometů (potkávací / dálkový světlomet).,B
+430,4.1.4.1.3,Umístění světlometů na vozidle nesplňuje požadavky na jejich uspořádání nebo orientaci nebo požadavky na jejich umístění vzhledem k šířce nebo výšce vozidla nebo podmínky jejich geometrické viditelnosti.,B
+431,4.1.4.1.4,Umístění nebo způsob montáže světlometů na vozidle nebo jejich úprava (např. ochranné mřížky) nesplňuje požadavky na vnější výčnělky na vozidle.,B
+432,4.1.4.1.5,"Světlomet vyzařuje jinou barvu světla než bílou (s výjimkou traktorů a vozidel schválených do provozu před 1. 7. 1972, u kterých se připouští i selektivní žlutá barva).",B
+433,4.1.4.1.6,Sada (pár) světlometů zjevně nesplňuje předepsané fotometrické vlastnosti (např. intenzita vyzařovaného světla).,B
+434,4.1.4.1.7,Index intenzity vyzařovaného světla u současně rozsvícených dálkových světlometů překračuje povolený limit.,B
+435,4.1.4.1.8,"Částice na čočce nebo zdroj světla, kvůli kterým se zjevně snižuje jasnost světla nebo se mění barva vyzařovaného světla",B
+436,4.1.4.2.1,"Světelný signál (houkačka), je-li jim vozidlo vybaveno, nefunguje v souladu s požadavky.",A
+437,4.1.4.2.2,Počet současně rozsvícených dálkových světlometů překračuje dva páry (4 ks).,B
+438,4.1.4.2.3,"Elektrické zapojení potkávacích nebo dálkových světlometů nebo jejich uvedení v činnost, není v souladu s požadavky.",B
+439,4.1.4.3.1,"Úpravy na vozidle, které ovlivňují vnější povrch rozptylového skla, avšak nezasahují do svítící plochy nebo plochy výstupu světla světlometu.",A
+440,4.1.4.3.2,Nepovolená úprava světlometu.,B
+441,4.1.4.3.3,Použití zjevně nehomologovaného / neschváleného zdroje světla nebo nepovolená úprava zdroje světla.,B
+442,4.1.4.4,"Ve světlometu použit zjevně jiný zdroj světla, který je neslučitelný s udělenou homologací / schválení světlometu.",B
+443,4.1.4.5.1,"U vozidla, schváleného v ČR po 1. 1. 2002, pro potkávací nebo dálkové světlo použit nehomologovaný světlomet (např. DOT) a na jeho použití není udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+444,4.1.4.5.2,"Použit potkávací světlomet, který není určen pro pravostranný provoz.",B
+445,4.1.4.5.3,"Pro potkávací nebo dálkové světlo použito světelné zařízení, určené pro jinou funkci osvětlení (např. mlhový světlomet).",B
+446,4.1.5.1.1,"U vozidla, je-li vyžadována, chybí automatická korekce sklonu světlometů.",B
+447,4.1.5.1.2,"Automatická korekce sklonu světlometů, není zjevně plně funkční.",B
+448,4.1.5.1.3,Systém vykazuje závadu přes elektronické rozhraní vozidla.,B
+449,4.1.5.2.1,"Ručně ovládaná korekce sklonu světlometů, je-li vyžadována, chybí.",B
+450,4.1.5.2.2,Korekce sklonu světlometů není plně funkční.,B
+451,4.1.6.1.1,Zařízení pro čištění světlometu není funkční.,A
+452,4.1.6.1.2,"U vozidla, je-li vyžadováno, chybí nebo není funkční zařízení pro čištění světlometů.",B
+453,4.2.1.1.1,Nesvítí některá nepovinná (volitelná) obrysová nebo denní svítilna.,A
+454,4.2.1.1.2,Nesvítí některá obrysová nebo denní svítilna.,B
+455,4.2.1.1.3,"Zdroj světla zjevně vadný (např. zčernalá žárovka) nebo poškozený tak, že zjevně ovlivňuje fotometrické vlastnosti obrysové nebo denní svítilny (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.",B
+456,4.2.1.1.4,Použití nehomologovaného / neschváleného zdroje světla nebo nepovolená změna zdroje světla.,B
+457,4.2.1.1.5,Na vozidle nesvítí žádná zadní obrysová svítilna nebo na straně do vozovky nesvítí žádná zadní obrysová svítilna včetně doplňkové obrysové svítilny.,C
+458,4.2.1.2.2,"Vnější krycí sklo, těleso nebo optický systém obrysové nebo denní svítilny poškozený tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat její funkci nebo fotometrické vlastnosti (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.",B
+459,4.2.1.3,Chybné uchycení nebo způsob montáže obrysové nebo denní svítilny negativně ovlivňuje její funkci nebo fotometrické vlastnosti (např. viditelnost) nebo se může za jízdy uvolnit.,B
+460,4.2.2.1,Obrysové nebo denní svítilny nelze uvést v činnost.,B
+461,4.2.2.2,"Kontrolka činnosti / zapojení obvodu obrysových světel, je-li vyžadována, chybí.",B
+462,4.2.3.1.1,Vozidlo není vybaveno některými předepsanými obrysovými nebo denními svítilnami.,B
+463,4.2.3.1.2,Skutečný stav zapojených obrysových nebo denních svítilen neodpovídá předepsanému / povolenému počtu (chybí / překračuje).,B
+464,4.2.3.1.3,Umístění obrysových nebo denních svítilen na vozidle nesplňuje požadavky na jejich uspořádání nebo orientaci nebo požadavky na jejich úhlovému naklopení či orientace montáže (TOP) nebo podmínky jejich geometrické viditelnosti.,B
+465,4.2.3.1.4,"Svítilna je umístěna na pohyblivých částech, nebo její umístění na pohyblivých částech není v souladu s požadavky.",A
+466,4.2.3.1.5,"Způsob dodatečné montáže obrysových nebo denních svítilen, jejich umístění nebo úprava, porušuje požadavky na vnější výčnělky na vozidle.",B
+467,4.2.3.1.6,"Obrysová nebo denní svítilna, není-li stanoveno jinak, vyzařuje směrem dopředu světlo jiné barvy než bílé, směrem dozadu světlo jiné barvy než červené a směrem do stran světlo jiné barvy než oranžové, nebo sada obrysových svítilen (společný pár) zjevně nesplňuje stejné fotometrické vlastnosti.",B
+468,4.2.3.1.7,Intenzita vyzařovaného světla obrysové nebo denní svítilny zjevně neodpovídá požadavkům (je nízká / vysoká).,B
+469,4.2.3.2,"Elektrické zapojení obrysových nebo denních svítilen nebo jejich uvedení v činnost, není v souladu s požadavky.",B
+470,4.2.3.3,Nepovolená úprava obrysové nebo denní svítilny nebo zdroje světla.,B
+471,4.2.3.4.1,"U vozidla, schváleného v ČR po 1. 1. 2002, pro obrysovou svítilnu použito nehomologované světelné zařízení (např. DOT) a na jeho použití není udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+472,4.2.3.4.2,"Pro obrysovou nebo denní svítilnu použito světelné zařízení, určené pro jinou funkci osvětlení.",B
+473,4.3.1.1.1,Nesvítí některá nepovinná (volitelná) brzdová svítilna.,A
+474,4.3.1.1.2,Nesvítí některá povinná brzdová svítilna.,B
+475,4.3.1.1.3,Na vozidle nesvítí žádná brzdová svítilna.,C
+476,4.3.1.1.4,"Zdroj světla zjevně vadný (např. zčernalá žárovka) nebo poškozený tak, že zjevně ovlivňuje fotometrické vlastnosti brzdové svítilny (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.",B
+477,4.3.1.1.5,Použití nehomologovaného / neschváleného zdroje světla nebo nepovolená změna zdroje světla.,B
+478,4.3.1.1.7,U brzdové svítilny v případě LED modulu více jak 1/3 zdrojů světla je vadných.,B
+479,4.3.1.2.2,"Vnější krycí sklo, těleso nebo optický systém brzdové svítilny poškozený tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat její funkci nebo fotometrické vlastnosti (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.",B
+480,4.3.1.3,Chybné uchycení nebo způsob montáže brzdové svítilny negativně ovlivňuje její funkci nebo fotometrické vlastnosti (např. viditelnost) nebo se může za jízdy uvolnit.,B
+481,4.3.2.1.1,Zpomalená funkce spínače brzdových světel.,B
+482,4.3.2.1.2,Systém vykazuje závadu přes elektronické rozhraní vozidla,B
+483,4.3.2.1.3,Po aktivaci brzdy se na vozidle neuvedou v činnost brzdová světla.,C
+484,4.3.2.2.1,Narušená funkce ovládacího zařízení - brzdová světla se nerozsvítí bezprostředně po aktivaci brzdy.,B
+485,4.3.2.2.2,Světla nouzového brždění jsou nefunkční nebo nefungují správně.,B
+486,4.3.3.1.1,Vozidlo není vybaveno brzdovými svítilnami předepsané kategorie.,B
+487,4.3.3.1.2,Skutečný stav zapojených brzdových svítilen neodpovídá předepsanému / povolenému počtu (chybí / překračuje).,B
+488,4.3.3.1.3,Umístění brzdových svítilen na vozidle nesplňuje požadavky na jejich uspořádání nebo orientaci nebo požadavky na jejich umístění vzhledem k šířce nebo výšce vozidla nebo jejich úhlovému naklopení či orientaci montáže (TOP) nebo podmínky jejich geometrické viditelnosti.,B
+489,4.3.3.1.4,"Svítilny jsou umístěny na pohyblivých částech, nebo jejich umístění na pohyblivých částech není v souladu s požadavky.",A
+490,4.3.3.1.5,Brzdová svítilna vyzařuje jinou barvu než červenou nebo sada brzdových svítilen (společný pár) zjevně nesplňuje stejné fotometrické vlastnosti.,B
+491,4.3.3.1.6,Intenzita vyzařovaného světla brzdové svítilny zjevně neodpovídá požadavkům (je nízká).,B
+492,4.3.3.1.7,"U brzdové svítilny kategorie S3 nebo S4, namontované uvnitř vozidla, dochází k obtěžování řidiče vyzařovaným světlem přes zařízení pro nepřímý výhled a / nebo jiné plochy vozidla (např. zadní okno).",B
+493,4.3.3.2,"Elektrické zapojení brzdových svítilen nebo jejich uvedení v činnost, není v souladu s požadavky.",B
+494,4.3.3.3,Nepovolená úprava brzdové svítilny nebo zdroje světla.,B
+495,4.3.3.4.1,"U vozidla, schváleného v ČR po 1. 1. 2002 pro brzdové světlo použito nehomologované světelné zařízení (např. DOT) a na jeho použití není udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+496,4.3.3.4.2,"Pro brzdové světlo použito světelné zařízení, určené pro jinou funkci osvětlení (např. zadní mlhová svítilna).",B
+497,4.4.1.1.1,Nesvítí některá nepovinná (volitelná) směrová svítilna.,A
+498,4.4.1.1.2,Nesvítí některá směrová svítilna.,B
+499,4.4.1.1.3,Nesvítí zadní směrová svítilna na straně přivrácené do středu vozovky.,C
+500,4.4.1.1.4,"Zdroj světla zjevně vadný (např. sloupnutá barva) nebo poškozený tak, že ovlivňuje zjevně fotometrické vlastnosti směrové svítilny (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla (bílá), v případě LED jako jediného zdroje světla funguje méně než ze 2/3.",B
+501,4.4.1.1.5,Použití nehomologovaného / neschváleného zdroje světla nebo nepovolená změna zdroje světla.,B
+502,4.4.1.1.6,"V případě vícenásobného zdroje světla (skupinová svítilna) některý zdroj světla směrové svítilny vadný, v případě LED modulu je až 1/3 zdrojů světla vadných.",A
+503,,,
+504,4.4.1.2.2,"Vnější krycí sklo, těleso nebo optický systém směrové svítilny poškozený tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat její funkci nebo fotometrické vlastnosti (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.",B
+505,4.4.1.3,Chybné uchycení nebo způsob montáže směrové svítilny negativně ovlivňuje její funkci nebo fotometrické vlastnosti (např. viditelnost) nebo se může za jízdy uvolnit.,B
+506,4.4.2.1.1,Spínač výstražné signalizace není spolehlivý.,A
+507,4.4.2.1.2,Výstražnou signalizaci nelze uvést v činnost.,B
+508,4.4.2.1.4,Směrová světla nelze uvést v činnost nebo spínač směrových světel není spolehlivý.,C
+509,4.4.2.2,Povinná kontrolka činnosti / zapojení obvodu (optická nebo zvuková) směrových světel nebo výstražné signalizace chybí.,B
+510,4.4.3.1.1,Vozidlo není vybaveno předepsanými směrovými svítilnami.,B
+511,4.4.3.1.2,Skutečný stav zapojených směrových svítilen neodpovídá předepsanému / povolenému počtu (chybí / překračuje).,B
+512,4.4.3.1.3,"Umístění směrových svítilen na vozidle nesplňuje požadavky na jejich uspořádání nebo orientaci nebo požadavky na jejich umístění vzhledem k šířce, výšce nebo délce vozidla nebo jejich úhlovému naklopení či orientaci montáže (TOP) nebo vzhledem k vzdálenosti od potkávacího světlometu nebo podmínky jejich geometrické viditelnosti.",B
+513,4.4.3.1.4,"Svítilny jsou umístěny na pohyblivých částech, nebo jejich umístění na pohyblivých částech není v souladu s požadavky.",A
+514,4.4.3.1.5,"Způsob dodatečné montáže směrových svítilen, jejich umístění nebo úprava, porušuje požadavky na vnější výčnělky na vozidle.",B
+515,4.4.3.1.6,"Směrová svítilna vyzařuje jinou barvu než oranžovou (s výjimkou vozidel schválených do provozu před 1. 7. 1972, u kterých se připouští barva bílá u předních a barva červená u zadních směrových svítilen) nebo sada směrových svítilen (společný pár) zjevně nesplňuje stejné fotometrické vlastnosti.",B
+516,4.4.3.1.7,Intenzita vyzařovaného světla směrové svítilny zjevně neodpovídá požadavkům (je nízká).,B
+517,4.4.3.2,Nepovolená úprava směrové svítilny nebo zdroje světla.,B
+518,4.4.3.3.1,"U vozidla, schváleného v ČR po 1. 1. 2002, pro směrové světlo použito nehomologované světelné zařízení (např. DOT) a na jeho použití není udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+519,4.4.3.3.2,"Pro směrové světlo použito světelné zařízení, určené pro jinou funkci osvětlení (např. obrysová svítilna).",B
+520,4.4.4.1.1,Frekvence přerušování světla u výstražných světel není zjevně v souladu s požadavky (90 ±30 krát/min).,A
+521,4.4.4.1.2,Frekvence přerušování světla u směrových světel není zjevně v souladu s požadavky (90 ±30 krát/min).,B
+522,4.5.1.1.1,Nesvítí některý přední mlhový světlomet nebo zadní mlhová svítilna na straně přivrácené ke kraji vozovky.,A
+523,4.5.1.1.2,Nesvítí zadní mlhová svítilna na straně přivrácené do středu vozovky.,B
+524,4.5.1.1.3,"U předního mlhového světlometu zdroj světla vadný, předepsaná kresba nemá osvětlenou plochu jasně ohraničenou nebo celistvou (tmavé plochy).",A
+525,4.5.1.1.4,"Zdroj světla předního mlhového světlometu zjevně chybně upevněn nebo je vadný, takže nesplňuje fotometrické vlastnosti (nevytváří požadovanou kresbu) nebo způsobuje oslnění, v případě LED jako jediného zdroje světla funguje méně než ze 2/3.",B
+526,4.5.1.1.5,"Zdroj světla v zadní mlhové svítilně vadný nebo poškozený tak, že zjevně ovlivňuje její fotometrické vlastnosti (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla, v případě LED jako jediného zdroje světla funguje méně než ze 2/3.",B
+527,4.5.1.1.6,Použití nehomologovaného / neschváleného zdroje světla nebo,B
+528,4.5.1.1.7,"Vadný zdroj světla (v případě vícenásobného zdroje světla, v případě LED nefunguje až z 1/3).",A
+529,4.5.1.2.2,"U předního mlhového světlometu vnější krycí sklo těleso nebo optický systém světlometu poškozený tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat jeho funkci nebo fotometrické vlastnosti (např. intenzita vyzařovaného světla, kresba) nebo možnost jeho seřízení.",B
+530,4.5.1.2.4,"U zadní mlhové svítilny vnější krycí sklo, těleso nebo optický systém svítilny poškozený tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat její funkci nebo fotometrické vlastnosti (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.",B
+531,4.5.1.3.1,Některý úchyt mlhového světlometu uvolněný nebo prasklý nebo chybí a tento stav má vliv na seřízení světlometu (např. způsobuje blikání světlometu za jízdy) nebo se světlomet může za jízdy uvolnit nebo způsob uchycení světlometu neodpovídá požadavkům.,B
+532,4.5.1.3.2,"Uvolněné uchycení zadní mlhové svítilny, které však neovlivňuje její funkci nebo fotometrické vlastnosti (např. viditelnost) nebo spolehlivost její montáže.",A
+533,4.5.1.3.3,Chybné uchycení nebo způsob montáže zadní mlhové svítilny negativně ovlivňuje její funkci nebo fotometrické vlastnosti (např. viditelnost) nebo může dojít k jejímu upadnutí.,B
+534,4.5.2.1.2,Výškové nastavení sklonu rozhraní předního mlhového světlometu způsobuje oslnění.,B
+535,4.5.3.1.1,Přední mlhové světlomety nelze uvést v činnost.,A
+536,4.5.3.1.2,Přední mlhové světlomety nelze vypnout.,B
+537,4.5.3.1.3,Zadní mlhovou svítilnu nelze uvést v činnost nebo vypnout.,B
+538,4.5.3.2,Povinná kontrolka činnosti / zapojení obvodu předních mlhových světlometů nebo zadní mlhové svítilny chybí.,B
+539,4.5.4.1.1,Vozidlo není vybaveno / dovybaveno předepsanou zadní mlhovou svítilnou na straně přivrácené do středu vozovky.,B
+540,4.5.4.1.2,Skutečný stav zapojených předních mlhových světlometů neodpovídá povolenému počtu (chybí / překračuje).,B
+541,4.5.4.1.3,Skutečný stav zapojených zadních mlhových svítilen neodpovídá povolenému počtu (překračuje).,B
+542,4.5.4.1.4,"Umístění předních mlhových světlometů na vozidle nesplňuje požadavky na jejich uspořádání nebo orientaci nebo požadavky na jejich umístění vzhledem k šířce nebo výšce vozidla, orientace montáže (TOP) nebo podmínky jejich geometrické viditelnosti.",B
+543,4.5.4.1.5,Umístění nebo způsob montáže předních mlhových světlometů na vozidle nebo jejich úprava (např. ochranné mřížky) nesplňuje požadavky na vnější výčnělky na vozidle.,B
+544,4.5.4.1.6,"Umístění zadní mlhové svítilny (popř. párem svítilen) na vozidle nesplňuje požadavky na její uspořádání nebo orientaci nebo požadavky na její umístění vzhledem k výšce vozidla nebo vzhledem k vzdálenosti od brzdové svítilny, nebo jejímu úhlovému naklopení či orientaci montáže (TOP) nebo podmínky její geometrické viditelnosti.",B
+545,4.5.4.1.7,Přední mlhový světlomet vyzařuje jinou barvu světla než bílou nebo žlutou selektivní.,B
+546,4.5.4.1.8,Zadní mlhová svítilna vyzařuje jinou barvu než červenou.,B
+547,4.5.4.1.9,Sada (pár) předních mlhových světlometů zjevně nesplňuje stejné fotometrické vlastnosti (např. intenzita vyzařovaného světla).,A
+548,4.5.4.1.10,Intenzita vyzařovaného světla zadní mlhovou svítilnou zjevně neodpovídá požadavkům (je nízká).,B
+549,4.5.4.2.1,Elektrické zapojení předních mlhových světlometů nebo jejich uvedení v činnost není v souladu s požadavky.,B
+550,4.5.4.2.2,Elektrické zapojení zadní mlhové svítilny nebo její uvedení v činnost není v souladu s požadavky.,B
+551,4.5.4.3.1,Nepovolená úprava světlometu se světlem do mlhy nebo jeho zdroje světla.,B
+552,4.5.4.3.2,Nepovolená úprava zadní mlhové svítilny nebo jejího zdroje světla.,B
+553,4.5.4.4.1,"U vozidla, schváleného v ČR po 1.1. 2002 pro zadní mlhové světlo použito nehomologované světelné zařízení (např. DOT) a na jeho použití není udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+554,4.5.4.4.2,"U vozidla, schváleného v ČR po 1.1. 2002 pro přední mlhové světlo použito nehomologované světelné zařízení (např. DOT) a na jeho použití není udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+555,4.5.4.4.3,"Pro zadní mlhové světlo použito světelné zařízení, určené pro jinou funkci osvětlení (např. brzdová svítilna).",B
+556,4.5.4.4.4,"Pro přední mlhové světlo použito homologované světelné zařízení, určené pro jinou funkci osvětlení (např. potkávací nebo dálkový světlomet).",B
+557,4.6.1.1.1,Nesvítí některý zpětný světlomet.,A
+558,4.6.1.1.2,Nesvítí žádný zpětný světlomet.,B
+559,4.6.1.1.3,"Zdroj světla ve zpětném světlometu vadný nebo poškozený tak, že ovlivňuje jeho fotometrické vlastnosti (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.",B
+560,4.6.1.1.4,Použití zjevně nehomologovaného / neschváleného zdroje světla nebo nepovolená úprava zdroje světla.,B
+561,4.6.1.2.2,"Vnější krycí sklo, těleso nebo optický systém zpětného světlometu poškozený tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat jeho funkci nebo fotometrické vlastnosti (např. intenzita vyzařovaného světla).",B
+562,4.6.1.3.1,"Uvolněné uchycení zpětného světlometu, které však neovlivňuje jeho funkci nebo fotometrické vlastnosti (např. viditelnost) nebo spolehlivost jeho montáže.",A
+563,4.6.1.3.2,Chybné uchycení nebo způsob montáže zpětného světlometu negativně ovlivňuje jeho funkci nebo fotometrické vlastnosti (např. viditelnost) nebo může dojít k jeho upadnutí.,B
+564,4.6.2.1.1,Vozidlo není vybaveno předepsaným zpětným světlometem (popřípadě předepsaným párem světlometů).,B
+565,4.6.2.1.2,Skutečný stav zapojených zpětných světlometů neodpovídá předepsanému / povolenému počtu (chybí / překračuje).,B
+566,4.6.2.1.3,"Umístění zpětných světlometů na vozidle nesplňuje požadavky na jejich uspořádání nebo orientaci nebo požadavky na jejich umístění vzhledem k výšce vozidla, úhlovému naklopení či orientaci montáže (TOP) nebo podmínky jejich geometrické viditelnosti.",B
+567,4.6.2.1.4,Zpětný světlomet vyzařuje jinou barvu světla než bílou.,B
+568,4.6.2.1.5,Intenzita vyzařovaného světla zpětným světlometem zjevně neodpovídá požadavkům (je nízká).,A
+569,4.6.2.1.6,"Sklon (naklopení) nepovinného (volitelného) zpětného světlometu není v souladu s požadavky, světlomet zjevně způsobuje oslnění.",B
+570,4.6.2.2.1,Nepovinné (volitelné) zpětné světlomety lze uvést v činnost bez současně rozsvícených obrysových svítilen.,A
+571,4.6.2.2.2,Zapnutí nebo vypnutí zpětných světlometů není v souladu s požadavky (např. zpětné světlomety lze uvést v činnost samostatným vypínačem).,B
+572,4.6.2.3.1,"Zpětný světlomet, není-li stanoveno jinak, není homologovaný (např. DOT) a na jeho použití není udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+573,4.6.2.3.2,"Pro nepovinný (volitelný) zpětný světlomet použito světelné zařízení, určené pro jinou funkci osvětlení (např. dálkový, pracovní nebo mlhový světlomet).",A
+574,4.6.2.3.3,"Pro povinný zpětný světlomet použito světelné zařízení, určené pro jinou funkci osvětlení (např. dálkový, pracovní nebo mlhový světlomet).",B
+575,4.6.2.4.1,Nepovolená úprava zpětného světlometu nebo jeho zdroje světla.,B
+576,4.6.3.1.1,Zpětné světlomety zůstávají trvale rozsvícené při jízdě vpřed.,B
+577,4.6.3.1.2,"Zpětný světlomet se může rozsvítit, přestože není zařazen zpětný chod.",B
+578,4.7.1.1.1,"Vozidlo, je-li vyžadováno, není vybaveno předepsaným zařízením pro osvětlení zadní tabulky registrační značky.",B
+579,4.7.1.1.2,"Zařízení k osvětlení zadní tabulky registrační značky poškozené, ale stav poškození zjevně neovlivňuje jeho funkci nebo fotometrické vlastnosti nebo nezpůsobuje vyzařování bílého světla směrem vzad.",A
+580,4.7.1.1.3,"Zařízení k osvětlení zadní tabulky registrační značky poškozené tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat jeho funkci nebo fotometrické vlastnosti (např. intenzita vyzařovaného světla) nebo zařízení způsobuje vyzařování bílého světla směrem vzad.",B
+581,4.7.1.2.1,U zařízení k osvětlení zadní tabulky registrační značky nesvítí některý světelný zdroj.,A
+582,4.7.1.2.2,U zařízení k osvětlení zadní tabulky registrační značky nesvítí žádný světelný zdroj.,B
+583,4.7.1.2.3,Použití nehomologovaného / neschváleného zdroje světla nebo nepovolená změna nebo úprava zdroje světla.,B
+584,4.7.1.2.4,Zdroj osvětlení zadní tabulky registrační značky vyzařuje přímé nebo bílé světlo směrem dozadu,B
+585,4.7.1.3.1,"Uvolněné uchycení zařízení k osvětlení zadní tabulky registrační značky, které však neovlivňuje účinnost osvětlení tabulky registrační značky ani spolehlivost montáže zařízení.",A
+586,4.7.1.3.2,Chybné uchycení zařízení k osvětlení zadní tabulky registrační značky negativně ovlivňuje účinnost osvětlení tabulky registrační značky nebo může způsobit vyzařování světla směrem vzad nebo může způsobit jeho upadnutí.,B
+587,4.7.2.1.1,Zařízení neosvětluje nebo neosvětluje dostatečně zadní tabulku registrační značky.,B
+588,4.7.2.1.2,Zařízení k osvětlení zadní tabulky registrační značky vyzařuje jinou barvu světla než bílou.,B
+589,4.7.2.1.3,Elektrické zapojení osvětlení zadní tabulky registrační značky neodpovídá požadavkům.,A
+590,4.7.2.2,"Pro osvětlení zadní tabulky registrační značky, použito nehomologované / neschválené světelné zařízení.",A
+591,4.8.1.1.1,"Odrazka poškozená, ale stav poškození zjevně neovlivňuje její fotometrické vlastnosti (např. viditelnost).",A
+592,4.8.1.1.2,"Deska zadního značení poškozená nebo částečně barevně změněná (např. od slunce), ale stav poškození zjevně neovlivňuje její fotometrické vlastnosti (viditelnost).",A
+593,4.8.1.1.3,"Některá část nápadného značení (pruhu) poškozená nebo chybí, ale tento stav zjevně neovlivňuje celkově funkci nápadného značení (vyznačení obrysu vozidla) nebo jeho fotometrické vlastnosti (viditelnost).",A
+594,4.8.1.1.4,"Odrazka poškozená tak, že stav poškození zjevně negativně ovlivňuje její fotometrické vlastnosti (viditelnost).",B
+595,4.8.1.1.5,"Deska zadního značení poškozená, deformovaná nebo barevně změněná tak (např. od slunce), že poškození zjevně negativně ovlivňuje její fotometrické vlastnosti (např. viditelnost) nebo může způsobit zranění (ostré hrany).",B
+596,4.8.1.1.6,Chybějící části nápadného značení (pruhu) zjevně ovlivňují funkci nápadného značení (nedostatečné vyznačení obrysu vozidla) nebo poškození nápadného značení zjevně ovlivňuje jeho fotometrické vlastnosti (viditelnost).,B
+597,4.8.1.2.1,"Uvolněné uchycení odrazky, které však zjevně neovlivňuje její fotometrické vlastnosti (např. viditelnost) ani spolehlivost její montáže.",A
+598,4.8.1.2.2,"Uvolněné uchycení desky zadního značení, které však zjevně neovlivňuje její fotometrické vlastnosti (např. viditelnost) ani spolehlivost její montáže.",A
+599,4.8.1.2.3,Nespolehlivé uchycení odrazky negativně ovlivňuje její fotometrické vlastnosti (viditelnost) nebo může způsobit její upadnutí.,B
+600,4.8.1.2.4,"Uvolněné nebo nevhodné uchycení desky zadního značení na vozidle negativně ovlivňuje její fotometrické vlastnosti nebo je uchycení nespolehlivé a může způsobit její upadnutí nebo zranění osob (vnější výčnělky vozidla) nebo držák desky pro pomalá vozidla, je-li vyžadován, chybí nebo není spolehlivý.",B
+601,4.8.1.2.5,Uvolněné uchycení některého pruhu nápadného značení může způsobit jeho upadnutí.,B
+602,4.8.2.1.1,Vozidlo není vybaveno některými předepsanými odrazkami stanovené třídy,B
+603,4.8.2.1.2,"Vozidlo, je-li vyžadováno, není vybaveno předepsanými deskami zadního značení.",B
+604,4.8.2.1.3,"Vozidlo, je-li vyžadováno, není vybaveno předepsaným nápadným značením.",B
+605,4.8.2.1.4,"Počet odrazek, neodpovídá předepsanému / povolenému počtu (chybí / překračuje).",B
+606,4.8.2.1.5,"Odrazky, není-li stanoveno jinak, vyzařují směrem dopředu odražené světlo jiné barvy než bílé, směrem dozadu odražené světlo jiné barvy než červené a směrem do stran odražené světlo jiné barvy než oranžové.",B
+607,4.8.2.1.6,"Nápadné značení třídy C, není-li stanoveno jinak, vyzařuje směrem dozadu odražené světlo jiné barvy než červené nebo žluté a směrem do stran odražené světlo jiné barvy než žluté nebo bílé.",B
+608,4.8.2.1.7,"Umístění odrazek na vozidle, nesplňuje požadavky na jejich uspořádání, orientaci, třídu odrazky nebo umístění vzhledem k šířce, výšce nebo délce vozidla, úhlovému naklopení všemi směry (±3°) či orientaci montáže (TOP) nebo podmínky jejich geometrické viditelnosti.",B
+609,4.8.2.1.8,"Umístění desek zadního značení na vozidle, nesplňuje požadavky na jejich uspořádání, orientaci nebo umístění vzhledem k šířce, výšce vozidla, úhlovému naklopení všemi směry (±5°) či orientaci montáže (TOP) nebo podmínky jejich geometrické viditelnosti.",B
+610,4.8.2.1.9,"Umístění nápadného značení na vozidle, nesplňuje požadavky montáže vzhledem k šířce, výšce nebo délce vozidla, kategorie vozidla (kategorie Ml a Ol nesmí být vybaveno nápadným značením) nebo vzhledem k viditelnosti vnějšího obrysu vozidla.",B
+611,4.8.2.1.10,Zakrytí desek zadního značení pro pomalá vozidla překračuje 10 % celkové plochy desky.,B
+612,4.8.2.2.1,Použita nehomologovaná / neschválená odrazka.,B
+613,4.8.2.2.2,Použity nehomologované desky zadního značení.,B
+614,4.8.2.2.3,Použity nehomologované pruhy pro nápadné značení.,B
+615,4.9.1.1.1,Nepovinná kontrolka (optická popř. zvuková) příslušného světelného zařízení se neaktivuje v souladu s požadavky.,A
+616,4.9.1.1.2,Povinná kontrolka (optická popř. zvuková) příslušného světelného zařízení chybí nebo se neaktivuje v souladu s požadavky.,B
+617,4.9.2.1.1,"Umístění nebo označení, nebo barva kontrolky není v souladu s požadavky.",A
+618,4.9.2.1.2,"Jas optické kontrolky neodpovídá požadavkům, kontrolka není dostatečně viditelná za denního světla nebo je-li kontrolka výlučně akustická, není dostatečně zřetelně slyšet při spuštěném motoru vozidla.",A
+619,4.10.1.1,"Zásuvka nebo zástrčka poškozená, ale stav poškození zjevně neovlivňuje spolehlivost elektrického propojení vozidel.",A
+620,4.10.1.2,"Zásuvka nebo zástrčka poškozená tak (mechanicky, oxidace apod.), že poškození zjevně ovlivňuje funkci některého světelného zařízení přípojného vozidla nebo negativně ovlivňuje spolehlivost elektrického propojení vozidel.",B
+621,4.10.1.3,Vozidlo není vybaveno předepsanou zástrčkou nebo zásuvkou nebo zástrčka / zásuvka není schváleného provedení.,B
+622,4.10.2.1,"Uvolněné uchycení zásuvky k vozidlu, které však neovlivňuje spolehlivost elektrického propojení vozidel.",A
+623,4.10.2.2,Chybné uchycení nebo způsob montáže zásuvky na vozidle nebo chybná montáž zástrčky k propojovacímu kabelu ovlivňuje funkci některého světelného zařízení přípojného vozidla nebo negativně ovlivňuje spolehlivost elektrického propojení vozidel.,B
+624,4.10.3.1,"Izolace propojovacího kabelu poškozená, ale stav poškození zjevně neovlivňuje spolehlivost elektrického propojení vozidel.",A
+625,4.10.3.2,"Izolace propojovacího kabelu poškozená (např. prodřená) tak, že poškození zjevně ovlivňuje funkci některého světelného zařízení přípojného vozidla nebo může negativně ovlivňovat spolehlivost elektrického propojení vozidel.",B
+626,4.10.3.3,Nebezpečná úprava propojovacího elektrického kabelu.,B
+627,4.10.4.1,"Elektrické propojení tažného vozidla s přípojným vozidlem nefunguje správně, v důsledku čehož na přípojném vozidle nesvítí zadní mlhová svítilna nebo zpětný světlomet nebo směrová svítilna na straně přivrácené ke kraji vozovky nebo na některé straně vozidla nesvítí obrysové, doplňkové obrysové nebo boční obrysové svítilny nebo zařízení k osvětlení zadní tabulky registrační značky.",B
+628,4.10.4.2,"Elektrické propojení tažného vozidla s přípojným vozidlem nefunguje správně v důsledku chybného ukostření nebo chybného zapojení, na tažném a přípojném vozidle svítí rozdílné svítilny (funkce).",B
+629,4.10.4.3,"Elektrické propojení tažného vozidla s přípojným vozidlem chybí nebo nefunguje správně, v důsledku čehož na přípojném vozidle nesvítí brzdové svítilny nebo směrová svítilna na straně přivrácené do středu vozovky nebo na tažném a přípojném vozidle svítí směrové svítilny na opačných stranách vozidel a tato závada bezprostředně ohrožuje provoz vozidla na pozemních komunikacích.",C
+630,4.11.1.1,"Uchycení elektrických kabelů neodpovídá požadavkům, avšak nehrozí jejich poškození nebo přerušení.",A
+631,4.11.1.2,"U vozidel určených pro přepravu nebezpečných věcí (ADR), vedení nebo ochrana elektrických kabelů neodpovídá požadavkům.",B
+632,4.11.1.3,"Uchycení nebo způsob montáže (např. vedení) elektrických kabelů neodpovídá požadavkům, hrozí nebezpečí jejich poškození nebo přerušení.",B
+633,4.11.1.4,"Elektrické kabely nevhodně vedeny nebo nespolehlivě připevněny, hrozí bezprostřední nebezpečí vzniku elektrického zkratu nebo požáru v důsledku jejich poškození.",C
+634,4.11.2.1,"Svorkovnice částečně poškozená, neúplná (např. chybí kryt).",A
+635,4.11.2.2,Způsob spojení elektrických kabelů neodpovídá požadavkům (např. mimo svorkovnici vozidla) nebo hrozí nebezpečí přerušení spojení.,B
+636,4.11.2.3,"Způsob spojení elektrických kabelů neodpovídá požadavkům (např. mimo svorkovnici vozidla), hrozí bezprostřední nebezpečí vzniku elektrického zkratu nebo požáru.",C
+637,4.11.3.1,Izolace elektrického kabelu v mírně zhoršeném stavu.,A
+638,4.11.3.2,"Elektrický kabel nebo jeho izolace poškozená tak, že poškození zjevně ovlivňuje jeho spolehlivost nebo hrozí nebezpečí vzniku elektrického zkratu.",B
+639,4.11.3.3,"Izolace elektrického kabelu je natolik poškozená (obnažený vodič), že hrozí bezprostřední nebezpečí vzniku elektrického zkratu nebo požáru.",C
+640,4.11.3.4,"Zjevné poškození izolace kabelu, svědčící o jeho značném proudovém přetěžování (např. roztavená izolace kabelu u světlometu), hrozí bezprostřední nebezpečí vzniku požáru.",C
+641,4.11.4.1,"Nebezpečná úprava elektroinstalace, která má vliv na její spolehlivost nebo při které hrozí nebezpečí vzniku elektrického zkratu.",B
+642,4.11.4.2,"Nebezpečná úprava elektroinstalace, při které hrozí bezprostřední nebezpečí vzniku elektrického zkratu nebo požáru.",C
+643,4.12.1.1.1,Nesvítí některé (jiné) nepovinné (volitelné) světelné zařízení.,A
+644,4.12.1.1.2,Nesvítí některé (jiné) povinné světelné zařízení.,B
+645,4.12.1.1.3,U (jiného) světelného zařízení zdroj světla chybně upevněn nebo je vadný takže nesplňuje fotometrické vlastnosti (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.,B
+646,4.12.1.1.5,"Vnější krycí sklo, těleso nebo optický systém (jiného) světelného zařízení poškozený tak, že poškození zjevně ovlivňuje nebo bude ovlivňovat jeho funkci nebo jeho optické vlastnosti (např. intenzita vyzařovaného světla) nebo mění barvu vyzařovaného světla.",B
+647,4.12.1.1.6,Světelný systém (např. AFS / HIAS) není zjevně funkční a způsobuje zjevně oslnění.,B
+648,4.12.1.2.1,Nepovinné (jiné volitelné) světelné zařízení nelze uvést v činnost.,A
+649,4.12.1.2.2,Povinné (jiné) světelné zařízení nelze uvést v činnost.,B
+650,4.12.1.2.3,Elektrické zapojení nebo způsob uvedení v činnost (jiného) světelného zařízení (povinného / nepovinného) není v souladu s požadavky.,B
+651,4.12.1.2.4,Funkce nebo činnost světelného systému (např. AFS / HIAS) není v souladu s požadavky.,B
+652,4.12.1.3.1,"Uvolněné uchycení (jiného) světelného zařízení, které však neovlivňuje jeho funkci nebo fotometrické vlastnosti (např. viditelnost) nebo spolehlivost jeho montáže.",A
+653,4.12.1.3.2,Chybné uchycení nebo způsob montáže (jiného) světelného zařízení negativně ovlivňuje jeho funkci nebo fotometrické vlastnosti (např. viditelnost) nebo může dojít k jejímu upadnutí.,B
+654,4.12.2.1.1,Vozidlo není vybaveno (J,B
+655,4.12.2.1.2,Skutečný stav zapojených (jiných) světelných zařízení neodpovídá předepsanému / povolenému počtu (chybí / překračuje).,B
+656,4.12.2.1.3,"Světelné zařízení (jiné), s výjimkou pracovních světlometů, není homologované (např. DOT) a na jeho použití není udělena výjimka, zapsaná v technickém průkazu vozidla.",B
+657,4.12.2.1.4,"Pro (jiné) světelné zařízení použito světelné zařízení, určené pro jinou funkci osvětlení.",B
+658,4.12.2.1.5,"Umístění (jiných) světelných zařízení na vozidle nesplňuje požadavky na jejich uspořádání nebo orientaci nebo požadavky na jejich umístění vzhledem k šířce, výšce nebo délce vozidla nebo jejich úhlovému naklopení či orientace montáže (TOP) nebo podmínky jejich geometrické viditelnosti.",B
+659,4.12.2.1.6,"Světelná zařízení (jiná) jsou umístěna na pohyblivých částech, nebo jejich umístění na pohyblivých částech není v souladu s požadavky.",A
+660,4.12.2.1.7,"Umístění nebo způsob montáže (jiných) světelných zařízení nebo jejich úprava (např. ochranné mřížky), nesplňuje požadavky na vnější výčnělky na vozidle.",B
+661,4.12.2.1.8,"Dodatečně upravené nebo instalované (jiné) světelné zařízení, není-li stanoveno jinak, vyzařuje směrem dopředu nepřerušované světlo jiné barvy než bílé, směrem dozadu nepřerušované světlo jiné barvy než červené a směrem do stran nepřerušované světlo jiné barvy než oranžové, nebo sada (jiných) světelných zařízení (společný pár) zjevně nesplňuje stejné fotometrické vlastnosti.",B
+662,4.12.2.1.9,Intenzita vyzařovaného světla (jiných) světelných zařízení zjevně neodpovídá požadavkům (je nízká / vysoká).,B
+663,4.12.2.1.10,Na vozidle je v rozporu s jinými legislativními požadavky namontováno světelné zařízení nebo světelný systém (zvláštní výstražné světelné zařízení určené pro vozidla s právem přednosti v jízdě apod.),B
+664,4.12.2.2,"Povinná kontrolka činnosti / signalizace poruchy /zapojení obvodu (optická nebo zvuková) světelného zařízení (jiného) nebo světelného systému, je-li vyžadována, chybí.",B
+665,4.12.2.3.1,"Úpravy na vozidle, které ovlivňují vnější povrch rozptylového skla, avšak nezasahují do svítící plochy nebo plochy výstupu světla (jiného) světelného zařízení.",A
+666,4.12.2.3.2,Nepovolená úprava (jiného) světelného zařízení nebo jeho zdroje světla.,B
+667,4.12.2.3.3,Použití nehomologovaného / neschváleného zdroje světla nebo nepovolená změna zdroje světla u (jiného) světelného zařízení.,B
+668,4.13.1,Vozidlo nelze spolehlivě nastartovat.,B
+669,4.13.2.1,"Akumulátor nedostatečně utěsněn, avšak elektrolyt nevytéká.",A
+670,4.13.2.2,"Akumulátor je poškozen, z akumulátoru vytéká elektrolyt.",B
+671,4.13.3.1,"Odpojovač akumulátoru je nespolehlivý nebo je-li vyžadován, chybí nebo neodpovídá požadavkům.",B
+672,4.13.3.2,Přístup k odpojovači akumulátoru omezen.,B
+673,4.13.3.3,Nespolehlivé uchycení odpojovače akumulátoru k vozidlu nebo uvolněné spojení elektrických kabelů s odpojovačem akumulátoru.,B
+674,4.13.4,Zjevná vada pojistky nebo zjevná nebezpečná úprava/změna pojistky (popřípadě pojistek).,B
+675,4.13.5,Odvětrání akumulátoru mimo prostor pro řidiče a cestující je zjevně nedostatečné nebo chybí.,B
+676,4.13.6.1,Akumulátor není dostatečně uchycen nebo jeho upevnění není spolehlivé nebo jeho umístění neodpovídá požadavkům.,B
+677,4.13.6.2,Akumulátor není uchycen nebo jeho upevnění není spolehlivé nebo jeho umístění neodpovídá požadavkům a může způsobit zkrat nebo požár.,C
+678,4.13.7,"Spojení kabelů s akumulátorem je uvolněné nebo vývody kabelů jsou nadměrně zoxidovány nebo je-li vyžadováno, nejsou kabely chráněny proti zkratu.",B
+679,5.1.1.1,"Prasklá, deformovaná nebo nadměrně zkorodovaná náprava, vidlice.",C
+680,5.1.1.2.1,"Některý spojovací prvek upevnění nápravy uvolněný, prasklý nebo chybí nebo v otočném uložení nápravy (např. čep / pouzdro u vodících tyčí / výkyvná přední náprava traktoru) jsou větší vůle než provozní.",B
+681,5.1.1.2.2,"Upevnění nápravy je natolik nespolehlivé (spojovací prvky uvolněné, prasklé nebo chybí) nebo v otočném uložení nápravy (např. čep / pouzdro u vodících tyčí / výkyvná přední náprava traktoru) jsou natolik velké vůle, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+682,5.1.1.2.3,"Zvětšená vůle v otočném uložení vidlice motocyklu, která má vliv na jeho provozní vlastnosti.",B
+683,5.1.1.2.4,"V otočném uložení vidlice motocyklu jsou natolik velké vůle, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+684,5.1.1.2.5,"Zhoršená stabilita, narušená funkčnost, nedostatečný odstup od jiných částí vozidla nebo od země.",C
+685,5.1.1.3.1,"Nebezpečná úprava u nápravy nebo vidlice, která ovlivňuje provozní vlastnosti vozidla.",B
+686,5.1.1.3.2,"Nebezpečná úprava nápravy nebo vidlice, která bezprostředně ohrožuje bezpečnost jízdy vozidla.",C
+687,5.1.1.4.1,Ze zařízení pro zdvihání / spouštění nápravy nadměrně uniká médium.,B
+688,5.1.1.4.2,"Zařízení pro zdvihání / spouštění nápravy je popraskané, deformované nebo nadměrně zkorodované nebo v otočném uložení jsou větší vůle než provozní nebo zařízení pro zdvihání / spouštění nápravy není funkční.",B
+689,5.1.1.4.3,Některé spojovací prvky upevnění zařízení pro zdvihání / spouštění nápravy jsou uvolněné nebo chybí.,B
+690,5.1.1.5.1,Netěsnost nápravy.,A
+691,5.1.1.5.2,Z nápravy odkapává mazivo na vozovku.,B
+692,5.1.2.1,Čep nápravy s prasklinami.,C
+693,5.1.2.2.1,U rejdového čepu radiální vůle větší než provozní.,B
+694,5.1.2.2.2,"U rejdového čepu je natolik velká radiální vůle, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+695,5.1.2.3.1,U rejdového čepu axiální vůle větší než provozní.,B
+696,5.1.2.3.2,"U rejdového čepu je natolik velká axiální vůle, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+697,5.1.2.4.1,Některý spojovací prvek upevnění čepu nápravy je uvolněný nebo upevnění čepu neodpovídá požadavkům.,B
+698,5.1.2.4.2,"Upevnění čepu nápravy je natolik nespolehlivé (některý spojovací prvek nadměrně uvolněný, prasklý nebo chybí) že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+699,5.1.2.5,"Viditelné zajištění upevnění čepu nápravy (např. závlačkou), je-li vyžadováno, chybí nebo není spolehlivé.",B
+700,5.1.3.1.1,V uložení kola větší vůle než provozní.,B
+701,5.1.3.1.2,"V uložení kola je natolik velká vůle, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+702,5.1.3.2.1,"V uložení kola je nedostatečná provozní vůle, kolo je obtížně pohyblivé.",B
+703,5.1.3.2.2,"Ložisko kola zadřené, při otáčení kola drhne, (nebezpečí přehřátí).",C
+704,5.2.1.1.1,"Některý spojovací prvek upevnění kola chybí nebo je zjevně uvolněný nebo některý použitý spojovací prvek (typ matice) není vhodný pro upevnění použitého typu disku nebo je-li vozidlo vybaveno poklicemi kol, které brání v provedení předepsaných kontrolních úkonů.",B
+705,5.2.1.1.2,"Upevnění kola je natolik nespolehlivé (spojovací prvky prasklé, chybí nebo jsou poškozené tak, že je nelze zjevně dotáhnout), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+706,5.2.1.1.3,"Způsob montáže kola zjevně neodpovídá požadavkům (např. otočený disk, použití speciálních vymezovacích podložek, které nejsou zapsány v dokladech vozidla nebo použití nevhodných upevňovacích prvků nebo upravené spojovací prvky mohou způsobit zachycení chodce).",B
+707,5.2.1.1.4,Způsob montáže kola zjevně neodpovídá požadavkům (např. použit nevhodný typ disku k délce upevňovacích šroubů nebo použité nevhodné upevňovací prvky pro daný typ disku) a tato závada bezprostředně ohrožuje bezpečnost jízdy vozidla (nebezpečí upadnutí kola).,C
+708,5.2.1.2.1,Z náboje kola výrazně uniká mazivo.,B
+709,5.2.1.2.2,"Náboj kola jev natolik zhoršeném technickém stavu (např. nadměrně opotřebený nebo poškozený), že je bezprostředně ohrožena bezpečnost jízdy vozidla (nebezpečí upadnutí kola).",C
+710,5.2.1.3,"Ochranné zařízení kryjící matice kol, je-li vyžadováno, chybí, neodpovídá požadavkům nebo je poškozené tak, že neplní svoji funkci, nebo může způsobit zranění.",B
+711,5.2.2.1,Zjevná trhlina nebo vada sváru na disku nebo ráfku kola.,C
+712,5.2.2.2.1,Ramínko nebo pojistný kruh ráfku není náležitě připevněn.,B
+713,5.2.2.2.2,Ramínko nebo pojistný kruh ráfku není náležitě připevněn a bezprostředně hrozí jeho uvolnění.,C
+714,5.2.2.3.1,Některé otvory pro šrouby v disku kola jsou zjevně zvětšené a tato závada ovlivňuje spolehlivost upevnění kola vozidla.,B
+715,5.2.2.3.2,Házivost kola neodpovídá požadavkům tolerance nebo zdeformovaný nebo jinak zjevně poškozený disk či ráfek ovlivňuje provozní vlastnosti vozidla.,B
+716,5.2.2.3.3,"Disk nebo ráfek kola jev natolik zhoršeném technickém stavu (např. zdeformovaný nebo poškozený), zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+717,5.2.2.4,"Neschválený typ kola nebo velikost (rozměr ráfku) není v souladu s údaji, uvedenými v technickém průkazu vozidla nebo je-li vozidlo vybaveno poklicemi kol, které brání v provedení předepsaných kontrolních úkonů.",B
+718,5.2.2.5.1,"Některé dráty drátového kola jsou uvolněné, ale tato závada nemá vliv na jízdní vlastnosti vozidla.",A
+719,5.2.2.5.2,"Některé dráty drátového kola jsou nadměrně zkorodované nebo jsou uvolněné, prasklé nebo chybí a tato závada ovlivňuje jízdní vlastnosti vozidla.",B
+720,5.2.2.5.3,"Drátové kolo je v natolik zhoršeném technickém stavu (např. nadměrně zkorodované, uvolněné, prasklé nebo chybějící dráty nebo zdeformovaný ráfek nebo snížená tuhost drátového kola způsobuje jeho nadměrnou házivost), zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+721,5.2.2.6,"Nepovolené změny konstrukce kola (např. opravy ve smyslu svařování, přidávání materiálů v oblasti ráfku nebo disku kolo, na základě lomů, prasklin nebo zjevného opotřebení).",C
+722,5.2.2.7,"Vozidlo je vybaveno poklicemi kol, které zakrývají upevnění kol nebo jinak brání v provedení předepsaných kontrolních úkonů.",B
+723,5.2.3.1.1,"Typ pneumatiky, namontovaný na vozidle, nesouhlasí s údaji uvedenými v technickém průkazu vozidla.",B
+724,5.2.3.1.2,"Maximální zatížení jednotlivé pneumatiky je překročeno ve vztahu k maximálnímu technicky přípustnému zatížení nápravy, stanovené výrobcem (údaj na identifikačním štítku vozidla).",B
+725,5.2.3.1.3,"Kategorie rychlosti pneumatiky je nižší, než je uvedena v technickém průkazu vozidla (konstrukční rychlost) nebo chybí informace řidiče (např. štítek) o snížené nejvyšší přípustné rychlosti, je-li informace vyžadována.",B
+726,5.2.3.1.4,Nesprávný způsob montáže pneumatiky (např. směrová pneumatika nebo umístění ventilku ve dvojité montáži).,B
+727,5.2.3.1.5,"Pneumatika namontovaná na vozidle, není-li stanoveno jinak, není schválená / homologovaná nebo neodpovídá požadavkům homologace.",B
+728,5.2.3.2,"Pneumatiky na vozidle, nestanoví-li výrobce jinak, různé konstrukce.",B
+729,5.2.3.3.1,Pneumatiky na téže nápravě se vzájemně liší označením výrobce pneumatiky.,B
+730,5.2.3.3.2,Pneumatiky na téže nápravě se vzájemně liší vyznačenou šířkou nebo průměrem nebo profilovým číslem.,B
+731,5.2.3.3.3,Pneumatiky na téže nápravě se vzájemně liší druhem použití.,B
+732,5.2.3.3.4,Pneumatiky na téže nápravě se vzájemně liší označeným indexem únosnosti.,B
+733,5.2.3.3.5,Pneumatiky na téže nápravě se vzájemně liší označenou kategorií rychlosti.,B
+734,5.2.3.4,"Vzájemný rozdíl vnějších průměrů jednotlivých nezatížených pneumatik na téže nápravě nebo ve dvojité montáži se zjevně vzájemně liší o více než 1,5 %.",B
+735,5.2.3.5.1,"Závažné poškození nebo proříznutí pneumatiky (např. v oblasti patky, boku, ramene, běhounu, obnažení kordu kostry, oddělování protektoru, vytrhávání pryže od běhounu, vyboulení, vznik obvodových trhlin).",B
+736,5.2.3.5.2,"Poškození pneumatiky je natolik závažné, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+737,5.2.3.6.1,Hloubka vzorku pneumatiky v hlavních dezénových drážkách nebo zářezech není v některé části šířky běhounu v souladu s požadavky.,B
+738,5.2.3.6.2,Hloubka vzorku pneumatiky v hlavních dezénových drážkách nebo zářezech není v celé šířce běhounu některé části pneumatiky v souladu s požadavky.,C
+739,5.2.3.7.1,Pneumatika dře o jiné části vozidla (poškození pneumatiky).,B
+740,5.2.3.7.2,Pneumatika dře o jiné části vozidla a tato závada bezprostředně ohrožuje bezpečnost jízdy vozidla nebo zvyšuje riziko vzniku požáru.,C
+741,5.2.3.8.1,"Obnovené drážkování pneumatiky provedeno na pneumatice, která není k tomu účelu schválena.",B
+742,5.2.3.8.2,Obnovené drážkování pneumatiky není provedeno v souladu s požadavky výrobce nebo je obnažena kordová vrstva nárazníku.,B
+743,5.2.3.8.3,Obnovené drážkování pneumatiky způsobilo narušení nosné kostry pneumatiky.,C
+744,5.2.3.9.1,Nepovinný systémem monitorování poklesu tlaku v pneumatikách zjevně nefunguje nebo nefunguje správně.,A
+745,5.2.3.9.2,"Vozidlo, je-li vyžadováno, není povinně vybaveno systémem monitorování poklesu tlaku v pneumatikách nebo systém zjevně nefunguje nebo nefunguje správně.",B
+746,5.2.3.10.1,Náhradní kolo chybí nebo je poškozené nebo neodpovídá požadavkům výrobce.,B
+747,5.2.3.10.2,"Vozidlo, které není vybaveno povinným náhradní kolem, nesplňuje požadavky pro jeho alternativní náhradu jinými prostředky (např. vozidlo nemá systém monitorování poklesu tlaku v každém kole nebo vozidlo nemá systém monitorování poklesu tlaku v každém kole společně se souhlasem výrobce vozidla nebo provozovatel vozidla nemá sjednanou asistenční smlouvu pro zajištění opravy poškozené pneumatiky nepřetržitě na celém území České republiky).",B
+748,5.2.3.11.2,Montáž obnovených pneumatik na přední nápravě autobusů třídy II a III nebo na přední nápravě u zásahového požárního automobilu není v souladu s požadavků.,B
+749,5.3.1.1.1,"V pohyblivém uložení (pouzdra / čepy / silentbloky) systému mechanického odpružení jsou větší vůle než provozní nebo některé spojovací prvky (třmeny, svorníky) jsou uvolněné nebo spojení neodpovídá požadavkům.",B
+750,5.3.1.1.2,"V pohyblivém uložení (pouzdra / čepy / silentbloky) systému mechanického odpružení jsou natolik velké vůle nebo spojení mechanického odpružení je natolik nespolehlivé, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+751,5.3.1.2.1,Některá část systému mechanického odpružení je poškozená opotřebovaná nebo nadměrně zkorodovaná.,B
+752,5.3.1.2.2,"Pružné dorazy pérování poškozené tak, že neplní svoji funkci nebo chybí nebo dorazy progresivního pérování nadměrně opotřebované (probroušené) nebo chybí.",B
+753,5.3.1.2.3,"Některá část systému mechanického odpružení je v natolik zhoršeném technickém stavu (např. poškozená, opotřebovaná nebo zkorodovaná), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+754,5.3.1.3.1,"Některá součást listového pera je prasklá nebo pružící element je nadměrně opotřebený nebo poškozený, ale systém mechanického odpružení je funkční.",B
+755,5.3.1.3.2,Systém mechanického odpružení není funkční nebo nefunguje správně z důvodu chybějící nebo poškozené pružící části (listové pero / pružina / torzní tyč / pružící elementy).,C
+756,5.3.1.4.1,"V pohyblivém uložení (pouzdra / čepy / silentbloky / tyčky s kulovými čepy) zařízení stabilizátoru jsou větší vůle než provozní nebo některé spojovací prvky jsou uvolněné, prasklé nebo chybí nebo spojení neodpovídá požadavkům.",B
+757,5.3.1.4.2,"Spojení nebo upevnění součástí stabilizátoru je natolik nespolehlivé (spojovací prvky uvolněné, prasklé nebo chybí) nebo v pohyblivém uložení stabilizátoru (pouzdra / čepy / silentbloky / tyčky s kulovými čepy) jsou natolik velké vůle, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+758,5.3.1.5.1,Některá část stabilizátoru je poškozená nebo nadměrně zkorodovaná (např. úchyty) a tato závada ovlivňuje spolehlivost funkce stabilizátoru.,B
+759,5.3.1.5.2,"Stabilizátor je natolik poškozený (některá část stabilizátoru je prasklá nebo není upevněná), že stabilizátor neplní svoji funkci.",C
+760,5.3.1.6.1,"Nebezpečná úprava neschválená změna v systému mechanického odpružení nebo stabilizátoru, která ovlivňuje spolehlivost funkce systému nebo provozní vlastnosti vozidla.",B
+761,5.3.1.6.2,"Nebezpečná úprava nebo neschválená změna v systému mechanického odpružení nebo stabilizátoru, která bezprostředně ohrožuje bezpečnost jízdy vozidla.",C
+762,5.3.2.1,"V upevnění tlumiče pérování jsou větší vůle než provozní nebo některé spojovací prvky jsou uvolněné, prasklé nebo chybí nebo upevnění tlumiče pérování neodpovídá požadavkům.",B
+763,5.3.2.2.1,Tlumič pérování je poškozený nebo netěsný avšak tato závada nemá vliv na provozní vlastnosti vozidla.,A
+764,5.3.2.2.2,"Tlumič pérování chybí nebo z něj vytéká kapalina nebo je poškozený tak, že zjevně nefunguje.",B
+765,5.3.3.1.1,V systému zavěšení kol (např. čepy / pouzdra / silentbloky) jsou větší vůle než provozní nebo některé spojovací prvky jsou uvolněné.,B
+766,5.3.3.1.2,"V systému zavěšení kol (např. čepy / pouzdra / silentbloky) jsou natolik velké vůle nebo spojovací prvky (např. šrouby, matice) jsou natolik nespolehlivé, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+767,5.3.3.2.2,"Některá část systému zavěšení kol (např. ramena) je poškozená, popraskaná nebo nadměrně zkorodovaná.",B
+768,5.3.3.2.3,"Některá část systému zavěšení kol je v natolik zhoršeném technickém stavu (např. je deformovaná, popraskaná nebo nadměrně zkorodovaná), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+769,5.3.3.3.1,"Nebezpečná úprava nebo neschválená změna v systému zavěšení kol, která ovlivňuje spolehlivost funkce systému nebo provozní vlastnosti vozidla.",B
+770,5.3.3.3.2,"Nebezpečná úprava nebo neschválená změna v systému zavěšení kol, která bezprostředně ohrožuje bezpečnost jízdy vozidla.",C
+771,5.3.4.1.1,"Opotřebení kloubového spojení hnacího hřídele kol (poloosy), které ovlivňuje spolehlivost funkce spojení nebo provozní vlastnosti vozidla.",B
+772,5.3.4.1.2,"V kloubovém spojení hnacího hřídele kol (poloosy) je natolik velká vůle, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+773,5.3.4.2.1,"Prachovka na hnacím hřídeli kola (poloose) je prasklá, avšak nedochází k úniku maziva.",A
+774,5.3.4.2.2,"Prachovka na hnacím hřídeli kola (poloose) je chybně upevněna nebo poškozená tak, že neplní svoji funkci a dochází k úniku maziva nebo prachovka chybí.",B
+775,5.3.5.1.1,"Systém pneumatického / hydropneumatického odpružení není funkční, ale tato závada bezprostředně neohrožuje bezpečnost jízdy vozidla.",B
+776,5.3.5.1.2,Nefunkční systém pneumatického / hydropneumatického odpružení bezprostředně ohrožuje bezpečnost jízdy vozidla.,C
+777,5.3.5.2.1,"Některá část systému pneumatického / hydropneumatického odpružení je opotřebovaná (např. měchy, vlnovce) nebo zkorodovaná, ale tato závada nemá vliv na provozní vlastnosti vozidla nebo spolehlivost systému.",A
+778,5.3.5.2.2,"Některá část systému pneumatického / hydropneumatického odpružení je poškozená, popraskaná nebo nadměrně zkorodovaná.",B
+779,5.3.5.2.3,"Některá část systému pneumatického / hydropneumatického odpružení je v natolik zhoršeném technickém stavu (např. poškozená, deformovaná, popraskaná nebo nadměrně zkorodovaná), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+780,5.3.5.3,Ze systému pneumatického / hydropneumatického odpružení uniká médium (vzduch / olej).,B
+781,5.3.5.4.1,"Některé spojovací prvky v systému pneumatického / hydropneumatického odpružení jsou uvolněné, prasklé nebo chybí nebo upevnění neodpovídá požadavkům.",B
+782,5.3.5.4.2,"Upevnění nebo spojení systému pneumatického / hydropneumatického odpružení je natolik nespolehlivé (např. spojovací prvky uvolněné, prasklé nebo chybí), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+783,5.3.5.5.1,"Ovládací nebo snímací zařízení nastavení výšky vozidla systému pneumatického / hydropneumatického odpružení je poškozeno nebo je zjevně chybně seřízeno, ale tato závada bezprostředně neohrožuje bezpečnost jízdy vozidla.",B
+784,5.3.5.5.2,"Ovládací nebo snímací zařízení nastavení výšky vozidla systému pneumatického / hydropneumatického odpružení je zjevně chybně seřízeno nebo je natolik poškozeno, že není funkční a tato závada bezprostředně ohrožuje bezpečnost jízdy vozidla.",C
+785,5.3.5.6.1,"Nebezpečná úprava nebo neschválená změna v systému pneumatického / hydropneumatického odpružení, která ovlivňuje spolehlivost funkce systému nebo provozní vlastnosti vozidla.",B
+786,5.3.5.6.2,"Nebezpečná úprava nebo neschválená změna v systému pneumatického / hydropneumatického odpružení, která bezprostředně ohrožuje bezpečnost jízdy vozidla.",C
+787,6.1.1.1.1,"Zjevné deformace, praskliny nebo lomy rámu, pomocného rámu nebo jiné nosné konstrukce vozidla.",B
+788,6.1.1.1.2,"Rám nebo pomocný rám je v tak zhoršeném technickém stavu (např. nadměrné deformace, praskliny nebo zlomy), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+789,6.1.1.2.1,"Některé spojovací prvky (šrouby) rámu jsou zjevně uvolněné, ale tato závada nemá vliv na pevnost konstrukce rámu.",A
+790,6.1.1.2.2,"Některé spojovací prvky (šrouby, nýty, sváry) nebo výstužné desky rámu jsou zjevně uvolněné, prasklé nebo chybí.",B
+791,6.1.1.2.3,"Spojení rámu nebo pomocného rámu je natolik nespolehlivé (spojovací prvky nebo výstužné desky rámu jsou zjevně uvolněné, poškozené, prasklé nebo chybí), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+792,6.1.1.3.1,"Povrchová koroze rámu nebo pomocného rámu vozidla, která nemá vliv na pevnost konstrukce vozidla.",A
+793,6.1.1.3.2,"Koroze části rámu nebo pomocného rámu vozidla, která narušuje celkovou pevnost a spolehlivost konstrukce vozidla.",B
+794,6.1.1.3.3,"Pevnost rámu nebo pomocného rámu vozidla je natolik narušena korozí, zeje zjevně bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+795,6.1.1.4,"Nebezpečná úprava rámu, která neodpovídá požadavkům výrobce nebo ovlivňuje celkovou pevnost konstrukce vozidla.",B
+796,6.1.2.1.1,Drobné netěsnosti ve spojích výfukového systému.,A
+797,6.1.2.1.2,Výfukový systém zjevně netěsný.,B
+798,6.1.2.2.1,Některá část výfukového systému je nedostatečně upevněna nebo upevnění výfukového systému neodpovídá požadavkům a tato závada nemá vliv na funkci systému.,A
+799,6.1.2.2.2,Některá část výfukového systému je nedostatečně upevněna nebo upevnění výfukového systému neodpovídá požadavkům a tato závada má vliv na funkci systému.,B
+800,6.1.2.2.3,"Některá část výfukového systému je poškozena, změněna nebo chybí a tato závada má vliv na funkci systému.",B
+801,6.1.2.3.1,"Nevhodné vyústění nebo netěsnost výfukového systému motoru nebo nezávislého topení, které může způsobit pronikání (např. podlahou) výfukových plynů do kabiny nebo do prostoru pro cestující.",B
+802,6.1.2.3.2,"Výfukové plyny z motoru nebo z nezávislého topení se zjevně dostávají do kabiny nebo do prostoru pro cestující, ohrožení zdraví osob ve vozidle.",C
+803,6.1.2.4.1,"Zjevný zásah do výfukového systému, který není v souladu s požadavky (např. ovlivňující funkci nebo bezpečnost).",B
+804,6.1.2.4.2,"Označení dílů výfukového systému, je-li vyžadováno, chybí nebo neodpovídá požadavkům.",B
+805,6.1.3.1.1,"Palivová nádrž je poškozená tak, zeje zjevně netěsná.",B
+806,6.1.3.1.2,"Palivová nádrž určená pro pohon / vytápění vozidla neodpovídá požadavkům (homologace) nebo nestanovil-li výrobce jinak, staří palivové nádrže na LPG/ CNG překračuje stanovenou dobu nebo nejsou na vozidle demontovány kryty palivových nádrží, pokud tak stanovil výrobce u vozidla vybaveného motorem na alternativní palivo.",B
+807,6.1.3.1.3,Z palivové nádrže na kapalná paliva dochází k úniku paliva.,C
+808,6.1.3.1.4,Do kabiny nebo prostoru pro cestující unikají plynné výpary z netěsné palivové nádrže na kapalná paliva.,C
+809,6.1.3.2.1,"Upevnění palivové nádrže ve vozidle je uvolněné, poškozené nebo spojovací prvky/úchyty chybí nebo upevnění nádrže neodpovídá požadavkům.",B
+810,6.1.3.2.2,Způsob montáže z hlediska umístění palivové nádrže ve vozidle neodpovídá požadavkům (např. přídavné nádrže nebo nádrže na vodík / LPG / CNG - pohon / vytápění).,B
+811,6.1.3.2.3,"Upevnění palivové nádrže ve vozidle je natolik nespolehlivé (např. spojovací prvky/úchyty uvolněné, poškozené nebo chybí), že je bezprostředně ohrožena bezpečnost jízdy vozidla nebo provoz na pozemních komunikacích.",C
+812,6.1.3.3.1,"Víčko plnicího hrdla palivové nádrže je netěsné nebo neodpovídá požadavkům, nebo je-li vyžadováno, nelze víčko uzamknout nebo víčko palivové nádrže chybí.",B
+813,6.1.3.3.2,Dochází k úniku paliva plnicím hrdlem palivové nádrže.,C
+814,6.1.3.4,"Ventil palivové nádrže, je-li vyžadován, zjevně nefunguje správně nebo chybí nebo neodpovídá požadavkům.",B
+815,6.1.3.5.1,"Palivové potrubí / hadice nebo jejich spojovací prvky (spony) jsou poškozené, ale tato závada nemá vliv na spolehlivost a těsnost systému.",A
+816,6.1.3.5.2,Palivové potrubí / hadice je netěsné nebo poškozené nebo zjevná koroze palivového potrubí / spojovacích prvků (spon) má vliv na spolehlivost a těsnost systému.,B
+817,6.1.3.5.3,"U nízkotlaké části systému pohonu / vytápění vozidla použito nevhodné palivové potrubí / hadice, které neodpovídá požadavkům nebo způsob spojení palivového potrubí / hadic je nespolehlivé, uvolněné nebo neodpovídá požadavkům (např. u LPG / CNG).",B
+818,6.1.3.5.4,Z netěsného palivového potrubí / hadice nebo jejich spojení dochází k úniku paliva.,C
+819,6.1.3.5.5,Z netěsného plynového potrubí / hadice nebo spojení systému pohonu / vytápění na LPG / CNG uniká plyn (z nízkotlaké / vysokotlaké části).,C
+820,6.1.3.6.1,"Upevnění palivového potrubí je uvolněné, ale tato závada nemá vliv na spolehlivost systému.",A
+821,6.1.3.6.2,"Upevnění palivového potrubí / hadic je uvolněné, nespolehlivé nebo způsob montáže palivového potrubí / hadic neodpovídá požadavkům a tato závada má vliv na bezpečnost nebo spolehlivost systému.",B
+822,6.1.3.7.1,Z důvodu hromadění maziva v motorovém prostoru (např. spodní kryt motoru) hrozí nebezpečí vzniku požáru.,B
+823,6.1.3.7.2,"Zařízení, které tepelně chrání nádrž / palivové potrubí od výfukového systému (tepelný štít), je-li zařízení vyžadováno, je poškozené tak, že není zařízení dostatečně funkční.",B
+824,6.1.3.7.3,"Z důvodu nashromážděného množství paliva, nebo jiného hořlavého materiálu v motorovém prostoru (např. spodní kryt motoru) nebo z důvodu nefunkčního nebo chybějícího zařízení, které tepelně chrání nádrž / palivové potrubí od výfukového systému (tepelný štít), je-li zařízení vyžadováno, hrozí bezprostřední nebezpečí vzniku požáru vozidla.",C
+825,6.1.3.7.4,"Systém LPG / CNG / LNG nebo vodíkový systém není v souladu s požadavky, některá z částí systému je vadná.",C
+826,6.1.3.8.1,Montáž systému pohonu na vodík / LPG / CNG ve vozidle není uvedena v technickém průkazu vozidla (neschválená přestavba).,B
+827,6.1.3.8.2,Způsob montáže systému pohonu na vodík / LPG / CNG do vozidla není v souladu s požadavky.,B
+828,6.1.3.8.3,"Některý komponent systému pohonu na vodík / LPG / CNG je poškozený (např. plynotěsná skřínka), chybí, není funkční nebo neodpovídá požadavkům homologace.",B
+829,6.1.3.8.4,"Způsob montáže systému pohonu na vodík / LPG / CNG ve vozidle je v rozporu s požadavky na bezpečnost a bezprostředně ohrožuje život a zdraví přepravovaných osob, bezpečnost jízdy vozidla nebo provoz na pozemních komunikacích.",C
+830,6.1.3.8.5,Do kabiny nebo do prostoru pro cestující uniká plyn ze systému pohonu na LPG/CNG,C
+831,6.1.3.8.6,"Vozidlo, je-li vyžadováno, není označeno předepsaným štítkem označující montáž systému pohonu na LPG / CNG / vodík nebo označení na vozidle je poškozené nebo není dostatečně viditelné.",B
+832,6.1.3.9.2,Způsob montáže systému nezávislého vytápění na kapalná / plynná paliva do vozidla není v souladu s požadavky.,B
+833,6.1.3.9.3,"Některý komponent systému nezávislého vytápění na LPG/CNG je poškozený, chybí, není funkční nebo neodpovídá požadavkům homologace.",B
+834,6.1.3.9.4,Způsob montáže systému nezávislého vytápění na kapalná / plynná paliva ve vozidle je v rozporu s požadavky na bezpečnost.,C
+835,6.1.3.9.5,Do kabiny nebo do prostoru pro cestující unikají plynné výpary/plyny LPG / CNG ze systému nezávislého vytápění (kapalná / plynná paliva).,C
+836,6.1.4.1.1,"Poškození nebo deformace zařízení ochrany proti podjetí zezadu, boční ochrany nebo nárazníku, které nemá vliv na jeho funkci nebo bezpečnost.",A
+837,6.1.4.1.2,"Zařízení ochrany proti podjetí zezadu, boční ochrana, nárazník, je-li vyžadován, chybí, je neúplný nebo některá část zařízení je poškozená tak, že zařízení neplní svůj účel nebo konstrukce zařízení nebo jeho montáž na vozidle není v souladu s požadavky.",B
+838,6.1.4.2.1,"U zařízení ochrany proti podjetí zezadu, boční ochrany nebo nárazníku, chybí bezpečné zakončení ostrých nebo náběžných hran (krytky) nebo zařízení je deformované, prasklé, neúplné nebo je poškozené natolik, že může způsobit zachycení osob (nebezpečné hrany).",B
+839,6.1.4.2.2,"Zařízení ochrany proti podjetí zezadu, boční ochrana nebo nárazník je v tak zhoršeném technickém stavu (uvolněný, prasklý, deformovaný, vyhnutý do strany), že bezprostředně hrozí jeho upadnutí nebo zachycení osob (nebezpečné hrany).",C
+840,6.1.4.3.1,"Některé spojovací prvky zařízení ochrany proti podjetí zezadu, boční ochrany nebo nárazníku jsou uvolněné nebo upevnění zařízení na vozidle je uvolněné, avšak tato závada nemá vliv na jeho funkci nebo bezpečnost.",A
+841,6.1.4.3.2,"Některé spojovací prvky zařízení ochrany proti podjetí zezadu, boční ochrany nebo nárazníku jsou uvolněné nebo chybí nebo upevnění zařízení na vozidle je uvolněné nebo není spolehlivé nebo neodpovídá požadavkům a tato závada ovlivňuje jeho funkci nebo bezpečnost.",B
+842,6.1.5.1.1,"Nosič náhradního kola poškozený, avšak tato závada nemá vliv na jeho funkci nebo spolehlivost.",A
+843,6.1.5.1.2,"Nosič náhradního kola poškozený, neúplný nebo není funkční.",B
+844,6.1.5.1.3,Nefunkční zajištění nosiče proti samovolnému sklopení náhradního kola.,C
+845,6.1.5.2,Nosič náhradního kola má praskliny nebo je nespolehlivě upevněn.,B
+846,6.1.5.3.1,Náhradní kolo není spolehlivě upevněno v prostoru pro náhradní kolo nebo náhradní kolo není spolehlivě upevněno na jiném místě vozidla (např. při instalaci toroidní nádrže na LPG).,B
+847,6.1.5.3.2,Náhradní kolo není spolehlivě upevněno k nosiči náhradního kola a bezprostředně hrozí jeho upadnutí na vozovku.,C
+848,6.1.6.1,"Montáž spojovacího zařízení není uvedena v předložené dokumentaci k vozidlu nebo montáž neodpovídá požadavkům (např. výrobce / technickým požadavkům) nebo spojovací zařízení, není-li stanoveno jinak, není schváleného provedení.",B
+849,6.1.6.2.1,"Poškození, praskliny nebo deformace některé části spojovacího zařízení (pouze samostatné tažné vozidlo).",B
+850,6.1.6.2.2,"Poškození, praskliny nebo deformace některých částí spojovacího zařízení u jízdní soupravy.",C
+851,6.1.6.3.1,Zjevně nadměrné opotřebení některé části spojovacího zařízení.,B
+852,6.1.6.3.2,"Opotřebení některých částí spojovacího zařízení u jízdní soupravy je v natolik zhoršeném technickém stavu, že je bezprostředně ohrožena bezpečnost silničního provozu (rozpojení jízdní soupravy).",C
+853,6.1.6.3.3,Ke kontrole není předložena příslušná část odnímatelného spojovacího zařízení tažného vozidla.,B
+854,6.1.6.4.1,"Upevnění spojovacího zařízení vadné, uvolněné, nespolehlivé nebo upevnění spojovacího zařízení neodpovídá požadavkům.",B
+855,6.1.6.4.2,"Upevnění některých částí spojovacího zařízení jízdní soupravy je natolik nespolehlivé, že je bezprostředně ohrožena bezpečnost jízdy jízdní soupravy.",C
+856,6.1.6.5.1,"Zajištění proti neúmyslnému rozpojení spojovacího zařízení (pojistka), je-li vyžadováno, chybí, je poškozeno, nefunguje správně nebo není spolehlivé.",B
+857,6.1.6.5.2,"Bezpečnostní zajištění při neúmyslném rozpojení jízdní soupravy (zajišťovací lanko, řetěz), je-li vyžadováno, chybí nebo neodpovídá požadavkům, je poškozené nebo je nadměrně zkorodované a z tohoto důvodu není spolehlivé.",B
+858,6.1.6.6,"Indikátor pro indikaci uzavření spojovacího zařízení, je-li vyžadován, nefunguje správně.",B
+859,6.1.6.7.2,Spojovací zařízení zakrývá registrační značku nebo předepsané osvětlení vozidla a tato závada ovlivňuje podstatným způsobem viditelnost předepsaného osvětlení nebo viditelnost nebo čitelnost tabulky registrační značky.,B
+860,6.1.6.8.1,"Nebezpečná úprava spojovacího zařízení, která má vliv na spolehlivost spojení vozidel.",B
+861,6.1.6.8.2,"Nebezpečná úprava spojovacího zařízení, která bezprostředně ohrožuje bezpečnost spojení jízdní soupravy.",C
+862,6.1.7.1.1,"Na přírubě kloubových hřídelů u převodového ústrojí jsou některé šrouby zjevně uvolněné nebo viditelné zajištění šroubů, je-li zjevně vyžadováno, chybí nebo neplní svoji funkci.",B
+863,6.1.7.1.2,"Spojení kloubových hřídelů u převodového ústrojí je natolik nespolehlivé, že je bezprostředně ohrožena bezpečnost jízdy vozidla (nebezpečí upadnutí hřídele).",C
+864,6.1.7.2.1,V uložení hřídele převodového ústrojí jsou zjevně větší vůle než provozní.,B
+865,6.1.7.2.2,"V uložení hřídele převodového ústrojí (ložiska) jsou zjevně natolik velké vůle, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+866,6.1.7.3.1,V universálních kloubech u převodového ústrojí jsou zjevně větší vůle než provozní (axiální a radiální).,B
+867,6.1.7.3.2,"Opotřebení univerzálních kloubů u převodového ústrojí je nadměrné natolik (axiální a radiální vůle), zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+868,6.1.7.4.1,Stav pružných členů u kloubů u převodového ústrojí je zjevně zhoršený.,B
+869,6.1.7.4.2,"Stav pružných členů u kloubů u převodového ústrojí je zjevně zhoršený natolik, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+870,6.1.7.5,Poškozená nebo zjevně deformovaná hřídel u převodového ústrojí.,B
+871,6.1.7.6.1,,B
+872,6.1.7.6.2,"Ložiskové pouzdro u převodového ústrojí je natolik poškozené, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+873,6.1.7.7.1,"Prachovka na převodovém ústrojí je prasklá, avšak nedochází k úniku maziva.",A
+874,6.1.7.7.2,"Prachovka na převodovém ústrojí je chybně upevněná nebo poškozená natolik, že neplní svoji funkci nebo prachovka chybí.",B
+875,6.1.7.8,Nepovolená oprava nebo úprava převodového ústrojí.,B
+876,6.1.7.9,"Povinný ochranný kryt řetězu / řemenice u převodového ústrojí je poškozen natolik, že neplní svůj účel nebo neodpovídá požadavkům nebo chybí (např. u motocyklu).",B
+877,6.1.8.1.1,"Uložení motoru je uvolněné, s prasklinami nebo ve zhoršeném stavu nebo způsob uložení motoru neodpovídá požadavkům.",B
+878,6.1.8.1.2,"Uložení motoru je natolik zjevně nespolehlivé, že je bezprostředně ohrožena bezpečnost.",C
+879,6.1.9.1,Zjevný nepovolený zásah do řídicí jednotky.,B
+880,6.1.9.2,Zjevná nepovolená úprava motoru.,B
+881,6.1.9.3,Zjevné nepovolené použití přídavných řídicích (korekčních) jednotek.,B
+882,6.2.1.1.1,"Povrchová koroze kabiny, karosérie nebo nástavby vozidla.",A
+883,6.2.1.1.2,"Koroze části karosérie, kabiny nebo nástavby vozidla, která narušuje celkovou pevnost a spolehlivost konstrukce vozidla.",B
+884,6.2.1.1.3,"Koroze narušila karosérii, kabinu nebo nástavbu vozidla natolik, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+885,6.2.1.1.4,"Deformace, praskliny nebo lomy karosérie, kabiny nebo nástavby vozidla, které ovlivňují její pevnost.",B
+886,6.2.1.1.5,"Rozsah poškození karosérie, kabiny nebo nástavby vozidla deformacemi, prasklinami je natolik závažné, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+887,6.2.1.1.6,Nedostatečná funkční vůle od rotujících nebo pohyblivých částí a vozovky.,C
+888,6.2.1.2.1,"Na karosérii, kabině nebo nástavbě vozidla se vyskytují nebezpečné vnější díly, které mohou způsobit zachycení nebo zranění osob.",B
+889,6.2.1.2.2,"V prostoru pro řidiče nebo cestující se vyskytují díly, které mohou způsobit zranění osob nebo nesplňují příslušné požadavky.",B
+890,6.2.1.2.3,"V prostoru pro řidiče, cestující nebo na povrchu karosérie, kabiny nebo nástavby vozidla se vyskytují díly, které bezprostředně ohrožují bezpečnost osob.",C
+891,6.2.1.3.1,Sloupky karoserie nebo kabiny nedostatečně ukotvené nebo poškozené.,B
+892,6.2.1.3.2,"Sloupky karoserie, kabiny jsou natolik nespolehlivé nebo poškozené, zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+893,6.2.1.4.1,Stav kabiny umožňuje pronikání výparů od motoru nebo výfukových plynů do kabiny řidiče nebo do prostoru pro cestující.,B
+894,6.2.1.4.2,Do kabiny pronikají zjevně výpary nebo výfukové plyny.,C
+895,6.2.1.5.1,"Druh (typ) karosérie nebo nástavby neodpovídá údajům, uvedeným v dokumentaci vozidla (neschválená změna karosérie nebo nástavby).",B
+896,6.2.1.5.2,"Přepážka, oddělující prostor nákladu od prostoru pro cestující, je-li vyžadována, chybí nebo neodpovídá požadavkům nebo prostor pro náklad není v souladu s požadavky.",B
+897,6.2.1.5.3,"Nebezpečná úprava kabiny, karosérie nebo nástavby, která ovlivňuje provozní vlastnosti vozidla.",B
+898,6.2.1.5.4,"Nebezpečná úprava kabiny, karosérie nebo nástavby, která bezprostředně ohrožuje bezpečnost jízdy vozidla.",C
+899,6.2.2.1.1,"Uchycení kabiny, karosérie nebo nástavby k podvozku nebo rámu vozidla není zjevně v jeho podélné rovině.",B
+900,6.2.2.1.2,"Způsob upevnění kabiny, karosérie nebo nástavby k podvozku nebo rámu vozidla (počet, rozmístění, provedení upevňovacích bodů) zjevně neodpovídá požadavkům výrobce vozidla.",B
+901,6.2.2.1.3,"Způsob upevnění kabiny, karosérie nebo nástavby k podvozku nebo rámu vozidla (počet, rozmístění, provedení upevňovacích bodů) zjevně neodpovídá požadavkům výrobce vozidla a je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+902,6.2.2.2.1,"Některé spojovací prvky (šrouby, pružiny) upevnění kabiny, karoserie nebo nástavby k podvozku nebo rámu vozidla jsou uvolněné, poškozené nebo chybí nebo spojení zjevně neodpovídá požadavkům výrobce.",B
+903,6.2.2.2.2,"Některé spojovací prvky (šrouby, pružiny) upevnění kabiny, karoserie nebo nástavby k podvozku nebo rámu vozidla jsou uvolněné, poškozené nebo chybí nebo spojení zjevně neodpovídá požadavkům výrobce a je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+904,6.2.2.3.1,"Upevňovací body (úchyty) nebo spojovací desky na rámu nebo karosérii nebo nástavbě jsou nadměrně zkorodované, zdeformované nebo prasklé.",B
+905,6.2.2.3.2,"Upevňovací body (úchyty) nebo spojovací desky na rámu nebo karosérii nebo nástavbě jsou natolik zkorodované, zdeformované nebo prasklé, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+906,6.2.3.1,Dveře nelze zvenku nebo zevnitř otevřít nebo spolehlivě zavřít nebo nelze dveře otevřít v plném rozsahu.,B
+907,6.2.3.2.1,Dveře nelze spolehlivě zajistit proti samovolnému otevírání.,B
+908,6.2.3.2.2,Dveře nelze spolehlivě zajistit v otevřené poloze (skříň).,B
+909,6.2.3.2.3,Dveře nelze zajistit proti samovolnému otevírání a tím je bezprostředně ohrožena bezpečnost jízdy vozidla.,C
+910,6.2.3.3.1,"Uvolněné nebo opotřebené závěsy dveří, vodicí kladky posuvných dveří, omezovače dveří, avšak tato závada nemá vliv na spolehlivost jejich otvírání a zavírání.",A
+911,6.2.3.3.2,"Některý prvek ze systému dveřních závěsů nebo dveřních zámků je nadměrně opotřebovaný, poškozený, nefunguje správně nebo chybí.",B
+912,6.2.3.3.3,"Stav systému dveřních závěsů nebo dveřních zámků je v tak zhoršeném stavu (poškozený, nadměrně opotřebovaný, nefunguje správně, chybí), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+913,6.2.3.3.4,"Dveře jsou nadměrně zkorodované, poškozené, zdeformované nebo provedení dveří neodpovídá požadavkům.",B
+914,6.2.3.3.5,"Dveře chybí nebo jsou v tak zhoršeném stavu (např. nadměrně zkorodované nebo poškozené), že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+915,6.2.3.4,Nebezpečná úprava nebo neschválená změna dveří nebo dveřního systému.,B
+916,6.2.3.5.1,Kapotu / víko zavazadlového prostoru nelze spolehlivě zajistit v otevřené poloze.,A
+917,6.2.3.5.2,Kapotu / víko zavazadlového prostoru nelze spolehlivě otevřít nebo zavřít.,B
+918,6.2.3.6,"U přední kapoty / předního víka zavazadlového prostoru, otvírané směrem dozadu, bezpečnostní pojistka proti samovolnému otevření, chybí nebo není funkční nebo neodpovídá požadavkům.",C
+919,6.2.3.7,"Závěsy kapoty / víka zavazadlového prostoru uvolněné, poškozené nebo zjevně opotřebené.",B
+920,6.2.4.1.1,"Podlaha je ve zhoršeném stavu (např. děravá, nadměrně zkorodovaná, uvolněná) nebo neodpovídá požadavkům.",B
+921,6.2.4.1.2,"Podlaha je v tak zhoršeném technickém stavu (např. děravá, nadměrně zkorodovaná, uvolněná), že je bezprostředně ohrožena bezpečnost jízdy vozidla nebo provoz na pozemních komunikacích.",C
+922,6.2.5.1.2,"Větši vůle než provozní v systému posouvání / seřízení sedadla řidiče (podélné, výškové, úhlové), ovlivňující mechanické vlastnosti sedadla (vůle / tuhost).",B
+923,6.2.5.1.3,"Konstrukce sedadla řidiče je poškozená nebo nadměrně opotřebená (sedák / opěradlo), prasklá, deformovaná nebo neúplná (např. chybí opěrky hlavy) nebo poškození sedadla může způsobit zranění řidiče (např. chybějící polstrování) nebo typ sedadla zjevně neodpovídá požadavkům.",B
+924,6.2.5.1.4,"Sedadlo řidiče chybí nebo nosná konstrukce sedadla řidiče je poškozená natolik, zeje bezprostředně ohroženo bezpečné ovládání vozidla.",C
+925,6.2.5.2.1,"Některý spojovací prvek ukotvení sedadla řidiče je zjevně uvolněný, prasklý nebo chybí nebo kotevní úchyt (včetně okolí) je nadměrně zkorodovaný nebo způsob ukotvení sedadla neodpovídá požadavkům (např. mimo kotevní úchyty).",B
+926,6.2.5.2.2,"Ukotvení sedadla řidiče je natolik nespolehlivé (uvolněné/prasklé/chybějící spojovací prvky, nadměrně zkorodované kotevní úchyty), zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+927,6.2.5.3.1,"Výškové nebo úhlové nebo podélné seřízení sedadla řidiče, je-li vyžadováno, není funkční nebo nelze sedadlo spolehlivě aretovat v požadované poloze.",B
+928,6.2.5.3.2,"Sedadlo řidiče nelze zajistit v poloze vhodné pro ovládání vozidla nebo aretace sedadla v požadované poloze je natolik nespolehlivá že, je bezprostředně ohroženo bezpečné ovládání vozidla.",C
+929,6.2.6.1.2,"Konstrukce sedadla je poškozená nebo nadměrně opotřebená (sedák / opěradlo), prasklá, deformovaná nebo neúplná (např. chybí opěrky hlavy) nebo poškození sedadla může způsobit zranění přepravované osoby (např. chybějící polstrování) nebo typ sedadla (provedení) neodpovídá požadavkům.",B
+930,6.2.6.1.3,"Větší vůle než provozní v systému posouvání / seřízení sedadla (podélné, výškové, úhlové), je-li instalováno, ovlivňující mechanické vlastnosti sedadla (vůle / tuhost).",B
+931,6.2.6.2,Počet kotevních úchytů / sedadel ve vozidle nesouhlasí (chybí / nadpočet) s údaji uvedenými v dokumentaci vozidla.,B
+932,6.2.6.3.1,Některý spojovací prvek ukotvení sedadla je zjevně uvolněný.,A
+933,6.2.6.3.2,"Některý spojovací prvek ukotvení sedadla je zjevně uvolněný, prasklý nebo chybí nebo způsob ukotvení sedadla neodpovídá požadavkům nebo kotevní úchyt (včetně okolí) je nadměrně zkorodovaný a tato závada ovlivňuje spolehlivost ukotvení sedadla.",B
+934,6.2.7.1.1,"Ovladač vozidla je poškozený, nefunguje správně, nebo je neodborně změněn tak, že může při ovládání vozidla způsobit zranění řidiče (např. ostré hrany na řadicí páce, pedálech / ručních pákách) nebo neodpovídá požadavkům (např. u ručních ovladačů motocyklů chybí předepsané zaoblení).",B
+935,6.2.7.1.2,"Jakýkoliv ovladač (např. řadicí páka, pedály / páky, ruční ovladače apod.) nezbytný pro bezpečné ovládání vozidla nefunguje správně, je vadný nebo poškozený tak, že vozidlo nelze spolehlivě a bezpečně ovládat.",C
+936,6.2.8.1.1,"Stupátko nebo schůdky u vozidla poškozeny, avšak tato závada nemá vliv na spolehlivost nebo bezpečnost.",A
+937,6.2.8.1.2,"Stupátka nebo schůdky u vozidla jsou nadměrně zkorodovány nebo přidržovací madla, stupátka nebo schůdky jsou uvolněné nebo poškozené tak, že nejsou spolehlivé nebo neodpovídají požadavkům nebo, jsou-li vyžadovány, chybí (např. u motocyklů).",B
+938,6.2.8.2,"Stupátka, schůdky nebo přidržovací madla ve stavu, který by mohl způsobit zranění osoby při nastupování / vystupování nebo by mohly způsobit zachycení.",B
+939,6.2.9.1.1,"Některý upevňovací prvek výbavy vozidla je uvolněný, ale tato závada nemá vliv na spolehlivost upevnění výbavy.",A
+940,6.2.9.1.2,"Upevnění výbavy vozidla, je vadné nebo uvolněné nebo nespolehlivé.",B
+941,6.2.9.1.3,Montáž výbavy vozidla na vozidlo neodpovídá požadavkům (např. ochranné rámy).,B
+942,6.2.9.2.1,"Některý spojovací prvek upevnění samostatného technického celku je uvolněný, ale tato závada nemá vliv na spolehlivost upevnění samostatného technického celku.",A
+943,6.2.9.2.2,"Způsob upevnění samostatného technického celku k podvozku nebo rámu vozidla (počet upevňovacích bodů, jejich umístění nebo provedení) zjevně neodpovídá požadavkům výrobce vozidla nebo je nespolehlivé.",B
+944,6.2.9.2.3,"Způsob upevnění samostatného technického celku k podvozku nebo rámu vozidla (počet, rozmístění, provedení upevňovacích bodů) zjevně neodpovídá požadavkům výrobce vozidla nebo je nespolehlivý a je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+945,6.2.9.2.4,"Některé spojovací prvky (šrouby, pružiny) uchycení samostatného technického celku k podvozku nebo rámu vozidla jsou uvolněné, poškozené, chybí nebo použité spojovací prvky zjevně neodpovídají požadavkům výrobce.",B
+946,6.2.9.2.5,"Některé spojovací prvky (šrouby, pružiny) uchycení samostatného technického celku k podvozku nebo rámu vozidla jsou uvolněné, poškozené nebo chybí nebo použité spojovací prvky zjevně neodpovídají požadavkům výrobce a tím je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+947,6.2.9.2.6,Upevňovací body (úchyty) nebo spojovací desky na rámu nebo samostatném technickém celku jsou zjevně nadměrně zkorodované nebo zdeformované nebo prasklé.,B
+948,6.2.9.2.7,"Upevňovací body (úchyty) nebo spojovací desky na rámu nebo samostatném technickém celku jsou natolik zkorodované nebo zdeformované nebo prasklé, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+949,6.2.9.3,"Vozidlo, není-li stanoveno jinak, je vybaveno výbavou vozidla (autodoplňky), jejíž technická způsobilost není schválena (chybí povinné označení např. schvalovací značkou ATEST 8SDXXXX).",B
+950,6.2.9.4,"U samostatného technického celku, který je namontován na vozidle: 1) Chybí záznam o schválení přestavby (pevná nástavba) v dokumentaci vozidla (ORV, OTP, technický průkaz vozidla) nebo",B
+951,6.2.9.5,"Na povrchu samostatného technického celku (výměnná nástavba /pracovní stroj nesený) nebo na povrchu výbavy vozidla jsou nebezpečné vnější díly, které mohou způsobit zranění.",B
+952,6.2.9.6.1,"Zařízení pro zajištění nebo uchycení kontejneru k vozidlu je opotřebené nebo poškozené (deformované, prasklé) tak, že zjevně není plně funkční.",B
+953,6.2.9.6.2,"Zařízení pro zajištění nebo uchycení kontejneru k vozidlu není funkční nebo je poškozené tak, že přepravovaný kontejner nelze bezpečně zajistit v přepravní poloze.",C
+954,6.2.9.7.1,Netěsnost hydraulického zařízení.,A
+955,6.2.9.7.2,Z hydraulického zařízení odkapává olej.,B
+956,6.2.10.1.1,"Zástěrka nebo zařízení proti rozstřiku s pohlcováním energie je uvolněné nebo poškozené, ale tato závada neovlivňuje spolehlivost jejich upevnění nebo funkci.",A
+957,6.2.10.1.2,"Zástěrka / zařízení proti rozstřiku s pohlcováním energie, je-li vyžadováno, chybí nebo je poškozené natolik, že neplní svoji funkci.",B
+958,6.2.10.1.3,"Upevnění zástěrky nebo zařízení proti rozstřiku s pohlcováním energie je natolik nespolehlivé, že může upadnout.",B
+959,6.2.10.2.1,"Na vozidle je kryt kola/blatník uvolněný nebo poškozený, ale tato závada nemá vliv na spolehlivost jejich upevnění nebo funkci.",A
+960,6.2.10.2.2,"Na vozidle, je-li vyžadováno, chybí kryt kola/blatník nebo je kryt kola/blatník uvolněný, nadměrně zkorodovaný nebo poškozený tak, že neplní svoji funkci.",B
+961,6.2.10.3,"Způsob montáže krytu kola / blatníku na vozidle (jeho umístění, výška od kola) neodpovídá požadavkům.",B
+962,6.2.10.4.1,"Parametry (provedení, velikost) zařízení proti rozstřiku s pohlcováním energie / zástěrky nebo způsob jejich montáže na vozidle není v souladu s požadavky.",B
+963,6.2.10.4.2,"Parametry (provedení, šířka) krytu kola /blatníku nejsou v souladu s požadavky (kryty kol nezakrývají celou šířku běhounu pneumatiky apod.).",B
+964,6.2.11.1,"Stojan u motocyklu je uvolněný nebo nadměrně zkorodovaný nebo je poškozený natolik, že neplní svoji funkci.",B
+965,6.2.11.2,Stojan u motocyklu chybí nebo neodpovídá požadavkům.,B
+966,6.2.11.3,Zajištění stojanu proti vysunutí během jízdy není plně funkční nebo není spolehlivé.,C
+967,6.2.12.1,"Držadla nebo stupačky u motocyklu chybí (jsou demontované), jsou velmi zkorodované nebojsou natolik poškozené, že neplní svoji funkci.",B
+968,6.2.12.2,Držadla nebo stupačky u motocyklu neodpovídají požadavkům.,B
+969,6.2.90.1.2,"Zjevná koroze, deformace nebo praskliny bočnice, čela nebo sloupku, která narušuje pevnost nebo těsnost valníkové karoserie nákladového prostoru.",B
+970,6.2.90.1.3,"Bočnice, čela nebo sloupky valníkové karoserie nákladového prostoru jsou v natolik zhoršeném technickém stavu (např. nadměrná koroze, deformace nebo praskliny), zeje bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+971,6.2.90.1.4,Bočnice a čela u valníkové karoserie na vozidle chybí (neschválená přestavba).,B
+972,6.2.90.2.2,"Upevnění čela nebo sloupků valníkové karoserie nákladního prostoru je uvolněné natolik, že je narušena pevnost a spolehlivost konstrukce valníkové karoserie.",B
+973,6.2.90.2.3,"Upevnění čela nebo sloupků valníkové karoserie nákladního prostoru je natolik nespolehlivé, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+974,6.2.90.3.2,"Závěsy bočnic jsou zjevně opotřebované, poškozené, uvolněné nebo některé závěsy bočnic chybí.",B
+975,6.2.90.3.3,"Uchycení bočnic je natolik nespolehlivé, že je bezprostředně ohrožena bezpečnost jízdy vozidla.",C
+976,6.2.90.4.2,"Některá část systému zavírání / otevírání nebo zajištění bočnic je zjevně opotřebovaná, zkorodovaná nebo neodpovídá požadavkům nebo některá část systému chybí nebo je poškozená tak, že některá část bočnice nelze spolehlivě uzavřít nebo zajistit proti otevření.",B
+977,6.2.90.4.3,"Některé části systému zavírání / otevírání nebo zajištění bočnic jsou natolik nespolehlivé, že hrozí bezprostřední nebezpečí otevření bočnice.",C
+978,6.2.90.5,"Nebezpečná úprava systému zavírání / otevírání nebo zajištění bočnic, která má vliv na jeho funkci nebo spolehlivost.",B
+979,6.2.91.1.2,"Opera přípojného vozidla, je-li vyžadováno, chybí nebo je popraskaná, neúplná, deformovaná nebo není spolehlivá nebo mechanismus pro vysouvání opery je vadný a opera nelze vysunout.",B
+980,7.1.1.1.1,"Kotevní úchyty pro bezpečnostní pás, je-li bezpečnostní pás vyžadován, chybí nebo kotevní úchyty neodpovídají požadavkům.",B
+981,7.1.1.1.2,"Bod ukotvení bezpečnostního pásu zjevně nadměrně zkorodovaný (včetně okolí) nebo poškozený tak, že ukotvení bezpečnostního pásu není spolehlivé.",B
+982,7.1.1.1.3,Stav ukotvení bezpečnostního pásu bezprostředně ohrožuje bezpečnost.,C
+983,7.1.1.2,"Některá část připevňovacího kování bezpečnostních pásů je uvolněná nebo poškozená tak, že ukotvení bezpečnostního pásu není spolehlivé.",B
+984,7.1.2.1,"Sedadlo vozidla, je-li vyžadováno, není vybaveno bezpečnostním pásem.",B
+985,7.1.2.2.3,"Popruh bezpečnostního pásu poškozen tak, že je narušena jeho pevnost (např. naříznutý, prodřený, roztřepený) nebo popruh bezpečnostního pásu neodpovídá požadavkům.",B
+986,7.1.2.2.4,"Seřizovači zařízení pásu pro ruční seřízení je poškozeno tak, že bezpečnostní pás nelze snadno a spolehlivě seřídit nebo některá tuhá část soupravy pásu (seřizovači zařízení, spony) má na svém povrchu ostré hrany, které mohou třením způsobit opotřebení nebo porušení popruhů nebo způsobit zranění osob nebo některá tuhá část soupravy pásu vykazuje známky poškození nebo koroze, která ohrožuje správnou funkci zařízení.",B
+987,7.1.2.3,"Vozidlo není na všech sedadlech, je-li vyžadováno, vybaveno předepsaným typem bezpečnostních pásů (břišní / tříbodový / samonavíjecí apod.) nebo typem zádržného systému (sedadlo s ukotvenými pásy).",B
+988,7.1.2.4,Bezpečnostní pás nelze spolehlivě zapnout nebo rozepnout.,B
+989,7.1.2.5,Navíječ bezpečnostního pásu nenavijí nebo nenavijí správně nebo neblokuje.,B
+990,7.1.2.6,"Signalizace nezapnutí bezpečnostního pásu, je-li vyžadovaná, nefunguje.",A
+991,7.1.3.1.1,"Omezovač bezpečnostních pasů, je-li vyžadován, není zjevně funkční nebo chybí nebo zjevně neodpovídá požadavkům.",B
+992,7.1.3.1.2,Systém ukazuje závadu omezovače bezpečnostního pásu přes elektronické rozhraní vozidla,B
+993,7.1.4.1.1,"Předepínací zařízení bezpečnostního pásu, je-li vyžadováno, zjevně chybí nebo je-li instalováno, zjevně neodpovídá požadavkům.",B
+994,7.1.4.1.2,Systém ukazuje závadu předepínacího zařízení bezpečnostního pásu přes elektronické rozhraní vozidla,B
+995,7.1.5.1.1,"Airbagy, jsou-li vyžadovány, zjevně chybí nebo jsou-li instalovány, zjevně neodpovídají požadavkům.",B
+996,7.1.5.1.2,Systém ukazuje závadu Airbagu přes elektronické rozhraní vozidla,B
+997,7.1.5.2,Airbag zjevně nefunguje (vystřelený) nebo kontrolka upozorňuje na nesprávnou funkci systému airbagu.,B
+998,7.1.5.3,"Vozidlo, vybavené airbagy pro cestující na předních sedadlech, je-li vyžadováno, není opatřeno výstražným štítkem o nebezpečí při používání dětských zádržných systémů orientovaných proti směru jízdy.",A
+999,7.1.6.1,Doplňující zádržný systém (např. ISOFIX) poškozený nebo kontrolka vadné funkce signalizuje jakékoliv selhání systému nebo doplňující zádržný systém neodpovídá požadavkům (nebezpečí poranění dítěte).,B
+1000,7.1.6.2,Způsob montáže doplňujícího zádržného systému ve vozidle neodpovídá požadavkům.,B
+1001,7.2.1,"Hasicí přístroj, je-li vyžadován, chybí nebo není zjevně funkční.",B
+1002,7.2.2.1,"Upevnění některého hasicího přístroje je uvolněné, ale spolehlivost jeho uchycení není ohrožena.",A
+1003,7.2.2.2,Počet předepsaných hasicích přístrojů ve vozidle nebo jejich minimální hasící schopnost není v souladu s požadavky nebo uchycení hasicího přístroje ve vozidle není spolehlivé.,B
+1004,7.2.2.3,U autobusu není hasicí přístroj umístěn v bezprostřední blízkosti řidiče nebo některý předepsaný hasicí přístroj není snadno přístupný.,B
+1005,7.2.3,Překročena lhůta povinné periodické prohlídky hasicího přístroje nebo periodická prohlídka přístroje chybí.,A
+1006,7.2.4.1,"Automatický hasicí systém, je-li instalován, není zjevně funkční, nebo je již zjevně použitý nebo má překročenou lhůtu periodické prohlídky.",A
+1007,7.2.4.2,"Automatický hasicí systém, je-li vyžadován, není zjevně funkční, nebo je již zjevně použitý nebo má překročenou lhůtu periodické prohlídky.",B
+1008,7.3.1,"Zařízení bránící neoprávněnému použití vozidla, je-li vyžadováno (např. uzamykání volantu, řídítek, řazení), zjevně chybí, je nefunkční nebo neodpovídá požadavkům.",B
+1009,7.3.2,"Zařízení bránící neoprávněnému použití vozidla může způsobit náhodné zablokování volantu, řídítek nebo může náhodně zablokovat převodové ústrojí nebo zabrzdit vozidlo.",C
+1010,7.4.1.1,"Výstražný trojúhelník je částečně poškozený, ale není omezena jeho funkce (viditelnost, použitelnost).",A
+1011,7.4.1.2,"Výstražný trojúhelník chybí, je neúplný nebo poškozený tak, že je omezena jeho funkce (viditelnost, použitelnost).",B
+1012,7.4.2,Nehomologovaný / neschválený výstražný trojúhelník.,B
+1013,7.5.1.1,"Vozidlo není vybaveno příslušným druhem lékárničky nebo obsah lékárničky je neúplný, poškozený nebo uložení lékárničky ve vozidle neodpovídá požadavkům stanoveným zvláštním právním předpisem",B
+1014,7.5.1.2,V autobusu není lékárnička uložena na označeném nebo přístupném místě v prostoru pro cestující (je např. v zavazadlovém prostoru).,B
+1015,7.6.1.1,"Zakládací klíny ke kolu nejsou v dobrém stavu, ale plní svoji funkci.",A
+1016,7.6.1.2,"Vozidlo není vybaveno stanoveným minimálním počtem zakládacích klínů ke kolům nebo zakládací klín neodpovídá požadavkům nebo je poškozen natolik, že neplní svoji funkci.",B
+1017,7.6.2,Uložení zakládacích klínů na vozidle neodpovídá požadavkům.,B
+1018,7.7.1,"Zvukové výstražné zařízení motorového vozidla, je-li vyžadováno, nefunguje nebo chybí.",B
+1019,7.7.2,Ovládání zvukového výstražného zařízení není spolehlivé.,A
+1020,7.7.3.2,"Zvukové výstražné zařízení vydává zjevně kolísavý nerovnoměrný zvuk (např. fanfáry, lodní siréna, tramvaj).",B
+1021,7.7.3.3,"Zvukové výstražné zařízení vozidla, je-li vyžadováno, není schváleného typu (např. použit zvonek na jízdní kolo, klakson s balónkem).",B
+1022,7.7.3.4,Umístění zvukového výstražného zařízení na vozidle porušuje požadavky na vnější výčnělky (ostré hrany).,B
+1023,7.8.1.2,"U silničního motorového vozidla, je-li vyžadováno, rychloměr chybí nebo není schváleného typu.",B
+1024,7.8.2,Rychloměr není zjevně funkční.,B
+1025,7.8.3.1,"Osvětlení stupnice rychloměru, je-li vyžadováno, není funkční.",B
+1026,7.8.3.2,"U vozidla, schváleného v ČR po 1. 7. 2002, stupnice rychloměru není uvedena v km/h.",B
+1027,7.9.1,"Záznamové zařízení, je-li vyžadováno, chybí nebo není v souladu s požadavky nebo bylo z vozidla zjevně demontováno nebo dodatečná montáž záznamového zařízení neodpovídá požadavkům (EC, digitální).",B
+1028,7.9.2,"Záznamové zařízení / adaptér nefunguje, je poškozený nebo není plně funkční (např. tiskárna).",B
+1029,7.9.3,Plomby u záznamového zařízení zjevně poškozené nebo zjevně chybí nebo zjevně neodpovídají požadavkům.,B
+1030,7.9.4,"Montážní štítek záznamového zařízení chybí nebo je porušen tak, že není čitelný nebo je překročena lhůta pro periodickou prohlídku záznamového zařízení (vztahuje se pouze na vozidlo s povinností být vybaveno záznamovým zařízením) nebo není montážní štítek v souladu s požadavky.",B
+1031,7.9.5,Zjevné zásahy nebo manipulace se záznamovým zařízením / adaptérem.,B
+1032,7.9.6,"Rozměr pneumatik, uvedený v montážním štítku k záznamovému zařízení, nesouhlasí s pneumatikami hnaných kol (např. změna profilového čísla).",B
+1033,7.10.1,"Vozidlo, je-li vyžadováno, není vybaveno / dovybaveno omezovačem rychlosti nebo podobným palubním systémem vozidla, které plní stejnou funkci omezení rychlosti.",B
+1034,7.10.2,Omezovač rychlosti není zjevně funkční (překročení rychlosti).,B
+1035,7.10.3,"Zjevný neoprávněný zásah do systému omezovače rychlosti, nastavená rychlost vozidla neodpovídá požadavkům (je-li kontrolováno).",B
+1036,7.10.4,Plomby omezovače rychlosti zjevně poškozené nebo zjevně chybí nebo zjevně neodpovídají požadavkům.,B
+1037,7.10.5,"Nastavená rychlost omezovače rychlosti není zřetelným způsobem uvedena na štítku v kabině řidiče vozidla nebo je štítek poškozený tak, že je nečitelný.",B
+1038,7.10.6,"Rozměr pneumatik, uvedený v montážním štítku k omezovači rychlosti, nesouhlasí pneumatikami hnaných kol (např. změna profilového čísla).",B
+1039,7.11.1.1,U počítadla ujeté vzdálenosti zjevná manipulace s počtem ujetých kilometrů.,B
+1040,7.11.2.1,"Počitadlo ujeté vzdálenosti, zjevně nefunguje.",B
+1041,7.11.2.2,"Počitadlo ujeté vzdálenosti, je-li vyžadováno, chybí.",B
+1042,7.12.1.1,"Vozidlo, je-li vyžadováno, není vybaveno systémem elektronického řízení stability.",B
+1043,7.12.1.2,Systém ukazuje závadu přes elektronické rozhraní vozidla.,B
+1044,7.12.2,"Čidlo otáčení kol systému elektronického řízení stability nevhodně uchycené nebo poškozené tak, že neplní svoji funkci nebo chybí.",B
+1045,7.12.3,"Elektrické kabely systému elektronického řízení stability jsou poškozené tak, že nejsou funkční nebo chybí.",B
+1046,7.12.4,"Jiné části systému elektronické kontroly stability chybí nebo jsou poškozené tak, že systém není funkční.",B
+1047,7.12.5,Spínač systému elektronické kontroly stability nefunguje v souladu s požadavky.,B
+1048,7.12.6,Kontrolka vadné funkce systému elektronické kontroly stability ukazuje jakékoli selhání systému.,B
+1049,7.90.1,Vozidlo není označeno předepsanými údaji.,B
+1050,7.90.2.2,"Označení některých předepsaných údajů na vozidle je poškozené tak, že je nečitelné nebo neplní svoji funkci.",B
+1051,7.90.2.3,Umístění nebo provedení některých předepsaných údajů na vozidle neodpovídá požadavkům nebo skutečnosti.,B
+1052,7.91.1,"Pokud je tak vyžadováno, vozidlo není vybaveno klíčem na matice nebo šrouby kol.",B
+1053,7.91.2,"Pokud je tak vyžadováno, vozidlo není vybaveno příručním zvedákem s předepsanou nosností.",B
+1054,8.1.1.1,Hlučnost zjevně přesahuje úroveň povolenou v požadavcích.,B
+1055,8.1.1.2.1,"Zařízení pro tlumení hluku ze vzduchotlakové soustavy chybí nebo je zjevně poškozené natolik, že neplní svoji funkci.",B
+1056,8.1.1.2.2,"Zjevný zásah do výfukového systému, kterým je bezprostředně zatěžováno životní prostředí nadměrným hlukem.",C
+1057,8.1.1.2.3,Velmi vysoké riziko odpadnutí některé části systému tlumení hluku.,C
+1058,8.2.1.1.1,"Zařízení k omezení emisí namontované výrobcem chybí, je změněno nebo je zjevně poškozené.",B
+1059,8.2.1.1.2,"Netěsnost zařízení k omezení emisí, která by měla vliv na měření emisí.",B
+1060,8.2.1.2.1,Plynné emise zážehových motorů překračují hodnoty stanovené výrobcem.,B
+1061,8.2.1.2.2,"Nestanoví-li výrobce vozidla hodnoty plynných emisí, je překročena povolená hodnota plynný emisí:",B
+1062,8.2.1.2.3,Součinitel přebytku vzduchu lambda neodpovídá specifikaci výrobce.,B
+1063,8.2.1.2.4,Zjištění z OBD značí zjevně nesprávnou funkci / nekompatibilní softwarová verze / s vozidlem nelze navázat komunikaci.,B
+1064,8.2.1.2.5,U vozidel s OBD sdělovač MI (MIL) se po zapnutí zapalování nerozsvítí nebo po nastartování vozidla indikuje závadu.,B
+1065,8.2.1.2.6,Zvýšený volnoběh - otáčky nejsou udržitelné ve stanoveném otáčkovém pásmu.,B
+1066,8.2.1.2.7,Regulace základního volnoběhu - otáčky nejsou ve stanoveném otáčkovém pásmu.,B
+1067,8.2.1.2.8,Nestandardní chování motoru vozidla znemožňující další měření.,B
+1068,8.2.1.2.9,Emisně relevantní závady získané z řídící jednotky.,B
+1069,8.2.2.1.1,"Zařízení k omezení emisí namontované výrobcem chybí, je změněno nebo je zjevně poškozené. V případě vozidla vybaveného filtrem pevných částic s emisní normou EURO 5 (V), EURO 6 (VI) je tato podmínka splněna také v případě, že je naměřena hodnota kouřivosti vyšší než 0,25 m",B
+1070,8.2.2.1.2,"Netěsnost zařízení k omezení emisí, která by měla vliv na měření emisí.",B
+1071,8.2.2.1.3,"Systém SCR k omezení emisí namontovaný výrobcem chybí, je změněn nebo zjevně vyřazen z funkčnosti.",B
+1072,8.2.2.2.1.1,Naměřená hodnota kouřivosti přesahuje úroveň korigovaného součinitele absorpce uvedenou na štítku výrobce.,B
+1073,8.2.2.2.1.2,"Pokud výrobce vozidla kategorie M nebo N s pohonem na motorovou naftu nebo s duálním pohonem nestanovil hodnotu korigovaného součinitele absorpce motoru, nesmí naměřená hodnota kouřivosti překročit:",B
+1074,8.2.2.2.1.3,U vozidel s OBD sdělovač MI (MIL) se po zapnutí zapalování nerozsvítí nebo po nastartování vozidla indikuje závadu.,B
+1075,8.2.2.2.1.4,Zjištění z OBD značí zjevně nesprávnou funkci / nekompatibilní softwarová verze / s vozidlem nelze navázat komunikaci.,B
+1076,8.2.2.2.1.5,Regulace volnoběhu - otáčky nejsou ve stanoveném otáčkovém pásmu.,B
+1077,8.2.2.2.1.6,Referenční nebo přeběhové otáčky nejsou ve stanoveném otáčkovém pásmu,B
+1078,8.2.2.2.1.7,Překročení max. přípustných otáček motoru (omezovače).,B
+1079,8.2.2.2.1.8,Povolený rozptyl kouřivosti byl překročen.,B
+1080,8.2.2.2.1.9,Překročeny doby akcelerace.,B
+1081,8.2.2.2.1.10,Nestandardní chování motoru vozidla znemožňující další měření.,B
+1082,8.2.2.2.1.11,Emisně relevantní závady získané z řídící jednotky.,B
+1083,8.2.2.2.2.1,Naměřená hodnota kouřivosti přesahuje úroveň korigovaného součinitele absorpce uvedenou na štítku výrobce.,B
+1084,8.2.2.2.2.2,"Pokud výrobce vozidla kategorie T nebo C s pohonem na motorovou naftu nebo s duálním pohonem nestanovil hodnotu korigovaného součinitele absorpce motoru, nesmí naměřená hodnota kouřivosti překročit:",B
+1085,8.2.2.2.2.3,U vozidel s OBD sdělovač MI (MIL) se po zapnutí zapalování nerozsvítí nebo po nastartování vozidla indikuje závadu.,B
+1086,8.2.2.2.2.4,Zjištění z OBD značí zjevně nesprávnou funkci / nekompatibilní softwarová verze / s vozidlem nelze navázat komunikaci.,B
+1087,8.2.2.2.2.5,Regulace volnoběhu - otáčky nejsou ve stanoveném otáčkovém pásmu.,B
+1088,8.2.2.2.2.6,Referenční nebo přeběhové otáčky nejsou ve stanoveném otáčkovém pásmu,B
+1089,8.2.2.2.2.7,Překročení max. přípustných otáček motoru (omezovače).,B
+1090,8.2.2.2.2.8,Povolený rozptyl kouřivosti byl překročen.,B
+1091,8.2.2.2.2.9,Překročeny doby akcelerace.,B
+1092,8.2.2.2.2.10,Nestandardní chování motoru vozidla znemožňující další měření.,B
+1093,8.2.2.2.2.11,Emisně relevantní závady získané z řídící jednotky.,B
+1094,8.3.1,Vozidlo nebo některá část jeho výbavy neplní požadavky na elektromagnetickou kompatibilitu.,A
+1095,8.4.1.1.1,"Únik provozních nebo jiných kapalin (které nejsou uvedeny v ostatních jednotlivých závadách), který by mohl poškodit životní prostředí nebo představovat bezpečnostní riziko pro ostatní účastníky silničního provozu.",B
+1096,8.4.1.1.2,"Nadměrný únik provozních nebo jiných kapalin (které nejsou uvedeny v ostatních jednotlivých závadách), který bezprostředně poškozuje životní prostředí nebo bezprostředně ohrožuje ostatní účastníky silničního provozu.",C
+1097,9.1.1.1,"Některé dveře autobusu nelze otevřít nebo bezpečně zavřít v plném rozsahu nebo je-li vyžadováno, nefunguje automatické uzamčení dveří za jízdy autobusu.",B
+1098,9.1.1.2.1,"Dveře autobusu jsou zdeformované, popraskané nebo zkorodované, ale tento stav nemá vliv na bezpečnost přepravovaných osob.",A
+1099,9.1.1.2.2,"Dveře autobusu jsou zdeformované, popraskané nebo nadměrně zkorodované nebo některá část dveří chybí nebo stav dveří ohrožuje bezpečnost přepravovaných osob.",B
+1100,9.1.1.2.3,"Některý prvek nebo zařízení ze systému dveřních zámků nebo dveřních závěsů nebo otočného mechanismu zavírání dveří autobusu je uvolněný, poškozený nebo opotřebovaný, ale tato závada neovlivňuje bezpečnost a provozní vlastnosti dveří.",A
+1101,9.1.1.2.4,"Některý prvek ze systému dveřních zámků, dveřních závěsů nebo otočného mechanismu zavírání dveří autobusu je uvolněný, nadměrně opotřebovaný, poškozený nebo chybí a tato závada ovlivňuje bezpečnost nebo provozní vlastnosti dveří autobusu.",B
+1102,9.1.1.3.1,Nefunkční nouzové otvírání dveří autobusu (pokud lze funkci ověřit bez poškození).,B
+1103,9.1.1.3.2,"Signalizace nouzového otevření dveří autobusu, je-li vyžadována, chybí nebo nefunguje.",B
+1104,9.1.1.4.1,Z místa řidiče autobusu nelze otevřít nebo zavřít některé dveře.,B
+1105,9.1.1.4.2,"Ovladač nebo zařízení pro otevírání dveří autobusu cestujícími, nefunguje.",B
+1106,9.1.1.4.3,"Signalizace otevření provozních dveří autobusu, je-li vyžadována, chybí nebo nefunguje.",B
+1107,9.1.1.4.4,"Některá zařízení nepřímého výhledu (zpětná zrcátka, kamery), umožňující řidiči autobusu sledovat přítomnost cestujících v bezprostřední blízkosti uvnitř nebo vně všech bočních provozních dveří, jsou-li vyžadována, chybí nebo nejsou funkční nebo jsou poškozená tak, že neplní svoji funkci.",B
+1108,9.1.1.4.5,"Zvuková výstraha proti rozjezdu autobusu při otevřených dveří, je-li vyžadována, nefunguje.",B
+1109,9.1.1.5.1,Označení ovladačů nebo zařízení pro otevírání dveří autobusu chybí nebo není v souladu s požadavky,A
+1110,9.1.1.5.2,"Konstrukce dveří autobusu, je-li vyžadováno, zjevně neodpovídá požadavkům ochrany proti sevření nebo zachycení (měkké hrany) nebo se dveře automaticky neotevřou při sevření.",B
+1111,9.1.1.5.3,"Počet provozních dveří a východů v autobusu, jejich provedení, požadované rozměry a rozmístění není v souladu s požadavky (např. dodatečnou úpravou).",B
+1112,9.1.1.5.4,Dodatečná úprava vnitřních prostorů autobusu brání použití povinného východu nebo požadovanému přístupu k takovému východu (včetně nouzovým dveřím).,B
+1113,9.1.2.1,"Některé části zařízení pro otevření únikového východu v autobusu (např. páčky, madla) zjevně chybí nebo jsou poškozené natolik, že únikový východ nelze zjevně otevřít (např. závěsný poklop nebo závěsné / odhoditelné okno).",B
+1114,9.1.2.2.1,"Označení únikového východu nebo návod na otevření únikového východu v autobusu je částečně poškozený, aleje srozumitelný.",A
+1115,9.1.2.2.2,Označení únikového východu nebo návod na otevření únikového východu v autobusu chybí nebo je nečitelný.,B
+1116,9.1.2.3,V blízkosti únikového okna autobusu není k dispozici zařízení nebo nástroj pro jeho rozbití.,B
+1117,9.1.2.4.1,"Počet, druh, rozměr, umístění nebo provedení (materiál) únikových východů (úniková okna odhoditelná / závěsná, únikové poklopy střešní / podlahové) neodpovídá kategorii a třídě autobusu.",B
+1118,9.1.2.4.2,"Neschválená úprava únikového okna autobusu (např. nalepení reklamní fólie), vyjma použití schválené folie pro úniková okna, opatřené povinným štítkem s předepsanými údaji (označení výrobce, typ výrobku, schvalovací číslo ATEST 8 SD XXXX a text „URČENO NA ÚNIKOVÁ OKNA“).",B
+1119,9.1.2.4.3,"Dodatečná úprava vnitřních/vnějších prostorů autobusu, která brání použití některého únikového východu nebo brání požadovanému přístupu k takovému východu.",B
+1120,9.1.2.4.4,Montáž schválené fólie na úniková okna autobusu neodpovídá požadavkům,B
+1121,9.2.1.1,Ovladačem systému odmlžování čelního skla autobusu nelze měnit výkon odmlžování (např. otáčky ventilátoru).,A
+1122,9.2.1.2,Systém odmlžování čelního skla autobusu nefunguje nebo systém odmlžování není zjevně dostatečně účinný (netěsnost vzduchového potrubí apod.).,B
+1123,9.2.2.1,Nevyhovujícím stavem systému odmrazování nebo odmlžování čelního skla autobusu (např. netěsnost nebo nadměrná koroze potrubí) hrozí nebezpečí pronikání emisí jedovatých či výfukových plynů do prostoru pro řidiče nebo pro cestující.,B
+1124,9.2.2.2,Systémem odmlžování nebo odmrazování čelního skla autobusu se dostávají do prostoru pro cestující emise výfukových nebo jiných jedovatých plynů.,C
+1125,9.2.3,Systém odmrazování čelního skla autobusu nefunguje nebo systém odmrazování není zjevně dostatečně účinný (netěsnost vzduchového potrubí apod.).,B
+1126,9.3.1.1,"Systém větrání nebo klimatizace v autobusu, je-li namontována, není funkční nebo nelze plynule regulovat intenzitu větrání / chlazení (např. nad sedadlem).",A
+1127,9.3.1.2,V autobusu zjevně nefunguje systém vytápění nebo je vytápění zjevně nedostatečné nebo nelze teplotu vytápění plynule regulovat.,B
+1128,9.3.1.3,"Některá část zařízení vytápění prostoru pro cestující chybí (např. kryt) nebo je nevhodně vedená nebo je poškozená natolik, že může způsobit cestujícím v autobusu popáleniny.",B
+1129,9.3.2.1,Nevyhovujícím stavem systému větrání nebo vytápění autobusu (např. netěsnost nebo nadměrná koroze vzduchového potrubí / výměníku) hrozí nebezpečí pronikání emisí jedovatých či výfukových plynů do prostoru pro řidiče nebo pro cestující.,B
+1130,9.3.2.2,Systémem větrání nebo vytápění autobusu se dostávají do prostoru pro řidiče nebo pro cestující emise jedovatých či výfukových plynů.,C
+1131,9.4.1.1.2,"Konstrukce sedadla pro cestující v autobusu je poškozená nebo nadměrně opotřebená (sedák / opěradlo), prasklá, deformovaná nebo neúplná nebo poškození sedadla může způsobit zranění přepravované osoby.",B
+1132,9.4.1.2,"Některý spojovací prvek ukotvení sedadla pro cestující v autobusu je uvolněný, prasklý nebo chybí nebo způsob ukotvení sedadla neodpovídá požadavkům (např. mimo kotevní úchyty) nebo kotevní úchyt (včetně okolí) je nadměrně zkorodovaný a tato závada ovlivňuje spolehlivost ukotvení sedadla.",B
+1133,9.4.1.3.1,"Větši vůle než montážní v systému posouvání / seřízení sedadla pro cestující v autobusu (např. boční, úhlové), ovlivňující mechanické vlastnosti sedadla (vůle / tuhost).",A
+1134,9.4.1.3.2,Systém seřízení nebo posouvání sedadla pro cestující v autobusu je vadný nebo nelze sedadlo aretovat spolehlivě v požadované poloze nebo se sedadlo po sklopení samočinně nezablokuje v obvyklé poloze.,B
+1135,9.4.1.4.1,"Počet sedadel pro cestující v autobusu, nestanoví-li výrobce jinak, neodpovídá počtu (chybí/překračujepočet sedadel/kotevních úchytů) uvedeném v dokumentaci vozidla nebo typ sedadla (provedení) neodpovídá požadavkům homologace nebo neodpovídá požadavkům typu vozidla.",B
+1136,9.4.1.4.2,Předepsaný minimální volný prostor pro sedícího cestujícího v autobusu nebo volný prostor nad místem seděni je zjevně snížen (např. dodatečnou úpravou).,B
+1137,9.4.1.4.3,Sedadla pro cestující blokují nouzový východ autobusu.,B
+1138,9.4.2.1.1,Sluneční clonu v autobusu nelze aretovat v horní (sklopené) poloze.,A
+1139,9.4.2.1.2,"Sluneční clona v autobusu nelze spolehlivě aretovat v nastavené poloze nebo sluneční clona / antireflexní ochrana proti oslnění řidiče chybí nebo je v tak zhoršeném stavu, že neplní svoji funkci nebo neodpovídá požadavkům (např. rozměr).",B
+1140,9.4.2.2.1,"Prostor řidiče autobusu, je-li opatřen zábranou (dvířky), nelze spolehlivě zajistit v zavřené poloze.",B
+1141,9.4.2.2.2,"Prostor řidiče autobusu, je-li vyžadováno, není dostatečně chráněn před cestujícími nebo předměty (např. zavazadly) a hrozí nebezpečí zranění řidiče nebo prostor řidiče neodpovídá požadavkům.",B
+1142,9.5.1.1,"Některá svítilna vnitřního osvětlení stanovených prostorů autobusu nesvití, ale tato závada neohrožuje bezpečnost přepravy cestujících.",A
+1143,9.5.1.2,"Některé svítilny vnitřního osvětlení stanovených prostorů autobusu nesvítí nebo jsou poškozeny/a natolik (ostré hrany), že tato závada ohrožuje bezpečnost přepravy cestujících.",B
+1144,9.5.1.3,"Některý stanovený prostor autobusu, je-li osvětlení vyžadováno (např. schody, východy, prostor pro cestující, toalety, vnitřní označení a vnitřní ovladače východů, překážky v prostoru autobusu) není osvětlen předepsaným umělým vnitřním osvětlením, nebo způsob osvětlení neodpovídá požadavkům.",B
+1145,9.6.1.1,"Povrch podlahy autobusu nezajišťuje bezpečný pohyb cestujících a může zapříčinit jejich zranění (např. povrch nadměrně opotřebený, potrhaný, vyboulený).",B
+1146,9.6.1.2,Některý poklop v podlaze autobusu není dostatečně upevněn nebo zajištěn proti otevření nebo některá jeho část nadměrně vyčnívá nad úroveň podlahy a může zapříčinit zranění cestujících.,B
+1147,9.6.1.3,"Podlaha autobusu jev natolik zhoršeném stavu (např. nadměrná koroze, praskliny nebo nespolehlivě uchycené poklopy nebo poklop chybí), že je bezprostředně ohrožena bezpečnost přepravovaných osob.",C
+1148,9.6.2.1,"Některá madla (zábradlí) nebo držadla (poutka) v autobusu jsou uvolněná, ale tato závada neohrožuje zdraví a bezpečnost přepravovaných osob.",A
+1149,9.6.2.2,"Madla (zábradlí) a držadla (poutka) v autobusu jsou na svém povrchu natolik poškozena, že mohou způsobit zranění přepravovaných osob nebo jsou prasklá nebo nespolehlivě uchycená, že neplní svoji funkci nebo ohrožují bezpečnost přepravovaných osob.",B
+1150,9.6.3.1,"Přihrádka pro zavazadla v autobusu je uvolněná, ale tato závada neovlivňuje její funkci (bezpečnou přepravu zavazadel).",A
+1151,9.6.3.2,"Přihrádka pro zavazadla v autobusu je uvolněná nebo poškozená natolik, že je ohrožena její funkce (nebezpečí vypadnutí zavazadel na cestující během jízdy).",B
+1152,9.6.3.3,"Prostor pro zavazadla v autobusu nelze bezpečně uzavřít, nebezpečí vypadnutí zavazadel.",B
+1153,9.6.4.1,"Rozměry (minimální šířka, maximální sklon) nebo povrchová úprava podlahy uličky autobusu není v souladu s požadavky (např. po dodatečné úpravě).",B
+1154,9.6.4.2,"Provedení, povrchová úprava nebo způsob montáže madel (zábradlí) nebo držadel v autobusu není v souladu s požadavky (např. po dodatečné úpravě) nebo některá předepsaná madla (zábradlí) nebo držadla (poutka) chybí.",B
+1155,9.6.4.3,Provedení prostoru pro zavazadla v autobusu není v souladu s požadavky (např. po dodatečné úpravě) a hrozí nebezpečí vypadnutí zavazadel.,B
+1156,9.7.1.1,"Nášlapná plocha schodů autobusu nezajišťuje bezpečný pohyb cestujících a může zapříčinit jejich zranění (např. povrch nadměrně opotřebený, potrhaný, vyboulený).",B
+1157,9.7.1.2,"Nášlapná plocha schodů autobusu je v natolik zhoršeném stavu, že je bezprostředně ohrožena bezpečnost osob.",C
+1158,9.7.2,"Zasouvatelné schody autobusu nelze vysunout / zasunout nebo signalizace funkce u řidiče, je-li vyžadována, není funkční nebo chybí.",B
+1159,9.7.3.1,"Rozměry, tvar, sklon nebo povrch schodů autobusu nejsou v souladu s požadavky.",B
+1160,9.7.3.2,Pohyb zasouvatelných schodů autobusu nebo porušení předepsaných požadavků pro zasouvatelné schody může způsobit zranění osob.,B
+1161,9.8.1.1,"Některý prostředek (tlačítko) pro komunikaci mezi řidičem autobusu a prostorem pro cestující nebo odpočinkovým prostorem pro druhého řidiče, je-li vyžadován, nefunguje nebo chybí.",A
+1162,9.8.1.2,"Systém vnitřní komunikace s cestujícími autobusu, je-li vyžadován, chybí nebo není funkční nebo neodpovídá požadavkům.",B
+1163,9.9.1.1,"Vnitřní označení autobusu předepsanými nápisy nebo piktogramy je poškozené, ale čitelné.",A
+1164,9.9.1.2,"Vnitřní označení autobusu předepsanými nápisy nebo piktogramy chybí nebo je poškozené tak, že nápisy nebo piktogramy jsou nečitelné.",B
+1165,9.9.2,Předepsaná minimální velikost číslic nebo písmen nebo provedení piktogramů pro vnitřní označení autobusů není v souladu s požadavky.,A
+1166,9.10.1.1,"U speciálně konstruovaných autobusů na přepravu dětí (školáků), konstrukce nebo systém ovládání provozních dveří neodpovídá požadavkům.",B
+1167,9.10.2.1,"U speciálně konstruovaných autobusů na přepravu dětí (školáků), signalizační nebo speciální vybavení chybí nebo není v souladu s požadavky.",B
+1168,9.11.1.1.1,"Dveře autobusu pro přístup invalidních vozíků, jsou-li vyžadovány, neumožňují snadný přístup nebo nejsou vybaveny rampou nebo zdviží.",B
+1169,9.11.1.1.2,Zdviž nebo rampa autobusu není funkční nebo nefunguje v celém rozsahu nebo ji nelze spolehlivě zajistit v přepravní poloze.,B
+1170,9.11.1.1.3,Při použití zdviže autobusu se neuvede samočinně v činnost zařízení bránící nechtěnému pohybu invalidního vozíku.,B
+1171,9.11.1.2.1,"Předepsané označení zdviže / rampy autobusu nebo směru pohybu invalidního vozíku, je-li vyžadováno, chybí nebo je nadměrně poškozené.",B
+1172,9.11.1.2.2,"Dveře, podlaha nebo zařízení zdviže /rampy autobusu je opotřebované, nadměrně zkorodované, popraskané nebo poškozené tak, že může způsobit zranění nebo překáží v pohybu cestujícím.",B
+1173,9.11.1.3.1,"Ovládání zdviže /rampy autobusu, které jsou poháněné servomotorem, není funkční.",B
+1174,9.11.1.3.2,Zařízení pro ručně ovládanou zdviž invalidního vozíku v autobusu nefunguje nebo zjevně nefunguje správně.,B
+1175,9.11.1.4.1,"Kontrolka, upozorňující řidiče autobusu na vysunutou nebo spuštěnou polohu zařízení pro nastupování (zdviž, rampa), nefunguje nebo chybí.",B
+1176,9.11.1.4.2,"Optická a zvuková signalizace vysunutí a zasunutí rampy v prostoru dveří autobusu, je-li vyžadována, nefunguje nebo chybí.",B
+1177,9.11.1.5.1,"Dveře autobusu pro přístup invalidních vozíků, jsou-li vyžadovány, nejsou v souladu s požadavky.",B
+1178,9.11.1.5.2,Zdviž / rampa pro přístup invalidních vozíků do autobusu nebo způsob jejich ovládání není v souladu požadavky.,B
+1179,9.11.2.1,"U zádržného systému pro uchycení invalidního vozíku v autobusu, vybaveného samonavíjecím pásem, samonavíjecí zařízení nenavijí nebo nenavijí správně nebo blokovací zařízení neblokuje.",B
+1180,9.11.2.2.2,"Popruh zádržného systému pro uchycení invalidního vozíku v autobusu poškozen tak, že je narušena jeho pevnost (naříznutý, prodřený, roztřepený apod.).",B
+1181,9.11.2.2.3,"Některá tuhá část zádržného systému pro uchycení invalidního vozíku v autobusu má na svém povrchu ostré hrany, které mohou třením způsobit opotřebení nebo porušení popruhu nebo způsobit zranění osob nebo některá tuhá část soupravy pásu vykazuje známky poškození nebo koroze, která ohrožuje správnou funkci zařízení.",B
+1182,9.11.2.2.4,"Některá část připevňovacího kování zádržného systému pro uchycení invalidního vozíku v autobusu je uvolněná nebo poškozená tak, že ukotvení zádržného systému uchycení invalidního vozíku není spolehlivé.",B
+1183,9.11.2.2.6,"Konstrukce opěradla / opory pro přepravu invalidního vozíku orientovaného směrem vzad je poškozená natolik, že opěradlo / opora neplní svoji funkci nebo může způsobit zranění ostatních přepravovaných osob (ostré hrany).",B
+1184,9.11.2.3,Spony zádržného systému pro uchycení invalidního vozíku v autobusu nelze spolehlivě zapnout nebo rozepnout.,B
+1185,9.11.2.4.1,Prostor určený pro přepravu invalidního vozíku v autobusu neodpovídá požadavkům nebo není vybaven předepsaným typem zádržného systému.,B
+1186,9.11.2.4.2,"Autobus, který je určen pro přepravu invalidního vozíku, není opatřen předepsaným označením.",A
+1187,9.11.3.1,"Dorozumívací zařízení pro osoby se sníženou pohyblivostí, je-li vyžadováno, nefunguje, nebo chybí nebo její provedení nebo umístění v autobusu není v souladu s požadavky.",B
+1188,9.12.1.1,Montáž zařízení pro výrobu horkých nápojů nebo kuchyňské zařízení v autobusu nesplňuje požadavky bezpečnosti.,B
+1189,9.12.1.2,"Zařízení pro přípravu jídla v autobusu je zjevně poškozené do takové míry, že by bylo jeho používání nebezpečné.",B
+1190,9.12.2.1,Sanitární zařízení v autobusu není v souladu s požadavky,A
+1191,9.12.2.2,Sanitární zařízení v autobusu je poškozené a může způsobit zranění.,B
+1192,9.12.3.1,"Audiovizuální systémy pro cestující, nejsou umístěny mimo zorné pole řidiče, nebo jejich provedení nebo umístění porušuje požadavky na bezpečnost (ostré hrany) nebo minimální výšku nad sedadlem.",B
+1193,9.12.3.2,"Dodatečná montáž zařízení (výbavy) v autobusu není v souladu s požadavky, ale není ohrožena bezpečnost jízdy ani bezpečnost cestujících",A
+1194,9.12.3.3,Dodatečně namontované zařízení (výbava) v autobusu porušuje požadavky na bezpečnost,B

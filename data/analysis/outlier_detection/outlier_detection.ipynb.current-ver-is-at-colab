@@ -1,0 +1,695 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "AUTOBUS: 1746\n",
+      "AUTOBUS DÁLKOVÝ: 5\n",
+      "JINÉ VOZIDLO: 1\n",
+      "MOPED: 11\n",
+      "MOTO S POST. VOZÍKEM: 7\n",
+      "MOTOCYKL: 4029\n",
+      "NÁKLADNÍ AUT. ADR: 398\n",
+      "NÁKLADNÍ AUTOMOBIL: 39443\n",
+      "NÁKLADNÍ NÁVĚS: 4664\n",
+      "NÁKLADNÍ NÁVĚS ADR: 342\n",
+      "NÁKLADNÍ PŘÍVĚS: 8288\n",
+      "NÁKLADNÍ PŘÍVĚS ADR: 27\n",
+      "NÁVĚS NÁKLADNÍ TRAKTOROVÝ ADR: 2\n",
+      "NÁVĚS SPECIÁLNÍ: 28\n",
+      "NÁVĚS SPECIÁLNÍ ADR: 4\n",
+      "NÁVĚS TRAKTOROVÝ: 157\n",
+      "OSOBNÍ AUTOMOBIL: 213866\n",
+      "OSTATNÍ VOZIDLO: 49\n",
+      "PRACOVNÍ STROJ: 15\n",
+      "PRACOVNÍ STROJ NESENÝ: 1\n",
+      "PRACOVNÍ STROJ SAMOJÍZDNÝ: 416\n",
+      "PŘÍPOJNÉ VOZIDLO: 1938\n",
+      "PŘÍVĚS TRAKTOROVÝ: 547\n",
+      "SPECIÁLNÍ AUTOMOBIL: 1581\n",
+      "SPECIÁLNÍ PŘÍVĚS: 428\n",
+      "TAHAČ NÁVĚSŮ: 1583\n",
+      "TAHAČ NÁVĚSŮ ADR: 103\n",
+      "TAHAČ PŘÍVĚSŮ: 2\n",
+      "TRAKTOR: 1005\n",
+      "TRAKTOR KOLOVÝ: 665\n",
+      "TRAKTOR PÁSOVÝ: 7\n",
+      "TŘÍKOLKA: 17\n",
+      "VOJENSKÉ VOZIDLO: 81\n",
+      "VOZIDLO URČENÉ K DOSTAVBĚ: 39\n",
+      "VOZIDLO ZVLÁŠTNÍHO URČENÍ: 842\n",
+      "VÝMĚNNÝ TAŽENÝ STROJ: 4\n",
+      "ČTYŘKOLKA: 216\n"
+     ]
+    }
+   ],
+   "source": [
+    "df = pd.read_csv('../prohlidky/nosync/data_csv_full/2019-01.csv', index_col=0)\n",
+    "df['DatKont'] = pd.to_datetime(df['DatKont'])\n",
+    "df['DatPrvReg'] = pd.to_datetime(df['DatPrvReg'])\n",
+    "\n",
+    "groups = df.groupby('DrVoz')\n",
+    "for name, items in groups:\n",
+    "    print(name + ': ' + str(items.shape[0]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array(['částečně způsobilé', 'způsobilé', 'nezpůsobilé', nan],\n",
+       "      dtype=object)"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df['VyslSTK'].unique()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = df[df['DrVoz'] == 'OSOBNÍ AUTOMOBIL']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = df.drop(['VIN', 'DatKont', 'TypMot', 'DrVoz', 'Ct', 'DatPrvReg', 'Zavady', 'VyslEmise'], axis=1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>STK</th>\n",
+       "      <th>DrTP</th>\n",
+       "      <th>TZn</th>\n",
+       "      <th>ObchOznTyp</th>\n",
+       "      <th>Km</th>\n",
+       "      <th>VyslSTK</th>\n",
+       "      <th>DTKont</th>\n",
+       "      <th>ZavA</th>\n",
+       "      <th>ZavB</th>\n",
+       "      <th>ZavC</th>\n",
+       "      <th>StariDnu</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>34</th>\n",
+       "      <td>3223</td>\n",
+       "      <td>pravidelná</td>\n",
+       "      <td>ADRIA</td>\n",
+       "      <td>MATRIX</td>\n",
+       "      <td>60377</td>\n",
+       "      <td>způsobilé</td>\n",
+       "      <td>2</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>4372</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>35</th>\n",
+       "      <td>3122</td>\n",
+       "      <td>Evidenční kontrola</td>\n",
+       "      <td>ADRIA</td>\n",
+       "      <td>MATRIX</td>\n",
+       "      <td>39595</td>\n",
+       "      <td>způsobilé</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>4223</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>37</th>\n",
+       "      <td>3761</td>\n",
+       "      <td>Evidenční kontrola</td>\n",
+       "      <td>ADRIA</td>\n",
+       "      <td>MATRIX</td>\n",
+       "      <td>8691</td>\n",
+       "      <td>způsobilé</td>\n",
+       "      <td>2</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1644</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>65</th>\n",
+       "      <td>3647</td>\n",
+       "      <td>Evidenční kontrola</td>\n",
+       "      <td>AERO</td>\n",
+       "      <td>500</td>\n",
+       "      <td>26670</td>\n",
+       "      <td>způsobilé</td>\n",
+       "      <td>2</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>33582</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>66</th>\n",
+       "      <td>3838</td>\n",
+       "      <td>Evidenční kontrola</td>\n",
+       "      <td>AERO</td>\n",
+       "      <td>662</td>\n",
+       "      <td>28814</td>\n",
+       "      <td>způsobilé</td>\n",
+       "      <td>2</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>32851</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "     STK                DrTP    TZn ObchOznTyp     Km    VyslSTK  DTKont  \\\n",
+       "34  3223          pravidelná  ADRIA     MATRIX  60377  způsobilé       2   \n",
+       "35  3122  Evidenční kontrola  ADRIA     MATRIX  39595  způsobilé       1   \n",
+       "37  3761  Evidenční kontrola  ADRIA     MATRIX   8691  způsobilé       2   \n",
+       "65  3647  Evidenční kontrola   AERO        500  26670  způsobilé       2   \n",
+       "66  3838  Evidenční kontrola   AERO        662  28814  způsobilé       2   \n",
+       "\n",
+       "    ZavA  ZavB  ZavC  StariDnu  \n",
+       "34     0     0     0      4372  \n",
+       "35     0     0     0      4223  \n",
+       "37     0     0     0      1644  \n",
+       "65     0     0     0     33582  \n",
+       "66     0     0     0     32851  "
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# dummies = pd.get_dummies(df[['DrTP', 'TZn', 'ObchOznTyp']], drop_first=True)\n",
+    "# base = pd.concat([df, dummies], axis=1)\n",
+    "# base = base.drop(['DrTP', 'TZn', 'ObchOznTyp'], axis=1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "Int64Index: 213866 entries, 34 to 282523\n",
+      "Data columns (total 18 columns):\n",
+      " #   Column                                               Non-Null Count   Dtype\n",
+      "---  ------                                               --------------   -----\n",
+      " 0   Km                                                   213866 non-null  int64\n",
+      " 1   VyslSTK                                              213866 non-null  uint8\n",
+      " 2   DTKont                                               213866 non-null  int64\n",
+      " 3   ZavA                                                 213866 non-null  int64\n",
+      " 4   ZavB                                                 213866 non-null  int64\n",
+      " 5   ZavC                                                 213866 non-null  int64\n",
+      " 6   StariDnu                                             213866 non-null  int64\n",
+      " 7   DrTP_Na žádost zákazníka                             213866 non-null  uint8\n",
+      " 8   DrTP_Nařízená technická prohlídka                    213866 non-null  uint8\n",
+      " 9   DrTP_Před registrací                                 213866 non-null  uint8\n",
+      " 10  DrTP_Před registrací - opakovaná                     213866 non-null  uint8\n",
+      " 11  DrTP_Před schvál. tech. způsob. vozidla              213866 non-null  uint8\n",
+      " 12  DrTP_Před schvál. tech. způsob. vozidla - opakovaná  213866 non-null  uint8\n",
+      " 13  DrTP_TSK - Opakovaná                                 213866 non-null  uint8\n",
+      " 14  DrTP_TSK - Opakovaná po DN                           213866 non-null  uint8\n",
+      " 15  DrTP_Technická silniční kontrola                     213866 non-null  uint8\n",
+      " 16  DrTP_opakovaná                                       213866 non-null  uint8\n",
+      " 17  DrTP_pravidelná                                      213866 non-null  uint8\n",
+      "dtypes: int64(6), uint8(12)\n",
+      "memory usage: 13.9 MB\n"
+     ]
+    }
+   ],
+   "source": [
+    "dummies = pd.get_dummies(df[['DrTP']], drop_first=True)\n",
+    "base = pd.concat([df, dummies], axis=1)\n",
+    "base = base.drop(['DrTP', 'TZn', 'ObchOznTyp', 'STK'], axis=1)\n",
+    "\n",
+    "def stk_result_to_ordinal(text):\n",
+    "    if text == 'způsobilé':\n",
+    "        return 0\n",
+    "    if text == 'částečně způsobilé':\n",
+    "        return 1\n",
+    "    if text == 'nezpůsobilé':\n",
+    "        return 2\n",
+    "    return 3\n",
+    "base['VyslSTK'] = base['VyslSTK'].apply(stk_result_to_ordinal).astype('uint8')\n",
+    "base.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 78,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Is CUDA supported by this system? True\n",
+      "CUDA version: 11.7\n",
+      "ID of current CUDA device: 0\n",
+      "Name of current CUDA device: NVIDIA GeForce RTX 3060 Laptop GPU\n"
+     ]
+    }
+   ],
+   "source": [
+    "import torch\n",
+    "  \n",
+    "print(f\"Is CUDA supported by this system? {torch.cuda.is_available()}\")\n",
+    "print(f\"CUDA version: {torch.version.cuda}\")\n",
+    "  \n",
+    "# Storing ID of current CUDA device\n",
+    "cuda_id = torch.cuda.current_device()\n",
+    "print(f\"ID of current CUDA device: {torch.cuda.current_device()}\")\n",
+    "        \n",
+    "print(f\"Name of current CUDA device: {torch.cuda.get_device_name(cuda_id)}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import torch\n",
+    "import torchvision\n",
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt\n",
+    "import torchvision.transforms as transforms\n",
+    "import torch.nn as nn\n",
+    "import torch.nn.functional as F\n",
+    "\n",
+    "from torch.utils.data import Dataset, DataLoader, TensorDataset"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "device(type='cuda', index=0)"
+      ]
+     },
+     "execution_count": 80,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')\n",
+    "device"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 81,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import subprocess\n",
+    "\n",
+    "class MyDataset(Dataset):\n",
+    "    \"\"\"Single PD DF dataset\"\"\"\n",
+    "\n",
+    "    def __init__(self, df):\n",
+    "        # self.dataset_path = path\n",
+    "        # self.df = pd.read_csv(path, index_col=0)\n",
+    "        self.df = df.astype('float32')\n",
+    "\n",
+    "    def __len__(self):\n",
+    "        return self.df.shape[0]\n",
+    "\n",
+    "    def __getitem__(self,idx):\n",
+    "        tensor = torch.tensor(self.df.iloc[idx])\n",
+    "\n",
+    "        return tensor, torch.tensor(0).float()\n",
+    "\n",
+    "dataset = MyDataset(base)\n",
+    "\n",
+    "# class MyDataset(Dataset):\n",
+    " \n",
+    "#   def __init__(self, dir, mem=True):\n",
+    "#     self.dataset_paths = [dir + '/' + filename\n",
+    "#             for filename in os.listdir(dir)]\n",
+    "    \n",
+    "#     # Count numbers of records for each file.\n",
+    "#     self.counts = []\n",
+    "#     self.len = 0\n",
+    "#     for path in self.dataset_paths:\n",
+    "#         output = subprocess.getoutput(f'wc -l {path}')\n",
+    "#         len = int(output.split(' ')[0]) - 1 # -1 for the CSV header\n",
+    "#         self.counts.append(len)\n",
+    "#         self.len = self.len + len\n",
+    "\n",
+    "#     if mem:\n",
+    "#         # Load all DFs into memory.\n",
+    "#         throw 'TODO: Implement'\n",
+    " \n",
+    "#     self.x_train=torch.tensor(x,dtype=torch.float32)\n",
+    "#     self.y_train=torch.tensor(y,dtype=torch.float32)\n",
+    " \n",
+    "#   def __len__(self):\n",
+    "#     return self.len\n",
+    "   \n",
+    "#   def __getitem__(self,idx):\n",
+    "    \n",
+    "    \n",
+    "#     return self.x_train[idx],self.y_train[idx]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 82,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dataloader = torch.utils.data.DataLoader(dataset, \n",
+    "                                         batch_size = 128,\n",
+    "                                         shuffle = True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "18"
+      ]
+     },
+     "execution_count": 83,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len(dataset.__getitem__(0)[0])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 105,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# define autoencoder architecture\n",
+    "class AE(nn.Module):\n",
+    "    def __init__(self, encoding_dim):\n",
+    "        super(AE, self).__init__()\n",
+    "        ## encoder ##\n",
+    "        self.encoder_1 = nn.Linear(18, encoding_dim) #4392\n",
+    "        ## decoder ##\n",
+    "        self.decoder_1 = nn.Linear(encoding_dim, 18)\n",
+    "\n",
+    "    def forward(self, x):\n",
+    "        # pass x into encoder\n",
+    "        encoded = F.relu(self.encoder_1(x))\n",
+    "        # pass x into decoder\n",
+    "        # x = torch.sigmoid(self.decoder_1(encoded))\n",
+    "        # return x\n",
+    "        return self.decoder_1(encoded)\n",
+    "\n",
+    "# class AE(nn.Module):\n",
+    "#     def __init__(self, encoding_dim):\n",
+    "#         super(AE, self).__init__()\n",
+    "#         ## encoder ##\n",
+    "#         self.encoder_1 = nn.Linear(18, 12)\n",
+    "#         self.encoder_2 = nn.Linear(12, 4)\n",
+    "#         ## decoder ##\n",
+    "#         self.decoder_1 = nn.Linear(4, 12)\n",
+    "#         self.decoder_2 = nn.Linear(12, 18)\n",
+    "\n",
+    "#     def forward(self, x):\n",
+    "#         # pass x into encoder\n",
+    "#         x = F.relu(self.encoder_1(x))\n",
+    "#         encoded = F.relu(self.encoder_2(x))\n",
+    "#         # pass x into decoder\n",
+    "#         x = F.relu(self.decoder_1(encoded))\n",
+    "#         # x = torch.sigmoid(self.decoder_2(x))\n",
+    "#         # return x\n",
+    "#         return self.decoder_2(x)\n",
+    "\n",
+    "# class AE(nn.Module):\n",
+    "#     def __init__(self, encoding_dim):\n",
+    "#         super(AE, self).__init__()\n",
+    "#         ## encoder ##\n",
+    "#         self.encoder_1 = nn.Linear(18, 14)\n",
+    "#         self.encoder_2 = nn.Linear(14, 11)\n",
+    "#         self.encoder_3 = nn.Linear(11, 8)\n",
+    "#         self.encoder_4 = nn.Linear(8, 4)\n",
+    "#         ## decoder ##\n",
+    "#         self.decoder_1 = nn.Linear(4, 8)\n",
+    "#         self.decoder_2 = nn.Linear(8, 11)\n",
+    "#         self.decoder_3 = nn.Linear(11, 14)\n",
+    "#         self.decoder_4 = nn.Linear(14, 18)\n",
+    "\n",
+    "#     def forward(self, x):\n",
+    "#         # pass x into encoder\n",
+    "#         x = F.relu(self.encoder_1(x))\n",
+    "#         x = F.relu(self.encoder_2(x))\n",
+    "#         x = F.relu(self.encoder_3(x))\n",
+    "#         encoded = F.relu(self.encoder_4(x))\n",
+    "#         # pass x into decoder\n",
+    "#         x = F.relu(self.decoder_1(encoded))\n",
+    "#         x = F.relu(self.decoder_2(x))\n",
+    "#         x = F.relu(self.decoder_3(x))\n",
+    "#         x = self.decoder_4(x)\n",
+    "#         # x = torch.sigmoid(self.decoder_2(x))\n",
+    "#         return x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "latent_dim = 4\n",
+    "model = AE(latent_dim).to(device)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "AE(\n",
+       "  (encoder_1): Linear(in_features=18, out_features=4, bias=True)\n",
+       "  (decoder_1): Linear(in_features=4, out_features=18, bias=True)\n",
+       ")"
+      ]
+     },
+     "execution_count": 112,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "model"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#what are we going to optimize?\n",
+    "criterion = nn.MSELoss() #if you have a regression task and don't know what to do - use `MSELoss`\n",
+    "\n",
+    "#how are we going to optimize it?\n",
+    "optimizer = torch.optim.Adam(model.parameters(), lr=0.001) #if you just don't know what to do - use `Adam` optimizer"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Epoch: 1 \tTraining Loss: 1260907454.7528\n",
+      "Epoch: 2 \tTraining Loss: 424650.0404\n",
+      "Epoch: 3 \tTraining Loss: 495.4706\n",
+      "Epoch: 4 \tTraining Loss: 75.9920\n",
+      "Epoch: 5 \tTraining Loss: 51.6015\n",
+      "Epoch: 6 \tTraining Loss: 280.5740\n",
+      "Epoch: 7 \tTraining Loss: 34.8506\n",
+      "Epoch: 8 \tTraining Loss: 119.5394\n",
+      "Epoch: 9 \tTraining Loss: 135.9073\n",
+      "Epoch: 10 \tTraining Loss: 130.4114\n"
+     ]
+    }
+   ],
+   "source": [
+    "# number of epochs to train the model\n",
+    "n_epochs = 10\n",
+    "\n",
+    "for epoch in range(1, n_epochs + 1):\n",
+    "    # monitor training loss\n",
+    "    train_loss = 0.0\n",
+    "\n",
+    "    for data, _ in dataloader: # returns batch shape = (batch_size, 28, 28)\n",
+    "        optimizer.zero_grad() # clear the gradients of all optimized variables\n",
+    "        # print(type(data))\n",
+    "        data = data.to(device) # send to GPU\n",
+    "        # data = data.view(data.shape[0], -1) # flatten images (batch_size, 28*28)\n",
+    "        outputs = model(data)  # forward pass: compute predicted outputs by passing inputs to the model\n",
+    "        loss = criterion(outputs, data) # calculate the loss\n",
+    "        loss.backward() # backward pass: compute gradient of the loss with respect to model parameters\n",
+    "        optimizer.step() # perform a single optimization step (parameter update)\n",
+    "        train_loss += loss.item()\n",
+    "  \n",
+    "    train_loss = train_loss/len(dataloader)\n",
+    "    print('Epoch: {} \\tTraining Loss: {:.4f}'.format(\n",
+    "        epoch, \n",
+    "        train_loss\n",
+    "        ))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# With TZn and ObchZnTyp as dummies: 20 min per epoch, poor loss."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3.10.8 64-bit",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  },
+  "orig_nbformat": 4,
+  "vscode": {
+   "interpreter": {
+    "hash": "e7370f93d1d0cde622a1f8e1c04877d8463912d04d973331ad4851f04de6915a"
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
