@@ -16,7 +16,7 @@ def filter_incomplete(df: pd.DataFrame, date: datetime.date = None, **kwargs) ->
             'make',
             'motor_type',
             'vehicle_type',
-            'model',
+            'model_primary',
             'vehicle_class',
             'first_registration_date',
         ])

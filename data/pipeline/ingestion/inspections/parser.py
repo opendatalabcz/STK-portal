@@ -112,7 +112,7 @@ def parse(path):
             # 'make': make,
             # 'motor_type': motor_type,
             'vehicle_type': vehicle_type,
-            # 'model': model,
+            # 'model_primary': model,
             # 'vehicle_class': vehicle_class,
             'first_registration_date': first_registration_date,
         })
