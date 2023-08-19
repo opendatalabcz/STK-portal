@@ -3,6 +3,7 @@ from sqlalchemy import Connection
 from .stations.main import ingest as stations_ingest
 from .defects.main import ingest as defects_ingest
 from .inspections.main import ingest as inspections_ingest
+from .vehicle_register.main import ingest as vehicle_register_ingest
 
 def ingest(conn: Connection):
     """Ingest all data sources."""
@@ -10,3 +11,4 @@ def ingest(conn: Connection):
     stations_ingest(conn)
     defects_ingest(conn)
     inspections_ingest(conn) # Requires stations and defects to be ingested.
+    vehicle_register_ingest(conn)
