@@ -3,9 +3,12 @@ __pycache__
 .venv
 catboost_info
 
+node_modules
+
 nosync
 *old
 /misc/**
+.~lock*
 
 .env
 

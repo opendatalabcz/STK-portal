@@ -1,15 +1,18 @@
-import Card from "./Card";
+"use client";
+
+import { Card } from "antd";
 
 export default function NumberBox({
-  value,
   title,
+  children,
 }: {
-  value: string;
   title: string;
+  children: React.ReactNode | undefined;
 }) {
   return (
     <Card>
-      <p className="pb-1 text-3xl font-medium">{value}</p>
+      {/* <p className="pb-1 text-3xl font-medium">{value ?? "?"}</p> */}
+      {children}
       <p>{title}</p>
     </Card>
   );
