@@ -1,55 +1,40 @@
-import Card from "@/components/Card";
-import PrimaryButton from "@/components/PrimaryButton";
-import { Rubik } from "next/font/google";
+"use client";
 
-const rubik = Rubik({ subsets: ["latin"] });
+import AverageAgeChart from "./changes_in_time/average_age";
+import Layout, { Content } from "antd/es/layout/layout";
+import { Button, ConfigProvider, Input } from "antd";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Card from "antd/es/card/Card";
+import theme from "../themeConfig";
 
 export default function VehiclesPage() {
   return (
-    <main className="flex flex-col items-stretch p-4 space-y-4">
-      <h1 className={`${rubik.className} text-4xl py-2`}>Vozidla</h1>
+    <ConfigProvider theme={theme}>
+      <Layout>
+        <Header></Header>
+        <Content className="flex flex-col items-stretch p-4 space-y-4">
+          <h1 className="text-3xl">Vozidla</h1>
 
-      <div className="space-x-4">
-        <input
-          type="text"
-          className="p-2 h-12 rounded border-2 outline-none md:w-96 focus:border-red-600 focus:bg-red-50 hover:border-red-600"
-          placeholder="VIN, značka, model, rok výroby..."
-          autoFocus
-        ></input>
-        <PrimaryButton>Hledat</PrimaryButton>
-      </div>
+          <div className="flex flex-row justify-start space-x-4 md:w-1/2">
+            <Input placeholder="VIN, značka, model, rok výroby..."></Input>
+            <Button type="primary" size="large">
+              Hledat
+            </Button>
+          </div>
 
-      <h2 className={`${rubik.className} text-3xl pt-4`}>Statistiky</h2>
+          <h1 className="pt-4 text-3xl">Statistiky</h1>
 
-      <h3 className={`${rubik.className} text-2xl pt-4`}>
-        Proměny vozového parku v čase
-      </h3>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
-        {["1", "2", "3"].map((n) => (
-          <Card>Graf {n}</Card>
-        ))}
-      </div>
-
-      <h3 className={`${rubik.className} text-2xl pt-4`}>Průměrné nájezdy</h3>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
-        {["1", "2", "3"].map((n) => (
-          <Card>Graf {n}</Card>
-        ))}
-      </div>
-
-      <h3 className={`${rubik.className} text-2xl pt-4`}>Ekologie</h3>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
-        {["1", "2", "3"].map((n) => (
-          <Card>Graf {n}</Card>
-        ))}
-      </div>
-
-      <h3 className={`${rubik.className} text-2xl pt-4`}>Migrace</h3>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
-        {["1", "2", "3"].map((n) => (
-          <Card>Graf {n}</Card>
-        ))}
-      </div>
-    </main>
+          <h2 className="pt-4 text-2xl">Proměny vozového parku v čase</h2>
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
+            <Card>
+              <h3 className="text-lg">Průměrný věk osobních automobilů</h3>
+              <AverageAgeChart></AverageAgeChart>
+            </Card>
+          </div>
+        </Content>
+        <Footer></Footer>
+      </Layout>
+    </ConfigProvider>
   );
 }
