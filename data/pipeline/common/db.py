@@ -12,6 +12,9 @@ class Connection:
         data_source: data source database id
         """
 
+        self.db = None
+        self.conn = None
+        
         try:
             username = urllib.parse.quote_plus(os.environ['POSTGRES_USER'])
             password = urllib.parse.quote_plus(os.environ['POSTGRES_PASSWORD'])

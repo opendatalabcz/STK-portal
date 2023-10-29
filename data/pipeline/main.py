@@ -1,11 +1,23 @@
 """Data ingestion module"""
 
-import db
+import asyncio
+
+from common.db import Connection
 from ingestion.main import ingest
+from analysis.main import analyze
+
+async def main():
+    # Set up database connection.
+    print('Connecting to the database')
+    db = Connection()
+
+    print('# Data ingestion')
+    ingest(db.conn)
+
+    print()
+    print('# Analysis')
+    analyze(db.conn)
+
 
 if __name__ == "__main__":
-    # Set up database connection.
-    db = db.Connection()
-
-    # Ingest data.
-    ingest(db.conn)
+    asyncio.run(main())
