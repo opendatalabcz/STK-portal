@@ -1,0 +1,24 @@
+type Inspection = {
+  id: bigint;
+  station_id: string;
+  date: string;
+  vin: string;
+  inspection_type: string;
+  vehicle_age: number;
+  result: number;
+  mileage: number;
+  defects: string;
+  defects_a: number;
+  defects_b: number;
+  defects_c: number;
+  defects_0: number;
+  defects_1: number;
+  defects_2: number;
+  defects_3: number;
+  defects_4: number;
+  defects_5: number;
+  defects_6: number;
+  defects_7: number;
+  defects_8: number;
+  defects_9: number;
+};
