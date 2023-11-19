@@ -52,13 +52,13 @@ export default function AverageAgeChart() {
       scales: {
         y: {
           grid: {
-            color: function (context: ScriptableScaleContext) {
-              if (Number.isInteger(context.tick.value as number)) {
-                return "rgb(0,0,0)";
-              } else {
-                return "rgb(200,200,200)";
-              }
-            },
+            // color: function (context: ScriptableScaleContext) {
+            //   if (Number.isInteger(context.tick.value as number)) {
+            //     return "rgb(0,0,0)";
+            //   } else {
+            //     return "rgb(200,200,200)";
+            //   }
+            // },
           },
         },
       },
