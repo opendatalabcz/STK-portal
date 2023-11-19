@@ -19,7 +19,7 @@ async function fetcher(key: string) {
 export default function Home() {
   // TODO: Add error handling using a redirect to error page.
   const { data: vehicleCount, isLoading: vehicleCountIsLoading } = useSWR(
-    "/api/vehicle_register",
+    "/api/vehicles",
     fetcher
   );
   const { data: stationCount, isLoading: stationCountIsLoading } = useSWR(
@@ -43,32 +43,32 @@ export default function Home() {
       <Layout>
         <Header></Header>
         <Content>
-          <main className="flex flex-col items-center max-w-screen-lg px-4 mx-auto my-4 space-y-8">
-            <p className="leading-relaxed md:w-3/4 xl:w-4/5">
+          <div className="flex flex-col items-center max-w-screen-lg px-4 mx-auto my-4 space-y-8">
+            <p className="leading-relaxed ">
               Vítejte na STK portálu. Naleznete zde informace o stanicích
               technické kontroly, detaily o vozidlech v ČR, statistiky vozového
-              parku a prohlídek na STK. Portál nabízí také průvodce výběrem
-              auta. To vše na základě dat z registru silničních vozidel a
-              záznamů o prohlídkách na STK zveřejněných MDČR (a případnými
-              dalšími subjekty).
+              parku a prohlídek na STK. Portál nabízí také srovnání vozidel
+              podle dostupných informací. To vše na základě dat z registru
+              silničních vozidel a záznamů o prohlídkách na STK zveřejněných
+              MDČR (a případnými dalšími subjekty).
             </p>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <NumberBox title="Vozidel v registru">
-                <p className="pb-1 text-3xl font-medium">
+                <p className="flex-wrap pb-1 text-3xl font-medium whitespace-break-spaces">
                   {vehicleCountIsLoading ? (
                     <LoadingOutlined spin={true} />
                   ) : (
-                    vehicleCount?.toLocaleString("cs-CZ")
+                    vehicleCount?.toLocaleString("cs-CZ").replace(/\s/g, " ")
                   )}
                 </p>
               </NumberBox>
               <NumberBox title="Stanic TK">
-                <p className="pb-1 text-3xl font-medium">
+                <p className="flex-wrap pb-1 text-3xl">
                   {stationCountIsLoading ? (
                     <LoadingOutlined spin={true} />
                   ) : (
-                    stationCount?.toLocaleString("cs-CZ")
+                    stationCount?.toLocaleString("cs-CZ").replace(/\s/g, " ")
                   )}
                 </p>
               </NumberBox>
@@ -77,7 +77,7 @@ export default function Home() {
                   {inspectionCountIsLoading ? (
                     <LoadingOutlined spin={true} />
                   ) : (
-                    inspectionCount?.toLocaleString("cs-CZ")
+                    inspectionCount?.toLocaleString("cs-CZ").replace(/\s/g, " ")
                   )}
                 </p>
               </NumberBox>
@@ -105,7 +105,7 @@ export default function Home() {
                 <Button size="large">Hledat</Button>
               </div>
             </div>
-          </main>
+          </div>
         </Content>
         <Footer></Footer>
       </Layout>

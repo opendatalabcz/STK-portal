@@ -1,7 +1,11 @@
 import "./globals.css";
 import StyledComponentsRegistry from "./AntdRegistry";
-import { App } from "antd";
+import { App, ConfigProvider } from "antd";
 import { IBM_Plex_Sans } from "next/font/google";
+import theme from "./themeConfig";
+import Layout, { Content } from "antd/es/layout/layout";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ["500", "700"],

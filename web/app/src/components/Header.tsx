@@ -20,14 +20,14 @@ export default function Header() {
       style={{
         position: "sticky",
         top: 0,
-        zIndex: 1,
+        zIndex: 10000, // Fixes overlapping maps and its controls.
         width: "100%",
         display: "flex",
         alignItems: "center",
-        background: colorBgLayout,
-        borderBottom: "1px",
-        borderBottomColor: colorSplit,
-        borderBottomStyle: "solid",
+        // background: colorBgLayout,
+        // borderBottom: "1px",
+        // borderBottomColor: colorSplit,
+        // borderBottomStyle: "solid",
       }}
     >
       <div className="flex flex-row items-baseline pr-8 space-x-4 sm:pr-16">
@@ -39,16 +39,17 @@ export default function Header() {
           className="self-center"
         ></Image>
         <Link href="/">
-          <h1 className="font-medium text-black sm:text-2xl">STK Portál</h1>
+          <h1 className="font-medium text-white sm:text-2xl">STK Portál</h1>
         </Link>
       </div>
       <div className="grow">
         <Menu
-          theme="light"
+          // theme="light"
+          theme="dark"
           style={{
             display: "flex",
             alignItems: "center",
-            background: colorBgLayout,
+            // background: colorBgLayout,
           }}
           mode="horizontal"
           defaultSelectedKeys={[firstLevelPath]}

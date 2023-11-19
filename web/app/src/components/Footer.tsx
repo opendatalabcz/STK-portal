@@ -13,11 +13,14 @@ export default function Footer() {
   return (
     <AntFooter
       className="flex flex-col items-center justify-center px-4 py-2 space-y-6"
-      style={{
-        borderTop: "1px",
-        borderTopColor: colorSplit,
-        borderTopStyle: "solid",
-      }}
+      style={
+        {
+          // backgroundColor: colorText,
+          // borderTop: "1px",
+          // borderTopColor: colorSplit,
+          // borderTopStyle: "solid",
+        }
+      }
     >
       <div>
         <p>
@@ -48,9 +51,10 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="flex flex-row items-center space-x-10">
+      <div className="flex flex-row flex-wrap items-center md:space-x-5">
         <a href="https://opendatalab.cz/" target="_blank">
           <Image
+            className="mx-4"
             src={"/logo-odl.svg"}
             width={64}
             height={64}
@@ -59,14 +63,27 @@ export default function Footer() {
         </a>
         <a href="https://fit.cvut.cz/" target="_blank">
           <Image
+            className="mx-4"
             src={"/logo-fit.svg"}
             width={160}
             height={64}
             alt={"Logo FIT ČVUT"}
           ></Image>
         </a>
+        <a href="https://profinit.eu/" target="_blank">
+          <Image
+            className="mx-4"
+            src={"/logo-profinit.png"}
+            width={150}
+            height={64}
+            alt={"Logo Profinit"}
+          ></Image>
+        </a>
         <a href="https://github.com/opendatalabcz/STK-portal" target="_blank">
-          <GithubOutlined className="text-4xl" style={{ color: "black" }} />
+          <GithubOutlined
+            className="mx-4 text-4xl"
+            style={{ color: "black" }}
+          />
         </a>
       </div>
     </AntFooter>

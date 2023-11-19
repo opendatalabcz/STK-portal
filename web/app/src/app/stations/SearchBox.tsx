@@ -14,7 +14,7 @@ export default function SearchBox({ initialValue }: { initialValue?: string }) {
   }
 
   return (
-    <div className="flex flex-row justify-start space-x-4 md:w-1/2">
+    <div className="flex flex-row justify-start space-x-4 md:w-8/12">
       <Input
         autoFocus
         value={value}

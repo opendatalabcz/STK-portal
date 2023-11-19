@@ -59,7 +59,7 @@ export default function Map() {
           {/* </MarkerClusterGroup> */}
         </MapContainer>
       </div>
-      <p className="text-sm">
+      <p className="pt-1 text-sm">
         Některé stanice mohou chybět, pokud k nim není dostupná poloha.
       </p>
     </Card>
