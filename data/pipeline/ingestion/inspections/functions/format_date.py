@@ -3,26 +3,32 @@ import datetime
 
 
 def format_date_v1(df):
-    df['date'] = pd.to_datetime(
-        df['date'], format='%Y-%m-%d', exact=False, errors='coerce')
-    df['first_registration_date'] = pd.to_datetime(
-        df['first_registration_date'], format='%Y-%m-%d', exact=False, errors='coerce')
+    df["date"] = pd.to_datetime(
+        df["date"], format="%Y-%m-%d", exact=False, errors="coerce"
+    )
+    df["first_registration"] = pd.to_datetime(
+        df["first_registration"], format="%Y-%m-%d", exact=False, errors="coerce"
+    )
     return df
 
 
 def format_date_v2(df):
-    df['date'] = pd.to_datetime(
-        df['date'], format='%m/%d/%Y', exact=True, errors='coerce')
-    df['first_registration_date'] = pd.to_datetime(
-        df['first_registration_date'], format='%m/%d/%Y', exact=True, errors='coerce')
+    df["date"] = pd.to_datetime(
+        df["date"], format="%m/%d/%Y", exact=True, errors="coerce"
+    )
+    df["first_registration"] = pd.to_datetime(
+        df["first_registration"], format="%m/%d/%Y", exact=True, errors="coerce"
+    )
     return df
 
 
 def format_date_v3(df):
-    df['date'] = pd.to_datetime(
-        df['date'], format='%d.%m.%Y', exact=True, errors='coerce')
-    df['first_registration_date'] = pd.to_datetime(
-        df['first_registration_date'], format='%d.%m.%Y', exact=True, errors='coerce')
+    df["date"] = pd.to_datetime(
+        df["date"], format="%d.%m.%Y", exact=True, errors="coerce"
+    )
+    df["first_registration"] = pd.to_datetime(
+        df["first_registration"], format="%d.%m.%Y", exact=True, errors="coerce"
+    )
     return df
 
 
@@ -36,6 +42,11 @@ def format_date(df: pd.DataFrame, date: datetime.date, **kwargs) -> pd.DataFrame
         df = format_date_v3(df)
 
     # Drop invalid rows
-    df = df.dropna(how='any', subset=['date',]) # 'first_registration_date'])
+    df = df.dropna(
+        how="any",
+        subset=[
+            "date",
+        ],
+    )  # 'first_registration'])
 
     return df

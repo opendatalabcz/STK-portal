@@ -6,8 +6,8 @@ def parse(path):
     file = path
 
     # Remove newlines.
-    clean = open(file, encoding='utf8').read().replace('\n', '')
-    f = open(file, 'w', encoding='utf8')
+    clean = open(file, encoding="utf8").read().replace("\n", "")
+    f = open(file, "w", encoding="utf8")
     f.write(clean)
     f.close()
 
@@ -20,7 +20,7 @@ def parse(path):
     vehicle_type = []
     # model = []
     # vehicle_class = []
-    first_registration_date = []
+    first_registration = []
     mileage = []
     defects = []
     result = []
@@ -28,29 +28,28 @@ def parse(path):
     # Parse.
     parser = ET.iterparse(file)
     for _, element in parser:
-        if element.tag == 'record':
-
-            if 'STK' in element.attrib:
-                station_id.append(element.attrib['STK'])
-            elif 'CisP' in element.attrib:
-                station_id.append(element.attrib['CisP'].split('-')[1])
+        if element.tag == "record":
+            if "STK" in element.attrib:
+                station_id.append(element.attrib["STK"])
+            elif "CisP" in element.attrib:
+                station_id.append(element.attrib["CisP"].split("-")[1])
             else:
-                station_id.append('')
+                station_id.append("")
 
-            if 'DrTP' in element.attrib:
-                inspection_type.append(element.attrib['DrTP'])
+            if "DrTP" in element.attrib:
+                inspection_type.append(element.attrib["DrTP"])
             else:
-                inspection_type.append('')
+                inspection_type.append("")
 
-            if 'VIN' in element.attrib:
-                vin.append(element.attrib['VIN'])
+            if "VIN" in element.attrib:
+                vin.append(element.attrib["VIN"])
             else:
-                vin.append('')
+                vin.append("")
 
-            if 'DatKont' in element.attrib:
-                date.append(element.attrib['DatKont'])
+            if "DatKont" in element.attrib:
+                date.append(element.attrib["DatKont"])
             else:
-                date.append('')
+                date.append("")
 
             # if 'TZn' in element.attrib:
             #     make.append(element.attrib['TZn'])
@@ -62,10 +61,10 @@ def parse(path):
             # else:
             #     motor_type.append('')
 
-            if 'DrVoz' in element.attrib:
-                vehicle_type.append(element.attrib['DrVoz'])
+            if "DrVoz" in element.attrib:
+                vehicle_type.append(element.attrib["DrVoz"])
             else:
-                vehicle_type.append('')
+                vehicle_type.append("")
 
             # if 'ObchOznTyp' in element.attrib:
             #     model.append(element.attrib['ObchOznTyp'])
@@ -77,42 +76,44 @@ def parse(path):
             # else:
             #     vehicle_class.append('')
 
-            if 'DatPrvReg' in element.attrib:
-                first_registration_date.append(element.attrib['DatPrvReg'])
+            if "DatPrvReg" in element.attrib:
+                first_registration.append(element.attrib["DatPrvReg"])
             else:
-                first_registration_date.append('')
+                first_registration.append("")
 
-            if 'Km' in element.attrib:
-                mileage.append(element.attrib['Km'])
+            if "Km" in element.attrib:
+                mileage.append(element.attrib["Km"])
             else:
-                mileage.append('')
+                mileage.append("")
 
-            if 'Zav' in element.attrib:
-                defects.append(element.attrib['Zav'])
+            if "Zav" in element.attrib:
+                defects.append(element.attrib["Zav"])
             else:
-                defects.append('')
+                defects.append("")
 
-            if 'VyslSTK' in element.attrib:
-                result.append(element.attrib['VyslSTK'])
-            elif 'Vysl' in element.attrib:
-                result.append(element.attrib['Vysl'])
+            if "VyslSTK" in element.attrib:
+                result.append(element.attrib["VyslSTK"])
+            elif "Vysl" in element.attrib:
+                result.append(element.attrib["Vysl"])
             else:
-                result.append('')
+                result.append("")
 
             element.clear()
 
-    return pd.DataFrame({
-            'station_id': station_id,
-            'date': date,
-            'vin': vin,
-            'inspection_type': inspection_type,
-            'result': result,
-            'mileage': mileage,
-            'defects': defects,
+    return pd.DataFrame(
+        {
+            "station_id": station_id,
+            "date": date,
+            "vin": vin,
+            "inspection_type": inspection_type,
+            "result": result,
+            "mileage": mileage,
+            "defects": defects,
             # 'make': make,
             # 'motor_type': motor_type,
-            'vehicle_type': vehicle_type,
+            "vehicle_type": vehicle_type,
             # 'model_primary': model,
             # 'vehicle_class': vehicle_class,
-            'first_registration_date': first_registration_date,
-        })
+            "first_registration": first_registration,
+        }
+    )
