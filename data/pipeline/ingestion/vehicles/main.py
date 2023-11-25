@@ -9,7 +9,7 @@ from .parser import parse, parse_mandatory_columns
 from .functions import pipeline
 
 
-TABLE = 'vehicle_register'
+TABLE = 'vehicles'
 
 def process_mandatory_columns(df: pd.DataFrame) -> pd.DataFrame:
     df['model_primary'] = df['model_primary'].astype('str')
@@ -36,12 +36,12 @@ def process_mandatory_columns(df: pd.DataFrame) -> pd.DataFrame:
 def ingest(conn: Connection):
     print('Importing vehicle register data')
 
-    data_dir = os.environ['INGESTION_SOURCES'] + '/vehicle_register' \
+    data_dir = os.environ['INGESTION_SOURCES'] + '/vehicles' \
         if 'INGESTION_SOURCES' in os.environ \
-        else '../sources/vehicle_register/data/nosync'
+        else '../sources/vehicles/data/nosync'
     filename = f'{data_dir}/registr_silnicnich_vozidel_2023-02-24.csv' # TODO: Change
 
-    print('  - Loading mandatory columns')
+    print('  - Loading mandatory full columns')
     print('    - Parsing')
     df_mandatory = parse_mandatory_columns(filename)
     print('    - Processing')
@@ -50,7 +50,7 @@ def ingest(conn: Connection):
     conn.execute(text(f'TRUNCATE TABLE {TABLE}'))
     conn.commit()
 
-    print('  - Processing batches of the data')
+    print('  - Loading remaining columns in batches')
 
     # Process in batches to conserve RAM.
     chunk_size = 1000000
