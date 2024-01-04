@@ -8,6 +8,9 @@ const nextConfig = {
             },
         ]
     },
+    env: {
+        api: 'http://127.0.0.1:5052',
+    }
 }
 
 module.exports = nextConfig

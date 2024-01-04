@@ -46,6 +46,7 @@ services:
     image: postgrest/postgrest:latest
     depends_on:
       - postgres
+    restart: unless-stopped
     networks:
       - backend
     ports:
@@ -55,8 +56,9 @@ services:
       PGRST_DB_SCHEMA: ${POSTGREST_SCHEMA?}
       PGRST_DB_ANON_ROLE: ${POSTGREST_ANON_ROLE?}
       PGRST_OPENAPI_SERVER_PROXY_URI: http://127.0.0.1:5052
-      # Limit the maximum row count in all responses
-      PGRST_DB_MAX_ROWS: 1000
+      # Limit the maximum row count in all responses, 1500 being a little bit
+      # more than what's required to read all defects in one go.
+      PGRST_DB_MAX_ROWS: 1500
 
   swagger:
     image: swaggerapi/swagger-ui

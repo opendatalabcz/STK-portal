@@ -69,6 +69,10 @@ export default function Header() {
               key: "compare",
               label: "Srovnání",
             },
+            {
+              key: "defects",
+              label: "Číselník závad",
+            },
           ]}
         />
       </div>
