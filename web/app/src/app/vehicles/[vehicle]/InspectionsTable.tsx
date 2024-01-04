@@ -73,6 +73,21 @@ export default function InspectionsTable({ vin }: { vin: string }) {
       },
     },
     {
+      title: "Počet závad",
+      dataIndex: "defects",
+      key: "defectCount",
+      render: (_, { defects }) => {
+        if (defects == null || defects.length == 0) {
+          return "0";
+        } else {
+          return defects.split(",").length.toString();
+        }
+      },
+      sorter: (a, b) =>
+        (a.defects == null ? 0 : a.defects.split(",").length) -
+        (b.defects == null ? 0 : b.defects.split(",").length),
+    },
+    {
       title: "Závady",
       dataIndex: "defects",
       key: "defects",
@@ -100,6 +115,9 @@ export default function InspectionsTable({ vin }: { vin: string }) {
       pagination={{ hideOnSinglePage: true }}
       scroll={{
         x: true,
+      }}
+      locale={{
+        emptyText: "Žádné prohlídky nebyly nalezeny",
       }}
     ></Table>
   );

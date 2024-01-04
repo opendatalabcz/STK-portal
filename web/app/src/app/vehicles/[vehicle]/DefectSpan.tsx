@@ -15,9 +15,20 @@ export default function DefectSpan({ defect }: { defect: string }) {
   if (data != null) {
     return (
       <Tooltip title={data.description}>
-        <Link href={`/defects#${defect}`} title={data.description}>
+        <Link
+          href={`/defects#${defect}`}
+          // title={data.description} // This would show along with the Ant tooltip.
+        >
           {defect}
         </Link>
+      </Tooltip>
+    );
+  }
+
+  if (!isLoading) {
+    return (
+      <Tooltip title="Chybí popis závady">
+        <Link href={`/defects#${defect}`}>{defect}</Link>
       </Tooltip>
     );
   }
