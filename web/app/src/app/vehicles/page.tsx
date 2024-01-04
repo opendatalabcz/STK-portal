@@ -4,23 +4,33 @@ import Card from "antd/es/card";
 import SearchBox from "./SearchBox";
 import AverageAgeChart from "./changes_in_time/average_age";
 import Container from "@/components/Container";
+import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
+import { Breadcrumb } from "antd";
+import Link from "next/link";
 
 export default function VehiclesPage() {
   return (
-    <Container>
-      <h1 className="pb-4 text-3xl">Vozidla</h1>
+    <>
+      <BreadcrumbsContainer>
+        <Breadcrumb
+          items={[
+            { title: <Link href="/">STK portál</Link> },
+            { title: "Vozidla" },
+          ]}
+        ></Breadcrumb>
+      </BreadcrumbsContainer>
 
-      <SearchBox></SearchBox>
+      <Container>
+        <h1 className="pb-4 text-3xl">Vozidla</h1>
 
-      <h1 className="pt-8 text-3xl">Statistiky</h1>
+        <SearchBox></SearchBox>
 
-      <h2 className="pt-4 text-2xl">Proměny vozového parku v čase</h2>
-      <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2 2xl:grid-cols-3">
-        <Card>
-          <h3 className="text-lg">Průměrný věk osobních automobilů</h3>
+        <h1 className="pt-8 text-3xl">Statistiky</h1>
+
+        <h2 className="pt-4 text-2xl">Proměny vozového parku v čase</h2>
           <AverageAgeChart></AverageAgeChart>
-        </Card>
-      </div>
-    </Container>
+          <ColorsChart></ColorsChart>
+      </Container>
+    </>
   );
 }

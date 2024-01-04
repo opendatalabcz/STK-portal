@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import useSWR from "swr";
 import { useState } from "react";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import Container from "@/components/Container";
 import InspectionsTable from "./InspectionsTable";
 
@@ -62,11 +62,15 @@ export default function StationDetailPage({
 
     return (
       <>
-        <Breadcrumbs>
-          <Breadcrumb.Item href="/">STK portál</Breadcrumb.Item>
-          <Breadcrumb.Item href="/vehicles">Vozidla</Breadcrumb.Item>
-          <Breadcrumb.Item>{vehicleData.vin}</Breadcrumb.Item>
-        </Breadcrumbs>
+        <BreadcrumbsContainer>
+          <Breadcrumb
+            items={[
+              { title: <Link href="/">STK portál</Link> },
+              { title: <Link href="/vehicles">Vozidla</Link> },
+              { title: vehicleData.vin },
+            ]}
+          ></Breadcrumb>
+        </BreadcrumbsContainer>
 
         <Container>
           <h1 className="pb-4 text-3xl">

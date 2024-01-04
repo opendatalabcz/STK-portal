@@ -12,7 +12,7 @@ import Link from "next/link";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import useSWR from "swr";
 import Container from "@/components/Container";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 
 export default function StationDetailPage({
   params: { station },
@@ -32,11 +32,15 @@ export default function StationDetailPage({
   if (data) {
     return (
       <>
-        <Breadcrumbs>
-          <Breadcrumb.Item href="/">STK portál</Breadcrumb.Item>
-          <Breadcrumb.Item href="/stations">Stanice</Breadcrumb.Item>
-          <Breadcrumb.Item>{data.company}</Breadcrumb.Item>
-        </Breadcrumbs>
+        <BreadcrumbsContainer>
+          <Breadcrumb
+            items={[
+              { title: <Link href="/">STK portál</Link> },
+              { title: <Link href="/stations">Stanice</Link> },
+              { title: data.company },
+            ]}
+          ></Breadcrumb>
+        </BreadcrumbsContainer>
 
         <Container>
           <h1 className="pb-4 text-3xl">{data.company}</h1>
