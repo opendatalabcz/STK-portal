@@ -73,6 +73,10 @@ export default function Header() {
               key: "defects",
               label: "Číselník závad",
             },
+            {
+              key: "about",
+              label: "O projektu",
+            },
           ]}
         />
       </div>
