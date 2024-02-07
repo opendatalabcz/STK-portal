@@ -85,9 +85,9 @@
     - [ ] VIN scanner pro mobilní web
   - [ ] Proměny vozového parku v čase
     - [x] Průměrné stáří
-    - [ ] Typ pohonu
+    - [x] Typ pohonu
     - [ ] Podíl značek a modelů
-    - [ ] Popularita barev
+    - [x] Popularita barev
   - [ ] Nájezdy
     - [ ] Průměrný nájezd
     - [ ] Celkový nájezd

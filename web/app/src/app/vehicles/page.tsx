@@ -1,12 +1,12 @@
-"use client";
-
-import Card from "antd/es/card";
 import SearchBox from "./SearchBox";
-import AverageAgeChart from "./changes_in_time/average_age";
+import AverageAgeChart from "./changes-in-time/AverageAgeChart";
 import Container from "@/components/Container";
+import ColorsChart from "./changes-in-time/ColorsChart";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import { Breadcrumb } from "antd";
 import Link from "next/link";
+import DriveTypeChart from "./changes-in-time/drive-type/DriveTypeChart";
+import ElectricDriveTypeChart from "./changes-in-time/ElectricDriveTypeChart";
 
 export default function VehiclesPage() {
   return (
@@ -28,8 +28,12 @@ export default function VehiclesPage() {
         <h1 className="pt-8 text-3xl">Statistiky</h1>
 
         <h2 className="pt-4 text-2xl">Proměny vozového parku v čase</h2>
-          <AverageAgeChart></AverageAgeChart>
-          <ColorsChart></ColorsChart>
+        <div className="grid grid-cols-1 gap-4 pt-4 md:grid-cols-2">
+          <AverageAgeChart linkToDetails></AverageAgeChart>
+          <ColorsChart linkToDetails></ColorsChart>
+          <DriveTypeChart linkToDetails></DriveTypeChart>
+          <ElectricDriveTypeChart linkToDetails></ElectricDriveTypeChart>
+        </div>
       </Container>
     </>
   );

@@ -1,0 +1,28 @@
+"use client";
+
+import { Breadcrumb } from "antd";
+import Container from "@/components/Container";
+import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
+import Link from "next/link";
+
+export default function StationDetailPage() {
+  return (
+    <>
+      <BreadcrumbsContainer>
+        <Breadcrumb
+          items={[
+            { title: <Link href="/">STK portál</Link> },
+            { title: <Link href="/vehicles">"Vozidla"</Link> },
+            { title: "Proměny vozového parku v čase" },
+          ]}
+        ></Breadcrumb>
+      </BreadcrumbsContainer>
+
+      <Container>
+        <h1 className="pb-4 text-3xl">Proměny vozového parku v čase</h1>
+
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2"></div>
+      </Container>
+    </>
+  );
+}
