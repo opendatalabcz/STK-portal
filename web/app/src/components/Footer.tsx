@@ -32,7 +32,7 @@ export default function Footer() {
           >
             OpenDataLab
           </a>{" "}
-          2023, portál vznikl jako{" "}
+          2024, portál vznikl jako{" "}
           <a
             href=""
             target="_blank"
