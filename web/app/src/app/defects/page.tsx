@@ -40,9 +40,15 @@ export default async function StationsPage() {
         </p>
 
         <ul className="py-2 pl-6 list-disc">
-          <li>A - lehká závada</li>
-          <li>B - vážná závada</li>
-          <li>C - nebezpečná závada</li>
+          <li>
+            <Tag color="green">A</Tag> lehká závada
+          </li>
+          <li>
+            <Tag color="orange">B</Tag> vážná závada
+          </li>
+          <li>
+            <Tag color="red">C</Tag> nebezpečná závada
+          </li>
         </ul>
 
         <p>
@@ -54,7 +60,7 @@ export default async function StationsPage() {
           číselníku není.
         </p>
 
-        <h2 className="pt-4 text-2xl">Obsah</h2>
+        <h2 className="pt-4 text-2xl">Okruhy závad</h2>
 
         <ol className="pt-4 pl-6 list-decimal" start={0}>
           <li>
