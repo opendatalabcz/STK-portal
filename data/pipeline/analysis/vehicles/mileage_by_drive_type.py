@@ -5,18 +5,28 @@ import numpy as np
 import pandas as pd
 
 
-def vehicles_changes_in_time_drive_type(db: Connection):
-    pass
+TABLE = "vehicles_mileage_by_drive_type"
 
+
+def vehicles_mileage_by_drive_type(db: Connection):
     # Load data from DB.
     records = db.conn.execute(
         text(
-            f"""SELECT date_part('year', first_registration_cz) as year, drive_type, count(1)
-FROM vehicles
-WHERE first_registration_cz IS NOT NULL AND drive_type IS NOT NULL
-GROUP BY year, drive_type"""
+            f"""SELECT i.year, v.drive_type, SUM(i.mileage) AS mileage
+FROM
+	(
+		SELECT DISTINCT ON (year, vin) date_part('year', date) as year, vin, mileage
+	 	FROM inspections
+	) AS i
+	JOIN vehicles AS v
+	ON i.vin = v.vin
+WHERE v.drive_type IS NOT NULL
+GROUP BY i.year, v.drive_type
+ORDER BY i.year ASC, v.drive_type ASC"""
         )
     ).all()
+
+    # Pivot table so it has years in rows and drive types in columns.
 
     # Load drive types from DB.
     drive_types = db.conn.execute(
@@ -49,14 +59,7 @@ WHERE drive_type IS NOT NULL"""
 
     df = pd.DataFrame(table)
 
-    # Aggregate columns.
-    general(df, db)
-    electric(df, db)
-
-    db.conn.commit()
-
-
-def general(df: pd.DataFrame, db: Connection):
+    # Group drive types in the same way as in changes_in_time/drive_type.
     # - pouze benzin
     # - pouze nafta nebo bio nafta
     # - obsahuje elektro
@@ -138,26 +141,17 @@ def general(df: pd.DataFrame, db: Connection):
         ["year", "benzin", "nafta", "elektrifikovane", "plyn", "ostatni"], axis=1
     )
 
-    db.write("vehicles_changes_in_time_drive_type", df)
-
-
-def electric(df: pd.DataFrame, db: Connection):
-    year = df["year"]
-    elektropohon = df["Elektropohon"]
-    nafta_hybrid = df["(Elektropohon,Nafta)"]
-    benzin_hybrid = df[["(Benzin,Elektropohon,LPG)", "(Benzin,Elektropohon)"]].sum(
+    # Convert to relative numbers, because the sums of mileages say nothing.
+    df["total"] = df[["benzin", "nafta", "elektrifikovane", "plyn", "ostatni"]].sum(
         axis=1
     )
 
-    # Assemble table.
-    df = pd.concat(
-        [
-            year,
-            elektropohon,
-            nafta_hybrid,
-            benzin_hybrid,
-        ],
-        axis=1,
-    ).set_axis(["year", "elektropohon", "nafta_hybrid", "benzin_hybrid"], axis=1)
+    df["benzin"] = df["benzin"] / df["total"]
+    df["nafta"] = df["nafta"] / df["total"]
+    df["elektrifikovane"] = df["elektrifikovane"] / df["total"]
+    df["plyn"] = df["plyn"] / df["total"]
+    df["ostatni"] = df["ostatni"] / df["total"]
 
-    db.write("vehicles_changes_in_time_electric_drive_type", df)
+    df.drop(columns=["total"], inplace=True)
+
+    db.write(TABLE, df)

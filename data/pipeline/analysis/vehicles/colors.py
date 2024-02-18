@@ -1,17 +1,15 @@
-from datetime import date
 from sqlalchemy import text
 from common.db import Connection
 
 from ingestion.inspections.main import get_last_record_date
 
-import numpy as np
 import pandas as pd
 
 
-TABLE = "vehicles_changes_in_time_colors"
+TABLE = "vehicles_colors"
 
 
-def vehicles_changes_in_time_colors(db: Connection):
+def vehicles_colors(db: Connection):
     # Init result table.
     table = {}
     last_record = get_last_record_date(db.conn)

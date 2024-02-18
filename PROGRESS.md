@@ -5,7 +5,7 @@
 - [x] Kontroly na STK
 - [x] Registr vozidel
 - [x] Číselník závad
-- [ ] Vzniklá a zaniklá vozidla
+- [x] Vzniklá a zaniklá vozidla - pomocí odhadu z STK + informace o statutu z registru vozidel
 - [ ] Provozní informace o stanicích TK
 
 ## Analýza dat
@@ -14,6 +14,9 @@
   - [ ] Průměrný výsledek prohlídky
   - [ ] Kapacita stanic
   - [ ] Anomální prohlídky
+  - [ ] Závady
+    - [ ] Mapy podle okresů
+    - [ ] Nejčastější závady
   - [ ] Detail stanice
     - [ ] Statistiky kontrol
       - [ ] Vytíženost
@@ -34,14 +37,9 @@
   - [x] Nájezdy
     - [x] Průměrný nájezd
     - [x] Celkový nájezd
-  - [ ] Ekologie
-    - [ ] Poměr nájezdů podle paliva
-    - [ ] Heatmapa znečištění podle nájezdů dle paliva
-  - [ ] Závady
-    - [ ] Mapy podle okresů
-    - [ ] Nejčastější závady
-  - [ ] Migrace
-  - [ ] Kolik bylo vybouraných motorkářů
+  - [x] Ekologie
+    - [x] Poměr nájezdů podle paliva
+  - [x] Migrace
   - [ ] Detail vozidla
     - [ ] Najeté kilometry a jejich predikce
     - [ ] Závady a jejich predikce
@@ -66,6 +64,9 @@
   - [ ] Průměrný výsledek prohlídky
   - [ ] Kapacita stanic
   - [ ] Anomální prohlídky
+  - [ ] Závady
+    - [ ] Mapy podle okresů
+    - [ ] Nejčastější závady
   - [ ] Detail stanice
     - [x] Informace o stanici
     - [ ] Scraping aktuálních dat (otevírací doba, ev. ceny)
@@ -83,26 +84,20 @@
   - [ ] Vyhledávač vozidel
     - [ ] Klasické vyhledávání
     - [ ] VIN scanner pro mobilní web
-  - [ ] Proměny vozového parku v čase
+  - [x] Proměny vozového parku v čase
     - [x] Průměrné stáří
     - [x] Typ pohonu
-    - [ ] Podíl značek a modelů
+    - [x] Podíl značek a modelů
     - [x] Popularita barev
-  - [ ] Nájezdy
-    - [ ] Průměrný nájezd
-    - [ ] Celkový nájezd
-  - [ ] Ekologie
-    - [ ] Poměr nájezdů podle paliva
-    - [ ] Heatmapa znečištění podle nájezdů dle paliva
-  - [ ] Závady
-    - [ ] Mapy podle okresů
-    - [ ] Nejčastější závady
-  - [ ] Migrace
-  - [ ] Kolik bylo vybouraných motorkářů
+  - [x] Nájezdy
+    - [x] Průměrný nájezd
+  - [x] Ekologie
+    - [x] Poměr nájezdů podle paliva
+  - [x] Migrace
   - [ ] Detail vozidla
-    - [ ] Základní informace o vozidle
-    - [ ] Náhled vozidla nebo alespoň značky
-    - [ ] Historie kontrol
+    - [x] Základní informace o vozidle
+    - [-] Náhled vozidla nebo alespoň značky
+    - [x] Historie kontrol
     - [ ] Najeté kilometry a jejich predikce
     - [ ] Závady a jejich predikce
     - [ ] Srovnání dosavadní poruchovosti
@@ -126,3 +121,4 @@
   - Tesly hoří?
   - Subaru bouchají motory?
   - Francouzi umí akorát pít víno?
+  - Kolik bylo vybouraných motorkářů a obecně "brzy" zaniklých vozidel
