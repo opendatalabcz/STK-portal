@@ -12,7 +12,7 @@ export default function EcologyPage() {
           items={[
             { title: <Link href="/">STK portál</Link> },
             { title: <Link href="/vehicles">Vozidla</Link> },
-            { title: "Poměrný nájezd podle typu pohonu" },
+            { title: "Celkový nájezd podle typu pohonu" },
           ]}
         ></Breadcrumb>
       </BreadcrumbsContainer>
@@ -22,10 +22,25 @@ export default function EcologyPage() {
           <MileageByDriveTypeChart></MileageByDriveTypeChart>
 
           <p>
-            Statistika ukazuje podíl, jakým vozidla, která byla v daném roce na
-            technické kontrole, přispívají k celkovému součtu zjištěných
-            nájezdů. Vidíme tedy odhad toho, v jakém poměru jsou využívána
-            jednotlivá paliva.
+            Statistika ukazuje součet stavů najetých kilometrů všech vozidel,
+            která byla v daném roce na technické kontrole, rozdělený podle typu
+            pohonu vozidel. Vidíme tedy, jak se mění využití jednotlivých paliv.
+            Nejedná se o součet přírůstků nájezdů vůči předchozímu roku či
+            předchozí kontrole každého z vozidel, ale o součet celkového
+            dosavadního nájezdu.
+          </p>
+
+          <p>
+            Pokud tedy celková výška sloupce v každém roce roste, koresponduje
+            to se stárnutím vozového parku a provozem vozidel s vyšším nájezdem.
+            V roce 2022 pozorujeme mírné meziroční snížení sloupce, dá se tedy
+            usoudit, že v předchozích dvou letech se (zřejmě vlivem Covid-19)
+            uskutečnil menší celkový nájezd než dříve, zatímco starší vozidla s
+            vysokým nájezdem zanikla či byla vyvezena a nebyla proto na STK. Rok
+            2021 zaznamenal naopak meziroční zvýšení, ale to Covidové
+            interpretaci neodporuje, protože se do tohoto roku započítala změna
+            nájezdů vozidel i za Covidem nepostižený rok 2019 &ndash; vozdila
+            jezdí na STK pouze každé dva roky.
           </p>
 
           <p>

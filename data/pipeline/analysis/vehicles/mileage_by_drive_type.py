@@ -141,17 +141,17 @@ WHERE drive_type IS NOT NULL"""
         ["year", "benzin", "nafta", "elektrifikovane", "plyn", "ostatni"], axis=1
     )
 
-    # Convert to relative numbers, because the sums of mileages say nothing.
-    df["total"] = df[["benzin", "nafta", "elektrifikovane", "plyn", "ostatni"]].sum(
-        axis=1
-    )
+    # # Convert to relative numbers, because the sums of mileages say nothing.
+    # df["total"] = df[["benzin", "nafta", "elektrifikovane", "plyn", "ostatni"]].sum(
+    #     axis=1
+    # )
 
-    df["benzin"] = df["benzin"] / df["total"]
-    df["nafta"] = df["nafta"] / df["total"]
-    df["elektrifikovane"] = df["elektrifikovane"] / df["total"]
-    df["plyn"] = df["plyn"] / df["total"]
-    df["ostatni"] = df["ostatni"] / df["total"]
+    # df["benzin"] = df["benzin"] / df["total"]
+    # df["nafta"] = df["nafta"] / df["total"]
+    # df["elektrifikovane"] = df["elektrifikovane"] / df["total"]
+    # df["plyn"] = df["plyn"] / df["total"]
+    # df["ostatni"] = df["ostatni"] / df["total"]
 
-    df.drop(columns=["total"], inplace=True)
+    # df.drop(columns=["total"], inplace=True)
 
     db.write(TABLE, df)
