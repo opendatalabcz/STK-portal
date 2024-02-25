@@ -14,12 +14,15 @@ import {
 import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
 import {
+  blue,
+  cyan,
   geekblue,
   gold,
   green,
   orange,
   purple,
   red,
+  volcano,
   yellow,
 } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
@@ -40,7 +43,7 @@ type ColorsData = {
   amount_new: number;
 }[];
 
-export default function ImportedVsNewChart({
+export default function ImportedVsNewAbsoluteChart({
   linkToDetails = false,
 }: {
   linkToDetails?: boolean;
@@ -48,7 +51,7 @@ export default function ImportedVsNewChart({
   return (
     <Card
       size="small"
-      title="Poměr nových a importovaných ojetých OA"
+      title="Počet nových a importovaných ojetých OA"
       extra={linkToDetails && <a href="/vehicles/imported-vs-new">Více</a>}
     >
       <div className="h-64 md:h-96">{_buildChart()}</div>
@@ -88,7 +91,7 @@ export default function ImportedVsNewChart({
           stacked: true,
           title: {
             display: true,
-            text: "Počet automobilů podle zdroje",
+            text: "Počet automobilů podle původu",
           },
           beginAtZero: true,
         },
@@ -112,22 +115,18 @@ export default function ImportedVsNewChart({
       },
     };
 
-    const sums = rawData.map(
-      (e) => (e.amount_imported + e.amount_new) * 1.0001
-    );
-
     const data = {
       labels: rawData.map((e) => e.year),
       datasets: [
         {
           label: "Nové",
-          data: rawData.map((e, i) => (e.amount_new / sums[i]) * 100),
-          backgroundColor: green[6],
+          data: rawData.map((e, i) => e.amount_new),
+          backgroundColor: cyan[4],
         },
         {
           label: "Importované ojeté",
-          data: rawData.map((e, i) => (e.amount_imported / sums[i]) * 100),
-          backgroundColor: geekblue[5],
+          data: rawData.map((e, i) => e.amount_imported),
+          backgroundColor: cyan[7],
         },
       ],
     };

@@ -2,7 +2,8 @@ import { Breadcrumb } from "antd";
 import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
-import ImportedVsNewChart from "./ImportedVsNewChart";
+import ImportedVsNewRatioChart from "./ImportedVsNewRatioChart";
+import ImportedVsNewAbsoluteChart from "./ImportedVsNewAbsoluteChart";
 
 export default function ColorsPage() {
   return (
@@ -19,7 +20,8 @@ export default function ColorsPage() {
 
       <Container>
         <div className="space-y-4">
-          <ImportedVsNewChart></ImportedVsNewChart>
+          <ImportedVsNewRatioChart></ImportedVsNewRatioChart>
+          <ImportedVsNewAbsoluteChart></ImportedVsNewAbsoluteChart>
 
           <p>
             Za importovaný považujeme automobil, jehož rozdíl v obecné první
@@ -29,8 +31,10 @@ export default function ColorsPage() {
             <a href="/vehicles/average-age-of-imported">zde</a>. Zjednodušeně se
             dá říci, že použitá metodika v každém roce nejvýše o 5 % chybně
             zvětšuje podíl nových automobilů na úkor importovaných ojetých.
-            Hodnota sloupce udává podíl obou skupin, který v součtu činí 100 %
-            za každý rok, porovnávány jsou pouze osobní automobily.
+            Hodnota sloupce v prvním grafu udává podíl obou skupin, který v
+            součtu činí 100 % za každý rok, porovnávány jsou pouze osobní
+            automobily. Druhý graf ukazuje absolutní počty osobních automobilů v
+            obou skupinách.
           </p>
         </div>
       </Container>
