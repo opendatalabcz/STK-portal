@@ -15,12 +15,12 @@ import {
 import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
 import {
-  geekblue,
-  gold,
+  blue,
   green,
-  orange,
-  purple,
+  grey,
+  magenta,
   red,
+  volcano,
   yellow,
 } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
@@ -139,7 +139,7 @@ export default function ColorsChart({
         {
           label: "Fialová",
           data: rawData.map((e, i) => e.FIALOVÁ / sums[i]),
-          backgroundColor: purple[4],
+          backgroundColor: magenta[7],
         },
         {
           label: "Červená",
@@ -149,28 +149,27 @@ export default function ColorsChart({
         {
           label: "Hnědá",
           data: rawData.map((e, i) => e.HNĚDÁ / sums[i]),
-          backgroundColor: gold[7],
+          backgroundColor: volcano[8],
         },
         {
           label: "Oranžová",
           data: rawData.map((e, i) => e.ORANŽOVÁ / sums[i]),
-          backgroundColor: orange[4],
+          backgroundColor: volcano[4],
         },
         {
           label: "Žlutá",
           data: rawData.map((e, i) => e.ŽLUTÁ / sums[i]),
-          backgroundColor: yellow[4],
+          backgroundColor: yellow[3],
         },
         {
           label: "Zelená",
           data: rawData.map((e, i) => e.ZELENÁ / sums[i]),
-          backgroundColor: green[6],
+          backgroundColor: green[3],
         },
-
         {
           label: "Modrá",
           data: rawData.map((e, i) => e.MODRÁ / sums[i]),
-          backgroundColor: geekblue[5],
+          backgroundColor: blue[4],
         },
         {
           label: "Bílá",
@@ -180,12 +179,12 @@ export default function ColorsChart({
         {
           label: "Šedá",
           data: rawData.map((e, i) => e.ŠEDÁ / sums[i]),
-          backgroundColor: "grey",
+          backgroundColor: grey[4],
         },
         {
           label: "Černá",
           data: rawData.map((e, i) => e.ČERNÁ / sums[i]),
-          backgroundColor: "rgb(0, 0, 0)",
+          backgroundColor: grey[7],
         },
       ],
     };

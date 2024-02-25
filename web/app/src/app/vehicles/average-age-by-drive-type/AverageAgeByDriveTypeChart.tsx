@@ -13,7 +13,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { Card } from "antd";
-import { geekblue, gold, green, red } from "@ant-design/colors";
+import { cyan, grey, red } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 
 ChartJS.register(
@@ -113,33 +113,33 @@ export default function AverageAgeByDriveTypeChart({
         {
           label: "Benzin",
           data: rawData.map((e) => e.benzin),
-          backgroundColor: green[6],
-          borderColor: green[6],
-        },
-        {
-          label: "Nafta",
-          data: rawData.map((e, i) => e.nafta),
           backgroundColor: red[4],
           borderColor: red[4],
         },
         {
+          label: "Nafta",
+          data: rawData.map((e, i) => e.nafta),
+          backgroundColor: red[7],
+          borderColor: red[7],
+        },
+        {
           label: "Elektrifikované",
           data: rawData.map((e, i) => e.elektrifikovane),
-          backgroundColor: geekblue[5],
-          borderColor: geekblue[5],
+          backgroundColor: cyan[5],
+          borderColor: cyan[5],
         },
 
         {
           label: "Plyn (i v kombinaci)",
           data: rawData.map((e, i) => e.plyn),
-          backgroundColor: gold[7],
-          borderColor: gold[7],
+          backgroundColor: cyan[7],
+          borderColor: cyan[7],
         },
         {
           label: "Ostatní",
           data: rawData.map((e, i) => e.ostatni),
-          backgroundColor: "grey",
-          borderColor: "grey",
+          backgroundColor: grey[4],
+          borderColor: grey[4],
         },
       ],
     };

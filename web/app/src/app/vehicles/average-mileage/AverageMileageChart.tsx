@@ -14,6 +14,7 @@ import {
 import { Line } from "react-chartjs-2";
 import { Card } from "antd";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
+import { red } from "@ant-design/colors";
 
 ChartJS.register(
   CategoryScale,
@@ -102,8 +103,8 @@ export default function AverageMileageChart({
         {
           label: "Průměrný nájezd",
           data: rawData.map((e) => e.average_mileage),
-          borderColor: "rgb(255, 99, 132)",
-          backgroundColor: "rgba(255, 99, 132, 0.5)",
+          borderColor: red[4],
+          backgroundColor: red[3],
         },
       ],
     };

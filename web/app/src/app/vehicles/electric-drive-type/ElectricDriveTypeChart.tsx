@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
-import { geekblue, green, red } from "@ant-design/colors";
+import { cyan, red } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 
@@ -110,17 +110,17 @@ export default function ElectricDriveTypeChart({
         {
           label: "Elektropohon",
           data: rawData.map((e, i) => e.elektropohon),
-          backgroundColor: geekblue[5],
+          backgroundColor: cyan[5],
         },
         {
           label: "Benzin hybrid",
           data: rawData.map((e, i) => e.benzin_hybrid),
-          backgroundColor: green[6],
+          backgroundColor: red[4],
         },
         {
           label: "Nafta hybrid",
           data: rawData.map((e, i) => e.nafta_hybrid),
-          backgroundColor: red[4],
+          backgroundColor: red[7],
         },
       ],
     };

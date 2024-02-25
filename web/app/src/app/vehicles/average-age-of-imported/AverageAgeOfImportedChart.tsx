@@ -14,6 +14,7 @@ import {
 import { Line } from "react-chartjs-2";
 import { Card } from "antd";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
+import { cyan } from "@ant-design/colors";
 
 ChartJS.register(
   CategoryScale,
@@ -106,8 +107,8 @@ export default function AverageAgeOfImportedChart({
         {
           label: "Průměrné stáří",
           data: rawData.map((e) => e.mean),
-          borderColor: "rgb(255, 99, 132)",
-          backgroundColor: "rgba(255, 99, 132, 0.5)",
+          borderColor: cyan[4],
+          backgroundColor: cyan[3],
         },
       ],
     };

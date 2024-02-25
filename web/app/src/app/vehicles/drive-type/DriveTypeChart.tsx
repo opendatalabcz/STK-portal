@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
-import { geekblue, gold, green, red } from "@ant-design/colors";
+import { cyan, grey, red } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 
@@ -112,28 +112,28 @@ export default function DriveTypeChart({
         {
           label: "Benzin",
           data: rawData.map((e, i) => e.benzin),
-          backgroundColor: green[6],
+          backgroundColor: red[4],
         },
         {
           label: "Nafta",
           data: rawData.map((e, i) => e.nafta),
-          backgroundColor: red[4],
+          backgroundColor: red[7],
         },
         {
           label: "Elektrifikované",
           data: rawData.map((e, i) => e.elektrifikovane),
-          backgroundColor: geekblue[5],
+          backgroundColor: cyan[5],
         },
 
         {
           label: "Plyn (i v kombinaci)",
           data: rawData.map((e, i) => e.plyn),
-          backgroundColor: gold[7],
+          backgroundColor: cyan[7],
         },
         {
           label: "Ostatní",
           data: rawData.map((e, i) => e.ostatni),
-          backgroundColor: "grey",
+          backgroundColor: grey[4],
         },
       ],
     };

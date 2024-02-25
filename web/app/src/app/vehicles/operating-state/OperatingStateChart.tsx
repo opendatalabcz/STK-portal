@@ -13,7 +13,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
-import { geekblue, green, red, orange } from "@ant-design/colors";
+import { red, cyan } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 
 ChartJS.register(
@@ -117,22 +117,22 @@ export default function OperatingStateChart({
         {
           label: "Provozované",
           data: rawData.map((e, i) => e.PROVOZOVANÉ / sums[i]),
-          backgroundColor: green[6],
+          backgroundColor: cyan[4],
         },
         {
           label: "Vývoz",
           data: rawData.map((e, i) => e.VÝVOZ / sums[i]),
-          backgroundColor: geekblue[5],
+          backgroundColor: cyan[7],
         },
         {
           label: "Vyřazeno z provozu",
           data: rawData.map((e, i) => e["VYŘAZENO Z PROVOZU"] / sums[i]),
-          backgroundColor: orange[4],
+          backgroundColor: red[4],
         },
         {
           label: "Zánik",
           data: rawData.map((e, i) => e.ZÁNIK / sums[i]),
-          backgroundColor: red[4],
+          backgroundColor: red[7],
         },
       ],
     };

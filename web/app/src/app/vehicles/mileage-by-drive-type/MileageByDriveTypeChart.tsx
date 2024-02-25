@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
-import { geekblue, gold, green, red } from "@ant-design/colors";
+import { cyan, grey, red } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 
@@ -43,7 +43,7 @@ export default function MileageByDriveTypeChart({
   return (
     <Card
       size="small"
-      title="Poměrný nájezd podle typu pohonu"
+      title="Celkový nájezd podle typu pohonu"
       extra={
         linkToDetails && <a href="/vehicles/mileage-by-drive-type">Více</a>
       }
@@ -85,7 +85,7 @@ export default function MileageByDriveTypeChart({
           stacked: true,
           title: {
             display: true,
-            text: "Poměrný nájezd dle pohonu [%]",
+            text: "Celkový nájezd dle pohonu [%]",
           },
           beginAtZero: true,
         },
@@ -101,7 +101,7 @@ export default function MileageByDriveTypeChart({
                 Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 2 }).format(
                   item.parsed.y
                 ) +
-                " %"
+                " km"
               );
             },
           },
@@ -114,29 +114,29 @@ export default function MileageByDriveTypeChart({
       datasets: [
         {
           label: "Benzin",
-          data: rawData.map((e, i) => e.benzin * 99.9),
-          backgroundColor: green[6],
-        },
-        {
-          label: "Nafta",
-          data: rawData.map((e, i) => e.nafta * 99.9),
+          data: rawData.map((e, i) => e.benzin),
           backgroundColor: red[4],
         },
         {
+          label: "Nafta",
+          data: rawData.map((e, i) => e.nafta),
+          backgroundColor: red[7],
+        },
+        {
           label: "Elektrifikované",
-          data: rawData.map((e, i) => e.elektrifikovane * 99.9),
-          backgroundColor: geekblue[5],
+          data: rawData.map((e, i) => e.elektrifikovane),
+          backgroundColor: cyan[4],
         },
 
         {
           label: "Plyn (i v kombinaci)",
-          data: rawData.map((e, i) => e.plyn * 99.9),
-          backgroundColor: gold[7],
+          data: rawData.map((e, i) => e.plyn),
+          backgroundColor: cyan[7],
         },
         {
           label: "Ostatní",
-          data: rawData.map((e, i) => e.ostatni * 99.9),
-          backgroundColor: "grey",
+          data: rawData.map((e, i) => e.ostatni),
+          backgroundColor: grey[4],
         },
       ],
     };
