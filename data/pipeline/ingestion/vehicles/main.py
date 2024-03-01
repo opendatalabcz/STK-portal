@@ -5,19 +5,21 @@ import numpy as np
 from sqlalchemy import Connection, text
 import pandas as pd
 
-from .parser import parse, parse_mandatory_columns
+
+from .functions.fill_names_from_inspections import fill_names_from_inspections
 from .functions import pipeline
+from .parser import parse, parse_mandatory_columns
 
 
 TABLE = "vehicles"
 
 
 def process_mandatory_columns(df: pd.DataFrame):
-    df["model_primary"] = df["model_primary"].astype("str")
+    df["model_primary"] = df["model_primary"].astype(str)
     # Strip trailing content in parentheses.
     df["model_primary"] = df["model_primary"].apply(lambda x: x.split("(")[0].strip())
     # Remove special characters and duplicate spaces.
-    df["model_primary"] = df["model_primary"].str.replace("[^\w\s]", "", regex=True)
+    df["model_primary"] = df["model_primary"].str.replace(r"[^\w\s]", "", regex=True)
     df["model_primary"] = df["model_primary"].str.replace("  ", " ")
     df["model_primary"] = df["model_primary"].str.replace("   ", " ")
 
@@ -36,10 +38,74 @@ def process_mandatory_columns(df: pd.DataFrame):
 def ingest(conn: Connection):
     print("Importing vehicle register data")
 
+    # Prepare table.
+    conn.execute(
+        text(
+            """DROP TABLE IF EXISTS public.vehicles;
+            
+CREATE TABLE IF NOT EXISTS public.vehicles
+(
+    vin text COLLATE pg_catalog."default" NOT NULL,
+	manufacture_year double precision,
+    operating_state text COLLATE pg_catalog."default" NOT NULL,
+    first_registration date without time zone,
+    first_registration_cz date without time zone,
+    primary_type text COLLATE pg_catalog."default",
+    secondary_type text COLLATE pg_catalog."default",
+    category text COLLATE pg_catalog."default",
+    make text COLLATE pg_catalog."default",
+    model_primary text COLLATE pg_catalog."default",
+    model_secondary text COLLATE pg_catalog."default",
+    motor_power double precision,
+    motor_volume double precision,
+    drive_type text COLLATE pg_catalog."default",
+    places double precision,
+    color text COLLATE pg_catalog."default",
+    wheelbase_size double precision,
+    vehicle_length double precision,
+    vehicle_width double precision,
+    vehicle_height double precision,
+    operating_weight double precision,
+    permissible_weight double precision,
+    connecting_device text COLLATE pg_catalog."default",
+    permissible_weight_braked_trailer double precision,
+    permissible_weight_unbraked_trailer double precision,
+    axles_count double precision,
+    tyres_n2 text COLLATE pg_catalog."default",
+    tyres_n3 text COLLATE pg_catalog."default",
+    tyres_n4 text COLLATE pg_catalog."default",
+    rims_n2 text COLLATE pg_catalog."default",
+    rims_n3 text COLLATE pg_catalog."default",
+    rims_n4 text COLLATE pg_catalog."default",
+    max_speed double precision,
+    city_consumption double precision,
+    average_consumption double precision,
+    out_of_city_consumption double precision,
+    gearbox text COLLATE pg_catalog."default",
+    emissions double precision,
+    city_emissions double precision,
+    out_of_city_emissions double precision,
+    inspection_state text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.vehicles
+    OWNER to postgres;
+
+REVOKE ALL ON TABLE public.inspections FROM web_anon;
+
+GRANT ALL ON TABLE public.inspections TO postgres;
+
+GRANT SELECT ON TABLE public.inspections TO web_anon;"""
+        )
+    )
+    conn.commit()
+
     data_dir = (
         os.environ["INGESTION_SOURCES"] + "/vehicles"
         if "INGESTION_SOURCES" in os.environ
-        else "../sources/vehicles/data/nosync"
+        else "data/sources/vehicles/data/nosync"
     )
     filename = f"{data_dir}/registr_silnicnich_vozidel_2023-02-24.csv"  # TODO: Change
 
@@ -48,9 +114,6 @@ def ingest(conn: Connection):
     df_mandatory = parse_mandatory_columns(filename)
     print("    - Processing")
     model_primary_frequencies = process_mandatory_columns(df_mandatory)
-
-    conn.execute(text(f"TRUNCATE TABLE {TABLE}"))
-    conn.commit()
 
     print("  - Loading remaining columns in batches")
 
@@ -67,6 +130,7 @@ def ingest(conn: Connection):
             # print(f'      - {fn.__name__}')
             chunk = fn(
                 chunk,
+                conn=conn,
                 min_date=1901,
                 model_primary_frequencies=model_primary_frequencies,
             )
@@ -86,11 +150,23 @@ WHERE EXISTS (               -- another record exists
         )
     )
 
-    # Add unique constraint
+    # Add primary key
     conn.execute(
         text(
             """ALTER TABLE IF EXISTS public.vehicles
-    ADD CONSTRAINT vin_unique UNIQUE (vin);"""
+ADD CONSTRAINT vehicles_pkey PRIMARY KEY (vin);
+
+ALTER TABLE IF EXISTS public.vehicles
+ADD CONSTRAINT vin_unique UNIQUE (vin);
+    """
+        )
+    )
+
+    # Remove 2023 data as it's incomplete
+    conn.execute(
+        text(
+            """DELETE FROM vehicles
+WHERE date_part('year', first_registration) = 2023 OR date_part('year', first_registration_cz) = 2023"""
         )
     )
 

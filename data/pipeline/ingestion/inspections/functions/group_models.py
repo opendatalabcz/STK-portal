@@ -2,7 +2,20 @@ import pandas as pd
 import numpy as np
 
 
-def group_models(df: pd.DataFrame, model_primary_frequencies, **kwargs) -> pd.DataFrame:
+def get_model_frequencies(df: pd.DataFrame):
+    models = df["model_primary"]
+
+    # Obtain counts of single-word values in the column.
+    sws = models[models.apply(lambda x: len(x.split(" "))) == 1].to_numpy()
+    sws_uniq, sws_cnt = np.unique(sws, return_counts=True)
+
+    # Obtain counts of two-word values in the column.
+    tws = models[models.apply(lambda x: len(x.split(" "))) == 2].to_numpy()
+    tws_uniq, tws_cnt = np.unique(tws, return_counts=True)
+    return sws_uniq, sws_cnt, tws_uniq, tws_cnt
+
+
+def group_models(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
     df["model_primary"] = df["model_primary"].astype("str")
 
     # Strip trailing content in parentheses.
@@ -12,12 +25,12 @@ def group_models(df: pd.DataFrame, model_primary_frequencies, **kwargs) -> pd.Da
     df["model_primary"] = df["model_primary"].str.replace("  ", " ")
     df["model_primary"] = df["model_primary"].str.replace("   ", " ")
 
-    sws_uniq, sws_cnt, tws_uniq, tws_cnt = model_primary_frequencies
+    sws_uniq, sws_cnt, tws_uniq, tws_cnt = get_model_frequencies(df)
 
     # For each make, group two-word values with <25 occurences whose first-word-only instance has >50 occurences
     # and group similarly seldom appearing multiword (3+ words) values to often appearing two-word values.
     # When a multiword value is seldom, replace it with the first-word-only value when that has enough occurences.
-    by_make = df.groupby("make", observed=False)
+    by_make = df.groupby("make")
     for make, mdf in by_make:
         # print(f'make: {make}')
         # Obtain counts of two-word values.

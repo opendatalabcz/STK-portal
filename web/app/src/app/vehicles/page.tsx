@@ -15,7 +15,7 @@ import TopModelsChart from "./model-popularity/TopModelsChart";
 import OperatingStateChart from "./operating-state/OperatingStateChart";
 import AverageMileageChart from "./average-mileage/AverageMileageChart";
 import AverageAgeOfImportedChart from "./average-age-of-imported/AverageAgeOfImportedChart";
-import ImportedVsNewChart from "./imported-vs-new/ImportedVsNewChart";
+import ImportedVsNewRatioChart from "./imported-vs-new/ImportedVsNewRatioChart";
 
 export default function VehiclesPage() {
   return (
@@ -68,7 +68,7 @@ export default function VehiclesPage() {
         <hr></hr>
         <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
           <AverageAgeOfImportedChart linkToDetails></AverageAgeOfImportedChart>
-          <ImportedVsNewChart linkToDetails></ImportedVsNewChart>
+          <ImportedVsNewRatioChart linkToDetails></ImportedVsNewRatioChart>
         </div>
 
         <h2 className="pt-4 text-2xl">Zajímavosti</h2>

@@ -55,7 +55,7 @@ def vehicles_average_age_by_drive_type(db: Connection):
     }
 
     # Load data from DB.
-    last_record = get_last_record_date(db.conn)
+    last_record = get_last_record_date(db)
 
     # Get an average for each year and drive type.
     years = range(2020, last_record.year + 1)

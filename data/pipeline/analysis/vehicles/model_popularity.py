@@ -11,47 +11,29 @@ TABLE = "vehicles_model_popularity"
 
 
 def vehicles_model_popularity(db: Connection):
-    # Load models from DB.
-    models = db.conn.execute(
-        text(
-            f"""SELECT DISTINCT make, model_primary
-FROM vehicles
-WHERE make IS NOT NULL
-    AND model_primary IS NOT NULL"""
-        )
-    ).all()
-    models = [model[0] + " " + model[1] for model in models]
-
     # Init result table.
     table = {}
-    last_record = get_last_record_date(db.conn)
+    last_record = get_last_record_date(db)
     table["year"] = range(1990, last_record.year + 1)
 
-    for model in models:
-        table[model] = []
+    records = db.conn.execute(
+        text(
+            f"""SELECT date_part('year', v.first_registration) as year, model_primary, count(1) as count
+FROM vehicles v
+WHERE model_primary IS NOT NULL AND v.first_registration IS NOT NULL
+GROUP BY year, model_primary
+ORDER BY year ASC, count DESC"""
+        )
+    ).all()
+    records = np.array(records)
 
-    # Get counts of colors for vehicles in each year.
-    for index, year in enumerate(table["year"]):
-        # Load all unique vehicles inspected that year.
-        records = db.conn.execute(
-            text(
-                f"""SELECT make, model_primary, count(1)
-FROM vehicles
-WHERE first_registration >= '{year}-01-01'
-  AND first_registration < '{year + 1}-01-01'
-GROUP BY make, model_primary"""
-            )
-        ).all()
-
-        for record in records:
-            if record[0] != None and record[1] != None:  # Skip unknown.
-                table[record[0] + " " + record[1]].append(record[2])
-
-        # Add missing counts.
-        for model in models:
-            if len(table[model]) != index + 1:
-                table[model].append(0)
-
-    df = pd.DataFrame(table)
+    df = pd.DataFrame(
+        {
+            # Parse float from string, then truncate to int.
+            "year": records[:, 0].astype(float).astype(np.int16),
+            "model_primary": records[:, 1],
+            "count": records[:, 2].astype(float).astype(np.int64),
+        }
+    )
 
     db.write(TABLE, df)

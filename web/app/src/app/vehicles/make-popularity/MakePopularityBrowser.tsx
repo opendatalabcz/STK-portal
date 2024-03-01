@@ -17,6 +17,8 @@ import useSWR from "swr";
 import { useState } from "react";
 import { red } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
+import { MakePopularityData } from "./TopMakesChart";
+import { latestYear } from "@/years";
 
 ChartJS.register(
   CategoryScale,
@@ -64,13 +66,13 @@ const options = {
 };
 
 export default function MakePopularityBrowser() {
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [selectedYear, setSelectedYear] = useState<number>(latestYear);
 
   const { data: rawData } = useSWR(
-    "/api/vehicles_make_popularity?order=year.desc",
+    `/api/vehicles_make_popularity?year=eq.${selectedYear}&order=count.desc&limit=20`,
     async (key) => {
       const res = await fetch(key);
-      const data = await res.json();
+      const data: MakePopularityData[] = await res.json();
       return data;
     }
   );
@@ -85,31 +87,21 @@ export default function MakePopularityBrowser() {
     );
   }
 
-  const firstYear = rawData[rawData.length - 1]["year"];
-  const lastYear = rawData[0]["year"];
-
-  const selectedRawData: Map<string, number> = new Map(
-    Object.entries(rawData[lastYear - (selectedYear ?? lastYear)])
-  );
-
-  const year = selectedRawData.get("year");
-  const rawCountData = new Map(selectedRawData);
-  rawCountData.delete("year");
-  const sortedData = Array.from(rawCountData.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 20);
+  const year = rawData[0].year;
 
   const data = {
-    labels: sortedData.map((item) => item[0]),
+    labels: rawData.map((item) => item.make),
     datasets: [
       {
         label: `${year}`,
-        data: sortedData.map((item) => item[1]),
+        data: rawData.map((item) => item.count),
         axis: "y",
         backgroundColor: red[4],
       },
     ],
   };
+
+  const firstYear = 1990;
 
   return (
     <Card
@@ -121,12 +113,8 @@ export default function MakePopularityBrowser() {
             icon={<CaretLeftOutlined />}
             disabled={selectedYear == firstYear}
             onClick={() => {
-              if (selectedYear == null) {
-                setSelectedYear(lastYear - 1);
-              } else {
-                if (selectedYear > firstYear) {
-                  setSelectedYear(selectedYear - 1);
-                }
+              if (selectedYear > firstYear) {
+                setSelectedYear(selectedYear - 1);
               }
             }}
           />
@@ -134,12 +122,10 @@ export default function MakePopularityBrowser() {
           <Button
             shape="circle"
             icon={<CaretRightOutlined />}
-            disabled={selectedYear == lastYear || selectedYear == null}
+            disabled={selectedYear == latestYear}
             onClick={() => {
-              if (selectedYear != null) {
-                if (selectedYear < lastYear) {
-                  setSelectedYear(selectedYear + 1);
-                }
+              if (selectedYear < latestYear) {
+                setSelectedYear(selectedYear + 1);
               }
             }}
           />

@@ -12,7 +12,7 @@ TABLE = "vehicles_colors"
 def vehicles_colors(db: Connection):
     # Init result table.
     table = {}
-    last_record = get_last_record_date(db.conn)
+    last_record = get_last_record_date(db)
     table["year"] = range(1990, last_record.year + 1)
 
     colors = [

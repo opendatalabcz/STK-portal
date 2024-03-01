@@ -10,7 +10,7 @@ from ingestion.inspections.main import get_last_record_date
 def vehicles_operating_state(db: Connection):
     # Init result table.
     table = {}
-    last_record = get_last_record_date(db.conn)
+    last_record = get_last_record_date(db)
     table["year"] = range(1990, last_record.year + 1)
 
     # Load states from DB.

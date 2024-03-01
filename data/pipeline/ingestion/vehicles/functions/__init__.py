@@ -1,4 +1,5 @@
 from .process_missing import process_missing
+from .fill_names_from_inspections import fill_names_from_inspections
 from .filter_vehicle_types import filter_vehicle_types
 from .filter_duplicates import filter_duplicates
 from .filter_vins import filter_vins
@@ -24,6 +25,7 @@ pipeline = [
     filter_vins,
     parse_date_of_manufacture,
     process_registration_dates,
+    fill_names_from_inspections,
     group_models,
     filter_motor_power,
     filter_motor_volume,

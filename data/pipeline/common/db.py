@@ -13,15 +13,11 @@ class Connection:
         data_source: data source database id
         """
 
-        try:
-            username = urllib.parse.quote_plus(os.environ["POSTGRES_USER"])
-            password = urllib.parse.quote_plus(os.environ["POSTGRES_PASSWORD"])
-            conn_string = f"postgresql+psycopg2://{username}:{password}@{os.environ['POSTGRES_HOST']}/{os.environ['POSTGRES_DB']}"
-            self.db = create_engine(conn_string)
-            self.conn = self.db.connect()
-        except:
-            print("Failed to connect to the database", file=sys.stderr)
-            sys.exit(1)
+        username = urllib.parse.quote_plus(os.environ["POSTGRES_USER"])
+        password = urllib.parse.quote_plus(os.environ["POSTGRES_PASSWORD"])
+        conn_string = f"postgresql+psycopg2://{username}:{password}@{os.environ['POSTGRES_HOST']}/{os.environ['POSTGRES_DB']}"
+        self.db = create_engine(conn_string)
+        self.conn = self.db.connect()
 
     def __del__(self):
         if self.conn:
@@ -37,5 +33,9 @@ class Connection:
             if_exists="replace",
             index=False,
         )
+        self.conn.execute(text(f"GRANT SELECT ON TABLE public.{name} TO web_anon;"))
+        self.conn.commit()
+
+    def grant_api_rights(self, name: str):
         self.conn.execute(text(f"GRANT SELECT ON TABLE public.{name} TO web_anon;"))
         self.conn.commit()

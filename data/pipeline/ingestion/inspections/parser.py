@@ -15,10 +15,10 @@ def parse(path):
     inspection_type = []
     vin = []
     date = []
-    # make = []
+    make = []
     # motor_type = []
     vehicle_type = []
-    # model = []
+    model = []
     # vehicle_class = []
     first_registration = []
     mileage = []
@@ -51,10 +51,10 @@ def parse(path):
             else:
                 date.append("")
 
-            # if 'TZn' in element.attrib:
-            #     make.append(element.attrib['TZn'])
-            # else:
-            #     make.append('')
+            if "TZn" in element.attrib:
+                make.append(element.attrib["TZn"])
+            else:
+                make.append("")
 
             # if 'TypMot' in element.attrib:
             #     motor_type.append(element.attrib['TypMot'])
@@ -66,10 +66,10 @@ def parse(path):
             else:
                 vehicle_type.append("")
 
-            # if 'ObchOznTyp' in element.attrib:
-            #     model.append(element.attrib['ObchOznTyp'])
-            # else:
-            #     model.append('')
+            if "ObchOznTyp" in element.attrib:
+                model.append(element.attrib["ObchOznTyp"])
+            else:
+                model.append("")
 
             # if 'Ct' in element.attrib:
             #     vehicle_class.append(element.attrib['Ct'])
@@ -100,7 +100,7 @@ def parse(path):
 
             element.clear()
 
-    return pd.DataFrame(
+    df = pd.DataFrame(
         {
             "station_id": station_id,
             "date": date,
@@ -109,11 +109,14 @@ def parse(path):
             "result": result,
             "mileage": mileage,
             "defects": defects,
-            # 'make': make,
+            "make": make,
             # 'motor_type': motor_type,
             "vehicle_type": vehicle_type,
-            # 'model_primary': model,
+            "model_primary": model,
             # 'vehicle_class': vehicle_class,
             "first_registration": first_registration,
-        }
+        },
     )
+    df["defects"] = df["defects"].astype(str)
+
+    return df

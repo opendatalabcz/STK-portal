@@ -16,6 +16,8 @@ import { Card } from "antd";
 import useSWR from "swr";
 import { useState } from "react";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
+import { MakePopularityData } from "./TopMakesChart";
+import { firstVehiclesYear, latestYear } from "@/years";
 
 ChartJS.register(
   CategoryScale,
@@ -105,13 +107,16 @@ const rareMakes = [
   "CHRYSLER",
   "DODGE",
   "JAGUAR",
-  "JEEP",
+  // "JEEP",
   "LANCIA",
   "LAND ROVER",
   "LEXUS",
   "MINI",
   "PORSCHE",
-  "SMART",
+  // "SMART",
+  "FERRARI",
+  "LAMBORGHINI",
+  "ROLLS-ROYCE",
 ];
 
 const motorcycleMakes = [
@@ -149,7 +154,7 @@ const otherMakes = [
 
 const datasets = ["Běžné", "Méně časté", "Vzácné", "Jednostopé", "Ostatní"];
 
-const datasetLabels = [
+const datasetsByLabel = [
   basicMakes,
   uncommonMakes,
   rareMakes,
@@ -166,12 +171,13 @@ const tabList = datasets.map((label, index) => {
 
 export default function SelectedMakesPopularityBrowser() {
   const [selectedData, setSelectedData] = useState(0);
+  const makes = datasetsByLabel[selectedData].map((i) => `\"${i}\"`).join(",");
 
   const { data: rawData } = useSWR(
-    "/api/vehicles_make_popularity?order=year.asc",
+    `/api/vehicles_make_popularity?year=gte.${firstVehiclesYear}&year=lte.${latestYear}&make=in.(${makes})&order=year.asc`,
     async (key) => {
       const res = await fetch(key);
-      const data = Array.from(await res.json());
+      const data: MakePopularityData[] = await res.json();
       console.log(data);
       return data;
     }
@@ -189,12 +195,14 @@ export default function SelectedMakesPopularityBrowser() {
 
   const data = {
     // @ts-ignore
-    labels: rawData.map((item) => item["year"]),
-    datasets: datasetLabels[selectedData].map((label) => {
+    labels: [...Array(latestYear - firstVehiclesYear + 1).keys()].map(
+      (i) => i + firstVehiclesYear
+    ),
+    datasets: datasetsByLabel[selectedData].map((label) => {
       return {
         label: label,
         // @ts-ignore
-        data: rawData.map((year) => year[label]),
+        data: rawData.filter((i) => i.make == label).map((i) => i.count),
       };
     }),
   };

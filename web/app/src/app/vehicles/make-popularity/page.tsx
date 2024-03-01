@@ -29,9 +29,21 @@ export default function MakePopularityPage() {
             některé značky zajímavé spíše z historického hlediska. Export
             registru vozidel, na kterém je statistika založená, obsahuje
             explicitní názvy pouze 150 nejčastějších značek a modelů, kvůli
-            čemuž není například možné zobrazit vývoj počtu velmi raritních
-            značek. Jednotlivé oddíly proto slouží jednoduše k rozdělení značek
-            na menší skupiny, aby byly grafy čitelnější.
+            čemuž není například možné spolehlivě zobrazit vývoj počtu velmi
+            raritních značek.
+          </p>
+
+          <p>
+            Toto omezení je ale zčásti vyřešeno kombinací dat z kontrol na STK,
+            která obsahují explicitně vyjmenované i méně časté značky a modely.
+            Pro vozidla, která byla na kontrole od roku 2018 dále (odkdy máme k
+            dispozici data) tedy lze tyto údaje do registru vozidel doplnit na
+            základě porovnání VIN kódu a zobrazit je zde. Je ovšem třeba mít na
+            paměti, že ve skutečnosti jejich četnosti budou vyšší (alespoň pro
+            data před rokem 2018), protože některá vozidla před tímto rokem
+            mohla zaniknout a jsou proto sice v registru uvedená bez názvu
+            značky či modelu, ale tyto údaje již nemůžeme z dostupných záznamů o
+            kontorolách získat.
           </p>
         </div>
       </Container>

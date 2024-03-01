@@ -16,6 +16,7 @@ import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
 import {
   blue,
+  cyan,
   green,
   grey,
   magenta,
@@ -169,7 +170,7 @@ export default function ColorsChart({
         {
           label: "Modrá",
           data: rawData.map((e, i) => e.MODRÁ / sums[i]),
-          backgroundColor: blue[4],
+          backgroundColor: cyan[4],
         },
         {
           label: "Bílá",

@@ -8,10 +8,13 @@ from .format_date import format_date
 from .filter_dates_out_of_range import filter_dates_out_of_range
 from .transform_result import transform_result
 from .count_failures_by_type import count_failures_by_type
-from .count_failures_by_first_level_category import count_failures_by_first_level_category
+from .count_failures_by_first_level_category import (
+    count_failures_by_first_level_category,
+)
 from .add_vehicle_age import add_vehicle_age
 from .filter_duplicates import filter_duplicates
 from .drop_extra_columns import drop_extra_columns
+from .group_models import group_models
 
 # The order of the pipeline operations is defined here.
 pipeline = [
@@ -27,6 +30,7 @@ pipeline = [
     count_failures_by_type,
     count_failures_by_first_level_category,
     add_vehicle_age,
+    group_models,
     filter_duplicates,
     drop_extra_columns,
 ]

@@ -15,7 +15,7 @@ def vehicles_average_age_of_imported(db: Connection):
     # Load data from DB.
     means = []
 
-    last_record = get_last_record_date(db.conn)
+    last_record = get_last_record_date(db)
 
     # Get an average for each year.
     years = range(2000, last_record.year + 1)

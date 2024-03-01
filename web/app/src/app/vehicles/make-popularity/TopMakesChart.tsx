@@ -26,18 +26,23 @@ ChartJS.register(
   Legend
 );
 
+export type MakePopularityData = {
+  year: number;
+  make: string;
+  count: number;
+};
+
 export default function TopMakesChart({
   linkToDetails = false,
 }: {
   linkToDetails?: boolean;
 }) {
   const { data: rawData } = useSWR(
-    "/api/vehicles_make_popularity?order=year.desc&limit=1",
+    "/api/vehicles_make_popularity?order=year.desc,count.desc&limit=10",
     async (key) => {
       const res = await fetch(key);
-      const data: Map<string, number> = new Map(
-        Object.entries((await res.json())[0])
-      );
+      const data: MakePopularityData[] = await res.json();
+      console.log(data);
       return data;
     }
   );
@@ -91,19 +96,12 @@ export default function TopMakesChart({
     },
   };
 
-  const year = rawData.get("year");
-  const rawCountData = new Map(rawData);
-  rawCountData.delete("year");
-  const sortedData = Array.from(rawCountData.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10);
-
   const data = {
-    labels: sortedData.map((item) => item[0]),
+    labels: rawData.map((item) => item.make),
     datasets: [
       {
-        label: `${year}`,
-        data: sortedData.map((item) => item[1]),
+        label: `${rawData[0].year}`,
+        data: rawData.map((item) => item.count),
         axis: "y",
         backgroundColor: red[4],
       },
@@ -113,7 +111,7 @@ export default function TopMakesChart({
   return (
     <Card
       size="small"
-      title={`Popularita značek (${year})`}
+      title={`Popularita značek (${rawData[0].year})`}
       extra={linkToDetails && <a href="/vehicles/make-popularity">Více</a>}
     >
       <div className="h-64 md:h-96">
