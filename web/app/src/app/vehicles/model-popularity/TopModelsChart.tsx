@@ -26,18 +26,22 @@ ChartJS.register(
   Legend
 );
 
+export type ModelPopularityData = {
+  year: number;
+  model: string;
+  count: number;
+};
+
 export default function TopModelsChart({
   linkToDetails = false,
 }: {
   linkToDetails?: boolean;
 }) {
   const { data: rawData } = useSWR(
-    "/api/vehicles_model_popularity?order=year.desc&limit=1",
+    "/api/vehicles_model_popularity?order=year.desc,count.desc&limit=10",
     async (key) => {
       const res = await fetch(key);
-      const data: Map<string, number> = new Map(
-        Object.entries((await res.json())[0])
-      );
+      const data: ModelPopularityData[] = await res.json();
       return data;
     }
   );
@@ -91,19 +95,13 @@ export default function TopModelsChart({
     },
   };
 
-  const year = rawData.get("year");
-  const rawCountData = new Map(rawData);
-  rawCountData.delete("year");
-  const sortedData = Array.from(rawCountData.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10);
-
+  const year = rawData[0].year;
   const data = {
-    labels: sortedData.map((item) => item[0]),
+    labels: rawData.map((item) => item.model),
     datasets: [
       {
         label: `${year}`,
-        data: sortedData.map((item) => item[1]),
+        data: rawData.map((item) => item.count),
         axis: "y",
         backgroundColor: red[4],
       },

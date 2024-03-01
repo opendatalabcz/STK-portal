@@ -178,7 +178,6 @@ export default function SelectedMakesPopularityBrowser() {
     async (key) => {
       const res = await fetch(key);
       const data: MakePopularityData[] = await res.json();
-      console.log(data);
       return data;
     }
   );
@@ -193,16 +192,23 @@ export default function SelectedMakesPopularityBrowser() {
     );
   }
 
+  // @ts-ignore
+  const years = [...Array(latestYear - firstVehiclesYear + 1).keys()].map(
+    (i) => i + firstVehiclesYear
+  );
+
   const data = {
-    // @ts-ignore
-    labels: [...Array(latestYear - firstVehiclesYear + 1).keys()].map(
-      (i) => i + firstVehiclesYear
-    ),
+    labels: years,
     datasets: datasetsByLabel[selectedData].map((label) => {
       return {
         label: label,
-        // @ts-ignore
-        data: rawData.filter((i) => i.make == label).map((i) => i.count),
+        data: years.map((year) => {
+          const point = rawData
+            .filter((i) => i.year == year)
+            .find((i) => i.make == label);
+          if (point != undefined) return point.count;
+          return null;
+        }),
       };
     }),
   };

@@ -18,7 +18,7 @@ import { useState } from "react";
 import { red } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { MakePopularityData } from "./TopMakesChart";
-import { latestYear } from "@/years";
+import { firstVehiclesYear, latestYear } from "@/years";
 
 ChartJS.register(
   CategoryScale,
@@ -101,8 +101,6 @@ export default function MakePopularityBrowser() {
     ],
   };
 
-  const firstYear = 1990;
-
   return (
     <Card
       title="Nejčastěji registrované značky za rok"
@@ -111,9 +109,9 @@ export default function MakePopularityBrowser() {
           <Button
             shape="circle"
             icon={<CaretLeftOutlined />}
-            disabled={selectedYear == firstYear}
+            disabled={selectedYear == firstVehiclesYear}
             onClick={() => {
-              if (selectedYear > firstYear) {
+              if (selectedYear > firstVehiclesYear) {
                 setSelectedYear(selectedYear - 1);
               }
             }}

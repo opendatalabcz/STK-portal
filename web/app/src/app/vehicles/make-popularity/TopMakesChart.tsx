@@ -42,7 +42,6 @@ export default function TopMakesChart({
     async (key) => {
       const res = await fetch(key);
       const data: MakePopularityData[] = await res.json();
-      console.log(data);
       return data;
     }
   );

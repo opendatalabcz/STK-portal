@@ -16,6 +16,8 @@ import { Card } from "antd";
 import useSWR from "swr";
 import { useState } from "react";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
+import { firstVehiclesYear, latestYear } from "@/years";
+import { ModelPopularityData } from "./TopModelsChart";
 
 ChartJS.register(
   CategoryScale,
@@ -156,7 +158,7 @@ const otherModels = [
 
 const datasets = ["Škoda", "Ostatní VAG", "Francouzské", "Asijské", "Ostatní"];
 
-const datasetLabels = [
+const datasetsByLabel = [
   skodaModels,
   vagModels,
   frenchModels,
@@ -173,12 +175,13 @@ const tabList = datasets.map((label, index) => {
 
 export default function SelectedModelsPopularityBrowser() {
   const [selectedData, setSelectedData] = useState(0);
+  const models = datasetsByLabel[selectedData].map((i) => `\"${i}\"`).join(",");
 
   const { data: rawData } = useSWR(
-    "/api/vehicles_model_popularity?order=year.asc",
+    `/api/vehicles_model_popularity?year=gte.${firstVehiclesYear}&year=lte.${latestYear}&model=in.(${models})&order=year.asc`,
     async (key) => {
       const res = await fetch(key);
-      const data = Array.from(await res.json());
+      const data: ModelPopularityData[] = await res.json();
       console.log(data);
       return data;
     }
@@ -194,14 +197,23 @@ export default function SelectedModelsPopularityBrowser() {
     );
   }
 
+  // @ts-ignore
+  const years = [...Array(latestYear - firstVehiclesYear + 1).keys()].map(
+    (i) => i + firstVehiclesYear
+  );
+
   const data = {
-    // @ts-ignore
-    labels: rawData.map((item) => item["year"]),
-    datasets: datasetLabels[selectedData].map((label) => {
+    labels: years,
+    datasets: datasetsByLabel[selectedData].map((label) => {
       return {
         label: label,
-        // @ts-ignore
-        data: rawData.map((year) => year[label]),
+        data: years.map((year) => {
+          const point = rawData
+            .filter((i) => i.year == year)
+            .find((i) => i.model == label);
+          if (point != undefined) return point.count;
+          return null;
+        }),
       };
     }),
   };
