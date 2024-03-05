@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import MileageByDriveTypeChart from "./MileageByDriveTypeChart";
+import MileageByDriveTypeStackedChart from "./MileageByDriveTypeStackedChart";
 
 export default function EcologyPage() {
   return (
@@ -20,6 +21,7 @@ export default function EcologyPage() {
       <Container>
         <div className="space-y-4">
           <MileageByDriveTypeChart></MileageByDriveTypeChart>
+          <MileageByDriveTypeStackedChart></MileageByDriveTypeStackedChart>
 
           <p>
             Statistika ukazuje součet stavů najetých kilometrů všech vozidel,
@@ -31,16 +33,17 @@ export default function EcologyPage() {
           </p>
 
           <p>
-            Pokud tedy celková výška sloupce v každém roce roste, koresponduje
-            to se stárnutím vozového parku a provozem vozidel s vyšším nájezdem.
-            V roce 2022 pozorujeme mírné meziroční snížení sloupce, dá se tedy
-            usoudit, že v předchozích dvou letech se (zřejmě vlivem Covid-19)
-            uskutečnil menší celkový nájezd než dříve, zatímco starší vozidla s
-            vysokým nájezdem zanikla či byla vyvezena a nebyla proto na STK. Rok
-            2021 zaznamenal naopak meziroční zvýšení, ale to Covidové
-            interpretaci neodporuje, protože se do tohoto roku započítala změna
-            nájezdů vozidel i za Covidem nepostižený rok 2019 &ndash; vozdila
-            jezdí na STK pouze každé dva roky.
+            Pokud tedy celková výška sloupce v každém roce roste, může to
+            naznačovat stárnutí vozového parku a provozem vozidel s vyšším
+            nájezdem nebo také celkově větší počet provozovaných vozidel. V roce
+            2022 pozorujeme mírné meziroční snížení sloupce, dá se tedy usoudit,
+            že v předchozích dvou letech se (zřejmě vlivem Covid-19) uskutečnil
+            menší nájezd než dříve, zatímco starší vozidla s vysokým nájezdem
+            zanikla či byla vyvezena a nebyla proto na STK. Rok 2021 zaznamenal
+            naopak meziroční zvýšení, ale to Covidové interpretaci neodporuje,
+            protože se do tohoto roku započítala změna nájezdů vozidel i za
+            Covidem nepostižený rok 2019 &ndash; vozidla jezdí na STK pouze
+            každé dva roky.
           </p>
 
           <p>
@@ -49,7 +52,9 @@ export default function EcologyPage() {
             nájezdu vůči podílu nově registrovaných elektrifikovaných vozidel
             zhruba se čtyřletým zpožděním, protože nová vozidla s významnějším
             nájezdem teprve po čtyřech letech pojedou na pravidelnou technickou
-            kontrolu.
+            kontrolu. Navíc tento graf nelze interpretovat jako podíl nájezdů
+            podle paliva uskutečněných v daném roce &ndash; pro takovou
+            interpretaci by bylo nutné analyzovat roční přírůstky nájezdu.
           </p>
 
           <p>

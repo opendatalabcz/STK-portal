@@ -35,7 +35,7 @@ type DriveTypeData = {
   ostatni: number;
 };
 
-export default function MileageByDriveTypeChart({
+export default function MileageByDriveTypeStackedChart({
   linkToDetails = false,
 }: {
   linkToDetails?: boolean;
@@ -43,7 +43,7 @@ export default function MileageByDriveTypeChart({
   return (
     <Card
       size="small"
-      title="Celkový nájezd podle typu pohonu"
+      title="Celkový nájezd podle typu pohonu (kumulovaný)"
       extra={
         linkToDetails && <a href="/vehicles/mileage-by-drive-type">Více</a>
       }
@@ -67,7 +67,7 @@ export default function MileageByDriveTypeChart({
     }
 
     const options = {
-      barPercentage: 0.95,
+      barPercentage: 1.15,
       responsive: true,
       maintainAspectRatio: false,
       interaction: {
@@ -75,12 +75,14 @@ export default function MileageByDriveTypeChart({
       },
       scales: {
         x: {
+          stacked: true,
           title: {
             display: true,
             text: "Rok",
           },
         },
         y: {
+          stacked: true,
           title: {
             display: true,
             text: "Celkový nájezd dle pohonu [km]",
@@ -121,14 +123,15 @@ export default function MileageByDriveTypeChart({
           backgroundColor: red[7],
         },
         {
-          label: "Plyn (i v kombinaci)",
-          data: rawData.map((e, i) => e.plyn),
-          backgroundColor: cyan[7],
-        },
-        {
           label: "Elektrifikované",
           data: rawData.map((e, i) => e.elektrifikovane),
           backgroundColor: cyan[4],
+        },
+
+        {
+          label: "Plyn (i v kombinaci)",
+          data: rawData.map((e, i) => e.plyn),
+          backgroundColor: cyan[7],
         },
         {
           label: "Ostatní",
