@@ -1,35 +1,53 @@
 from common.db import Connection
 
+from .inspections.average_inspection_count_by_severity_by_nuts3 import (
+    stations_average_inspection_count_by_severity_by_nuts3,
+)
+from .inspections.average_inspection_result import stations_average_inspection_result
+from .inspections.defect_counts import stations_defect_counts
+from .inspections.defect_counts_by_category import stations_defect_counts_by_category
+from .inspections.inspection_failure_reasons import stations_inspection_failure_reasons
+from .inspections.inspection_success_by_make import stations_inspection_success_by_make
+from .inspections.inspection_success_by_model import (
+    stations_inspection_success_by_model,
+)
 from .vehicles.average_age_by_drive_type import vehicles_average_age_by_drive_type
 from .vehicles.average_age_of_imported import vehicles_average_age_of_imported
 from .vehicles.average_age import vehicles_average_age
 from .vehicles.average_mileage import vehicles_average_mileage
+from .vehicles.average_mileage_by_region import vehicles_average_mileage_by_region
 from .vehicles.colors import vehicles_colors
 from .vehicles.drive_type import vehicles_drive_type
 from .vehicles.estimated_end_of_life import vehicles_estimated_end_of_life
 from .vehicles.imported_vs_new import vehicles_imported_vs_new
 from .vehicles.make_popularity import vehicles_make_popularity
+from .vehicles.mileage_by_drive_type import vehicles_mileage_by_drive_type
 from .vehicles.model_popularity import vehicles_model_popularity
 from .vehicles.operating_state import vehicles_operating_state
-from .vehicles.mileage_by_drive_type import vehicles_mileage_by_drive_type
-from .vehicles.average_mileage_by_region import vehicles_average_mileage_by_region
 
 functions = [
-    # Dependencies first.
-    # vehicles_estimated_end_of_life,
-    # The (parallelizable) rest.
-    # vehicles_average_age_by_drive_type,
-    vehicles_average_age_of_imported,
-    # vehicles_average_age,
-    # vehicles_average_mileage,
-    # vehicles_average_mileage_by_region,
-    # vehicles_colors,
-    # vehicles_drive_type,
+    #### Dependencies first.
+    vehicles_estimated_end_of_life,
+    #### The (parallelizable) rest.
+    stations_average_inspection_count_by_severity_by_nuts3,
+    stations_average_inspection_result,
+    stations_defect_counts_by_category,
+    stations_defect_counts,
+    stations_inspection_failure_reasons,
+    stations_inspection_success_by_make,
+    stations_inspection_success_by_model,
+    vehicles_average_age_by_drive_type,  # Depends on vehicles_estimated_end_of_life
+    vehicles_average_age_of_imported,  # Depends on vehicles_estimated_end_of_life
+    vehicles_average_age,  # Depends on vehicles_estimated_end_of_life
+    vehicles_average_mileage,
+    vehicles_average_mileage_by_region,
+    vehicles_colors,
+    vehicles_drive_type,
     vehicles_imported_vs_new,
-    # vehicles_make_popularity,
-    # vehicles_model_popularity,
-    # vehicles_operating_state,
-    # vehicles_mileage_by_drive_type,
+    vehicles_operating_state,
+    vehicles_make_popularity,
+    vehicles_mileage_by_drive_type,
+    vehicles_model_popularity,
 ]
 
 
