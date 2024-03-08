@@ -18,21 +18,27 @@ def vehicles_model_popularity(db: Connection):
 
     records = db.conn.execute(
         text(
-            f"""SELECT date_part('year', v.first_registration) as year, model_primary, count(1) as count
+            f"""SELECT date_part('year', v.first_registration) as year, make, model_primary, count(1) as count
 FROM vehicles v
-WHERE model_primary IS NOT NULL AND v.first_registration IS NOT NULL
-GROUP BY year, model_primary
+WHERE make IS NOT NULL
+    AND model_primary IS NOT NULL
+    AND v.first_registration IS NOT NULL
+GROUP BY year, make, model_primary
 ORDER BY year ASC, count DESC"""
         )
     ).all()
     records = np.array(records)
 
+    models = []
+    for record in records:
+        models.append(record[1] + " " + record[2])
+
     df = pd.DataFrame(
         {
             # Parse float from string, then truncate to int.
             "year": records[:, 0].astype(float).astype(np.int16),
-            "model_primary": records[:, 1],
-            "count": records[:, 2].astype(float).astype(np.int64),
+            "model": np.array(models),
+            "count": records[:, 3].astype(float).astype(np.int64),
         }
     )
 

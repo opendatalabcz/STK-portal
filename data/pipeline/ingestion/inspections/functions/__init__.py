@@ -15,6 +15,7 @@ from .add_vehicle_age import add_vehicle_age
 from .filter_duplicates import filter_duplicates
 from .drop_extra_columns import drop_extra_columns
 from .group_models import group_models
+from .rename_make import rename_make
 
 # The order of the pipeline operations is defined here.
 pipeline = [
@@ -30,6 +31,7 @@ pipeline = [
     count_failures_by_type,
     count_failures_by_first_level_category,
     add_vehicle_age,
+    rename_make,
     group_models,
     filter_duplicates,
     drop_extra_columns,

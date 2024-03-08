@@ -93,11 +93,11 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public.vehicles
     OWNER to postgres;
 
-REVOKE ALL ON TABLE public.inspections FROM web_anon;
+REVOKE ALL ON TABLE public.vehicles FROM web_anon;
 
-GRANT ALL ON TABLE public.inspections TO postgres;
+GRANT ALL ON TABLE public.vehicles TO postgres;
 
-GRANT SELECT ON TABLE public.inspections TO web_anon;"""
+GRANT SELECT ON TABLE public.vehicles TO web_anon;"""
         )
     )
     conn.commit()
