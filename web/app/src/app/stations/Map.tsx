@@ -9,6 +9,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useState } from "react";
 import Button from "antd/es/button";
 import { useRouter } from "next/navigation";
+import { Icon } from "leaflet";
 
 // import "leaflet/dist/leaflet.css";
 
@@ -25,6 +26,10 @@ export default function Map() {
     }
   );
 
+  const icon = new Icon({
+    iconUrl: "/icon-marker.svg",
+  });
+
   return (
     <Card>
       <div className="items-center h-96">
@@ -37,7 +42,11 @@ export default function Map() {
           {/* <MarkerClusterGroup chunkedLoading> */}
           {stations &&
             stations.map((s) => (
-              <Marker key={s.id} position={[s.latitude!, s.longitude!]}>
+              <Marker
+                key={s.id}
+                position={[s.latitude!, s.longitude!]}
+                icon={icon}
+              >
                 <Popup>
                   <div className="pb-1 space-y-1">
                     <h2 className="pb-2 text-lg">{s.company}</h2>
