@@ -1,4 +1,4 @@
-import { Tooltip } from "antd";
+import { Tag, Tooltip } from "antd";
 import Link from "next/link";
 import useSWR from "swr";
 
@@ -15,12 +15,14 @@ export default function DefectSpan({ defect }: { defect: string }) {
   if (data != null) {
     return (
       <Tooltip title={data.description}>
-        <Link
-          href={`/defects#${defect}`}
-          // title={data.description} // This would show along with the Ant tooltip.
-        >
-          {defect}
-        </Link>
+        <Tag color="red">
+          <Link
+            href={`/defects#${defect}`}
+            // title={data.description} // This would show along with the Ant tooltip.
+          >
+            <span className="text-red-500">{defect}</span>
+          </Link>
+        </Tag>
       </Tooltip>
     );
   }

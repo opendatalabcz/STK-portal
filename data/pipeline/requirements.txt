@@ -4,3 +4,4 @@ pandas
 openpyxl
 geopy
 requests # for geopy adapter
+catboost

@@ -17,6 +17,7 @@ from .vehicles.average_age import vehicles_average_age
 from .vehicles.average_mileage import vehicles_average_mileage
 from .vehicles.average_mileage_by_region import vehicles_average_mileage_by_region
 from .vehicles.colors import vehicles_colors
+from .vehicles.defect_prediciton import defect_prediction
 from .vehicles.drive_type import vehicles_drive_type
 from .vehicles.estimated_end_of_life import vehicles_estimated_end_of_life
 from .vehicles.imported_vs_new import vehicles_imported_vs_new
@@ -42,6 +43,7 @@ functions = [
     vehicles_average_mileage,
     vehicles_average_mileage_by_region,
     vehicles_colors,
+    defect_prediction,
     vehicles_drive_type,
     vehicles_imported_vs_new,
     vehicles_operating_state,

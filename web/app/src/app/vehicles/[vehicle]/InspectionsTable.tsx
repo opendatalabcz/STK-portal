@@ -76,7 +76,10 @@ export default function InspectionsTable({ vin }: { vin: string }) {
       title: "Počet závad",
       dataIndex: "defects",
       key: "defectCount",
-      render: (_, { defects }) => {
+      render: (_, { defects, date }) => {
+        if (date.startsWith("2018"))
+          return <span className="text-gray-400">&mdash;</span>;
+
         if (defects == null || defects.length == 0) {
           return "0";
         } else {
@@ -91,7 +94,10 @@ export default function InspectionsTable({ vin }: { vin: string }) {
       title: "Závady",
       dataIndex: "defects",
       key: "defects",
-      render: (_, { defects }) => {
+      render: (_, { defects, date }) => {
+        if (date.startsWith("2018"))
+          return <span className="text-gray-400">Závady nejsou dostupné</span>;
+
         if (defects == null || defects.length == 0)
           return <Tag color="green">Bez závad</Tag>;
 
@@ -99,7 +105,6 @@ export default function InspectionsTable({ vin }: { vin: string }) {
         return parts.map((d, index) => (
           <span key={index}>
             <DefectSpan defect={d}></DefectSpan>
-            {index + 1 < parts.length && ", "}
           </span>
         ));
       },
