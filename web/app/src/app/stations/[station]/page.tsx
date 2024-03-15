@@ -13,6 +13,7 @@ import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import useSWR from "swr";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
+import InspectionFrequencyChart from "./InspectionFrequencyChart";
 
 export default function StationDetailPage({
   params: { station },
@@ -113,6 +114,31 @@ export default function StationDetailPage({
           </div>
 
           <h1 className="pt-4 text-3xl">Statistiky</h1>
+
+          <h2 className="pt-4 text-2xl">Predikce vytíženosti</h2>
+          <hr></hr>
+          <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
+            <div>
+              <InspectionFrequencyChart
+                station={station}
+              ></InspectionFrequencyChart>
+            </div>
+            <div>
+              <p>
+                Predikce vytíženosti funguje na principu průměrování počtu
+                prohlídek ve stejném týdnu napříč roky. Graf tedy zobrazuje
+                průměrnou vytíženost v tomto týdnu na základě známé historie
+                prohlídek.
+              </p>
+              <p>
+                Při rozhodování, který den na kontrolu jet, je ale navíc potřeba
+                brát v úvahu, že páteční otevírací doba bývá u mnoha stanic
+                zkrácená. Navíc je nutné počítat s pohyblivými svátky, které
+                tato predikce zachytit nedokáže.
+              </p>
+            </div>
+          </div>
+
           <h2 className="pt-4 text-2xl">Průměrné výsledky kontrol</h2>
         </Container>
       </>

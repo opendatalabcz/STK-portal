@@ -3,6 +3,9 @@ from common.db import Connection
 from .inspections.average_inspection_count_by_severity_by_nuts3 import (
     stations_average_inspection_count_by_severity_by_nuts3,
 )
+from .inspections.average_inspection_frequency import (
+    stations_average_inspection_frequency,
+)
 from .inspections.average_inspection_result import stations_average_inspection_result
 from .inspections.defect_counts import stations_defect_counts
 from .inspections.defect_counts_by_category import stations_defect_counts_by_category
@@ -31,6 +34,7 @@ functions = [
     vehicles_estimated_end_of_life,
     #### The (parallelizable) rest.
     stations_average_inspection_count_by_severity_by_nuts3,
+    stations_average_inspection_frequency,
     stations_average_inspection_result,
     stations_defect_counts_by_category,
     stations_defect_counts,
