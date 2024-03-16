@@ -14,6 +14,7 @@ import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import Container from "@/components/Container";
 import InspectionsTable from "./InspectionsTable";
 import DefectPredictionTable from "./DefectPredictionTable";
+import MileageChart from "./MileageChart";
 
 interface IStringMap {
   [index: string]: string;
@@ -73,6 +74,11 @@ export default function StationDetailPage({
           </p>
 
           <DefectPredictionTable vehicle={vehicle}></DefectPredictionTable>
+
+          <h2 className="pt-4 text-2xl">Predikce nájezdu</h2>
+          <hr className="pb-4"></hr>
+
+          <MileageChart vehicle={vehicle}></MileageChart>
         </Container>
       </>
     );

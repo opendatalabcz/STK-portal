@@ -227,7 +227,7 @@ def pipeline(
     conn.commit()
 
 
-def defect_prediction(conn: Connection):
+def vehicles_defect_prediction(conn: Connection):
     prepare_data(conn.conn)
     conn.conn.commit()
 

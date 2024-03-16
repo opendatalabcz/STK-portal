@@ -20,12 +20,13 @@ from .vehicles.average_age import vehicles_average_age
 from .vehicles.average_mileage import vehicles_average_mileage
 from .vehicles.average_mileage_by_region import vehicles_average_mileage_by_region
 from .vehicles.colors import vehicles_colors
-from .vehicles.defect_prediciton import defect_prediction
+from .vehicles.defect_prediciton import vehicles_defect_prediction
 from .vehicles.drive_type import vehicles_drive_type
 from .vehicles.estimated_end_of_life import vehicles_estimated_end_of_life
 from .vehicles.imported_vs_new import vehicles_imported_vs_new
 from .vehicles.make_popularity import vehicles_make_popularity
 from .vehicles.mileage_by_drive_type import vehicles_mileage_by_drive_type
+from .vehicles.mileage_prediction import vehicles_mileage_prediction
 from .vehicles.model_popularity import vehicles_model_popularity
 from .vehicles.operating_state import vehicles_operating_state
 
@@ -47,12 +48,13 @@ functions = [
     vehicles_average_mileage,
     vehicles_average_mileage_by_region,
     vehicles_colors,
-    defect_prediction,
+    vehicles_defect_prediction,
     vehicles_drive_type,
     vehicles_imported_vs_new,
     vehicles_operating_state,
     vehicles_make_popularity,
     vehicles_mileage_by_drive_type,
+    vehicles_mileage_prediction,
     vehicles_model_popularity,
 ]
 
