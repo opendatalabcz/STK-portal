@@ -14,6 +14,8 @@ from .inspections.inspection_success_by_make import stations_inspection_success_
 from .inspections.inspection_success_by_model import (
     stations_inspection_success_by_model,
 )
+from .inspections.top_makes_by_station import stations_top_makes_by_station
+from .inspections.top_models_by_station import stations_top_models_by_station
 from .vehicles.average_age_by_drive_type import vehicles_average_age_by_drive_type
 from .vehicles.average_age_of_imported import vehicles_average_age_of_imported
 from .vehicles.average_age import vehicles_average_age
@@ -42,6 +44,8 @@ functions = [
     stations_inspection_failure_reasons,
     stations_inspection_success_by_make,
     stations_inspection_success_by_model,
+    stations_top_makes_by_station,
+    stations_top_models_by_station,
     vehicles_average_age_by_drive_type,  # Depends on vehicles_estimated_end_of_life
     vehicles_average_age_of_imported,  # Depends on vehicles_estimated_end_of_life
     vehicles_average_age,  # Depends on vehicles_estimated_end_of_life
@@ -54,7 +58,7 @@ functions = [
     vehicles_operating_state,
     vehicles_make_popularity,
     vehicles_mileage_by_drive_type,
-    vehicles_mileage_prediction,
+    vehicles_mileage_prediction,  # Depends on vehicles_defect_prediction
     vehicles_model_popularity,
 ]
 

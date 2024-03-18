@@ -6,28 +6,25 @@
 - [x] Registr vozidel
 - [x] Číselník závad
 - [x] Vzniklá a zaniklá vozidla - pomocí odhadu z STK + informace o statutu z registru vozidel
-- [ ] Provozní informace o stanicích TK
 
 ## Analýza dat
 
 - [ ] Stanice
-  - [ ] Průměrný výsledek prohlídky
-  - [ ] Kapacita stanic
+  - [x] Průměrný výsledek prohlídky
   - [ ] Anomální prohlídky
-  - [ ] Závady
-    - [ ] Mapy podle okresů
-    - [ ] Nejčastější závady
+  - [x] Závady
+    - [x] Mapy podle okresů
+    - [x] Nejčastější závady
   - [ ] Detail stanice
-    - [ ] Statistiky kontrol
-      - [ ] Vytíženost
-      - [ ] Kontrolovaná vozidla
-        - [ ] Typy vozidel
-        - [ ] Rozdělení značek
-        - [ ] Rozdělení modelů
+    - [x] Statistiky kontrol
+      - [x] Vytíženost
+      - [x] Kontrolovaná vozidla
+        - [x] Typy vozidel
+        - [x] Rozdělení značek
+        - [x] Rozdělení modelů
     - [ ] Anomální prohlídky
       - [ ] Podíl anomálních a normálních kontrol
       - [ ] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
-    - [ ] Závislost úspěšnosti průchodu prohlídkou na dni v týdnu, měsíci v roce
 - [ ] Vozidla
   - [x] Proměny vozového parku v čase
     - [x] Průměrné stáří
@@ -41,8 +38,8 @@
     - [x] Poměr nájezdů podle paliva
   - [x] Migrace
   - [ ] Detail vozidla
-    - [ ] Najeté kilometry a jejich predikce
-    - [ ] Závady a jejich predikce
+    - [x] Najeté kilometry a jejich predikce
+    - [x] Závady a jejich predikce
     - [ ] Srovnání dosavadní poruchovosti
     - [ ] Příslušnost do flotily
     - [ ] Periody, kdy mělo vypršelou technickou
@@ -61,25 +58,22 @@
 - [ ] Stanice
   - [x] Vyhledávač stanic
   - [x] Mapa stanic
-  - [ ] Průměrný výsledek prohlídky
-  - [ ] Kapacita stanic
+  - [x] Průměrný výsledek prohlídky
   - [ ] Anomální prohlídky
-  - [ ] Závady
-    - [ ] Mapy podle okresů
-    - [ ] Nejčastější závady
+  - [x] Závady
+    - [x] Mapy podle okresů
+    - [x] Nejčastější závady
   - [ ] Detail stanice
     - [x] Informace o stanici
-    - [ ] Scraping aktuálních dat (otevírací doba, ev. ceny)
-    - [ ] Statistiky kontrol
-      - [ ] Vytíženost
-      - [ ] Kontrolovaná vozidla
-        - [ ] Typy vozidel
-        - [ ] Rozdělení značek
-        - [ ] Rozdělení modelů
+    - [x] Statistiky kontrol
+      - [x] Vytíženost
+      - [x] Kontrolovaná vozidla
+        - [x] Typy vozidel
+        - [x] Rozdělení značek
+        - [x] Rozdělení modelů
     - [ ] Anomální prohlídky
       - [ ] Podíl anomálních a normálních kontrol
       - [ ] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
-    - [ ] Závislost úspěšnosti průchodu prohlídkou na dni v týdnu, měsíci v roce
 - [ ] Vozidla
   - [ ] Vyhledávač vozidel
     - [ ] Klasické vyhledávání
@@ -98,8 +92,8 @@
     - [x] Základní informace o vozidle
     - [-] Náhled vozidla nebo alespoň značky
     - [x] Historie kontrol
-    - [ ] Najeté kilometry a jejich predikce
-    - [ ] Závady a jejich predikce
+    - [x] Najeté kilometry a jejich predikce
+    - [x] Závady a jejich predikce
     - [ ] Srovnání dosavadní poruchovosti
     - [ ] Příslušnost do flotily
     - [ ] Periody, kdy mělo vypršelou technickou
