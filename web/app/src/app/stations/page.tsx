@@ -36,7 +36,7 @@ export default function StationsPage() {
 
         <Map></Map>
 
-        <h1 className="pt-8 pb-4 text-3xl">Statistiky</h1>
+        <h1 className="pt-8 pb-4 text-3xl">Souhrnné statistiky</h1>
 
         <Card size="small" title="Obsah">
           <ul className="pl-5 list-disc">

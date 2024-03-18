@@ -11,17 +11,7 @@ export default function Footer() {
   } = theme.useToken();
 
   return (
-    <AntFooter
-      className="flex flex-col items-center justify-center px-4 py-2 space-y-6"
-      style={
-        {
-          // backgroundColor: colorText,
-          // borderTop: "1px",
-          // borderTopColor: colorSplit,
-          // borderTopStyle: "solid",
-        }
-      }
-    >
+    <AntFooter className="flex flex-col items-center justify-center px-4 py-2 space-y-6">
       <div>
         <p>
           &copy;&nbsp;

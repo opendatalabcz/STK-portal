@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "antd/es/button";
 import Input from "antd/es/input";
 import { useRouter } from "next/navigation";
@@ -16,7 +18,6 @@ export default function SearchBox({ initialValue }: { initialValue?: string }) {
   return (
     <div className="flex flex-row justify-start space-x-4 md:w-8/12">
       <Input
-        autoFocus
         value={value}
         onChange={(e) => setValue(e.currentTarget.value)}
         onKeyDown={(e) => {

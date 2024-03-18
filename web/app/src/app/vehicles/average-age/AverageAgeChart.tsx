@@ -39,7 +39,7 @@ export default function AverageAgeChart({
   return (
     <Card
       size="small"
-      title="Průměrný věk osobních automobilů"
+      title="Průměrný věk osobních automobilů (OA)"
       extra={linkToDetails && <a href="/vehicles/average-age">Více</a>}
     >
       <div className="h-48 md:h-96">{_buildChart()}</div>

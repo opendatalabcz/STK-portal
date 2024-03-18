@@ -2,7 +2,7 @@ import SearchBox from "./SearchBox";
 import Container from "@/components/Container";
 import ColorsChart from "./colors/ColorsChart";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
-import { Breadcrumb } from "antd";
+import { Breadcrumb, Card } from "antd";
 import Link from "next/link";
 import AverageAgeChart from "./average-age/AverageAgeChart";
 import AverageAgeByDriveTypeChart from "./average-age-by-drive-type/AverageAgeByDriveTypeChart";
@@ -34,9 +34,54 @@ export default function VehiclesPage() {
 
         <SearchBox></SearchBox>
 
-        <h1 className="pt-8 text-3xl">Souhrnné statistiky</h1>
+        <h1 className="pt-8 pb-4 text-3xl">Souhrnné statistiky</h1>
 
-        <h2 className="pt-4 text-2xl">Stáří a nájezd vozidel</h2>
+        <Card size="small" title="Obsah">
+          <ul className="pl-5 list-disc">
+            <li>
+              <a href="#age-and-mileage">Stáří a nájezd vozidel</a>
+              <ul className="pl-6 list-disc ">
+                <li>Průměrný věk osobních automobilů (OA)</li>
+                <li>Průměrný věk OA podle typu pohonu</li>
+                <li>Průměrný nájezd kontrolovaných OA</li>
+                <li>Průměrný nájezd kontrolovaných OA podle kraje</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#makes-and-models">Značky a modely</a>
+              <ul className="pl-6 list-disc ">
+                <li>Popularita značek</li>
+                <li>Popularita modelů</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#alternative-drive-types">Alternativní pohony</a>
+              <ul className="pl-6 list-disc ">
+                <li>Typ pohonu nově registrovaných vozidel</li>
+                <li>Elektrifikace nově registrovaných vozidel</li>
+                <li>Celkový nájezd podle typu pohonu</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#import">Import ojetých vozidel</a>
+              <ul className="pl-6 list-disc ">
+                <li>Průměrné stáří ojetin při importu</li>
+                <li>Poměr nových a importovaných ojetých OA</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#misc">Zajímavosti</a>
+              <ul className="pl-6 list-disc ">
+                <li>Podíl barev nově registrovaných vozidel</li>
+                <li>Status vozidel podle data registrace</li>
+              </ul>
+            </li>
+          </ul>
+        </Card>
+
+        <h2 id="age-and-mileage" className="pt-4 text-2xl">
+          Stáří a nájezd vozidel
+        </h2>
         <hr></hr>
         <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
           <AverageAgeChart linkToDetails></AverageAgeChart>
@@ -49,14 +94,18 @@ export default function VehiclesPage() {
           ></RegionalAverageMileageChart>
         </div>
 
-        <h2 className="pt-8 text-2xl">Značky a modely</h2>
+        <h2 id="makes-and-models" className="pt-8 text-2xl">
+          Značky a modely
+        </h2>
         <hr></hr>
         <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
           <TopMakesChart linkToDetails></TopMakesChart>
           <TopModelsChart linkToDetails></TopModelsChart>
         </div>
 
-        <h2 className="pt-8 text-2xl">Alternativní pohony</h2>
+        <h2 id="alternative-drive-types" className="pt-8 text-2xl">
+          Alternativní pohony
+        </h2>
         <hr></hr>
         <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
           <DriveTypeChart linkToDetails></DriveTypeChart>
@@ -64,14 +113,18 @@ export default function VehiclesPage() {
           <MileageByDriveTypeChart linkToDetails></MileageByDriveTypeChart>
         </div>
 
-        <h2 className="pt-8 text-2xl">Import ojetých vozidel</h2>
+        <h2 id="import" className="pt-8 text-2xl">
+          Import ojetých vozidel
+        </h2>
         <hr></hr>
         <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
           <AverageAgeOfImportedChart linkToDetails></AverageAgeOfImportedChart>
           <ImportedVsNewRatioChart linkToDetails></ImportedVsNewRatioChart>
         </div>
 
-        <h2 className="pt-4 text-2xl">Zajímavosti</h2>
+        <h2 id="misc" className="pt-4 text-2xl">
+          Zajímavosti
+        </h2>
         <hr></hr>
         <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
           <ColorsChart linkToDetails></ColorsChart>
