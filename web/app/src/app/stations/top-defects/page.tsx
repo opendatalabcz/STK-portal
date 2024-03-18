@@ -26,8 +26,11 @@ export default function InspectionResultByMakePage() {
           <TopDefectsBrowser></TopDefectsBrowser>
 
           <p>
-            Najed mysi na sloupec, abys videl cely nazev zavady. M2 a M3 jsou
-            vozidla hromadne dopravy, link na ciselnik zavad.
+            Graf ukazuje nejčastěji zjištěné závady na všech kontrolách v daném
+            roce. Pro zobrazení plného názvu závady stačí najet myší na
+            příslušný sloupec. Všechny závady, jejich závažnosti a kategorie, do
+            nichž spadají lze prohlížet v <a href="/defects">číselníku závad</a>
+            .
           </p>
         </div>
       </Container>

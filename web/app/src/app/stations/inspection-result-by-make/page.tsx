@@ -25,7 +25,13 @@ export default function InspectionResultByMakePage() {
         <div className="space-y-4">
           <InspectionResultByMakeBrowser></InspectionResultByMakeBrowser>
 
-          <p>Cim mensi celkovy sloupec, tim lepsi.</p>
+          <p>
+            Graf zobrazuje percentuální podíl výsledků všech kontrol dané značky
+            v daném roce. Zobrazeny jsou pouze podíly nezpůsobilého a částečně
+            způsobilého výsledku, zbytek do 100 % tvoří úspěšné kontroly. Čím
+            menší jsou tedy oba sloupce dohromady, tím více vozidel dané značky
+            prošlo STK úspěšně.
+          </p>
         </div>
       </Container>
     </>

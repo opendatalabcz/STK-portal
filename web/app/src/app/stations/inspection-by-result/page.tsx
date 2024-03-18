@@ -24,6 +24,11 @@ export default function InspectionResultByMakePage() {
       <Container>
         <div className="space-y-4">
           <TotalInspectionsByResultChart></TotalInspectionsByResultChart>
+
+          <p>
+            Graf zobrazuje celkový počet kontrol provedených v každém roce
+            rozdělený podle výsledku kontroly.
+          </p>
         </div>
       </Container>
     </>

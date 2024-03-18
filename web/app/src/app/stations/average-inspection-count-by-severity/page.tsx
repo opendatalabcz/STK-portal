@@ -28,9 +28,10 @@ export default function InspectionResultByMakePage() {
           <AverageSevereInspectionCountBrowser></AverageSevereInspectionCountBrowser>
 
           <p>
-            Nebezpecne zavady jsou zobrazene podle spodni osy, protoze jich je
-            velmi malo a pokud by vsechny pocty byly na stejne ose, nebyly by
-            skoro videt.
+            Graf ukazuje průměrný počet závad dané závažnosti zjištěný na každé
+            kontrole podle kraje, kde sídlí stanice provádějící kontrolu.
+            Nebezpečné závady jsou zobrazené na odděleném grafu, protože jejich
+            počet je výrazně menší než je lehkých a vážných závad.
           </p>
         </div>
       </Container>

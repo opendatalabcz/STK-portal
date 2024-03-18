@@ -25,7 +25,13 @@ export default function InspectionResultByMakePage() {
         <div className="space-y-4">
           <DefectsByCategoryBrowser></DefectsByCategoryBrowser>
 
-          <p>M2 a M3 jsou vozidla hromadne dopravy, link na ciselnik zavad.</p>
+          <p>
+            Graf zobrazuje počet všech zjištěných závad na kontrolách v daném
+            roce rozdělený do kategorií. M2 a M3 jsou vozidla hromadné dopravy
+            osob. Jednotlivé kategorie závad a jejich plný název (pro zobrazení
+            v grafu byly některé názvy zkráceny) lze prozkoumat v{" "}
+            <a href="/defects">číselníku závad</a>.
+          </p>
         </div>
       </Container>
     </>

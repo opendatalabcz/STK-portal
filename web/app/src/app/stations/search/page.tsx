@@ -1,11 +1,13 @@
 "use client";
 
-import { Spin } from "antd";
-// import Link from "next/link";
+import { Breadcrumb, Spin } from "antd";
 import { useSearchParams } from "next/navigation";
 import useSWR from "swr";
 import SearchBox from "../SearchBox";
 import SearchResult from "./SearchResult";
+import Container from "@/components/Container";
+import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
+import Link from "next/link";
 
 export default function StationDetailPage() {
   const query = useSearchParams().get("q");
@@ -20,45 +22,53 @@ export default function StationDetailPage() {
     }
   );
 
-  if (data && !isLoading) {
-    return (
-      <>
-        {/* <Link
-          autoFocus={false}
-          href="/stations"
-          className="text-primary hover:text-primary focus:text-primary focus:underline hover:underline"
-        >
-          Zpět
-        </Link> */}
+  return (
+    <>
+      <BreadcrumbsContainer>
+        <Breadcrumb
+          items={[
+            { title: <Link href="/">STK portál</Link> },
+            { title: <Link href="/stations">Stanice</Link> },
+            { title: "Vyhledávání stanic" },
+          ]}
+        ></Breadcrumb>
+      </BreadcrumbsContainer>
 
-        <h1 className="text-3xl">Vyhledávání stanic</h1>
+      <Container>
+        <h1 className="pb-4 text-3xl">Vyhledávání stanic</h1>
 
         <SearchBox initialValue={query ?? ""}></SearchBox>
 
-        <div className="space-y-4">
-          {data.map((d) => (
-            <div>
-              <SearchResult station={d}></SearchResult>
-            </div>
-          ))}
-        </div>
+        {buildContent()}
+      </Container>
+    </>
+  );
 
-        {data.length == 0 && (
-          <div>
-            Je nám líto, ale na tento dotaz nebyly nalezeny žádné výsledky.
+  function buildContent() {
+    if (data && !isLoading) {
+      return (
+        <>
+          <div className="pt-4 space-y-4">
+            {data.map((d) => (
+              <div>
+                <SearchResult station={d}></SearchResult>
+              </div>
+            ))}
           </div>
-        )}
-      </>
-    );
-  } else {
-    return (
-      <>
-        <SearchBox initialValue={query ?? ""}></SearchBox>
 
-        <div className="flex items-center justify-center grow">
+          {data.length == 0 && (
+            <div className="pt-4">
+              Je nám líto, ale na tento dotaz nebyly nalezeny žádné výsledky.
+            </div>
+          )}
+        </>
+      );
+    } else {
+      return (
+        <div className="flex items-center justify-center h-32 grow">
           <Spin></Spin>
         </div>
-      </>
-    );
+      );
+    }
   }
 }

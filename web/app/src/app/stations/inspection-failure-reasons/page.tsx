@@ -25,9 +25,11 @@ export default function InspectionResultByMakePage() {
         <div className="space-y-4">
           <InspectionFailureReasonsBrowser></InspectionFailureReasonsBrowser>
           <p>
-            Nejcastejsi zavady u neuspesnych kontrol vsech nejcastejsich znacek
-            jsou vzdy stejne, a to povrchove koroze kabiny, ramu a brzdoveho
-            potrubi.
+            Pro nejpopulárnější značky (podle počtu kontrol v daném roce) jsou
+            zobrazeny tři nejčastější závady závažnosti B nebo C, které se
+            objevily na kontrolách, kde bylo vozidlo shledáno částečně
+            způsobilým nebo nezpůsobilým. Jedná se tedy o nejčastější důvody,
+            proč vozidlo dané značky "neprošlo" STK.
           </p>
         </div>
       </Container>
