@@ -93,6 +93,9 @@ WHERE date_part('year', date) = {year}
             defects = str(record["defects"]).split(",")
 
             for defect in defects:
+                if not is_defect_severe(defect):
+                    continue
+
                 if defect in defect_counts[make].keys():
                     defect_counts[make][defect] += 1
                 else:
