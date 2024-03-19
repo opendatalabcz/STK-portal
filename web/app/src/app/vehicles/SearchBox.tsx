@@ -12,7 +12,7 @@ export default function SearchBox({ initialValue }: { initialValue?: string }) {
 
   function submit() {
     if (value.length == 0) return;
-    router.push(`/vehicles/search?q=${value}`);
+    router.push(`/vehicles/${value}`);
   }
 
   return (
@@ -25,7 +25,7 @@ export default function SearchBox({ initialValue }: { initialValue?: string }) {
             submit();
           }
         }}
-        placeholder="VIN (min. 10 znaků)"
+        placeholder="VIN (zadejte celý kód)"
       ></Input>
 
       <Button type="primary" size="large" onClick={submit}>
