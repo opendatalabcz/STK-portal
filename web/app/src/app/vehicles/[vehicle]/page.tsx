@@ -1,11 +1,10 @@
 "use client";
 
-import { Breadcrumb, Spin } from "antd";
+import { Breadcrumb, Card, Spin } from "antd";
 import {
   CarOutlined,
   NumberOutlined,
   CalendarOutlined,
-  InfoCircleOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 import useSWR from "swr";
@@ -15,10 +14,8 @@ import Container from "@/components/Container";
 import InspectionsTable from "./InspectionsTable";
 import DefectPredictionTable from "./DefectPredictionTable";
 import MileageChart from "./MileageChart";
-
-interface IStringMap {
-  [index: string]: string;
-}
+import VehicleDetailsCard from "./VehicleDetailsCard";
+import SearchBox from "../SearchBox";
 
 export default function StationDetailPage({
   params: { vehicle },
@@ -33,8 +30,6 @@ export default function StationDetailPage({
       return data[0];
     }
   );
-
-  const [displayMore, setDisplayMore] = useState(false);
 
   if (vehicleData) {
     return (
@@ -92,6 +87,7 @@ export default function StationDetailPage({
     return (
       <div className="flex flex-col items-center justify-center space-y-8 grow">
         <p>Vozidlo nebylo nalezeno</p>
+        <SearchBox></SearchBox>
         <Link href={"/vehicles"} className="text-primary">
           Zpět na přehled vozidel
         </Link>
@@ -100,31 +96,6 @@ export default function StationDetailPage({
   }
 
   function buildVehicleDataDetails(vehicleData: Vehicle) {
-    const colorMap = {
-      ORANŽOVÁ: "orange",
-      ŠEDÁ: "grey",
-      ŽLUTÁ: "yellow",
-      MODRÁ: "blue",
-      ČERNÁ: "black",
-      ZELENÁ: "green",
-      BÍLÁ: "black",
-      ČERVENÁ: "red",
-      FIALOVÁ: "purple",
-      HNĚDÁ: "brown",
-    } as IStringMap;
-
-    const tyres = [];
-    if (vehicleData.tyres_n1 != null) tyres.push(vehicleData.tyres_n1);
-    if (vehicleData.tyres_n2 != null) tyres.push(vehicleData.tyres_n2);
-    if (vehicleData.tyres_n3 != null) tyres.push(vehicleData.tyres_n3);
-    if (vehicleData.tyres_n4 != null) tyres.push(vehicleData.tyres_n4);
-
-    const rims = [];
-    if (vehicleData.rims_n1 != null) rims.push(vehicleData.rims_n1);
-    if (vehicleData.rims_n2 != null) rims.push(vehicleData.rims_n2);
-    if (vehicleData.rims_n3 != null) rims.push(vehicleData.rims_n3);
-    if (vehicleData.rims_n4 != null) rims.push(vehicleData.rims_n4);
-
     return (
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="space-y-2">
@@ -132,8 +103,8 @@ export default function StationDetailPage({
             <NumberOutlined className="mt-1" title="VIN" />
             <div>
               <p>
-                VIN:
-                <span className="px-1 font-mono ">{vehicleData.vin}</span>
+                {/* <span className="font-bold">VIN:&nbsp;</span> */}
+                <span className="font-mono">{vehicleData.vin}</span>
               </p>
             </div>
           </div>
@@ -141,10 +112,12 @@ export default function StationDetailPage({
             <CarOutlined className="mt-1" title="Kategorie vozidla" />
             <div>
               <p>
-                {vehicleData.category ?? (
-                  <span className="text-gray-500">Chybí kategorie</span>
+                {<span className="font-bold">{vehicleData.category}</span> ?? (
+                  <span className="font-bold text-gray-500">
+                    Chybí kategorie
+                  </span>
                 )}
-                {vehicleData.primary_type && " - "}
+                {vehicleData.primary_type && <span>&nbsp;&ndash;&nbsp;</span>}
                 {vehicleData.primary_type}
                 {vehicleData.primary_type && vehicleData.secondary_type && ", "}
                 {vehicleData.secondary_type}
@@ -156,8 +129,8 @@ export default function StationDetailPage({
             <table className="table-auto">
               <tbody>
                 <tr>
-                  <td>První registrace:&nbsp;</td>
-                  <td>
+                  <td className="pr-2 font-bold">První registrace</td>
+                  <td className="px-2">
                     {vehicleData.first_registration != null ? (
                       new Date(
                         vehicleData.first_registration
@@ -168,8 +141,8 @@ export default function StationDetailPage({
                   </td>
                 </tr>
                 <tr>
-                  <td>První registrace v ČR:&nbsp;</td>
-                  <td>
+                  <td className="pr-2 font-bold">První registrace v ČR</td>
+                  <td className="px-2">
                     {vehicleData.first_registration_cz != null ? (
                       new Date(
                         vehicleData.first_registration_cz
@@ -180,8 +153,8 @@ export default function StationDetailPage({
                   </td>
                 </tr>
                 <tr>
-                  <td>Rok výroby:&nbsp;</td>
-                  <td>
+                  <td className="pr-2 font-bold">Rok výroby</td>
+                  <td className="px-2">
                     {vehicleData.manufacture_year ?? (
                       <span className="text-gray-500">&mdash;</span>
                     )}
@@ -192,293 +165,7 @@ export default function StationDetailPage({
           </div>
         </div>
 
-        <div className="flex items-start space-x-2">
-          <InfoCircleOutlined
-            className="mt-1"
-            title="Informace z registru vozidel"
-          />
-          <table className="table-auto">
-            <tbody>
-              <tr>
-                <td>Stav prohlídky:&nbsp;</td>
-                <td>{vehicleData.inspection_state}</td>
-              </tr>
-              <tr>
-                <td>Stav vozidla:&nbsp;</td>
-                <td>{vehicleData.operating_state}</td>
-              </tr>
-              <tr>
-                <td>Pohon:&nbsp;</td>
-                <td>
-                  {vehicleData.drive_type}
-                  {vehicleData.motor_volume &&
-                    ", " + vehicleData.motor_volume / 1000 + " l"}
-                  {(vehicleData.drive_type || vehicleData.motor_volume) &&
-                    vehicleData.motor_power &&
-                    ", "}
-                  {vehicleData.motor_power && vehicleData.motor_power + " kW"}
-                </td>
-              </tr>
-              <tr>
-                <td>Převodovka:&nbsp;</td>
-                <td>
-                  {vehicleData.gearbox != null ? (
-                    vehicleData.gearbox.toLowerCase()
-                  ) : (
-                    <span className="text-gray-500">&mdash;</span>
-                  )}
-                </td>
-              </tr>
-              <tr>
-                <td>Barva:&nbsp;</td>
-                <td>
-                  {vehicleData.color != null ? (
-                    <span
-                      style={{
-                        color: colorMap[vehicleData.color ?? "ČERNÁ"],
-                      }}
-                    >
-                      {vehicleData.color.toLowerCase()}
-                    </span>
-                  ) : (
-                    <span className="text-gray-500">&mdash;</span>
-                  )}
-                </td>
-              </tr>
-              {!displayMore ? (
-                <tr
-                  onClick={() => setDisplayMore(!displayMore)}
-                  className="hover:cursor-pointer"
-                >
-                  <td className="italic text-gray-500 hover:text-primary">
-                    Zobrazit vše...
-                  </td>
-                </tr>
-              ) : (
-                <>
-                  <tr>
-                    <td>Počet míst:&nbsp;</td>
-                    <td>
-                      {vehicleData.places != null ? (
-                        vehicleData.places
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Rozvor:&nbsp;</td>
-                    <td>
-                      {vehicleData.wheelbase_size != null ? (
-                        vehicleData.wheelbase_size + " mm"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Rozměry (d, š, v):&nbsp;</td>
-                    <td>
-                      {vehicleData.vehicle_length != null ? (
-                        vehicleData.vehicle_length
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                      ,{" "}
-                      {vehicleData.vehicle_width != null ? (
-                        vehicleData.vehicle_width
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                      ,{" "}
-                      {vehicleData.vehicle_height != null ? (
-                        vehicleData.vehicle_height
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}{" "}
-                      mm
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Provozní hmotnost:&nbsp;</td>
-                    <td>
-                      {vehicleData.operating_weight != null ? (
-                        vehicleData.operating_weight + " kg"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Přípustná hmotnost:&nbsp;</td>
-                    <td>
-                      {vehicleData.permissible_weight != null ? (
-                        vehicleData.permissible_weight + " kg"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Spojovací zařízení (SZ):&nbsp;</td>
-                    <td>
-                      {vehicleData.connecting_device != null ? (
-                        vehicleData.connecting_device
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Přípustná SZ brzděného:&nbsp;</td>
-                    <td>
-                      {vehicleData.permissible_weight_braked_trailer != null ? (
-                        vehicleData.permissible_weight_braked_trailer + " kg"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Přípustná SZ nebrzděného:&nbsp;</td>
-                    <td>
-                      {vehicleData.permissible_weight_unbraked_trailer !=
-                      null ? (
-                        vehicleData.permissible_weight_unbraked_trailer + " kg"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Počet náprav:&nbsp;</td>
-                    <td>
-                      {vehicleData.axles_count ?? (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Pneumatiky:&nbsp;</td>
-                    <td>
-                      {tyres.length > 0 ? (
-                        tyres[0]
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  {tyres.slice(1).map((t, i) => (
-                    <tr key={i}>
-                      <td></td>
-                      <td>{t}</td>
-                    </tr>
-                  ))}
-                  <tr>
-                    <td>Ráfky:&nbsp;</td>
-                    <td>
-                      {rims.length > 0 ? (
-                        rims[0]
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  {rims.slice(1).map((t, i) => (
-                    <tr key={i}>
-                      <td></td>
-                      <td>{t}</td>
-                    </tr>
-                  ))}
-                  <tr>
-                    <td>Max. rychlost:&nbsp;</td>
-                    <td>
-                      {vehicleData.max_speed != null ? (
-                        vehicleData.max_speed + " km/h"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Spotřeba průměrná:&nbsp;</td>
-                    <td>
-                      {vehicleData.average_consumption != null ? (
-                        vehicleData.average_consumption + " l/100 km"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Spotřeba město:&nbsp;</td>
-                    <td>
-                      {vehicleData.city_consumption != null ? (
-                        vehicleData.city_consumption + " l/100 km"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Spotřeba mimo město:&nbsp;</td>
-                    <td>
-                      {vehicleData.out_of_city_consumption != null ? (
-                        vehicleData.out_of_city_consumption + " l/100 km"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Emise CO<sub>2</sub>:&nbsp;
-                    </td>
-                    <td>
-                      {vehicleData.emissions != null ? (
-                        vehicleData.emissions + " g/100 km"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Emise CO<sub>2</sub> město:&nbsp;
-                    </td>
-                    <td>
-                      {vehicleData.city_emissions != null ? (
-                        vehicleData.city_emissions + " g/100 km"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Emise CO<sub>2</sub> mimo město:&nbsp;
-                    </td>
-                    <td>
-                      {vehicleData.out_of_city_emissions != null ? (
-                        vehicleData.out_of_city_emissions + " g/100 km"
-                      ) : (
-                        <span className="text-gray-500">&mdash;</span>
-                      )}
-                    </td>
-                  </tr>
-                  <tr
-                    onClick={() => setDisplayMore(!displayMore)}
-                    className="hover:cursor-pointer"
-                  >
-                    <td className="italic text-gray-500 hover:text-primary">
-                      Zobrazit méně...
-                    </td>
-                  </tr>
-                </>
-              )}
-            </tbody>
-          </table>
-        </div>
+        <VehicleDetailsCard vehicleData={vehicleData}></VehicleDetailsCard>
       </div>
     );
   }
