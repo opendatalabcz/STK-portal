@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { Button, Card } from "antd";
-import { cyan, grey, red } from "@ant-design/colors";
+import { cyan } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { useState } from "react";
@@ -174,9 +174,9 @@ export default function InspectionFrequencyChart({
             }
 
             if (weekNumber == selectedWeek && dow == ctx.parsed.x + 1) {
-              return red[7];
+              return cyan[7];
             } else {
-              return red[4];
+              return cyan[5];
             }
           },
         },
