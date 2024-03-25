@@ -14,6 +14,10 @@ import DefectsByCategoryLatestYearChart from "./top-defects-by-category/DefectsB
 import TopDefectsLatestYearChart from "./top-defects/TopDefectsLatestYearChart";
 import InspectionFailureReasonsPreview from "./inspection-failure-reasons/InspectionFailureReasonsPreview";
 import AverageInspectionCountBySeverityChart from "./average-inspection-count-by-severity/AverageInspectionCountBySeverityChart";
+import AnomalousInspectionsChart from "./anomalous-inspections/AnomalousInspectionsChart";
+import InspectionsOnFrequentDaysChart from "./anomalous-inspections-on-frequent-days/InspectionsOnFrequentDaysChart";
+import InspectionsWithDissapearingFailuresChart from "./anomalous-inspections-disappearing-failures/InspectionsWithDissapearingFailuresChart";
+import RepeatedInspectionsChart from "./anomalous-inspections-repeated-success/RepeatedInspectionsChart";
 
 export default function StationsPage() {
   return (
@@ -58,9 +62,12 @@ export default function StationsPage() {
               </ul>
             </li>
             <li>
-              <a href="#anomalies">Alternativní pohony</a>
+              <a href="#anomalies">Anomální kontroly</a>
               <ul className="pl-6 list-disc ">
-                <li>TODO</li>
+                <li>Podíl všech anomálních kontrol</li>
+                <li>Prohlídky v nadměrně vytížených dnech</li>
+                <li>Prohlídky s mizejícími závady</li>
+                <li>Prohlídky s úspěšným opakováním na jiné stanici</li>
               </ul>
             </li>
           </ul>
@@ -101,7 +108,16 @@ export default function StationsPage() {
           Anomální kontroly
         </h2>
         <hr></hr>
-        <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2"></div>
+        <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
+          <AnomalousInspectionsChart linkToDetails></AnomalousInspectionsChart>
+          <InspectionsOnFrequentDaysChart
+            linkToDetails
+          ></InspectionsOnFrequentDaysChart>
+          <InspectionsWithDissapearingFailuresChart
+            linkToDetails
+          ></InspectionsWithDissapearingFailuresChart>
+          <RepeatedInspectionsChart linkToDetails></RepeatedInspectionsChart>
+        </div>
       </Container>
     </>
   );

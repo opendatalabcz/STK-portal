@@ -9,22 +9,22 @@
 
 ## Analýza dat
 
-- [ ] Stanice
+- [x] Stanice
   - [x] Průměrný výsledek prohlídky
-  - [ ] Anomální prohlídky
+  - [x] Anomální prohlídky
   - [x] Závady
     - [x] Mapy podle okresů
     - [x] Nejčastější závady
-  - [ ] Detail stanice
+  - [x] Detail stanice
     - [x] Statistiky kontrol
       - [x] Vytíženost
       - [x] Kontrolovaná vozidla
         - [x] Typy vozidel
         - [x] Rozdělení značek
         - [x] Rozdělení modelů
-    - [ ] Anomální prohlídky
-      - [ ] Podíl anomálních a normálních kontrol
-      - [ ] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
+    - [x] Anomální prohlídky
+      - [x] Podíl anomálních a normálních kontrol
+      - [x] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
 - [ ] Vozidla
   - [x] Proměny vozového parku v čase
     - [x] Průměrné stáří
@@ -40,10 +40,7 @@
   - [ ] Detail vozidla
     - [x] Najeté kilometry a jejich predikce
     - [x] Závady a jejich predikce
-    - [ ] Srovnání dosavadní poruchovosti
     - [ ] Příslušnost do flotily
-    - [ ] Periody, kdy mělo vypršelou technickou
-    - [ ] Vizualizace migrace po republice
 - [ ] Srovnání a výběr
   - [ ] Popularita
   - [ ] Srovnání parametrů
@@ -55,15 +52,15 @@
 - [x] Hlavní stránka
   - [x] Statistiky databáze
   - [ ] Chytrý vyhledávač, který akceptuje VIN a detaily stanic (číslo, PSČ, ...)
-- [ ] Stanice
+- [x] Stanice
   - [x] Vyhledávač stanic
   - [x] Mapa stanic
   - [x] Průměrný výsledek prohlídky
-  - [ ] Anomální prohlídky
+  - [x] Anomální prohlídky
   - [x] Závady
     - [x] Mapy podle okresů
     - [x] Nejčastější závady
-  - [ ] Detail stanice
+  - [x] Detail stanice
     - [x] Informace o stanici
     - [x] Statistiky kontrol
       - [x] Vytíženost
@@ -71,12 +68,12 @@
         - [x] Typy vozidel
         - [x] Rozdělení značek
         - [x] Rozdělení modelů
-    - [ ] Anomální prohlídky
-      - [ ] Podíl anomálních a normálních kontrol
-      - [ ] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
+    - [x] Anomální prohlídky
+      - [x] Podíl anomálních a normálních kontrol
+      - [x] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
 - [ ] Vozidla
   - [ ] Vyhledávač vozidel
-    - [ ] Klasické vyhledávání
+    - [x] Klasické vyhledávání
     - [ ] VIN scanner pro mobilní web
   - [x] Proměny vozového parku v čase
     - [x] Průměrné stáří
@@ -90,14 +87,10 @@
   - [x] Migrace
   - [ ] Detail vozidla
     - [x] Základní informace o vozidle
-    - [-] Náhled vozidla nebo alespoň značky
     - [x] Historie kontrol
     - [x] Najeté kilometry a jejich predikce
     - [x] Závady a jejich predikce
-    - [ ] Srovnání dosavadní poruchovosti
     - [ ] Příslušnost do flotily
-    - [ ] Periody, kdy mělo vypršelou technickou
-    - [ ] Vizualizace migrace po republice
 - [ ] Srovnání a výběr
   - [ ] Výběr vozidel ke srovnání
   - [ ] Popularita

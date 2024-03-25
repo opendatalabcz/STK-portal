@@ -11,13 +11,10 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Button, Card } from "antd";
-import { cyan, red } from "@ant-design/colors";
+import { Card } from "antd";
+import { cyan } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
-import { useState } from "react";
-import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
-import { InspectionsWithDissapearingFailuresData } from "./InspectionsWithDissapearingFailuresDisplay";
 
 ChartJS.register(
   CategoryScale,
@@ -29,43 +26,39 @@ ChartJS.register(
   Legend
 );
 
-type InspectionsWithDissapearingFailuresHistogramData = {
-  tens: number;
+type TotalAnomalousInspectionsHistogramData = {
+  thousandths: number;
   count: number;
 };
 
-export default function InspectionsWithDissapearingFailuresChart({
-  station,
+export default function AnomalousInspectionsChart({
+  linkToDetails = false,
 }: {
-  station: string;
+  linkToDetails?: boolean;
 }) {
-  const { data: thisStationCount } = useSWR(
-    `/api/stations_dissapearing_failures_by_station?station_id=eq.${station}`,
-    async (key) => {
-      const res = await fetch(key);
-      const data: InspectionsWithDissapearingFailuresData[] = await res.json();
-      return data[0];
-    }
-  );
-
   const { data: rawData } = useSWR(
-    `/api/stations_dissapearing_failures_by_station_histogram?order=tens.asc`,
+    `/api/stations_total_anomalies_by_station_histogram?order=thousandths.asc`,
     async (key) => {
       const res = await fetch(key);
-      const data: InspectionsWithDissapearingFailuresHistogramData[] =
-        await res.json();
+      const data: TotalAnomalousInspectionsHistogramData[] = await res.json();
       return data;
     }
   );
 
   return (
-    <Card size="small" title="Histogram anomálních prohlídek">
-      <div className="h-64">{_buildChart()}</div>
+    <Card
+      size="small"
+      title="Histogram podílu všech anomálních prohlídek"
+      extra={
+        linkToDetails && <a href="/stations/anomalous-inspections">Více</a>
+      }
+    >
+      <div className="h-64 md:h-96">{_buildChart()}</div>
     </Card>
   );
 
   function _buildChart() {
-    if (rawData == undefined || thisStationCount == undefined) {
+    if (rawData == undefined) {
       return <ChartPlaceholder></ChartPlaceholder>;
     }
 
@@ -79,27 +72,28 @@ export default function InspectionsWithDissapearingFailuresChart({
       scales: {
         x: {
           type: "linear",
-          offset: 5,
+          offset: 0.1,
           grid: {
             offset: true,
           },
           ticks: {
-            stepSize: 10,
+            stepSize: 0.1,
           },
           title: {
             display: true,
-            text: "Počet anomálních prohlídek",
+            text: "Podíl anomálních prohlídek [%]",
             font: {
               size: 14,
             },
           },
         },
+        beginAtZero: false,
+
         y: {
           title: {
             display: true,
             text: "Počet stanic",
           },
-          // beginAtZero: true,
         },
       },
       plugins: {
@@ -124,7 +118,11 @@ export default function InspectionsWithDissapearingFailuresChart({
               }
               const item = items[0];
               const x = item.parsed.x;
-              return `Počet anomálií: ${x} - ${x + 10}`;
+              return `Podíl anomálií: ${Intl.NumberFormat("cs-CZ", {
+                maximumFractionDigits: 1,
+              }).format(x)} - ${Intl.NumberFormat("cs-CZ", {
+                maximumFractionDigits: 1,
+              }).format(x + 0.1)} %`;
             },
           },
         },
@@ -132,22 +130,12 @@ export default function InspectionsWithDissapearingFailuresChart({
     };
 
     const data = {
-      labels: rawData.map((e) => e.tens * 10),
+      labels: rawData.map((e) => e.thousandths / 10),
       datasets: [
         {
           label: "Počet anomálií",
-          data: rawData.map((e, i) => e.count),
-          // @ts-ignore
-          backgroundColor: (ctx) => {
-            if (
-              thisStationCount.count + 5 <= ctx.parsed.x ||
-              thisStationCount.count - 5 > ctx.parsed.x
-            ) {
-              return cyan[5];
-            } else {
-              return cyan[7];
-            }
-          },
+          data: rawData.map((e) => e.count),
+          backgroundColor: cyan[5],
           borderWidth: 1,
           barPercentage: 1,
           categoryPercentage: 1,

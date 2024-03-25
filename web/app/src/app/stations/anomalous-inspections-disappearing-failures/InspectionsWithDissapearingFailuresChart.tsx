@@ -11,13 +11,10 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Button, Card } from "antd";
-import { cyan, red } from "@ant-design/colors";
+import { Card } from "antd";
+import { cyan } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
-import { useState } from "react";
-import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
-import { InspectionsWithDissapearingFailuresData } from "./InspectionsWithDissapearingFailuresDisplay";
 
 ChartJS.register(
   CategoryScale,
@@ -35,19 +32,10 @@ type InspectionsWithDissapearingFailuresHistogramData = {
 };
 
 export default function InspectionsWithDissapearingFailuresChart({
-  station,
+  linkToDetails = false,
 }: {
-  station: string;
+  linkToDetails?: boolean;
 }) {
-  const { data: thisStationCount } = useSWR(
-    `/api/stations_dissapearing_failures_by_station?station_id=eq.${station}`,
-    async (key) => {
-      const res = await fetch(key);
-      const data: InspectionsWithDissapearingFailuresData[] = await res.json();
-      return data[0];
-    }
-  );
-
   const { data: rawData } = useSWR(
     `/api/stations_dissapearing_failures_by_station_histogram?order=tens.asc`,
     async (key) => {
@@ -59,13 +47,23 @@ export default function InspectionsWithDissapearingFailuresChart({
   );
 
   return (
-    <Card size="small" title="Histogram anomálních prohlídek">
-      <div className="h-64">{_buildChart()}</div>
+    <Card
+      size="small"
+      title="Histogram prohlídek s mizejícími závadami"
+      extra={
+        linkToDetails && (
+          <a href="/stations/anomalous-inspections-disappearing-failures">
+            Více
+          </a>
+        )
+      }
+    >
+      <div className="h-64 md:h-96">{_buildChart()}</div>
     </Card>
   );
 
   function _buildChart() {
-    if (rawData == undefined || thisStationCount == undefined) {
+    if (rawData == undefined) {
       return <ChartPlaceholder></ChartPlaceholder>;
     }
 
@@ -137,17 +135,7 @@ export default function InspectionsWithDissapearingFailuresChart({
         {
           label: "Počet anomálií",
           data: rawData.map((e, i) => e.count),
-          // @ts-ignore
-          backgroundColor: (ctx) => {
-            if (
-              thisStationCount.count + 5 <= ctx.parsed.x ||
-              thisStationCount.count - 5 > ctx.parsed.x
-            ) {
-              return cyan[5];
-            } else {
-              return cyan[7];
-            }
-          },
+          backgroundColor: cyan[5],
           borderWidth: 1,
           barPercentage: 1,
           categoryPercentage: 1,
