@@ -9,13 +9,21 @@ from .inspections.average_inspection_frequency import (
 from .inspections.average_inspection_result import stations_average_inspection_result
 from .inspections.defect_counts import stations_defect_counts
 from .inspections.defect_counts_by_category import stations_defect_counts_by_category
+from .inspections.disappearing_failures import stations_dissapearing_failures
 from .inspections.inspection_failure_reasons import stations_inspection_failure_reasons
 from .inspections.inspection_success_by_make import stations_inspection_success_by_make
 from .inspections.inspection_success_by_model import (
     stations_inspection_success_by_model,
 )
+from .inspections.inspections_on_frequent_days import (
+    stations_inspections_on_frequent_days,
+)
+from .inspections.repeated_inspections_on_different_station import (
+    stations_repeated_inspections_on_different_station,
+)
 from .inspections.top_makes_by_station import stations_top_makes_by_station
 from .inspections.top_models_by_station import stations_top_models_by_station
+from .inspections.total_anomalies import stations_total_anomalies
 from .vehicles.average_age_by_drive_type import vehicles_average_age_by_drive_type
 from .vehicles.average_age_of_imported import vehicles_average_age_of_imported
 from .vehicles.average_age import vehicles_average_age
@@ -41,11 +49,15 @@ functions = [
     stations_average_inspection_result,
     stations_defect_counts_by_category,
     stations_defect_counts,
+    stations_dissapearing_failures,
     stations_inspection_failure_reasons,
     stations_inspection_success_by_make,
     stations_inspection_success_by_model,
+    stations_inspections_on_frequent_days,
+    stations_repeated_inspections_on_different_station,
     stations_top_makes_by_station,
     stations_top_models_by_station,
+    stations_total_anomalies,  # Depends on stations_inspections_on_frequent_days, stations_repeated_inspections_on_different_station
     vehicles_average_age_by_drive_type,  # Depends on vehicles_estimated_end_of_life
     vehicles_average_age_of_imported,  # Depends on vehicles_estimated_end_of_life
     vehicles_average_age,  # Depends on vehicles_estimated_end_of_life

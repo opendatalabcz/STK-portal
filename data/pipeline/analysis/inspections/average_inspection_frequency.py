@@ -1,6 +1,4 @@
 from common.db import Connection
-import numpy as np
-import pandas as pd
 from sqlalchemy import text
 
 

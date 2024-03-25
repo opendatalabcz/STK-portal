@@ -34,7 +34,7 @@ type InspectionFrequencyData = {
   avg_inspection_count: number;
 };
 
-export default function InspectionFrequencyChart({
+export default function InspectionFrequencyBrowser({
   station,
 }: {
   station: string;
@@ -70,7 +70,6 @@ export default function InspectionFrequencyChart({
     async (key) => {
       const res = await fetch(key);
       const data: InspectionFrequencyData[] = await res.json();
-      console.log(data);
       return data;
     }
   );

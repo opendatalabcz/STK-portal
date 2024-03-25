@@ -16,6 +16,7 @@ import DefectPredictionTable from "./DefectPredictionTable";
 import MileageChart from "./MileageChart";
 import VehicleDetailsCard from "./VehicleDetailsCard";
 import SearchBox from "../SearchBox";
+import InspectionsOnFrequentDaysTable from "./InspectionsOnFrequentDaysTable";
 
 export default function StationDetailPage({
   params: { vehicle },
@@ -56,24 +57,50 @@ export default function StationDetailPage({
 
           <h2 className="pt-4 text-2xl">Prohlídky</h2>
           <hr className="pb-4"></hr>
-
           <InspectionsTable vin={vehicle}></InspectionsTable>
 
           <h1 className="pt-8 text-3xl">Statistiky</h1>
+
           <h2 className="pt-4 text-2xl">Predikce závad</h2>
           <hr className="pb-4"></hr>
-
           <p className="pb-4">
             Tabulka zobrazuje pravděpodobnost, že vozidlo na příští prohlídce
             bude mít v dané kategorii nějakou závadu.
           </p>
-
           <DefectPredictionTable vehicle={vehicle}></DefectPredictionTable>
 
-          <h2 className="pt-4 text-2xl">Predikce nájezdu</h2>
+          <h2 className="pt-4 text-2xl">Historie a predikce nájezdu</h2>
           <hr className="pb-4"></hr>
-
           <MileageChart vehicle={vehicle}></MileageChart>
+
+          <h2 className="pt-4 text-2xl">
+            Prohlídky v neobvykle frekventovaných dnech
+          </h2>
+          <hr className="pb-4"></hr>
+          <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
+            <InspectionsOnFrequentDaysTable
+              vin={vehicle}
+            ></InspectionsOnFrequentDaysTable>
+            <div>
+              <p>
+                Tabulka obsahuje výčet prohlídek, které byly prováděny v den,
+                kdy na dané stanici proběhlo výjimečně velké množství prohlídek
+                vůči průměru. To může indikovat zvýšené nároky na personál a
+                potenciální vliv na průběh prohlídky.
+              </p>
+              <p>
+                Za výjimečně frekventovaný den se považuje takový, že počet
+                provedených prohlídek je o dvě standardní odchylky vyšší než
+                průměr daného měsíce. Tato hranice byla zvolena tak, aby bylo
+                označeno pouze malé procento dní a tempo práce muselo tedy na
+                stanici být nadstandardní. Do vzorku, z nichž je průměr a
+                odchylka získána, se započítávají stejné měsíce ze všech let, za
+                které jsou data o prohlídkách k dispozici. To umožňuje podchytit
+                sezónní charakter vytíženosti stanic, kdy např. v lednu je
+                obecně vytíženost menší než v květnu a podobně.
+              </p>
+            </div>
+          </div>
         </Container>
       </>
     );
