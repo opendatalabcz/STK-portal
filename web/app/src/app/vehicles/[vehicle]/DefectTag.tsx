@@ -1,6 +1,17 @@
+import { green } from "@ant-design/colors";
 import { Tag, Tooltip } from "antd";
 import Link from "next/link";
 import useSWR from "swr";
+
+interface IStringMap {
+  [index: string]: string;
+}
+
+const defectTypeColorMap = {
+  A: "green",
+  B: "orange",
+  C: "red",
+} as IStringMap;
 
 export default function DefectSpan({ defect }: { defect: string }) {
   const { data, isLoading } = useSWR(
@@ -14,15 +25,17 @@ export default function DefectSpan({ defect }: { defect: string }) {
 
   if (data != null) {
     return (
-      <Tooltip title={data.description}>
-        <Tag color="red">
-          <Link
-            href={`/defects#${defect}`}
-            // title={data.description} // This would show along with the Ant tooltip.
-          >
-            <span className="text-red-500">{defect}</span>
-          </Link>
-        </Tag>
+      <Tooltip
+        title={
+          <>
+            <Tag color={defectTypeColorMap[data.type]}>{data.type}</Tag>{" "}
+            {data.description}
+          </>
+        }
+      >
+        <Link href={`/defects#${defect}`}>
+          <Tag color={defectTypeColorMap[data.type]}>{defect}</Tag>
+        </Link>
       </Tooltip>
     );
   }

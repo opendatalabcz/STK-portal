@@ -1,8 +1,8 @@
 import useSWR from "swr";
-import DefectSpan from "./DefectSpan";
-import { LoadingOutlined } from "@ant-design/icons";
+import DefectSpan from "./DefectTag";
 import { Table, Tag } from "antd";
 import { ColumnsType } from "antd/es/table";
+import StationTag from "./StationTag";
 
 export default function InspectionsTable({ vin }: { vin: string }) {
   const { data: inspectionData, isLoading: isInspectionsLoading } = useSWR(
@@ -34,12 +34,6 @@ export default function InspectionsTable({ vin }: { vin: string }) {
     before_acceptance: "Před schvál. tech. způsobilosti",
   } as IStringMap;
 
-  const inspectionResultMap = {
-    0: "Způsobilé",
-    1: "Částečně způsobilé",
-    2: "Nezpůsobilé",
-  } as IStringMap;
-
   const columns: ColumnsType<Inspection> = [
     {
       title: "Datum",
@@ -48,6 +42,15 @@ export default function InspectionsTable({ vin }: { vin: string }) {
       render: (value) => new Date(value).toLocaleDateString("cs-CZ"),
       sorter: (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
       defaultSortOrder: "ascend",
+    },
+    {
+      title: "Stanice",
+      dataIndex: "station_id",
+      key: "station_id",
+      render: (_, { station_id }) => (
+        <StationTag station={station_id}></StationTag>
+      ),
+      align: "center",
     },
     {
       title: "Typ",
@@ -126,7 +129,4 @@ export default function InspectionsTable({ vin }: { vin: string }) {
       }}
     ></Table>
   );
-  // }
-
-  // return <p>Nebyly nalezeny žádné prohlídky</p>;
 }
