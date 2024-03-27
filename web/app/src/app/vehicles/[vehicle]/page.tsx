@@ -1,11 +1,7 @@
 "use client";
 
 import { Breadcrumb, Card, Spin } from "antd";
-import {
-  CarOutlined,
-  NumberOutlined,
-  CalendarOutlined,
-} from "@ant-design/icons";
+
 import Link from "next/link";
 import useSWR from "swr";
 import { useState } from "react";
@@ -17,6 +13,7 @@ import MileageChart from "./MileageChart";
 import VehicleDetailsCard from "./VehicleDetailsCard";
 import SearchBox from "../SearchBox";
 import InspectionsOnFrequentDaysTable from "./InspectionsOnFrequentDaysTable";
+import VehicleGeneralCard from "./VehicleGeneralCard";
 
 export default function StationDetailPage({
   params: { vehicle },
@@ -53,7 +50,11 @@ export default function StationDetailPage({
               <span className="text-xl">{vehicleData.model_secondary}</span>
             )}
           </h1>
-          {buildVehicleDataDetails(vehicleData)}
+
+          <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
+            <VehicleGeneralCard vehicleData={vehicleData}></VehicleGeneralCard>
+            <VehicleDetailsCard vehicleData={vehicleData}></VehicleDetailsCard>
+          </div>
 
           <h2 className="pt-4 text-2xl">Prohlídky</h2>
           <hr className="pb-4"></hr>
@@ -81,7 +82,7 @@ export default function StationDetailPage({
             <InspectionsOnFrequentDaysTable
               vin={vehicle}
             ></InspectionsOnFrequentDaysTable>
-            <div>
+            <div className="space-y-4">
               <p>
                 Tabulka obsahuje výčet prohlídek, které byly prováděny v den,
                 kdy na dané stanici proběhlo výjimečně velké množství prohlídek
@@ -118,81 +119,6 @@ export default function StationDetailPage({
         <Link href={"/vehicles"} className="text-primary">
           Zpět na přehled vozidel
         </Link>
-      </div>
-    );
-  }
-
-  function buildVehicleDataDetails(vehicleData: Vehicle) {
-    return (
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div className="space-y-2">
-          <div className="flex items-start space-x-2">
-            <NumberOutlined className="mt-1" title="VIN" />
-            <div>
-              <p>
-                {/* <span className="font-bold">VIN:&nbsp;</span> */}
-                <span className="font-mono">{vehicleData.vin}</span>
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <CarOutlined className="mt-1" title="Kategorie vozidla" />
-            <div>
-              <p>
-                {<span className="font-bold">{vehicleData.category}</span> ?? (
-                  <span className="font-bold text-gray-500">
-                    Chybí kategorie
-                  </span>
-                )}
-                {vehicleData.primary_type && <span>&nbsp;&ndash;&nbsp;</span>}
-                {vehicleData.primary_type}
-                {vehicleData.primary_type && vehicleData.secondary_type && ", "}
-                {vehicleData.secondary_type}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-2">
-            <CalendarOutlined className="mt-1" />
-            <table className="table-auto">
-              <tbody>
-                <tr>
-                  <td className="pr-2 font-bold">První registrace</td>
-                  <td className="px-2">
-                    {vehicleData.first_registration != null ? (
-                      new Date(
-                        vehicleData.first_registration
-                      ).toLocaleDateString("cs-CZ")
-                    ) : (
-                      <span className="text-gray-500">&mdash;</span>
-                    )}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="pr-2 font-bold">První registrace v ČR</td>
-                  <td className="px-2">
-                    {vehicleData.first_registration_cz != null ? (
-                      new Date(
-                        vehicleData.first_registration_cz
-                      ).toLocaleDateString("cs-CZ")
-                    ) : (
-                      <span className="text-gray-500">&mdash;</span>
-                    )}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="pr-2 font-bold">Rok výroby</td>
-                  <td className="px-2">
-                    {vehicleData.manufacture_year ?? (
-                      <span className="text-gray-500">&mdash;</span>
-                    )}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <VehicleDetailsCard vehicleData={vehicleData}></VehicleDetailsCard>
       </div>
     );
   }

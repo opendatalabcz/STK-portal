@@ -1,51 +1,60 @@
 "use client";
 
-import ConfigProvider from "antd/es/config-provider";
-import theme from "../themeConfig";
-import Layout from "antd/es/layout";
-import Header from "@/components/Header";
-import { Content } from "antd/es/layout/layout";
-import Footer from "@/components/Footer";
-import Button from "antd/es/button";
-import Card from "antd/es/card";
-import Input from "antd/es/input";
+import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
+import { Breadcrumb, Segmented, Spin } from "antd";
+import Link from "next/link";
+import Container from "@/components/Container";
+import { useState } from "react";
+import VehicleComparator from "./vehicles/VehicleComparator";
+import ModelComparator from "./models/ModelComparator";
+
+enum ComparatorMode {
+  vehicles,
+  models,
+}
 
 export default function ComparePage() {
+  const [mode, setMode] = useState(ComparatorMode.vehicles);
+
   return (
-    <ConfigProvider theme={theme}>
-      <Layout>
-        <Header></Header>
-        <Content className="flex flex-col items-stretch p-4 space-y-4">
-          <h1 className="text-3xl">Srovnání vozidel</h1>
+    <>
+      <BreadcrumbsContainer>
+        <Breadcrumb
+          items={[
+            { title: <Link href="/">STK portál</Link> },
+            { title: "Srovnání vozidel" },
+          ]}
+        ></Breadcrumb>
+      </BreadcrumbsContainer>
 
-          <p>
-            Srovnávač vozidel umožňuje porovnat buď jednotlivá vozidla podle
-            VIN, nebo obecně značky a modely.
-          </p>
+      <Container>
+        <h1 className="pb-4 text-3xl">Srovnání vozidel</h1>
 
-          <div className="flex flex-col space-y-4 items-left md:w-1/2">
-            <Input placeholder="Model, značka nebo VIN" autoFocus></Input>
-            <Input placeholder="Model, značka nebo VIN"></Input>
+        <p>
+          Srovnávač vozidel umožňuje porovnat buď jednotlivá vozidla podle VIN,
+          nebo obecné vlastnosti jednotlivých modelů. Typ srovnání zvolíte
+          přepínačem níže.
+        </p>
 
-            <div className="flex justify-center">
-              <Button type="primary">Porovnat vozidla</Button>
-            </div>
-          </div>
-          <div></div>
+        <div className="py-4">
+          <Segmented
+            // block
+            options={["Vozidla", "Modely"]}
+            onChange={(value) => {
+              setMode(
+                value == "Vozidla"
+                  ? ComparatorMode.vehicles
+                  : ComparatorMode.models
+              );
+            }}
+          />
+        </div>
 
-          <Card>Výsledek 1</Card>
-          <Card>Výsledek 2</Card>
-          <Card>Výsledek 3</Card>
-        </Content>
-        <Footer></Footer>
-      </Layout>
-    </ConfigProvider>
-    // <main className="flex flex-col items-stretch p-4 space-y-4">
-    //   {/* <h1 className={`${rubik.className} text-4xl py-2`}>Srovnání vozidel</h1>
-
-    //
-
-    //   </div> */}
-    // </main>
+        {mode == ComparatorMode.vehicles && (
+          <VehicleComparator></VehicleComparator>
+        )}
+        {mode == ComparatorMode.models && <ModelComparator></ModelComparator>}
+      </Container>
+    </>
   );
 }

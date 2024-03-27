@@ -188,7 +188,7 @@ export default function VehicleDetailsCard({
                   </td>
                 </tr>
                 <tr>
-                  <td className="pr-2 font-bold">Přípustná SZ brzděného</td>
+                  <td className="pr-2 font-bold">Přípustná hm. brzděného</td>
                   <td className="px-2">
                     {vehicleData.permissible_weight_braked_trailer != null ? (
                       vehicleData.permissible_weight_braked_trailer + " kg"
@@ -199,7 +199,7 @@ export default function VehicleDetailsCard({
                 </tr>
                 <tr>
                   <td className="pb-2 pr-2 font-bold">
-                    Přípustná SZ nebrzděného
+                    Přípustná hm. nebrzděného
                   </td>
                   <td className="px-2 pb-2 ">
                     {vehicleData.permissible_weight_unbraked_trailer != null ? (
@@ -270,7 +270,7 @@ export default function VehicleDetailsCard({
                   </td>
                 </tr>
                 <tr>
-                  <td className="pr-2 font-bold">- město</td>
+                  <td className="pr-2 font-bold">&ndash; město</td>
                   <td className="px-2">
                     {vehicleData.city_consumption != null ? (
                       vehicleData.city_consumption + " l/100 km"
@@ -280,7 +280,7 @@ export default function VehicleDetailsCard({
                   </td>
                 </tr>
                 <tr>
-                  <td className="pb-2 pr-2 font-bold">- mimo město</td>
+                  <td className="pb-2 pr-2 font-bold">&ndash; mimo město</td>
                   <td className="px-2 pb-2">
                     {vehicleData.out_of_city_consumption != null ? (
                       vehicleData.out_of_city_consumption + " l/100 km"
@@ -302,7 +302,7 @@ export default function VehicleDetailsCard({
                   </td>
                 </tr>
                 <tr>
-                  <td className="pr-2 font-bold">- město</td>
+                  <td className="pr-2 font-bold">&ndash; město</td>
                   <td className="px-2">
                     {vehicleData.city_emissions != null ? (
                       vehicleData.city_emissions + " g/100 km"
@@ -312,7 +312,7 @@ export default function VehicleDetailsCard({
                   </td>
                 </tr>
                 <tr>
-                  <td className="pr-2 font-bold">- mimo město</td>
+                  <td className="pr-2 font-bold">&ndash; mimo město</td>
                   <td className="px-2">
                     {vehicleData.out_of_city_emissions != null ? (
                       vehicleData.out_of_city_emissions + " g/100 km"
