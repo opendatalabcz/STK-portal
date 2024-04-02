@@ -14,6 +14,7 @@ import {
 } from "chart.js";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { Line } from "react-chartjs-2";
+import { min, max, range } from "lodash";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -116,6 +117,7 @@ export default function DoubleMileageChart({
     const options = {
       responsive: true,
       maintainAspectRatio: false,
+      spanGaps: true,
       plugins: {
         tooltip: {
           callbacks: {
@@ -154,62 +156,80 @@ export default function DoubleMileageChart({
       (e) => e.inspection_type == "regular"
     );
 
-    const data = {
-      labels: [
-        ...firstRegularInspections.map((e) => e.date.split("-")[0]),
+    const minAge = Math.min(
+      // @ts-ignore
+      min(firstRegularInspections.map((x) => x.date.split("-")[0] * 1.0)) ?? 0,
+      // @ts-ignore
+      min(secondRegularInspections.map((x) => x.date.split("-")[0] * 1.0)) ?? 0
+    );
+    // @ts-ignore
+    const firstMaxAge =
+      // @ts-ignore
+      max(firstRegularInspections.map((x) => x.date.split("-")[0] * 1.0)) ?? 0;
+    const secondMaxAge =
+      // @ts-ignore
+      max(secondRegularInspections.map((x) => x.date.split("-")[0] * 1.0)) ?? 0;
+    const maxAge = Math.max(firstMaxAge, secondMaxAge);
+    const years = range(minAge - 1, maxAge + 4, 1);
+    const firstMileages: (number | null)[] = [];
+    const secondMileages: (number | null)[] = [];
+    years.forEach((y) => {
+      const firstPoint = firstRegularInspections.find(
         // @ts-ignore
-        firstRegularInspections[firstRegularInspections.length - 1].date.split(
-          "-"
-        )[0] *
-          1.0 +
-          2,
-      ],
+        (x) => x.date.split("-")[0] * 1.0 == y
+      );
+      const secondPoint = secondRegularInspections.find(
+        // @ts-ignore
+        (x) => x.date.split("-")[0] * 1.0 == y
+      );
+
+      if (firstPoint != null) {
+        firstMileages.push(firstPoint.mileage);
+      } else {
+        if (y == firstMaxAge + 2) {
+          firstMileages.push(firstMileagePredictionData.future_mileage);
+        } else {
+          firstMileages.push(null);
+        }
+      }
+
+      if (secondPoint != null) {
+        secondMileages.push(secondPoint.mileage);
+      } else {
+        if (y == secondMaxAge + 2) {
+          secondMileages.push(secondMileagePredictionData.future_mileage);
+        } else {
+          secondMileages.push(null);
+        }
+      }
+    });
+
+    const data = {
+      labels: years,
       datasets: [
         {
           label: `Nájezd ${firstVehicleName}`,
-          data: [
-            ...firstRegularInspections.map((e) => e.mileage),
-            firstMileagePredictionData.future_mileage,
-          ],
+          data: firstMileages,
           borderColor: [
-            ...firstRegularInspections.map((_) => cyan[5]),
-            cyan[7],
+            ...range(minAge - 1, firstMaxAge + 1).map((_) => cyan[5]),
+            ...range(firstMaxAge + 2, maxAge + 4).map((_) => cyan[7]),
           ],
           backgroundColor: [
-            ...firstRegularInspections.map((_) => cyan[5]),
-            cyan[7],
+            ...range(minAge - 1, firstMaxAge + 1).map((_) => cyan[5]),
+            ...range(firstMaxAge + 2, maxAge + 4).map((_) => cyan[7]),
           ],
         },
-        {
-          label: `Predikovaný nájezd ${firstVehicleName}`,
-          data: [
-            ...firstRegularInspections.map((e) => null),
-            firstMileagePredictionData.future_mileage,
-          ],
-          borderColor: cyan[7],
-          backgroundColor: cyan[7],
-        },
-
         {
           label: `Nájezd ${secondVehicleName}`,
-          data: [
-            ...secondRegularInspections.map((e) => e.mileage),
-            secondMileagePredictionData.future_mileage,
+          data: secondMileages,
+          borderColor: [
+            ...range(minAge - 1, secondMaxAge + 1).map((_) => red[4]),
+            ...range(secondMaxAge + 2, maxAge + 4).map((_) => red[7]),
           ],
-          borderColor: [...secondRegularInspections.map((_) => red[4]), red[4]],
           backgroundColor: [
-            ...secondRegularInspections.map((_) => red[4]),
-            red[4],
+            ...range(minAge - 1, secondMaxAge + 1).map((_) => red[4]),
+            ...range(secondMaxAge + 2, maxAge + 4).map((_) => red[7]),
           ],
-        },
-        {
-          label: `Predikovaný nájezd ${secondVehicleName}`,
-          data: [
-            ...secondRegularInspections.map((e) => null),
-            secondMileagePredictionData.future_mileage,
-          ],
-          borderColor: red[7],
-          backgroundColor: red[7],
         },
       ],
     };

@@ -22,7 +22,10 @@ export default function VehicleComparator() {
         <div className="col-span-5 py-2">
           <Input
             value={firstVin}
-            onChange={(e) => setFirstVin(e.target.value)}
+            onChange={(e) => {
+              setComparatorState(ComparatorState.ready);
+              setFirstVin(e.target.value);
+            }}
             placeholder="VIN prvního vozidla"
           ></Input>
         </div>
@@ -30,7 +33,10 @@ export default function VehicleComparator() {
         <div className="col-span-5 py-2">
           <Input
             value={secondVin}
-            onChange={(e) => setSecondVin(e.target.value)}
+            onChange={(e) => {
+              setComparatorState(ComparatorState.ready);
+              setSecondVin(e.target.value);
+            }}
             placeholder="VIN druhého vozidla"
           ></Input>
         </div>

@@ -122,8 +122,6 @@ export default function InspectionSuccessByAgeChart({
       },
     };
 
-    console.log(firstData);
-
     const maxAge = Math.max(
       max(firstData.map((x) => x.age)) ?? 0,
       max(secondData.map((x) => x.age)) ?? 0

@@ -33,17 +33,14 @@ export default function TotalAnomalousInspectionsDisplay({
 
     return (
       <>
-        <span
-          className={
-            "text-2xl " + (thisStationCount.ratio >= 0.01 ? "text-red-500" : "")
-          }
-        >
+        <span className="text-2xl text-cyan-500">
           {Intl.NumberFormat("cs-CZ", {
             maximumFractionDigits: 2,
           }).format(thisStationCount.ratio * 100)}
         </span>{" "}
-        % anomálních prohlídek ({thisStationCount.anomalous} z{" "}
-        {thisStationCount.total})
+        % anomálních prohlídek na této stanici (
+        {Intl.NumberFormat("cs-CZ").format(thisStationCount.anomalous)} z{" "}
+        {Intl.NumberFormat("cs-CZ").format(thisStationCount.total)})
       </>
     );
   }

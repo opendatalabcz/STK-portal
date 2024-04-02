@@ -14,7 +14,7 @@ enum ComparatorMode {
 }
 
 export default function ComparePage() {
-  const [mode, setMode] = useState(ComparatorMode.models);
+  const [mode, setMode] = useState(ComparatorMode.vehicles);
 
   return (
     <>

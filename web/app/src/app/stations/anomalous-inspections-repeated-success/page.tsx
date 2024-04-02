@@ -35,8 +35,7 @@ export default function InspectionResultByMakePage() {
 
           <p>
             Histogram zobrazuje rozdělení počtů těchto anomálií napříč
-            stanicemi. Do 400 anomálií je tedy běžný počet, hodnoty nad 500
-            anomálií už jsou výjimečné.
+            stanicemi.
           </p>
 
           <p>

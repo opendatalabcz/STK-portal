@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
-import { cyan } from "@ant-design/colors";
+import { cyan, red } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { TotalAnomalousInspectionsData } from "./TotalAnomalousInspectionsDisplay";
@@ -142,12 +142,12 @@ export default function TotalAnomalousInspectionsChart({
           // @ts-ignore
           backgroundColor: (ctx) => {
             if (
-              thisStationCount.ratio * 100 + 0.05 <= ctx.parsed.x ||
-              thisStationCount.ratio * 100 - 0.05 > ctx.parsed.x
+              thisStationCount.ratio * 100 <= ctx.parsed.x ||
+              thisStationCount.ratio * 100 - 0.1 > ctx.parsed.x
             ) {
-              return cyan[5];
+              return red[4];
             } else {
-              return cyan[7];
+              return cyan[5];
             }
           },
           borderWidth: 1,

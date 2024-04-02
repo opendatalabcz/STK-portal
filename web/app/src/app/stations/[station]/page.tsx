@@ -169,9 +169,6 @@ export default function StationDetailPage({
           <h2 className="pt-4 text-2xl">Podíl anomálií vůči všem kontrolám</h2>
           <hr></hr>
           <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
-            <TotalAnomalousInspectionsChart
-              station={station}
-            ></TotalAnomalousInspectionsChart>
             <div className="space-y-4">
               <TotalAnomalousInspectionsDisplay
                 station={station}
@@ -182,21 +179,31 @@ export default function StationDetailPage({
               </p>
               <p>
                 Histogram zobrazuje rozdělení podílů anomálních prohlídek napříč
-                stanicemi. Podíl do jednoho procenta je tedy běžný, vyšší
-                hodnoty jsou již poměrně neobvyklé. Vysoké absolutní počty
-                anomálních prohlídek níže se navíc v tomto histogramu nemusí
-                projevit, protože stanice s velkým počtem anomálií může zároveň
-                provádět velké množství prohlídek obecně.
+                stanicemi. Stanice je podezřelá, pokud má podíl anomálních
+                kontrol výrazně vyšší než je u většiny ostatních stanic. Vysoké
+                absolutní počty anomálních prohlídek vyjmenovaných níže se v
+                tomto histogramu nemusí projevit, protože stanice s velkým
+                počtem anomálií může zároveň provádět velké množství prohlídek
+                obecně.
               </p>
             </div>
+            <TotalAnomalousInspectionsChart
+              station={station}
+            ></TotalAnomalousInspectionsChart>
           </div>
 
-          <h2 className="pt-4 text-2xl">Nadměrně vytížené dny</h2>
+          <h2 className="pt-4 text-2xl">Jednotlivé typy anomálií</h2>
           <hr></hr>
+          <p className="pt-4">
+            Následující sekce rozděluje anomalitu kontrol podle tří různých
+            kritérií. Histogram se vždy týká porovnání počtu zjištěných anomálií
+            na této stanici s počtem zjištěným na ostatních stanicích napříč
+            celou ČR. Pozice aktuální stanice je v histogramu zvýrazněna
+            červeně.
+          </p>
+
+          <h3 className="pt-4 text-xl">Nadměrně vytížené dny</h3>
           <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
-            <InspectionsOnFrequentDaysChart
-              station={station}
-            ></InspectionsOnFrequentDaysChart>
             <div className="space-y-4">
               <InspectionsOnFrequentDaysDisplay
                 station={station}
@@ -211,22 +218,16 @@ export default function StationDetailPage({
                 malé procento dní a tempo práce muselo tedy na stanici být
                 nadstandardní.
               </p>
-              <p>
-                Histogram zobrazuje rozdělení počtů těchto anomálií napříč
-                stanicemi. Do 2000 anomálií je tedy běžný počet, vyšší hodnoty
-                už jsou neobvyklé.
-              </p>
             </div>
+            <InspectionsOnFrequentDaysChart
+              station={station}
+            ></InspectionsOnFrequentDaysChart>
           </div>
 
-          <h2 className="pt-4 text-2xl">
+          <h3 className="pt-4 text-xl">
             Úspěšné opakování kontroly na jiné stanici
-          </h2>
-          <hr></hr>
+          </h3>
           <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
-            <RepeatedInspectionsChart
-              station={station}
-            ></RepeatedInspectionsChart>
             <div className="space-y-4">
               <RepeatedInspectionsDisplay
                 station={station}
@@ -239,20 +240,14 @@ export default function StationDetailPage({
                 uvedený výše odpovídá počtu těchto opakovaných úspěšných kontrol
                 na této stanici.
               </p>
-              <p>
-                Histogram zobrazuje rozdělení počtů těchto anomálií napříč
-                stanicemi. Do 400 anomálií je tedy běžný počet, hodnoty nad 500
-                anomálií už jsou výjimečné.
-              </p>
             </div>
+            <RepeatedInspectionsChart
+              station={station}
+            ></RepeatedInspectionsChart>
           </div>
 
-          <h2 className="pt-4 text-2xl">Mizející závady</h2>
-          <hr></hr>
+          <h3 className="pt-4 text-xl">Mizející závady</h3>
           <div className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-2">
-            <InspectionsWithDissapearingFailuresChart
-              station={station}
-            ></InspectionsWithDissapearingFailuresChart>
             <div className="space-y-4">
               <InspectionsWithDissapearingFailuresDisplay
                 station={station}
@@ -266,11 +261,10 @@ export default function StationDetailPage({
                 závady, proto je anomální, když se jejich počet takto výrazně
                 sníží.
               </p>
-              <p>
-                Histogram zobrazuje rozdělení počtů těchto anomálií napříč
-                stanicemi obdobně jako výše.
-              </p>
             </div>
+            <InspectionsWithDissapearingFailuresChart
+              station={station}
+            ></InspectionsWithDissapearingFailuresChart>
           </div>
         </Container>
       </>

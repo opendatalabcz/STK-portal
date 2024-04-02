@@ -27,8 +27,9 @@ export default function InspectionResultByMakePage() {
 
           <p>
             Histogram zobrazuje rozdělení podílů anomálních prohlídek napříč
-            stanicemi. Podíl do jednoho procenta je tedy běžný, vyšší hodnoty
-            jsou již poměrně neobvyklé.
+            stanicemi. Určitý podíl anomálií je tedy poměrně běžný, podezřelé
+            je, pokud je podíl anomálních prohlídek dané stanice na některé z
+            krajních stran grafu.
           </p>
 
           <p>

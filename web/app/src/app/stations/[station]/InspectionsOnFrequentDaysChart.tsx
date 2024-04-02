@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { Card } from "antd";
-import { cyan } from "@ant-design/colors";
+import { cyan, red } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 
@@ -60,7 +60,7 @@ export default function InspectionsOnFrequentDaysChart({
   );
 
   return (
-    <Card size="small" title="Histogram anomálních prohlídek">
+    <Card size="small">
       <div className="h-64">{_buildChart()}</div>
     </Card>
   );
@@ -140,12 +140,12 @@ export default function InspectionsOnFrequentDaysChart({
           // @ts-ignore
           backgroundColor: (ctx) => {
             if (
-              thisStationCount.count + 50 <= ctx.parsed.x ||
-              thisStationCount.count - 50 > ctx.parsed.x
+              thisStationCount.count <= ctx.parsed.x ||
+              thisStationCount.count - 100 > ctx.parsed.x
             ) {
               return cyan[5];
             } else {
-              return cyan[7];
+              return red[4];
             }
           },
           borderWidth: 1,

@@ -38,12 +38,18 @@ export default function ModelComparator() {
       <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-2">
         <MakeInput
           value={firstMake}
-          onChange={(make) => setFirstMake(make)}
+          onChange={(make) => {
+            setComparatorState(ComparatorState.ready);
+            setFirstMake(make);
+          }}
         ></MakeInput>
         <ModelInput
           make={firstMake}
           value={firstModel}
-          onChange={(model) => setFirstModel(model)}
+          onChange={(model) => {
+            setComparatorState(ComparatorState.ready);
+            setFirstModel(model);
+          }}
         ></ModelInput>
       </div>
 
@@ -52,12 +58,18 @@ export default function ModelComparator() {
       <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-2">
         <MakeInput
           value={secondMake}
-          onChange={(make) => setSecondMake(make)}
+          onChange={(make) => {
+            setComparatorState(ComparatorState.ready);
+            setSecondMake(make);
+          }}
         ></MakeInput>
         <ModelInput
           make={secondMake}
           value={secondModel}
-          onChange={(model) => setSecondModel(model)}
+          onChange={(model) => {
+            setComparatorState(ComparatorState.ready);
+            setSecondModel(model);
+          }}
         ></ModelInput>
       </div>
       <div className="flex justify-center pt-4">

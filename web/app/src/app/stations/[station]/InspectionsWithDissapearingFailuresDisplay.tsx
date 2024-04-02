@@ -31,14 +31,8 @@ export default function InspectionsWithDissapearingFailuresDisplay({
 
     return (
       <>
-        <span
-          className={
-            "text-2xl " + (thisStationCount.count >= 200 ? "text-red-500" : "")
-          }
-        >
-          {thisStationCount.count}
-        </span>{" "}
-        anomálních prohlídek
+        <span className="text-2xl text-red-500">{thisStationCount.count}</span>{" "}
+        výskytů na této stanici
       </>
     );
   }

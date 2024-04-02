@@ -102,7 +102,7 @@ export default function InspectionsTable({ vin }: { vin: string }) {
           return <span className="text-gray-400">Závady nejsou dostupné</span>;
 
         if (defects == null || defects.length == 0)
-          return <Tag color="green">Bez závad</Tag>;
+          return <Tag color="blue">Bez závad</Tag>;
 
         const parts = defects.split(",");
         return parts.map((d, index) => (

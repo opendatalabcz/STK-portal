@@ -600,6 +600,12 @@ export default function Comparison({
 
         <h2 className="pt-6 text-2xl">Historie a predikce nájezdu</h2>
         <hr></hr>
+        <p className="pt-4">
+          Graf srovnává historii nájezdů obou vozidel. Poslední bod (zvýrazněný
+          tmavší barvou) je predikce založená na poslední známé pravidelné
+          kontrole. Křivka chybí, pokud nejsou k dispozici žádné pravidelné
+          kontroly vozu.
+        </p>
         <div className="pt-4">
           <DoubleMileageChart
             firstVin={firstVin}

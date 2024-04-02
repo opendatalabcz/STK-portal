@@ -31,14 +31,8 @@ export default function RepeatedInspectionsDisplay({
 
     return (
       <>
-        <span
-          className={
-            "text-2xl " + (thisStationCount.count >= 500 ? "text-red-500" : "")
-          }
-        >
-          {thisStationCount.count}
-        </span>{" "}
-        anomálních prohlídek
+        <span className="text-2xl text-red-500">{thisStationCount.count}</span>{" "}
+        výskytů na této stanici
       </>
     );
   }

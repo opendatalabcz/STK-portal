@@ -59,7 +59,7 @@ export default function InspectionsWithDissapearingFailuresChart({
   );
 
   return (
-    <Card size="small" title="Histogram anomálních prohlídek">
+    <Card size="small">
       <div className="h-64">{_buildChart()}</div>
     </Card>
   );
@@ -140,12 +140,12 @@ export default function InspectionsWithDissapearingFailuresChart({
           // @ts-ignore
           backgroundColor: (ctx) => {
             if (
-              thisStationCount.count + 5 <= ctx.parsed.x ||
-              thisStationCount.count - 5 > ctx.parsed.x
+              thisStationCount.count <= ctx.parsed.x ||
+              thisStationCount.count - 10 > ctx.parsed.x
             ) {
               return cyan[5];
             } else {
-              return cyan[7];
+              return red[4];
             }
           },
           borderWidth: 1,

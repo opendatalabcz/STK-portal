@@ -11,7 +11,7 @@ export default function SearchBox({ initialValue }: { initialValue?: string }) {
   const [value, setValue] = useState(initialValue ?? "");
 
   function submit() {
-    if (value.length == 0) return;
+    if (value.length != 17) return;
     router.push(`/vehicles/${value}`);
   }
 
@@ -25,10 +25,15 @@ export default function SearchBox({ initialValue }: { initialValue?: string }) {
             submit();
           }
         }}
-        placeholder="VIN (zadejte celý kód)"
+        placeholder="VIN (17 znaků)"
       ></Input>
 
-      <Button type="primary" size="large" onClick={submit}>
+      <Button
+        type="primary"
+        size="large"
+        onClick={submit}
+        disabled={value.length != 17}
+      >
         Hledat
       </Button>
     </div>
