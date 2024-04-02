@@ -14,7 +14,7 @@ enum ComparatorMode {
 }
 
 export default function ComparePage() {
-  const [mode, setMode] = useState(ComparatorMode.vehicles);
+  const [mode, setMode] = useState(ComparatorMode.models);
 
   return (
     <>
@@ -38,8 +38,8 @@ export default function ComparePage() {
 
         <div className="py-4">
           <Segmented
-            // block
             options={["Vozidla", "Modely"]}
+            value={mode == ComparatorMode.models ? "Modely" : "Vozidla"}
             onChange={(value) => {
               setMode(
                 value == "Vozidla"
