@@ -1,14 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import NumberBox from "@/components/NumberBox";
-import { Button, ConfigProvider, Input, Layout } from "antd";
+import { Card, ConfigProvider, Layout, Statistic } from "antd";
 import { Content } from "antd/es/layout/layout";
-import { LoadingOutlined } from "@ant-design/icons";
 import theme from "./themeConfig";
 import useSWR from "swr";
 import Container from "@/components/Container";
+import SearchBox from "./SearchBox";
+import DefectsByCategoryLatestYearChart from "./stations/top-defects-by-category/DefectsByCategoryLatestYearChart";
+import ElectricDriveTypeChart from "./vehicles/electric-drive-type/ElectricDriveTypeChart";
+import { firstInspectionYear } from "@/years";
+import Link from "next/link";
+import ColorsChart from "./vehicles/colors/ColorsChart";
+import InspectionResultByTopMake from "./stations/inspection-result-by-make/InspectionResultByTopMake";
 
 async function fetcher(key: string) {
   const res = await fetch(key, {
@@ -18,7 +24,6 @@ async function fetcher(key: string) {
 }
 
 export default function Home() {
-  // TODO: Add error handling using a redirect to error page.
   const { data: vehicleCount, isLoading: vehicleCountIsLoading } = useSWR(
     "/api/vehicles",
     fetcher
@@ -44,70 +49,129 @@ export default function Home() {
         <Header></Header>
         <Content className="flex flex-col items-stretch w-full mx-auto lg:w-10/12 2xl:w-8/12">
           <Container>
-            <div className="flex flex-col items-center max-w-screen-lg px-4 mx-auto space-y-8">
-              <p className="leading-relaxed ">
+            <div className="flex flex-col">
+              <div className="flex flex-row items-center self-center py-6 space-x-6">
+                <Image
+                  src="/logo.svg"
+                  alt="logo"
+                  width="64"
+                  height="64"
+                  className="self-center"
+                ></Image>
+                <h1 className="text-4xl font-bold">STK portál</h1>
+              </div>
+
+              <p className="leading-relaxed">
                 Vítejte na STK portálu. Naleznete zde informace o stanicích
                 technické kontroly, detaily o vozidlech v ČR, statistiky
-                vozového parku a prohlídek na STK. Portál nabízí také srovnání
-                vozidel podle dostupných informací. To vše na základě dat z
-                registru silničních vozidel a záznamů o prohlídkách na STK
-                zveřejněných MDČR (a případnými dalšími subjekty).
+                vozového parku a prohlídek na STK. Portál nabízí také srovnávač
+                konkrétních vozidel i značek a modelů celkově. To vše na základě
+                dat z registru silničních vozidel a záznamů o prohlídkách na STK
+                zveřejněných Ministerstvem dopravy ČR a dalšími subjekty.{" "}
+                <Link href="/about">Více o portálu a datech...</Link>
               </p>
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <NumberBox title="Vozidel v registru">
-                  <p className="flex-wrap pb-1 text-3xl font-medium whitespace-break-spaces">
-                    {vehicleCountIsLoading ? (
-                      <LoadingOutlined spin={true} />
-                    ) : (
-                      vehicleCount?.toLocaleString("cs-CZ").replace(/\s/g, " ")
-                    )}
-                  </p>
-                </NumberBox>
-                <NumberBox title="Stanic TK">
-                  <p className="flex-wrap pb-1 text-3xl">
-                    {stationCountIsLoading ? (
-                      <LoadingOutlined spin={true} />
-                    ) : (
-                      stationCount?.toLocaleString("cs-CZ").replace(/\s/g, " ")
-                    )}
-                  </p>
-                </NumberBox>
-                <NumberBox title="Kontrol na STK">
-                  <p className="pb-1 text-3xl font-medium">
-                    {inspectionCountIsLoading ? (
-                      <LoadingOutlined spin={true} />
-                    ) : (
-                      inspectionCount
-                        ?.toLocaleString("cs-CZ")
-                        .replace(/\s/g, " ")
-                    )}
-                  </p>
-                </NumberBox>
-                <NumberBox title="Časové pokrytí">
-                  <p className="pb-1 text-3xl font-medium">
-                    {newestInspectionIsLoading ? (
-                      <LoadingOutlined spin={true} />
-                    ) : (
-                      `2018–${newestInspection}`
-                    )}
-                  </p>
-                </NumberBox>
+              <div className="grid grid-cols-1 gap-4 py-4 sm:grid-cols-2 lg:grid-cols-4">
+                <Card>
+                  <Statistic
+                    loading={vehicleCountIsLoading}
+                    title="Vozidel v databázi"
+                    value={vehicleCount
+                      ?.toLocaleString("cs-CZ")
+                      .replace(/\s/g, " ")}
+                  ></Statistic>
+                </Card>
+                <Card>
+                  <Statistic
+                    loading={stationCountIsLoading}
+                    title="Stanic TK"
+                    value={stationCount
+                      ?.toLocaleString("cs-CZ")
+                      .replace(/\s/g, " ")}
+                  ></Statistic>
+                </Card>
+                <Card>
+                  <Statistic
+                    loading={inspectionCountIsLoading}
+                    title="Kontrol na STK"
+                    value={inspectionCount
+                      ?.toLocaleString("cs-CZ")
+                      .replace(/\s/g, " ")}
+                  ></Statistic>
+                </Card>
+                <Card>
+                  <Statistic
+                    loading={newestInspectionIsLoading}
+                    title="Časové pokrytí"
+                    value={firstInspectionYear + "–" + newestInspection}
+                  ></Statistic>
+                </Card>
               </div>
 
-              <div className="flex flex-col space-y-4">
-                <Input
-                  placeholder="Hledejte VIN nebo stanici TK"
-                  className="p-2 md:w-96"
-                  size="large"
-                ></Input>
-                <div className="flex justify-center space-x-4">
-                  <Button type="primary" size="large">
-                    Naskenovat VIN
-                  </Button>
-                  <Button size="large">Hledat</Button>
+              <p className="pt-6 leading-relaxed">
+                Vyhledávač umožňuje najít konkrétní vozidlo podle VIN (17 znaků,
+                velká písmena a číslice). Hledat lze také stanice technické
+                kontroly podle názvu, města nebo kontaktních údajů (telefon,
+                email).
+              </p>
+
+              <SearchBox></SearchBox>
+
+              <h2 className="self-start pt-12 text-3xl">Kontroly na STK</h2>
+              <p className="py-4">
+                Jaký je průměrný výsledek kontroly populárních značek a modelů?
+                Kvůli kterým závadám nejčastěji auta neprojdou STK? Kolik
+                kontrol se vůbec celkem ročně provede? Prohlížejte statistiky o
+                všech kontrolách nebo najděte konkrétní STK a její analýzu na
+                stránce <Link href="/stations">stanic</Link>.
+              </p>
+              <div className="grid grid-cols-1 space-x-4 md:grid-cols-2">
+                <div className="w-96 sm:w-auto">
+                  <DefectsByCategoryLatestYearChart
+                    linkToDetails
+                  ></DefectsByCategoryLatestYearChart>
+                </div>
+                <div className="w-96 sm:w-auto">
+                  <InspectionResultByTopMake
+                    linkToDetails
+                  ></InspectionResultByTopMake>
                 </div>
               </div>
+              <Link className="pt-2" href="/stations">
+                Další statistiky stanic...
+              </Link>
+
+              <h2 className="self-start pt-6 text-3xl">Vozový park ČR</h2>
+              <p className="py-4">
+                Kolik kilometrů mají průměrně auta najeto v různých krajích? Jak
+                se vyvíjí popularita značek a modelů? Jak roste popularita
+                elektrifikovaných vozů ve srovnání s běžnými palivy? Jak staré
+                jsou importované ojetiny? Nejen to se dozvíte na stránce{" "}
+                <Link href="/vehicles">vozidel</Link>.
+              </p>
+              <div className="grid grid-cols-1 space-x-4 md:grid-cols-2">
+                <div className="w-96 sm:w-auto">
+                  <ElectricDriveTypeChart
+                    linkToDetails
+                  ></ElectricDriveTypeChart>
+                </div>
+                <div className="w-96 sm:w-auto">
+                  <ColorsChart linkToDetails></ColorsChart>
+                </div>
+              </div>
+              <Link className="pt-2" href="/vehicles">
+                Další statistiky vozového parku...
+              </Link>
+
+              <h2 className="self-start pt-6 text-3xl">Srovnávač</h2>
+              <p className="py-4">
+                Jak se liší detailní technické parametry dvou různých vozů? Jaká
+                je historie prohlídek obou vozů? Srovnejte si dvě vozidla podle
+                jejich VIN ve <Link href="/compare">srovnávači</Link>. Srovnávač
+                umožňuje také porovnat dva modely stejné nebo různé značky
+                &ndash; můžete srovnat nabízené motorizace, úspěšnost na STK
+                podle věku a další parametry.
+              </p>
             </div>
           </Container>
         </Content>
