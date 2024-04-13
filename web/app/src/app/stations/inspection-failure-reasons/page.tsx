@@ -29,7 +29,7 @@ export default function InspectionResultByMakePage() {
             zobrazeny tři nejčastější závady závažnosti B nebo C, které se
             objevily na kontrolách, kde bylo vozidlo shledáno částečně
             způsobilým nebo nezpůsobilým. Jedná se tedy o nejčastější důvody,
-            proč vozidlo dané značky "neprošlo" STK.
+            proč vozidlo dané značky &quot;neprošlo&quot; STK.
           </p>
         </div>
       </Container>

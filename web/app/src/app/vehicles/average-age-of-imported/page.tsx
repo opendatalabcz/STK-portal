@@ -49,18 +49,18 @@ export default function DriveTypePage() {
             dní, hodnoty by se snížila zhruba o 0,2 roku. Přidali-li bychom
             požadavek na minimální zjištěný nájezd při evidenční kontrole na
             1000 kilometrů, hodnota by se mírně zvýšila zhruba o setinu roku
-            &ndash; přiblížili bychom se tak "správnému" poměru importovaných
-            vozidel podle SDA. Toto bylo zjištěno na části registru vozidel, k
-            níž máme odpovídající data o prohlídkách. Jelikož vliv požadavku na
-            minimální nájezd na výsledek je ale poměrně malý, lze od něj upustit
-            a získat tak rozumně důvěryhodnou hodnotu i pro dřívější roky, pro
-            které data o prohlídkách nemáme.
+            &ndash; přiblížili bychom se tak &quot;správnému&quot; poměru
+            importovaných vozidel podle SDA. Toto bylo zjištěno na části
+            registru vozidel, k níž máme odpovídající data o prohlídkách.
+            Jelikož vliv požadavku na minimální nájezd na výsledek je ale
+            poměrně malý, lze od něj upustit a získat tak rozumně důvěryhodnou
+            hodnotu i pro dřívější roky, pro které data o prohlídkách nemáme.
           </p>
 
           <p>
             Protože jsou ale data první registrace pro stará vozidla (kolem roku
-            1990) často "zaokrouhlená" na 1. leden daného roku, jejich přesnost
-            je diskutabilní a analýzu proto raději omezíme na vozidla
+            1990) často &quot;zaokrouhlená&quot; na 1. leden daného roku, jejich
+            přesnost je diskutabilní a analýzu proto raději omezíme na vozidla
             registrovaná poprvé v ČR od roku 2000 dál.
           </p>
         </div>

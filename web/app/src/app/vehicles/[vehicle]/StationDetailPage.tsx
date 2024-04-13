@@ -14,7 +14,10 @@ import Container from "@/components/Container";
 import InspectionsTable from "./InspectionsTable";
 import DefectPredictionTable from "./DefectPredictionTable";
 import MileageChart from "./MileageChart";
-import { IStringMap } from "./page";
+
+interface IStringMap {
+  [index: string]: string;
+}
 
 export default function StationDetailPage({
   params: { vehicle },

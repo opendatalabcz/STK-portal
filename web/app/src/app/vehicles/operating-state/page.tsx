@@ -37,7 +37,8 @@ export default async function DriveTypePage() {
             . Datum první registrace často neodpovídá stáří vozidla &ndash;
             zejména ojetá importovaná vozidla budou zpravidla mnohem starší, než
             je jejich datum první registrace v ČR. Graf ale poskytuje náhled
-            toho, jak dlouho vozidlo průměrně v České republice "prežije".
+            toho, jak dlouho vozidlo průměrně v České republice
+            &quot;přežije&quot;.
           </p>
         </div>
       </Container>

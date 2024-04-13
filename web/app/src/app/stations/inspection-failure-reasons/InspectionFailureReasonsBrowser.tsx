@@ -80,7 +80,7 @@ export default function InspectionFailureReasonsBrowser({
     >
       <div className="space-y-4">
         {rawData.map((item) => (
-          <Card title={item.make} size="small">
+          <Card key={item.make} title={item.make} size="small">
             <ol className="pl-5 list-decimal">
               <li>
                 <a href={`/defects#${item.top1_defect_code}`}>

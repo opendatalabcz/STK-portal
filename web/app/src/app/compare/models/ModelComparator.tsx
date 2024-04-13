@@ -26,7 +26,8 @@ export default function ModelComparator() {
         Vyhledejte nejprve značku a následně model. Vyhledávání funguje na
         základě dat zadávaných při kontrolách na STK, takže někdy obsahuje i
         nesmyslné údaje. Navíc např. většina Volkswagenů je evidována pod
-        značkou "VW", mnohem menší počet je veden jako "VOLKSWAGEN".
+        značkou &quot;VW&quot;, mnohem menší počet je veden jako
+        &quot;VOLKSWAGEN&quot;.
       </p>
       <p className="pt-4">
         Srovnávač proto zobrazuje i počet porovnávaných vozidel ve vzorku. Pokud

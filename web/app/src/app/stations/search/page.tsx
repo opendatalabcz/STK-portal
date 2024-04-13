@@ -50,7 +50,7 @@ export default function StationDetailPage() {
         <>
           <div className="pt-4 space-y-4">
             {data.map((d) => (
-              <div>
+              <div key={d.id}>
                 <SearchResult station={d}></SearchResult>
               </div>
             ))}

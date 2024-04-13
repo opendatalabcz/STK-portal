@@ -2,10 +2,9 @@
 
 import Card from "antd/es/card";
 import SearchBox from "./SearchBox";
-import Map from "./Map";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
-import { Breadcrumb } from "antd";
+import { Breadcrumb, Spin } from "antd";
 import Link from "next/link";
 import TotalInspectionsByResultChart from "./inspection-by-result/AverageInspectionResultChart";
 import InspectionResultByTopMake from "./inspection-result-by-make/InspectionResultByTopMake";
@@ -18,6 +17,18 @@ import AnomalousInspectionsChart from "./anomalous-inspections/AnomalousInspecti
 import InspectionsOnFrequentDaysChart from "./anomalous-inspections-on-frequent-days/InspectionsOnFrequentDaysChart";
 import InspectionsWithDissapearingFailuresChart from "./anomalous-inspections-disappearing-failures/InspectionsWithDissapearingFailuresChart";
 import RepeatedInspectionsChart from "./anomalous-inspections-repeated-success/RepeatedInspectionsChart";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("./Map"), {
+  ssr: false,
+  loading: () => (
+    <Card>
+      <div className="flex items-center justify-center h-96 grow">
+        <Spin></Spin>
+      </div>
+    </Card>
+  ),
+});
 
 export default function StationsPage() {
   return (

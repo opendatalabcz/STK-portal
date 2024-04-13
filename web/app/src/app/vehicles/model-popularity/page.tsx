@@ -36,11 +36,11 @@ export default function MakePopularityPage() {
             existenci lze ověřit i na webu provozovaném Ministerstvem dopravy ČR{" "}
             <a href="https://www.dataovozidlech.cz/">Datová kostka</a>. Jedná se
             v kontextu této statistiky o špatně zadané názvy obchodního označení
-            vozidla (tj. název modelu). Objevují se kombinace jako "AUDI FORMAN"
-            (podle sekundárního názvu modelu se v jednom z případů má zřejmě
-            jednat o AUDI RS6), "ŠKODA GOLF", "VW CITIGO" či "HYUNDAI CEED".
-            Většinou jde o jednotky, maximálně desítky záznamů s takovou
-            kombinací.
+            vozidla (tj. název modelu). Objevují se kombinace jako &quot;AUDI
+            FORMAN&quot; (podle sekundárního názvu modelu se v jednom z případů
+            má zřejmě jednat o AUDI RS6), &quot;ŠKODA GOLF&quot;, &quot;VW
+            CITIGO&quot; či &quot;HYUNDAI CEED&quot;. Většinou jde o jednotky,
+            maximálně desítky záznamů s takovou kombinací.
           </p>
         </div>
       </Container>

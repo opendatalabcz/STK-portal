@@ -87,7 +87,7 @@ export default function StationDetailPage({
                 <PhoneOutlined className="mt-1" />
                 <div>
                   {data.phones.map((p) => (
-                    <p>
+                    <p key={p}>
                       <a href={`tel:${p}`}>{p}</a>
                     </p>
                   ))}
@@ -97,7 +97,7 @@ export default function StationDetailPage({
                 <MailOutlined className="mt-1" />
                 <div>
                   {data.emails.map((m) => (
-                    <p>
+                    <p key={m}>
                       <a href={`mailto:${m}`}>{m}</a>
                     </p>
                   ))}
@@ -212,7 +212,7 @@ export default function StationDetailPage({
                 Prohlídka v nadměrně vytíženém dni, kdy proběhlo výrazně více
                 kontrol než je průměrem, může indikovat zvýšené nároky na
                 personál a potenciální vliv na průběh prohlídky. Za výjimečně
-                frekventovaný den se považuje takový, že počet provedených
+                frekventovaný den se považuje takový, kdy počet provedených
                 prohlídek je o dvě standardní odchylky vyšší než průměr daného
                 měsíce. Tato hranice byla zvolena tak, aby bylo označeno pouze
                 malé procento dní a tempo práce muselo tedy na stanici být

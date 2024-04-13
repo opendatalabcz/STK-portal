@@ -35,11 +35,12 @@ export default function InspectionResultByMakePage() {
 
           <p>
             Je třeba při odvozování kvality modelů pamatovat na to, že
-            "úspěšnější" modely mohou být poměrně nové (např. Škoda Rapid a
-            další novější modely), takže se na kontrolách ještě nemohlo stihnout
-            projevit mnoho závad. Naopak modely, které se dnes již nevyrábí,
-            budou mít zpravidla horší úspěšnost, protože všechna vozidla těchto
-            modelů jsou mnohem starší a s věkem závad obecně přibývá.
+            &quot;úspěšnější&quot; modely mohou být poměrně nové (např. Škoda
+            Rapid a další novější modely), takže se na kontrolách ještě nemohlo
+            stihnout projevit mnoho závad. Naopak modely, které se dnes již
+            nevyrábí, budou mít zpravidla horší úspěšnost, protože všechna
+            vozidla těchto modelů jsou mnohem starší a s věkem závad obecně
+            přibývá.
           </p>
 
           <p>

@@ -2,18 +2,12 @@
 
 import Card from "antd/es/card/Card";
 import useSWR from "swr";
-// import "@react-leaflet/core";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-// import { MarkerClusterGroup } from "@changey/react-leaflet-markercluster";
-// import MarkerClusterGroup from "react-leaflet-markercluster";
-import { useState } from "react";
 import Button from "antd/es/button";
 import { useRouter } from "next/navigation";
 import { Icon } from "leaflet";
 
-// import "leaflet/dist/leaflet.css";
-
-export default function Map() {
+export default function LazyMap() {
   const router = useRouter();
 
   const { data: stations, isLoading: stationsIsLoading } = useSWR(
@@ -39,7 +33,6 @@ export default function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-          {/* <MarkerClusterGroup chunkedLoading> */}
           {stations &&
             stations.map((s) => (
               <Marker
@@ -65,7 +58,6 @@ export default function Map() {
                 </Popup>
               </Marker>
             ))}
-          {/* </MarkerClusterGroup> */}
         </MapContainer>
       </div>
       <p className="pt-1 text-sm">

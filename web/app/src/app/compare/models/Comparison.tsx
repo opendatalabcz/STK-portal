@@ -72,11 +72,12 @@ export default function Comparison({
       <h2 className="pt-8 text-2xl">Úspěšnost na STK podle věku</h2>
       <hr></hr>
       <p className="py-4">
-        Úspěšnost je vypočítána jako podíl prohlídek se závěrem "způsobilé" a
-        všech prohlídek vozidla daného věku zaokrouhleného na celé roky. Protože
-        vozidel do 4 let věku a stejně tak i velmi starých vozidel je zpravidla
-        na prohlídkách málo, začátek a chvost grafu je třeba opět brát s
-        rezervou &ndash; výsledek je zde zpravidla tvořen velmi málo vzorky.
+        Úspěšnost je vypočítána jako podíl prohlídek se závěrem
+        &quot;způsobilé&quot; a všech prohlídek vozidla daného věku
+        zaokrouhleného na celé roky. Protože vozidel do 4 let věku a stejně tak
+        i velmi starých vozidel je zpravidla na prohlídkách málo, začátek a
+        chvost grafu je třeba opět brát s rezervou &ndash; výsledek je zde
+        zpravidla tvořen velmi málo vzorky.
       </p>
       <InspectionSuccessByAgeChart
         firstMake={firstMake}
@@ -93,6 +94,11 @@ export default function Comparison({
           modelu podle jejich závažnosti. Stejně jako pro předchozí grafy platí,
           že počáteční a koncové hodnoty jsou tvořeny malým počtem vzorků a
           nelze je považovat za průkazné.
+        </p>
+        <p>
+          Zároveň může dojít k chybě při zadávání záznamu na kontrole, která se
+          projeví abnormálně starým vozidlem v grafu, přestože se v odpovídajím
+          roce ještě nevyrábělo.
         </p>
         <DefectsBySeverityAgeDriveTypeChart
           firstMake={firstMake}

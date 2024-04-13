@@ -141,7 +141,11 @@ export default function MotorsTable({
               }
             });
 
-          return parts.map((p) => <Tag color="blue">{p}</Tag>);
+          return parts.map((p) => (
+            <Tag key={p} color="blue">
+              {p}
+            </Tag>
+          ));
         } else {
           return <Tag color="blue">{drive_type}</Tag>;
         }
