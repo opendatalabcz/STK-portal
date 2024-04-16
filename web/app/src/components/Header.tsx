@@ -56,13 +56,8 @@ export default function Header() {
         position: "sticky",
         top: 0,
         zIndex: 10000, // Fixes overlapping maps and its controls.
-        // width: "100%",
         display: "flex",
         alignItems: "center",
-        // background: colorBgLayout,
-        // borderBottom: "1px",
-        // borderBottomColor: colorSplit,
-        // borderBottomStyle: "solid",
       }}
     >
       <div className="flex flex-row pr-8 md:pr-16">
@@ -83,15 +78,13 @@ export default function Header() {
           </h1>
         </Link>
       </div>
-      {/* 
-      <div className="grow"> */}
       <Menu
-        // theme="light"
         theme="dark"
         style={{
           display: "flex",
           alignItems: "center",
-          // background: colorBgLayout,
+          flex: 1,
+          minWidth: 0,
         }}
         mode="horizontal"
         defaultSelectedKeys={[firstLevelPath]}
@@ -121,7 +114,6 @@ export default function Header() {
           },
         ]}
       />
-      {/* </div> */}
     </AntHeader>
   );
 }

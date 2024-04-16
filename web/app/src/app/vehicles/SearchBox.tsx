@@ -11,8 +11,8 @@ export default function SearchBox({ initialValue }: { initialValue?: string }) {
   const [value, setValue] = useState(initialValue ?? "");
 
   function submit() {
-    if (value.length != 17) return;
-    router.push(`/vehicles/${value}`);
+    if (value.trim().length != 17) return;
+    router.push(`/vehicles/${value.trim().toUpperCase()}`);
   }
 
   return (

@@ -14,8 +14,8 @@ export default function SearchBox() {
     if (value.length == 0) return;
 
     // Simple regex to distinguish VIN
-    if (RegExp("[A-Z0-9]{17}").test(value)) {
-      router.push(`/vehicles/${value}`);
+    if (RegExp("[A-Za-z0-9]{17}").test(value.trim())) {
+      router.push(`/vehicles/${value.trim().toUpperCase()}`);
     } else {
       router.push(`/stations/search?q=${value}`);
     }
