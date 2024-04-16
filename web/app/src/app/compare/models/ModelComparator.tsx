@@ -14,10 +14,10 @@ export default function ModelComparator() {
   // const [firstModel, setFirstModel] = useState<string | undefined>(undefined);
   // const [secondMake, setSecondMake] = useState<string | undefined>(undefined);
   // const [secondModel, setSecondModel] = useState<string | undefined>(undefined);
-  const [firstMake, setFirstMake] = useState<string | undefined>("AUDI");
-  const [firstModel, setFirstModel] = useState<string | undefined>("A6");
-  const [secondMake, setSecondMake] = useState<string | undefined>("HONDA");
-  const [secondModel, setSecondModel] = useState<string | undefined>("CIVIC");
+  const [firstMake, setFirstMake] = useState<string | undefined>("ŠKODA");
+  const [firstModel, setFirstModel] = useState<string | undefined>("OCTAVIA");
+  const [secondMake, setSecondMake] = useState<string | undefined>("VW");
+  const [secondModel, setSecondModel] = useState<string | undefined>("GOLF");
   const [comparatorState, setComparatorState] = useState(ComparatorState.ready);
 
   return (

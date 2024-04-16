@@ -12,8 +12,8 @@ enum ComparatorState {
 }
 
 export default function VehicleComparator() {
-  const [firstVin, setFirstVin] = useState("SHHFK2760CU023083");
-  const [secondVin, setSecondVin] = useState("WAUZZZ4G1CN143262");
+  const [firstVin, setFirstVin] = useState("");
+  const [secondVin, setSecondVin] = useState("");
   const [comparatorState, setComparatorState] = useState(ComparatorState.ready);
 
   return (
@@ -24,7 +24,7 @@ export default function VehicleComparator() {
             value={firstVin}
             onChange={(e) => {
               setComparatorState(ComparatorState.ready);
-              setFirstVin(e.target.value);
+              setFirstVin(e.target.value.trim().toUpperCase());
             }}
             placeholder="VIN prvního vozidla"
           ></Input>
@@ -35,7 +35,7 @@ export default function VehicleComparator() {
             value={secondVin}
             onChange={(e) => {
               setComparatorState(ComparatorState.ready);
-              setSecondVin(e.target.value);
+              setSecondVin(e.target.value.trim().toUpperCase());
             }}
             placeholder="VIN druhého vozidla"
           ></Input>
