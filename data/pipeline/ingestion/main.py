@@ -8,7 +8,7 @@ from .vehicles.main import ingest as vehicles_ingest
 def ingest(conn: Connection):
     """Ingest all data sources."""
 
-    stations_ingest(conn)
-    defects_ingest(conn)
+    # stations_ingest(conn)
+    # defects_ingest(conn)
     inspections_ingest(conn)  # Requires stations and defects to be ingested.
     vehicles_ingest(conn.conn)  # Requires inspections to be ingested.

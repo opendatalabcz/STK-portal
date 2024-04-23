@@ -4,24 +4,26 @@ import pandas as pd
 from xml.etree import ElementTree as ET
 
 
-TABLE = 'defects'
+TABLE = "defects"
 
 
 def ingest(conn: Connection):
     """Ingest vehicle defects metadata.
-    
+
     Expects a `defects/defects.xml` file under INGESTION_SOURCES environment variable.
     The file should be obtained from https://zakonyprolidi.cz,
     the HTML table should be extracted to an XML file and renamed.
     """
 
-    print('Importing defects metadata')
+    print("Importing defects metadata")
 
-    data_dir = os.environ['INGESTION_SOURCES'] + '/defects' \
-        if 'INGESTION_SOURCES' in os.environ \
-        else '../sources/defect_list/data'
-    filename = f'{data_dir}/defect_list.xml' # TODO: Change
-    
+    data_dir = (
+        os.environ["INGESTION_SOURCES"] + "/defects"
+        if "INGESTION_SOURCES" in os.environ
+        else "../sources/defect_list/data"
+    )
+    filename = f"{data_dir}/defect_list.xml"  # TODO: Change
+
     # Cols for a table of concrete issues
     code = []
     description = []
@@ -31,7 +33,6 @@ def ingest(conn: Connection):
     # prefix = []
     # nazev = []
 
-
     root = ET.parse(filename).getroot()
     for row in root:
         # Table of concrete issues
@@ -39,7 +40,9 @@ def ingest(conn: Connection):
             code.append(row[1].text)
             description.append(row[2].text)
             type.append(row[3].text)
-        elif len(row) == 3 and len(row[2].text) == 1: # The second condition is for skipping section headings
+        elif (
+            len(row) == 3 and len(row[2].text) == 1  # type: ignore
+        ):  # The second condition is for skipping section headings
             code.append(row[0].text)
             description.append(row[1].text)
             type.append(row[2].text)
@@ -48,16 +51,11 @@ def ingest(conn: Connection):
         #     prefix.append(row[0].text[0])
         #     nazev.append(row[0].text.split(' ', maxsplit=1)[1].lower())
 
+    defects = pd.DataFrame({"code": code, "description": description, "type": type})
 
-    defects = pd.DataFrame({
-        'code': code,
-        'description': description,
-        'type': type
-    })
+    defects = defects.dropna(how="any", axis=0)
 
-    defects = defects.dropna(how='any', axis=0)
-
-    conn.execute(text(f'TRUNCATE TABLE {TABLE}'))
+    conn.execute(text(f"TRUNCATE TABLE {TABLE}"))
     conn.commit()
 
-    defects.to_sql(TABLE, conn, index=False, if_exists='append')
+    defects.to_sql(TABLE, conn, index=False, if_exists="append")

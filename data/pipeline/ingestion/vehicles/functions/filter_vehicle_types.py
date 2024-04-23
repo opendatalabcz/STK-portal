@@ -2,9 +2,9 @@ import pandas as pd
 
 
 types_to_retain = [
-    'OSOBNÍ AUTOMOBIL',
-    'NÁKLADNÍ AUTOMOBIL',
-    'MOTOCYKL',
+    "OSOBNÍ AUTOMOBIL",
+    "NÁKLADNÍ AUTOMOBIL",
+    "MOTOCYKL",
     # 'AUTOBUS'
 ]
 
@@ -12,4 +12,4 @@ types_to_retain = [
 
 
 def filter_vehicle_types(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
-    return df[df['primary_type'].isin(types_to_retain)]
+    return df[df["primary_type"].isin(types_to_retain)]

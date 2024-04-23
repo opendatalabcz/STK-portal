@@ -3,7 +3,9 @@ import numpy as np
 from datetime import datetime
 
 
-def parse_date_of_manufacture(df: pd.DataFrame, min_date: int, **kwargs) -> pd.DataFrame:
+def parse_date_of_manufacture(
+    df: pd.DataFrame, min_date: int, **kwargs
+) -> pd.DataFrame:
     this_year = datetime.now().year
 
     def process(x):
@@ -16,5 +18,5 @@ def parse_date_of_manufacture(df: pd.DataFrame, min_date: int, **kwargs) -> pd.D
         except:
             return np.nan
 
-    df['manufacture_year'] = df['manufacture_year'].apply(process)
+    df["manufacture_year"] = df["manufacture_year"].apply(process)
     return df

@@ -6,7 +6,7 @@ def parse(path):
     file = path
 
     # Remove newlines.
-    clean = open(file, encoding="utf8").read().replace("\n", "")
+    clean = open(file, encoding="utf8", mode="r").read().replace("\n", "")
     f = open(file, "w", encoding="utf8")
     f.write(clean)
     f.close()
