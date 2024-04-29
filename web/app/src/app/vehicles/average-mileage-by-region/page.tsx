@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import AverageMileageByRegionBrowser from "./AverageMileageByRegionBrowser";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Průměrný nájezd OA podle kraje - STK Portál",
+};
 
 export default function MakePopularityPage() {
   return (

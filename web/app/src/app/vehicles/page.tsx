@@ -16,6 +16,11 @@ import OperatingStateChart from "./operating-state/OperatingStateChart";
 import AverageMileageChart from "./average-mileage/AverageMileageChart";
 import AverageAgeOfImportedChart from "./average-age-of-imported/AverageAgeOfImportedChart";
 import ImportedVsNewRatioChart from "./imported-vs-new/ImportedVsNewRatioChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vozidla - STK Portál",
+};
 
 export default function VehiclesPage() {
   return (

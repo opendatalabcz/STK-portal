@@ -4,6 +4,11 @@ import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import ModelPopularityBrowser from "./ModelPopularityBrowser";
 import SelectedMakesPopularityChart from "./SelectedModelsPopularityBrowser";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Popularita modelů - STK Portál",
+};
 
 export default function MakePopularityPage() {
   return (

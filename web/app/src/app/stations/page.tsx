@@ -1,5 +1,3 @@
-"use client";
-
 import Card from "antd/es/card";
 import SearchBox from "./SearchBox";
 import Container from "@/components/Container";
@@ -18,6 +16,11 @@ import InspectionsOnFrequentDaysChart from "./anomalous-inspections-on-frequent-
 import InspectionsWithDissapearingFailuresChart from "./anomalous-inspections-disappearing-failures/InspectionsWithDissapearingFailuresChart";
 import RepeatedInspectionsChart from "./anomalous-inspections-repeated-success/RepeatedInspectionsChart";
 import dynamic from "next/dynamic";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stanice - STK Portál",
+};
 
 const Map = dynamic(() => import("./Map"), {
   ssr: false,

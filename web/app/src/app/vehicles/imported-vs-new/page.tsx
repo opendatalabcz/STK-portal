@@ -4,6 +4,11 @@ import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import ImportedVsNewRatioChart from "./ImportedVsNewRatioChart";
 import ImportedVsNewAbsoluteChart from "./ImportedVsNewAbsoluteChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Poměr nových a importovaných ojetých OA - STK Portál",
+};
 
 export default function ColorsPage() {
   return (

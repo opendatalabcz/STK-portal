@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import DefectsByCategoryBrowser from "./DefectsByCategoryBrowser";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nejčastější závady podle kategorie - STK Portál",
+};
 
 export default function InspectionResultByMakePage() {
   return (

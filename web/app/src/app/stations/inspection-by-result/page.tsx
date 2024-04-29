@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import TotalInspectionsByResultChart from "./AverageInspectionResultChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Počet kontrol podle výsledku - STK Portál",
+};
 
 export default function InspectionResultByMakePage() {
   return (

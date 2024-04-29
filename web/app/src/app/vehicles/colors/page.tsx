@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import ColorsChart from "./ColorsChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Podíl barev nově registrovaných vozidel - STK Portál",
+};
 
 export default function ColorsPage() {
   return (

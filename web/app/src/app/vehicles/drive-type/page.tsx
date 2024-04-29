@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import DriveTypeChart from "./DriveTypeChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Typ pohonu nově registrovaných vozidel - STK Portál",
+};
 
 export default function DriveTypePage() {
   return (

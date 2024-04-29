@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "antd/es/button";
 import Input from "antd/es/input";
 import { useRouter } from "next/navigation";

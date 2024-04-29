@@ -4,6 +4,11 @@ import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import AverageInspectionCountBySeverityBrowser from "./AverageInspectionCountBySeverityBrowser";
 import AverageSevereInspectionCountBrowser from "./AverageSevereInspectionCountBrowser";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Průměrný počet závad podle závažnosti - STK Portál",
+};
 
 export default function InspectionResultByMakePage() {
   return (

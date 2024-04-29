@@ -109,10 +109,9 @@ export default function Home() {
               </div>
 
               <p className="pt-6 leading-relaxed">
-                Vyhledávač umožňuje najít konkrétní vozidlo podle VIN (17 znaků,
-                velká písmena a číslice). Hledat lze také stanice technické
-                kontroly podle názvu, města nebo kontaktních údajů (telefon,
-                email).
+                Vyhledávač umožňuje najít konkrétní vozidlo podle VIN (17
+                znaků). Hledat lze také stanice technické kontroly podle názvu,
+                města nebo kontaktních údajů (telefon, email).
               </p>
 
               <SearchBox></SearchBox>
@@ -125,13 +124,13 @@ export default function Home() {
                 všech kontrolách nebo najděte konkrétní STK a její analýzu na
                 stránce <Link href="/stations">stanic</Link>.
               </p>
-              <div className="grid grid-cols-1 space-x-4 md:grid-cols-2">
-                <div className="w-96 sm:w-auto">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div>
                   <DefectsByCategoryLatestYearChart
                     linkToDetails
                   ></DefectsByCategoryLatestYearChart>
                 </div>
-                <div className="w-96 sm:w-auto">
+                <div>
                   <InspectionResultByTopMake
                     linkToDetails
                   ></InspectionResultByTopMake>
@@ -149,13 +148,13 @@ export default function Home() {
                 jsou importované ojetiny? Nejen to se dozvíte na stránce{" "}
                 <Link href="/vehicles">vozidel</Link>.
               </p>
-              <div className="grid grid-cols-1 space-x-4 md:grid-cols-2">
-                <div className="w-96 sm:w-auto">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div>
                   <ElectricDriveTypeChart
                     linkToDetails
                   ></ElectricDriveTypeChart>
                 </div>
-                <div className="w-96 sm:w-auto">
+                <div>
                   <ColorsChart linkToDetails></ColorsChart>
                 </div>
               </div>

@@ -4,6 +4,11 @@ import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import MileageByDriveTypeChart from "./MileageByDriveTypeChart";
 import MileageByDriveTypeStackedChart from "./MileageByDriveTypeStackedChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Celkový nájezd podle typu pohonu - STK Portál",
+};
 
 export default function EcologyPage() {
   return (

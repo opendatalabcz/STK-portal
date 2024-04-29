@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import AverageAgeChart from "./AverageAgeChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Průměrný věk osobních automobilů - STK Portál",
+};
 
 export default function DriveTypePage() {
   return (

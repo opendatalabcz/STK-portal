@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import { Content } from "antd/es/layout/layout";
 import Footer from "@/components/Footer";
 
-export default function StationsPage({
+export default function VehiclesPage({
   children,
 }: {
   children: React.ReactNode;

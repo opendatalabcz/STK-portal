@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import OperatingStateChart from "./OperatingStateChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Status vozidel - STK Portál",
+};
 
 export default async function DriveTypePage() {
   const data: Vehicle[] = await (

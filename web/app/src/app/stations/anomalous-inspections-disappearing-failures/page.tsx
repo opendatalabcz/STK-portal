@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import InspectionsWithDissapearingFailuresChart from "./InspectionsWithDissapearingFailuresChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Prohlídky s mizejícími závady - STK Portál",
+};
 
 export default function InspectionResultByMakePage() {
   return (

@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import AverageAgeOfImportedChart from "./AverageAgeOfImportedChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Průměrné stáří ojetin při importu - STK Portál",
+};
 
 export default function DriveTypePage() {
   return (

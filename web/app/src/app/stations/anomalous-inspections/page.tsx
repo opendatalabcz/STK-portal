@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import AnomalousInspectionsChart from "./AnomalousInspectionsChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Podíl všech anomálních kontrol - STK Portál",
+};
 
 export default function InspectionResultByMakePage() {
   return (

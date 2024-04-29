@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import InspectionsOnFrequentDaysChart from "./InspectionsOnFrequentDaysChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Prohlídky v nadměrně vytížených dnech - STK Portál",
+};
 
 export default function InspectionResultByMakePage() {
   return (

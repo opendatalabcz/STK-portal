@@ -43,10 +43,16 @@ export default function DefectSpan({ defect }: { defect: string }) {
   if (!isLoading) {
     return (
       <Tooltip title="Chybí popis závady">
-        <Link href={`/defects#${defect}`}>{defect}</Link>
+        <Link href={`/defects#${defect}`}>
+          <Tag color="gray">{defect}</Tag>
+        </Link>
       </Tooltip>
     );
   }
 
-  return <Link href={`/defects#${defect}`}>{defect}</Link>;
+  return (
+    <Link href={`/defects#${defect}`}>
+      <Tag color="gray">{defect}</Tag>
+    </Link>
+  );
 }

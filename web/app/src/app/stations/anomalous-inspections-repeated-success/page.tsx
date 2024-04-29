@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import RepeatedInspectionsChart from "./RepeatedInspectionsChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Prohlídky s úspěšným opakováním na jiné stanici - STK Portál",
+};
 
 export default function InspectionResultByMakePage() {
   return (

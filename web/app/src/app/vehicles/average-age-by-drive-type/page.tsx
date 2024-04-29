@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import AverageAgeByDriveTypeChart from "./AverageAgeByDriveTypeChart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Průměrný věk OA podle typu pohonu - STK Portál",
+};
 
 export default function DriveTypePage() {
   return (

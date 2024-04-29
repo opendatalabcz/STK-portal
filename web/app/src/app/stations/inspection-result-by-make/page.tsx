@@ -3,6 +3,11 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import InspectionResultByMakeBrowser from "./InspectionResultByMakeBrowser";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Poměrný výsledek prohlídek populárních značek - STK Portál",
+};
 
 export default function InspectionResultByMakePage() {
   return (
