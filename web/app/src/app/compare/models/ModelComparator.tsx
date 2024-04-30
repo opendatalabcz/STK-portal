@@ -1,4 +1,4 @@
-import { Button, Input, Spin } from "antd";
+import Button from "antd/es/button";
 import ModelInput from "./ModelInput";
 import { useState } from "react";
 import MakeInput from "./MakeInput";
@@ -10,10 +10,6 @@ enum ComparatorState {
 }
 
 export default function ModelComparator() {
-  // const [firstMake, setFirstMake] = useState<string | undefined>(undefined);
-  // const [firstModel, setFirstModel] = useState<string | undefined>(undefined);
-  // const [secondMake, setSecondMake] = useState<string | undefined>(undefined);
-  // const [secondModel, setSecondModel] = useState<string | undefined>(undefined);
   const [firstMake, setFirstMake] = useState<string | undefined>("ŠKODA");
   const [firstModel, setFirstModel] = useState<string | undefined>("OCTAVIA");
   const [secondMake, setSecondMake] = useState<string | undefined>("VW");

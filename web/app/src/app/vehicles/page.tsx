@@ -2,7 +2,6 @@ import SearchBox from "./SearchBox";
 import Container from "@/components/Container";
 import ColorsChart from "./colors/ColorsChart";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
-import { Breadcrumb, Card } from "antd";
 import Link from "next/link";
 import AverageAgeChart from "./average-age/AverageAgeChart";
 import AverageAgeByDriveTypeChart from "./average-age-by-drive-type/AverageAgeByDriveTypeChart";
@@ -17,6 +16,8 @@ import AverageMileageChart from "./average-mileage/AverageMileageChart";
 import AverageAgeOfImportedChart from "./average-age-of-imported/AverageAgeOfImportedChart";
 import ImportedVsNewRatioChart from "./imported-vs-new/ImportedVsNewRatioChart";
 import { Metadata } from "next";
+import Breadcrumb from "antd/es/breadcrumb";
+import Card from "antd/es/card";
 
 export const metadata: Metadata = {
   title: "Vozidla - STK Portál",

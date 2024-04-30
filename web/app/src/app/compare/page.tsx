@@ -1,7 +1,8 @@
 "use client";
 
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
-import { Breadcrumb, Segmented, Spin } from "antd";
+import Breadcrumb from "antd/es/breadcrumb";
+import Segmented from "antd/es/segmented";
 import Link from "next/link";
 import Container from "@/components/Container";
 import { useState } from "react";

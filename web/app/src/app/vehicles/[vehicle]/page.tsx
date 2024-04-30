@@ -1,10 +1,7 @@
 "use client";
 
-import { Breadcrumb, Card, Spin } from "antd";
-
 import Link from "next/link";
 import useSWR from "swr";
-import { useState } from "react";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import Container from "@/components/Container";
 import InspectionsTable from "./InspectionsTable";
@@ -14,6 +11,8 @@ import VehicleDetailsCard from "./VehicleDetailsCard";
 import SearchBox from "../SearchBox";
 import InspectionsOnFrequentDaysTable from "./InspectionsOnFrequentDaysTable";
 import VehicleGeneralCard from "./VehicleGeneralCard";
+import Breadcrumb from "antd/es/breadcrumb";
+import Spin from "antd/es/spin";
 
 export default function StationDetailPage({
   params: { vehicle },

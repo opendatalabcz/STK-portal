@@ -1,8 +1,8 @@
 "use client";
 
-import { Card } from "antd";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
+import Card from "antd/es/card";
 
 export type InspectionFailureReasonsData = {
   year: number;

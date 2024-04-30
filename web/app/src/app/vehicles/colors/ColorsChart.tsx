@@ -10,12 +10,10 @@ import {
   Tooltip,
   Legend,
   BarElement,
-  TooltipItem,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Card } from "antd";
+import Card from "antd/es/card";
 import {
-  blue,
   cyan,
   green,
   grey,

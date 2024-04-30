@@ -10,13 +10,12 @@ import {
   Title,
   Tooltip,
   Legend,
-  TooltipItem,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { Card } from "antd";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { cyan, red } from "@ant-design/colors";
 import { max, range } from "lodash";
+import Card from "antd/es/card/Card";
 
 ChartJS.register(
   CategoryScale,

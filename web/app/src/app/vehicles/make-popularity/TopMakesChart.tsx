@@ -11,7 +11,7 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Card } from "antd";
+import Card from "antd/es/card";
 import useSWR from "swr";
 import { red } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";

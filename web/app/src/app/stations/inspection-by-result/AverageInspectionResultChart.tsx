@@ -11,18 +11,10 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Card } from "antd";
-import {
-  cyan,
-  geekblue,
-  gold,
-  green,
-  lime,
-  red,
-  volcano,
-} from "@ant-design/colors";
+import { cyan, red } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
+import Card from "antd/es/card";
 
 ChartJS.register(
   CategoryScale,
@@ -50,9 +42,7 @@ export default function TotalInspectionsByResultChart({
     <Card
       size="small"
       title="Počet kontrol podle výsledku"
-      extra={
-        linkToDetails && <a href="/stations/inspection-by-result">Více</a>
-      }
+      extra={linkToDetails && <a href="/stations/inspection-by-result">Více</a>}
     >
       <div className="h-64 md:h-96">{_buildChart()}</div>
     </Card>

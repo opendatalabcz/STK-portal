@@ -1,4 +1,4 @@
-import { Breadcrumb } from "antd";
+import Breadcrumb from "antd/es/breadcrumb";
 import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";

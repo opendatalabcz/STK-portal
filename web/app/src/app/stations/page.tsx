@@ -2,7 +2,6 @@ import Card from "antd/es/card";
 import SearchBox from "./SearchBox";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
-import { Breadcrumb, Spin } from "antd";
 import Link from "next/link";
 import TotalInspectionsByResultChart from "./inspection-by-result/AverageInspectionResultChart";
 import InspectionResultByTopMake from "./inspection-result-by-make/InspectionResultByTopMake";
@@ -17,6 +16,8 @@ import InspectionsWithDissapearingFailuresChart from "./anomalous-inspections-di
 import RepeatedInspectionsChart from "./anomalous-inspections-repeated-success/RepeatedInspectionsChart";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
+import Breadcrumb from "antd/es/breadcrumb";
+import Spin from "antd/es/spin";
 
 export const metadata: Metadata = {
   title: "Stanice - STK Portál",

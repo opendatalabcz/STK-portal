@@ -1,7 +1,7 @@
-import { Card } from "antd";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { latestYear } from "@/years";
+import Card from "antd/es/card";
 
 interface IStringMap {
   [index: string]: string;

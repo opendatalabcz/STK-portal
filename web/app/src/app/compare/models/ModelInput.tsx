@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useMemo, useRef, useState } from "react";
-import { Select, Spin } from "antd";
+import Select from "antd/es/select";
+import Spin from "antd/es/spin";
 import type { SelectProps } from "antd";
 import { debounce } from "lodash";
 

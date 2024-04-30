@@ -12,7 +12,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { Card } from "antd";
+import Card from "antd/es/card";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { red } from "@ant-design/colors";
 

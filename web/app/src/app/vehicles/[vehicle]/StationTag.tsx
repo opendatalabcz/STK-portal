@@ -1,4 +1,5 @@
-import { Tag, Tooltip } from "antd";
+import Tag from "antd/es/tag";
+import Tooltip from "antd/es/tooltip";
 import Link from "next/link";
 import useSWR from "swr";
 

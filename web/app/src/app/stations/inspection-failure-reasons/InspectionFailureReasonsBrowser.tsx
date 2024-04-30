@@ -1,11 +1,12 @@
 "use client";
 
-import { Button, Card } from "antd";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { firstInspectionWithDefectsYear, latestYear } from "@/years";
+import Card from "antd/es/card";
+import Button from "antd/es/button";
 
 export type InspectionFailureReasonsData = {
   year: number;
@@ -21,11 +22,7 @@ export type InspectionFailureReasonsData = {
   top3_defect_count: number;
 };
 
-export default function InspectionFailureReasonsBrowser({
-  linkToDetails = false,
-}: {
-  linkToDetails?: boolean;
-}) {
+export default function InspectionFailureReasonsBrowser() {
   const [selectedYear, setSelectedYear] = useState<number>(latestYear);
 
   const { data: rawData } = useSWR(

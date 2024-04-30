@@ -1,6 +1,5 @@
 "use client";
 
-import { Breadcrumb, Spin } from "antd";
 import Card from "antd/es/card/Card";
 import {
   CarOutlined,
@@ -25,6 +24,8 @@ import TotalAnomalousInspectionsChart from "./TotalAnomalousInspectionsChart";
 import TotalAnomalousInspectionsDisplay from "./TotalAnomalousInspectionsDisplay";
 import InspectionsOnFrequentDaysChart from "./InspectionsOnFrequentDaysChart";
 import InspectionsOnFrequentDaysDisplay from "./InspectionsOnFrequentDaysDisplay";
+import Breadcrumb from "antd/es/breadcrumb";
+import Spin from "antd/es/spin";
 
 export default function StationDetailPage({
   params: { station },

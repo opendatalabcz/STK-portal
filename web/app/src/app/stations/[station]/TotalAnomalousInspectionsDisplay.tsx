@@ -1,6 +1,7 @@
 "use client";
 
-import { Card, Spin } from "antd";
+import Card from "antd/es/card";
+import Spin from "antd/es/spin";
 import useSWR from "swr";
 
 export type TotalAnomalousInspectionsData = {

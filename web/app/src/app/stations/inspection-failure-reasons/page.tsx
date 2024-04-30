@@ -1,9 +1,9 @@
-import { Breadcrumb } from "antd";
 import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import InspectionFailureReasonsBrowser from "./InspectionFailureReasonsBrowser";
 import { Metadata } from "next";
+import Breadcrumb from "antd/es/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Poměrný výsledek prohlídek populárních modelů - STK Portál",

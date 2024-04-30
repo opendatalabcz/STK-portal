@@ -1,6 +1,5 @@
-import { cyan, green, orange, red } from "@ant-design/colors";
-import { Card, Progress, ProgressProps, Table } from "antd";
-import { ColumnsType } from "antd/es/table";
+import { cyan, red } from "@ant-design/colors";
+import Card from "antd/es/card";
 import useSWR from "swr";
 import {
   Chart as ChartJS,

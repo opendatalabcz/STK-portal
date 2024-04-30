@@ -3,8 +3,7 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Card, ConfigProvider, Layout, Statistic } from "antd";
-import { Content } from "antd/es/layout/layout";
+import Layout, { Content } from "antd/es/layout/layout";
 import theme from "./themeConfig";
 import useSWR from "swr";
 import Container from "@/components/Container";
@@ -15,6 +14,9 @@ import { firstInspectionYear } from "@/years";
 import Link from "next/link";
 import ColorsChart from "./vehicles/colors/ColorsChart";
 import InspectionResultByTopMake from "./stations/inspection-result-by-make/InspectionResultByTopMake";
+import ConfigProvider from "antd/es/config-provider";
+import Card from "antd/es/card/Card";
+import Statistic from "antd/es/statistic";
 
 async function fetcher(key: string) {
   const res = await fetch(key, {

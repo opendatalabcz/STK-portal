@@ -1,6 +1,4 @@
-import { cyan, green, orange, red } from "@ant-design/colors";
-import { Card, Progress, ProgressProps, Table } from "antd";
-import { ColumnsType } from "antd/es/table";
+import { cyan, red } from "@ant-design/colors";
 import useSWR from "swr";
 import {
   Chart as ChartJS,
@@ -14,6 +12,7 @@ import {
 } from "chart.js";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { Line } from "react-chartjs-2";
+import Card from "antd/es/card";
 ChartJS.register(
   CategoryScale,
   LinearScale,

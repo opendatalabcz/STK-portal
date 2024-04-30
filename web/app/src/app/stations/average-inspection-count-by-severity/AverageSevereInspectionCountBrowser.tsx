@@ -11,14 +11,15 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Button, Card } from "antd";
 import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
 import useSWR from "swr";
 import { useState } from "react";
-import { cyan, red } from "@ant-design/colors";
+import { red } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { firstInspectionWithDefectsYear, latestYear } from "@/years";
 import { AverageInspectionCountBySeverityData } from "./AverageInspectionCountBySeverityChart";
+import Card from "antd/es/card";
+import Button from "antd/es/button";
 
 ChartJS.register(
   CategoryScale,
@@ -58,17 +59,7 @@ const options = {
         text: "Průměrný počet nebezpečných závad na prohlídce",
       },
       beginAtZero: true,
-      // position: "top",
     },
-    // A: {
-    //   grid: { display: false },
-    //   position: "bottom",
-    //   type: "linear",
-    //   title: {
-    //     display: true,
-    //     text: "Průměrný počet nebezpečných závad na prohlídce",
-    //   },
-    // },
   },
 };
 
@@ -99,18 +90,6 @@ export default function AverageSevereInspectionCountBrowser() {
   const data = {
     labels: rawData.map((item) => item.nuts3),
     datasets: [
-      // {
-      //   label: "Lehká",
-      //   data: rawData.map((item) => item.avg_defects_a),
-      //   axis: "y",
-      //   backgroundColor: cyan[4],
-      // },
-      // {
-      //   label: "Vážná",
-      //   data: rawData.map((item) => item.avg_defects_b),
-      //   axis: "y",
-      //   backgroundColor: cyan[7],
-      // },
       {
         label: "Nebezpečná",
         data: rawData.map((item) => item.avg_defects_c),

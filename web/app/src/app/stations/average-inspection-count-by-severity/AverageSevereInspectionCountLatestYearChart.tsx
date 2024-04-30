@@ -11,12 +11,12 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Card } from "antd";
 import useSWR from "swr";
-import { cyan, red } from "@ant-design/colors";
+import { red } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { latestYear } from "@/years";
 import { AverageInspectionCountBySeverityData } from "./AverageInspectionCountBySeverityChart";
+import Card from "antd/es/card";
 
 ChartJS.register(
   CategoryScale,

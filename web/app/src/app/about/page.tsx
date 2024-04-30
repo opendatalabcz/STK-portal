@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
-import { Breadcrumb, Divider, Tag } from "antd";
 import Link from "next/link";
+import Breadcrumb from "antd/es/breadcrumb";
 
 export default async function AboutPage() {
   return (

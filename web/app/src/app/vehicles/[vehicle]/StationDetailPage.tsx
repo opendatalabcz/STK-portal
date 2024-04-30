@@ -1,5 +1,4 @@
 "use client";
-import { Breadcrumb, Card, Spin } from "antd";
 import {
   CarOutlined,
   NumberOutlined,
@@ -14,6 +13,9 @@ import Container from "@/components/Container";
 import InspectionsTable from "./InspectionsTable";
 import DefectPredictionTable from "./DefectPredictionTable";
 import MileageChart from "./MileageChart";
+import Breadcrumb from "antd/es/breadcrumb";
+import Spin from "antd/es/spin";
+import Card from "antd/es/card";
 
 interface IStringMap {
   [index: string]: string;

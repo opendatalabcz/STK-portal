@@ -11,12 +11,10 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Button, Card } from "antd";
 import { cyan, red } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
-import { useState } from "react";
-import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
+import Card from "antd/es/card";
 
 ChartJS.register(
   CategoryScale,
@@ -102,7 +100,6 @@ export default function RepeatedInspectionsChart({
             display: true,
             text: "Počet stanic",
           },
-          // beginAtZero: true,
         },
       },
       plugins: {

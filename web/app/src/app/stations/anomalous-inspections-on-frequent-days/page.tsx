@@ -1,9 +1,9 @@
-import { Breadcrumb } from "antd";
 import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import InspectionsOnFrequentDaysChart from "./InspectionsOnFrequentDaysChart";
 import { Metadata } from "next";
+import Breadcrumb from "antd/es/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Prohlídky v nadměrně vytížených dnech - STK Portál",

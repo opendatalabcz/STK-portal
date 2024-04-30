@@ -1,5 +1,7 @@
-import { cyan, green, orange, red } from "@ant-design/colors";
-import { ConfigProvider, Progress, ProgressProps, Table } from "antd";
+import { green, orange, red } from "@ant-design/colors";
+import ConfigProvider from "antd/es/config-provider";
+import Progress, { ProgressProps } from "antd/es/progress";
+import Table from "antd/es/table";
 import { ColumnsType } from "antd/es/table";
 import useSWR from "swr";
 

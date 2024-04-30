@@ -1,9 +1,9 @@
-import { Breadcrumb } from "antd";
 import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import TotalInspectionsByResultChart from "./AverageInspectionResultChart";
 import { Metadata } from "next";
+import Breadcrumb from "antd/es/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Počet kontrol podle výsledku - STK Portál",

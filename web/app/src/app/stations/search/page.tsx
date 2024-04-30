@@ -1,6 +1,5 @@
 "use client";
 
-import { Breadcrumb, Spin } from "antd";
 import { useSearchParams } from "next/navigation";
 import useSWR from "swr";
 import SearchBox from "../SearchBox";
@@ -8,6 +7,8 @@ import SearchResult from "./SearchResult";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import Link from "next/link";
+import Breadcrumb from "antd/es/breadcrumb";
+import Spin from "antd/es/spin";
 
 export default function StationDetailPage() {
   const query = useSearchParams().get("q");

@@ -11,7 +11,6 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Button, Card } from "antd";
 import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
 import useSWR from "swr";
 import { useState } from "react";
@@ -19,6 +18,8 @@ import { cyan, red } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { firstInspectionYear, latestYear } from "@/years";
 import { InspectionSuccessData } from "./InspectionResultByTopMake";
+import Card from "antd/es/card";
+import Button from "antd/es/button";
 
 ChartJS.register(
   CategoryScale,

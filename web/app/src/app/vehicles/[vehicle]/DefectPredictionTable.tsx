@@ -1,6 +1,6 @@
-import { cyan, green, orange, red } from "@ant-design/colors";
-import { Progress, ProgressProps, Table } from "antd";
-import { ColumnsType } from "antd/es/table";
+import { green, orange, red } from "@ant-design/colors";
+import Progress, { ProgressProps } from "antd/es/progress";
+import Table, { ColumnsType } from "antd/es/table";
 import useSWR from "swr";
 
 type DefectPredictionData = {

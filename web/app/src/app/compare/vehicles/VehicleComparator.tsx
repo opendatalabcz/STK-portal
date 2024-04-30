@@ -1,4 +1,6 @@
-import { Button, Input, Spin } from "antd";
+import Button from "antd/es/button";
+import Input from "antd/es/input";
+import Spin from "antd/es/spin";
 import { useState } from "react";
 import Comparison from "./Comparison";
 

@@ -11,12 +11,13 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Button, Card } from "antd";
 import { cyan } from "@ant-design/colors";
 import useSWR from "swr";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { useState } from "react";
 import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
+import Card from "antd/es/card";
+import Button from "antd/es/button";
 
 ChartJS.register(
   CategoryScale,
@@ -122,15 +123,7 @@ export default function InspectionFrequencyBrowser({
         intersect: false,
       },
       scales: {
-        x: {
-          // stacked: true,
-          // title: {
-          //   display: true,
-          //   text: "Den",
-          // },
-        },
         y: {
-          // stacked: true,
           title: {
             display: true,
             text: "Počet prohlídek",

@@ -1,9 +1,9 @@
-import { Breadcrumb } from "antd";
 import Link from "next/link";
 import Container from "@/components/Container";
 import BreadcrumbsContainer from "@/components/BreadcrumbsContainer";
 import DefectsByCategoryBrowser from "./DefectsByCategoryBrowser";
 import { Metadata } from "next";
+import Breadcrumb from "antd/es/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Nejčastější závady podle kategorie - STK Portál",

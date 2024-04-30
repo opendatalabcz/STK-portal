@@ -1,4 +1,5 @@
-import { Spin, Table, Tag } from "antd";
+import Table from "antd/es/table";
+import Tag from "antd/es/tag";
 import { ColumnsType } from "antd/es/table";
 import useSWR from "swr";
 

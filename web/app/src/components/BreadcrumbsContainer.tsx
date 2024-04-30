@@ -1,5 +1,3 @@
-import Breadcrumb from "antd/es/breadcrumb/Breadcrumb";
-
 export default function BreadcrumbsContainer({
   children,
 }: {

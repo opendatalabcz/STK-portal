@@ -1,7 +1,5 @@
 import useSWR from "swr";
-import DefectSpan from "./DefectTag";
-import { Table, Tag } from "antd";
-import { ColumnsType } from "antd/es/table";
+import Table, { ColumnsType } from "antd/es/table";
 import StationTag from "./StationTag";
 
 type InspectionOnFrequentDayData = {

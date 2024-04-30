@@ -12,9 +12,9 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { Card } from "antd";
 import { cyan, grey, red } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
+import Card from "antd/es/card";
 
 ChartJS.register(
   CategoryScale,
@@ -69,11 +69,6 @@ export default function AverageAgeByDriveTypeChart({
     const options = {
       responsive: true,
       maintainAspectRatio: false,
-      // plugins: {
-      //   legend: {
-      //     display: false,
-      //   },
-      // },
       scales: {
         x: {
           title: {

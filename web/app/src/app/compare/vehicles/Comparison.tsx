@@ -1,12 +1,6 @@
-import DefectPredictionTable from "@/app/vehicles/[vehicle]/DefectPredictionTable";
 import InspectionsTable from "@/app/vehicles/[vehicle]/InspectionsTable";
 import { latestYear } from "@/years";
-import {
-  CarOutlined,
-  NumberOutlined,
-  CalendarOutlined,
-} from "@ant-design/icons";
-import { Spin } from "antd";
+import Spin from "antd/es/spin";
 import useSWR from "swr";
 import DoubleDefectPredictionTable from "./DoubleDefectPredictionTable";
 import DoubleMileageChart from "./DoubleMileageChart";

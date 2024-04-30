@@ -1,4 +1,5 @@
-import { Card, Spin, Statistic } from "antd";
+import Statistic from "antd/es/statistic";
+import Spin from "antd/es/spin";
 import useSWR from "swr";
 
 export default function VehicleCounter({
@@ -8,7 +9,7 @@ export default function VehicleCounter({
   make: string;
   model: string;
 }) {
-  const { data: vehicleCount, isLoading: vehicleCountIsLoading } = useSWR(
+  const { data: vehicleCount } = useSWR(
     `/api/vehicles?make=eq.${make}&model_primary=eq.${model}`,
     async (key: string) => {
       const res = await fetch(key, {

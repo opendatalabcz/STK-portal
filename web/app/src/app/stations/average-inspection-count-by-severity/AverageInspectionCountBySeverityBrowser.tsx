@@ -11,14 +11,15 @@ import {
   BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { Button, Card } from "antd";
 import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
 import useSWR from "swr";
 import { useState } from "react";
-import { cyan, red } from "@ant-design/colors";
+import { cyan } from "@ant-design/colors";
 import ChartPlaceholder from "@/components/ChartPlaceholder";
 import { firstInspectionWithDefectsYear, latestYear } from "@/years";
 import { AverageInspectionCountBySeverityData } from "./AverageInspectionCountBySeverityChart";
+import Card from "antd/es/card";
+import Button from "antd/es/button";
 
 ChartJS.register(
   CategoryScale,
@@ -57,17 +58,7 @@ const options = {
         text: "Průměrný počet lehkých a vážných závad na prohlídce",
       },
       beginAtZero: true,
-      // position: "top",
     },
-    // A: {
-    //   grid: { display: false },
-    //   position: "bottom",
-    //   type: "linear",
-    //   title: {
-    //     display: true,
-    //     text: "Průměrný počet nebezpečných závad na prohlídce",
-    //   },
-    // },
   },
 };
 

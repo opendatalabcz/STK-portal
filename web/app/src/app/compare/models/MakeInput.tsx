@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useMemo, useRef, useState } from "react";
-import { Select, Spin } from "antd";
-import type { SelectProps } from "antd";
+import Select, { SelectProps } from "antd/es/select";
+import Spin from "antd/es/spin";
 import { debounce } from "lodash";
 
 export interface DebounceSelectProps<ValueType = any>
