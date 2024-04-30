@@ -1,4 +1,5 @@
 {
-    "python.analysis.typeCheckingMode": "off",
-    "jupyter.kernels.filter": []
+    "python.analysis.typeCheckingMode": "basic",
+    "jupyter.kernels.filter": [],
+    "python.analysis.autoImportCompletions": true
 }

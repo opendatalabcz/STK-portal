@@ -25,7 +25,7 @@
     - [x] Anomální prohlídky
       - [x] Podíl anomálních a normálních kontrol
       - [x] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
-- [ ] Vozidla
+- [x] Vozidla
   - [x] Proměny vozového parku v čase
     - [x] Průměrné stáří
     - [x] Typ pohonu
@@ -37,21 +37,16 @@
   - [x] Ekologie
     - [x] Poměr nájezdů podle paliva
   - [x] Migrace
-  - [ ] Detail vozidla
+  - [x] Detail vozidla
     - [x] Najeté kilometry a jejich predikce
     - [x] Závady a jejich predikce
-    - [ ] Příslušnost do flotily
-- [ ] Srovnání a výběr
-  - [ ] Popularita
-  - [ ] Srovnání parametrů
-  - [ ] Srovnání spolehlivosti
-  - [ ] Finální verdikt
+- [x] Srovnávač
 
 ## Funkce webu
 
 - [x] Hlavní stránka
   - [x] Statistiky databáze
-  - [ ] Chytrý vyhledávač, který akceptuje VIN a detaily stanic (číslo, PSČ, ...)
+  - [x] Chytrý vyhledávač, který akceptuje VIN a detaily stanic (číslo, PSČ, ...)
 - [x] Stanice
   - [x] Vyhledávač stanic
   - [x] Mapa stanic
@@ -71,10 +66,9 @@
     - [x] Anomální prohlídky
       - [x] Podíl anomálních a normálních kontrol
       - [x] Další vysvětlení (čas, délka prohlídky, najeté kilometry?)
-- [ ] Vozidla
-  - [ ] Vyhledávač vozidel
+- [x] Vozidla
+  - [x] Vyhledávač vozidel
     - [x] Klasické vyhledávání
-    - [ ] VIN scanner pro mobilní web
   - [x] Proměny vozového parku v čase
     - [x] Průměrné stáří
     - [x] Typ pohonu
@@ -85,18 +79,12 @@
   - [x] Ekologie
     - [x] Poměr nájezdů podle paliva
   - [x] Migrace
-  - [ ] Detail vozidla
+  - [x] Detail vozidla
     - [x] Základní informace o vozidle
     - [x] Historie kontrol
     - [x] Najeté kilometry a jejich predikce
     - [x] Závady a jejich predikce
-    - [ ] Příslušnost do flotily
-- [ ] Srovnání a výběr
-  - [ ] Výběr vozidel ke srovnání
-  - [ ] Popularita
-  - [ ] Srovnání parametrů
-  - [ ] Srovnání spolehlivosti
-  - [ ] Finální verdikt
+- [x] Srovnávač
 
 ## Ostatní
 

@@ -1,4 +1,5 @@
 # STK Portál
-Portál sloužící k ověření vozidla pomocí STK prohlídek
+
+Informační portál o vozidlech v ČR a jejich prohlídkách na STK.
 
 [Progress tracker](PROGRESS.md)
