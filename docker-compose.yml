@@ -103,7 +103,7 @@ services:
     image: swaggerapi/swagger-ui
     restart: unless-stopped
     ports:
-      - 5053:8080
+      - 5054:8080
     environment:
       API_URL: ${API_DOMAIN:?API domain name incl. scheme}:${API_PORT:?API port}/
 
