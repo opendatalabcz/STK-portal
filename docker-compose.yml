@@ -82,7 +82,7 @@ services:
     networks:
       - frontend
     ports:
-      - "5053:3000"
+      - "${WEB_PORT:?Web server port}:3000"
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -94,7 +94,7 @@ services:
     networks:
       - backend
     ports:
-      - 5050:80
+      - ${PGADMIN_PORT:?PgAdmin port}:80
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:?PgAdmin email}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:?PgAdmin password}
@@ -103,7 +103,7 @@ services:
     image: swaggerapi/swagger-ui
     restart: unless-stopped
     ports:
-      - 5054:8080
+      - ${SWAGGER_PORT:?Swagger UI port}:8080
     environment:
       API_URL: ${API_DOMAIN:?API domain name incl. scheme}:${API_PORT:?API port}/
 
