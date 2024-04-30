@@ -68,7 +68,6 @@ functions = [
     stations_inspection_success_by_model,
     stations_top_makes_by_station,
     stations_top_models_by_station,
-    stations_total_anomalies,  # Depends on stations_inspections_on_frequent_days, stations_repeated_inspections_on_different_station, stations_dissapearing_failures
     vehicles_average_age_by_drive_type,  # Depends on vehicles_estimated_end_of_life
     vehicles_average_age_of_imported,  # Depends on vehicles_estimated_end_of_life
     vehicles_average_age,  # Depends on vehicles_estimated_end_of_life
@@ -84,9 +83,10 @@ functions = [
     vehicles_model_popularity,
     vehicles_motors_by_model,
     vehicles_operating_state,
+    stations_total_anomalies,  # Depends on stations_inspections_on_frequent_days, stations_repeated_inspections_on_different_station, stations_dissapearing_failures
     #### CatBoost models last in this order
-    # vehicles_defect_prediction,
-    # vehicles_mileage_prediction,  # Depends on vehicles_defect_prediction
+    vehicles_defect_prediction,
+    vehicles_mileage_prediction,  # Depends on vehicles_defect_prediction
 ]
 
 

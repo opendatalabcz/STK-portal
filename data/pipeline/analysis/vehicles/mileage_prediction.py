@@ -77,4 +77,3 @@ def vehicles_mileage_prediction(conn: Connection):
         processed += batch_size
 
     conn.grant_api_rights("vehicles_mileage_prediction")
-    conn.conn.commit()

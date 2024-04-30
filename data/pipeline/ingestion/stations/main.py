@@ -76,20 +76,23 @@ def ingest(conn: Connection):
 
     # Obtain geo coordinates using https://geolokator.profinit.cz/
     print("  - Finding coordinates for addresses")
+    try:
 
-    # Prepare session.
-    # session = requests.Session()
-    # r = session.get("https://geolokator.profinit.cz/")
-    # token = re.search(
-    #     r'name="csrf_token"type="hidden"value="([^"]+)">',
-    #     r.text.replace("\n", "").replace(" ", ""),
-    #     re.MULTILINE,
-    # ).group(1)
+        # Prepare session.
+        session = requests.Session()
+        r = session.get("https://geolokator.profinit.cz/")
+        token = re.search(
+            r'name="csrf_token"type="hidden"value="([^"]+)">',
+            r.text.replace("\n", "").replace(" ", ""),
+            re.MULTILINE,
+        ).group(1)
 
-    # stations[["latitude", "longitude"]] = stations.apply(
-    #     get_coords, axis=1, result_type="expand", session=session, token=token
-    # )
-    stations[["latitude", "longitude"]] = None
+        stations[["latitude", "longitude"]] = stations.apply(
+            get_coords, axis=1, result_type="expand", session=session, token=token
+        )
+    except:
+        print("    - Failed to find coordinates using geolokator.profinit.cz")
+        stations[["latitude", "longitude"]] = None
 
     # Add pure text fields for full-text-search.
     stations["inspection_types_fts"] = stations["inspection_types"].apply(

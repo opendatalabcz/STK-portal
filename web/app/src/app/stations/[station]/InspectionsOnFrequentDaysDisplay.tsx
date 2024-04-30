@@ -15,7 +15,7 @@ export default function InspectionsOnFrequentDaysDisplay({
   station: string;
 }) {
   const { data: thisStationCount } = useSWR(
-    `/api/inspections_on_frequent_days_by_station?station_id=eq.${station}`,
+    `/api/stations_inspections_on_frequent_days_by_station?station_id=eq.${station}`,
     async (key) => {
       const res = await fetch(key);
       const data: InspectionsOnFrequentDaysData[] = await res.json();

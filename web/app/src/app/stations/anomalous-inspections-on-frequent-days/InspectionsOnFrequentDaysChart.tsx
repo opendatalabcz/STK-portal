@@ -37,7 +37,7 @@ export default function InspectionsOnFrequentDaysChart({
   linkToDetails?: boolean;
 }) {
   const { data: rawData } = useSWR(
-    `/api/inspections_on_frequent_days_by_station_histogram?order=hundreds.asc`,
+    `/api/stations_inspections_on_frequent_days_by_station_histogram?order=hundreds.asc`,
     async (key) => {
       const res = await fetch(key);
       const data: InspectionsOnFrequentDaysHistogramData[] = await res.json();

@@ -251,4 +251,3 @@ def vehicles_defect_prediction(conn: Connection):
         processed += batch_size
 
     conn.grant_api_rights("vehicles_defect_prediction")
-    conn.conn.commit()

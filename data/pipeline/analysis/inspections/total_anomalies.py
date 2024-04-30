@@ -6,18 +6,19 @@ def stations_total_anomalies(db: Connection):
     # Counts by station
     db.conn.execute(
         text(
-            """DROP MATERIALIZED VIEW IF EXISTS public.stations_total_anomalies_by_station;
-DROP MATERIALIZED VIEW IF EXISTS public.stations_total_anomalies_by_station_histogram;
+            """DROP MATERIALIZED VIEW IF EXISTS public.stations_total_anomalies_by_station_histogram;
+DROP MATERIALIZED VIEW IF EXISTS public.stations_total_anomalies_by_station;
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.stations_total_anomalies_by_station
 TABLESPACE pg_default
 AS
  SELECT sdf.station_id,
-    sdf.count + sri.count AS anomalous,
+    sdf.count + sri.count + sif.count AS anomalous,
     ic.count AS total,
-    (sdf.count + sri.count)::double precision / ic.count::double precision AS ratio
+    (sdf.count + sri.count + sif.count)::double precision / ic.count::double precision AS ratio
    FROM stations_dissapearing_failures_by_station sdf
      JOIN stations_repeated_inspections_on_different_station sri ON sdf.station_id = sri.station_id
+     JOIN stations_inspections_on_frequent_days_by_station sif ON sdf.station_id = sif.station_id
      JOIN ( SELECT inspections.station_id,
             count(*) AS count
            FROM inspections
