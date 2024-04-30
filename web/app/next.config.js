@@ -4,13 +4,15 @@ const nextConfig = {
         return [
             {
                 source: '/api/:route',
-                destination: 'http://127.0.0.1:5052/:route',
+                destination: (process.env.API_URL ?? 'http://127.0.0.1:5052') + '/:route',
             },
         ]
     },
     env: {
-        api: 'http://127.0.0.1:5052',
-    }
+        api: process.env.API_URL ?? 'http://127.0.0.1:5052',
+    },
+    // Docker configuration
+    output: "standalone",
 }
 
 module.exports = nextConfig

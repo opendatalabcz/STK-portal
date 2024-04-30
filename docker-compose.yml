@@ -1,5 +1,3 @@
-# Base services used both in development and production
-
 version: "3.9"
 
 services:
@@ -8,19 +6,14 @@ services:
     restart: unless-stopped
     volumes:
       - postgres:/var/lib/postgresql/data
-      # - ./storage/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
     ports:
-      - 5051:5432
+      - ${POSTGRES_PORT?Postgres port}:5432
     networks:
       - backend
     environment:
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD?Postgres password}
-      POSTGRES_USER: ${POSTGRES_USER?Postgres username}
-      POSTGRES_DB: ${POSTGRES_DB?Postgres DB name}
-      # # Variables for the init script.
-      # POSTGREST_USER: ${POSTGREST_USER?PostgREST authenticator username}
-      # POSTGREST_PASSWORD: ${POSTGREST_PASSWORD?PostgREST authenticator password}
-      # POSTGREST_ANON_ROLE: ${POSTGREST_ANON_ROLE?PostgREST anon role}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Postgres password}
+      POSTGRES_USER: ${POSTGRES_USER:?Postgres username}
+      POSTGRES_DB: ${POSTGRES_DB:?Postgres DB name}
     healthcheck:
       test: pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"
       interval: 15s
@@ -47,27 +40,59 @@ services:
     depends_on:
       - postgres
     restart: unless-stopped
+    ports:
+      - ${API_PORT:?API port}:3000
+    networks:
+      - backend
+      - frontend
+    environment:
+      PGRST_DB_URI: postgres://${POSTGREST_USER:?PostgREST username}:${POSTGREST_PASSWORD:?PostgREST password}@postgres:5432/${POSTGRES_DB:?PostgREST database name}
+      PGRST_DB_SCHEMA: ${POSTGREST_SCHEMA:?PostgREST database schema}
+      PGRST_DB_ANON_ROLE: ${POSTGREST_ANON_ROLE:?PostgREST anon role}
+      PGRST_OPENAPI_SERVER_PROXY_URI: ${API_DOMAIN:?API domain name incl. scheme}:${API_PORT:?API port}
+      # Limit the maximum row count in all responses, 1500 being a little bit
+      # more than what's required to read all defects at once.
+      PGRST_DB_MAX_ROWS: 1500
+
+  web:
+    build:
+      context: web/app
+      args:
+        # This env variable used in next.config.js can only be set during build.
+        # But since you can't access the running api at this URL while building,
+        # SSG at build time is not usable in Next.js 
+        - API_URL=http://api:3000
+      network: host
+    depends_on:
+      - api
+    restart: unless-stopped
+    networks:
+      - frontend
+    ports:
+      - "5053:3000"
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    volumes:
+      - pgadmin:/var/lib/pgadmin
     networks:
       - backend
     ports:
-      - 5052:3000
+      - 5050:80
     environment:
-      PGRST_DB_URI: postgres://${POSTGREST_USER?}:${POSTGREST_PASSWORD?}@postgres:5432/${POSTGRES_DB?}
-      PGRST_DB_SCHEMA: ${POSTGREST_SCHEMA?}
-      PGRST_DB_ANON_ROLE: ${POSTGREST_ANON_ROLE?}
-      PGRST_OPENAPI_SERVER_PROXY_URI: http://127.0.0.1:5052
-      # Limit the maximum row count in all responses, 1500 being a little bit
-      # more than what's required to read all defects in one go.
-      PGRST_DB_MAX_ROWS: 1500
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:?PgAdmin email}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:?PgAdmin password}
 
   swagger:
     image: swaggerapi/swagger-ui
+    restart: unless-stopped
     ports:
       - 5053:8080
-    networks:
-      - backend
     environment:
-      API_URL: http://127.0.0.1:5052/
+      API_URL: ${API_DOMAIN:?API domain name incl. scheme}:${API_PORT:?API port}/
 
 volumes:
   postgres:
@@ -76,3 +101,4 @@ volumes:
 
 networks:
   backend:
+  frontend:
