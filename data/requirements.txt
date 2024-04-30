@@ -3,5 +3,5 @@ sqlalchemy
 pandas
 openpyxl
 geopy
-requests # for geopy adapter
+requests
 catboost

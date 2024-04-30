@@ -5,7 +5,7 @@ import pandas as pd
 from sqlalchemy import Connection as SqlAlchemyConnection, text
 
 from common.db import Connection
-from .defect_prediciton import add_drive_type_features, impute_missing_values, load_data
+from .defect_prediction import add_drive_type_features, impute_missing_values, load_data
 
 
 def predict(X: pd.DataFrame, model_path: str):
@@ -55,12 +55,7 @@ def pipeline(conn: SqlAlchemyConnection, offset: int, limit: int, model_path: st
 
 def vehicles_mileage_prediction(conn: Connection):
     # Get model paths.
-    data_dir = (
-        os.environ["PRECOMPUTED_DATA"] + "/mileage_prediction/"
-        if "PRECOMPUTED_DATA" in os.environ
-        else "data/precomputed/mileage_prediction/"
-    )
-    model_path = data_dir + f"model"
+    model_path = os.environ["PRECOMPUTED_DATA"] + "/mileage_prediction/model"
 
     # Clear table.
     conn.conn.execute(text("DROP TABLE IF EXISTS vehicles_mileage_prediction"))
@@ -75,7 +70,7 @@ def vehicles_mileage_prediction(conn: Connection):
     processed = 0
     batch_size = 1000000
     while processed < total_data:
-        print(f"  - Processed {processed} out of {total_data} records")
+        print(f"  - Processed {processed} out of {total_data} vehicles")
         pipeline(
             conn=conn.conn, offset=processed, limit=batch_size, model_path=model_path
         )

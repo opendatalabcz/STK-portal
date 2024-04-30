@@ -1,12 +1,10 @@
 import os
-import time
 import re
 import requests
-from sqlalchemy import Connection, text
+from sqlalchemy import text
 import pandas as pd
-from geopy.geocoders import Nominatim
-from geopy.adapters import RequestsAdapter
-from geopy.extra.rate_limiter import RateLimiter
+
+from common.db import Connection
 
 
 TABLE = "stations"
@@ -54,14 +52,8 @@ def ingest(conn: Connection):
 
     print("  - Parsing input")
 
-    data_dir = (
-        os.environ["INGESTION_SOURCES"] + "/stations"
-        if "INGESTION_SOURCES" in os.environ
-        else "../sources/station_list/data"
-    )
-
     stations = pd.read_excel(
-        f"{data_dir}/Aktualni-data-STK-na-web-MD-2023-04.xlsx",  # TODO: Change
+        os.environ["STATIONS_SOURCE"],
         skiprows=[0, 1],
         usecols="A:H,K",
         names=[
@@ -86,17 +78,18 @@ def ingest(conn: Connection):
     print("  - Finding coordinates for addresses")
 
     # Prepare session.
-    session = requests.Session()
-    r = session.get("https://geolokator.profinit.cz/")
-    token = re.search(
-        r'name="csrf_token"type="hidden"value="([^"]+)">',
-        r.text.replace("\n", "").replace(" ", ""),
-        re.MULTILINE,
-    ).group(1)
+    # session = requests.Session()
+    # r = session.get("https://geolokator.profinit.cz/")
+    # token = re.search(
+    #     r'name="csrf_token"type="hidden"value="([^"]+)">',
+    #     r.text.replace("\n", "").replace(" ", ""),
+    #     re.MULTILINE,
+    # ).group(1)
 
-    stations[["latitude", "longitude"]] = stations.apply(
-        get_coords, axis=1, result_type="expand", session=session, token=token
-    )
+    # stations[["latitude", "longitude"]] = stations.apply(
+    #     get_coords, axis=1, result_type="expand", session=session, token=token
+    # )
+    stations[["latitude", "longitude"]] = None
 
     # Add pure text fields for full-text-search.
     stations["inspection_types_fts"] = stations["inspection_types"].apply(
@@ -105,10 +98,12 @@ def ingest(conn: Connection):
     stations["emails_fts"] = stations["emails"].apply(join_array_type)
     stations["phones_fts"] = stations["phones"].apply(join_array_type)
 
-    conn.execute(text(f"TRUNCATE TABLE {TABLE}"))
-    conn.commit()
-
-    stations.to_sql(TABLE, conn, index=False, if_exists="append")
+    try:
+        conn.conn.execute(text(f"TRUNCATE TABLE {TABLE}"))
+    except:
+        conn.conn.rollback()
+    stations.to_sql(TABLE, conn.conn, index=False, if_exists="append")
+    conn.grant_api_rights(TABLE)
 
 
 # pyright: reportOptionalMemberAccess=false

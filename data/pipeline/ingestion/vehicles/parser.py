@@ -34,7 +34,7 @@ def parse_mandatory_columns(filepath: str) -> pd.DataFrame:
     )
 
 
-def parse(filepath: str, start: int, chunk_size: int):
+def parse(filepath: str, start: int, batch_size: int):
     cols = [
         "Rok výroby",
         "Stav",
@@ -141,7 +141,7 @@ def parse(filepath: str, start: int, chunk_size: int):
             encoding="cp1250",
             encoding_errors="ignore",
             skiprows=range(1, start),  # Keep the header.
-            nrows=chunk_size,
+            nrows=batch_size,
         )
     else:
         df = pd.read_csv(
@@ -156,7 +156,7 @@ def parse(filepath: str, start: int, chunk_size: int):
             decimal=",",
             encoding="cp1250",
             encoding_errors="ignore",
-            nrows=chunk_size,
+            nrows=batch_size,
         )
 
     return df.rename(

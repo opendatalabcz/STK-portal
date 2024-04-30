@@ -33,4 +33,5 @@ GRANT ALL ON TABLE public.inspections_avg_success_by_model_age TO postgres;
 GRANT SELECT ON TABLE public.inspections_avg_success_by_model_age TO web_anon;
 """
         )
-    ).all()
+    )
+    db.conn.commit()

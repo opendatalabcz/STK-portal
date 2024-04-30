@@ -37,7 +37,7 @@ from .vehicles.average_mileage import vehicles_average_mileage
 from .vehicles.average_mileage_by_age import vehicles_average_mileage_by_age
 from .vehicles.average_mileage_by_region import vehicles_average_mileage_by_region
 from .vehicles.colors import vehicles_colors
-from .vehicles.defect_prediciton import vehicles_defect_prediction
+from .vehicles.defect_prediction import vehicles_defect_prediction
 from .vehicles.drive_type import vehicles_drive_type
 from .vehicles.estimated_end_of_life import vehicles_estimated_end_of_life
 from .vehicles.imported_vs_new import vehicles_imported_vs_new
@@ -50,8 +50,11 @@ from .vehicles.motors_by_model import vehicles_motors_by_model
 from .vehicles.operating_state import vehicles_operating_state
 
 functions = [
-    #### Dependencies first.
+    #### Dependencies first (parallelizable).
     vehicles_estimated_end_of_life,
+    stations_dissapearing_failures,
+    stations_inspections_on_frequent_days,
+    stations_repeated_inspections_on_different_station,
     #### The (parallelizable) rest.
     stations_average_defects_by_severity_model_age,
     stations_average_inspection_count_by_severity_by_nuts3,
@@ -60,15 +63,12 @@ functions = [
     stations_average_success_by_model_age,
     stations_defect_counts_by_category,
     stations_defect_counts,
-    stations_dissapearing_failures,
     stations_inspection_failure_reasons,
     stations_inspection_success_by_make,
     stations_inspection_success_by_model,
-    stations_inspections_on_frequent_days,
-    stations_repeated_inspections_on_different_station,
     stations_top_makes_by_station,
     stations_top_models_by_station,
-    stations_total_anomalies,  # Depends on stations_inspections_on_frequent_days, stations_repeated_inspections_on_different_station
+    stations_total_anomalies,  # Depends on stations_inspections_on_frequent_days, stations_repeated_inspections_on_different_station, stations_dissapearing_failures
     vehicles_average_age_by_drive_type,  # Depends on vehicles_estimated_end_of_life
     vehicles_average_age_of_imported,  # Depends on vehicles_estimated_end_of_life
     vehicles_average_age,  # Depends on vehicles_estimated_end_of_life
@@ -76,16 +76,17 @@ functions = [
     vehicles_average_mileage_by_age,
     vehicles_average_mileage_by_region,
     vehicles_colors,
-    vehicles_defect_prediction,
     vehicles_drive_type,
     vehicles_imported_vs_new,
     vehicles_make_model_list,
     vehicles_make_popularity,
     vehicles_mileage_by_drive_type,
-    vehicles_mileage_prediction,  # Depends on vehicles_defect_prediction
     vehicles_model_popularity,
     vehicles_motors_by_model,
     vehicles_operating_state,
+    #### CatBoost models last in this order
+    # vehicles_defect_prediction,
+    # vehicles_mileage_prediction,  # Depends on vehicles_defect_prediction
 ]
 
 

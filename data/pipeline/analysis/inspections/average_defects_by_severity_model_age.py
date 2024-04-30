@@ -30,4 +30,5 @@ GRANT ALL ON TABLE public.inspections_avg_defects_by_severity_model_age TO postg
 GRANT SELECT ON TABLE public.inspections_avg_defects_by_severity_model_age TO web_anon;
 """
         )
-    ).all()
+    )
+    db.conn.commit()

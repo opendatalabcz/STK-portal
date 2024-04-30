@@ -30,4 +30,5 @@ COMMENT ON MATERIALIZED VIEW public.vehicles_motors_by_model
 GRANT ALL ON TABLE public.vehicles_motors_by_model TO postgres;
 GRANT SELECT ON TABLE public.vehicles_motors_by_model TO web_anon;"""
         )
-    ).all()
+    )
+    db.conn.commit()

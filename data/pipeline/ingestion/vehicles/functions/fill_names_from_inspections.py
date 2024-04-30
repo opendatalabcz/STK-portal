@@ -51,7 +51,7 @@ def fill_names_from_inspections(df: pd.DataFrame, conn: Connection, **kwargs):
     df["make"] = np.array(makes)
     df["model_primary"] = np.array(models)
 
-    print(added_makes)
-    print(added_models)
+    # print(added_makes)
+    # print(added_models)
 
     return df

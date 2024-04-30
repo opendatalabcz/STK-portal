@@ -41,15 +41,15 @@ def ingest(conn: Connection):
     # Prepare table.
     conn.execute(
         text(
-            """DROP TABLE IF EXISTS public.vehicles;
+            """DROP TABLE IF EXISTS public.vehicles CASCADE;
             
 CREATE TABLE IF NOT EXISTS public.vehicles
 (
     vin text COLLATE pg_catalog."default" NOT NULL,
 	manufacture_year double precision,
     operating_state text COLLATE pg_catalog."default" NOT NULL,
-    first_registration date without time zone,
-    first_registration_cz date without time zone,
+    first_registration date,
+    first_registration_cz date,
     primary_type text COLLATE pg_catalog."default",
     secondary_type text COLLATE pg_catalog."default",
     category text COLLATE pg_catalog."default",
@@ -102,12 +102,7 @@ GRANT SELECT ON TABLE public.vehicles TO web_anon;"""
     )
     conn.commit()
 
-    data_dir = (
-        os.environ["INGESTION_SOURCES"] + "/vehicles"
-        if "INGESTION_SOURCES" in os.environ
-        else "data/sources/vehicles/data/nosync"
-    )
-    filename = f"{data_dir}/registr_silnicnich_vozidel_2023-02-24.csv"  # TODO: Change
+    filename = os.environ["VEHICLES_SOURCE"]
 
     print("  - Loading mandatory full columns")
     print("    - Parsing")
@@ -118,14 +113,14 @@ GRANT SELECT ON TABLE public.vehicles TO web_anon;"""
     print("  - Loading remaining columns in batches")
 
     # Process in batches to conserve RAM.
-    chunk_size = 1000000
+    batch_size = 1000000
     start = 0
     i = 1
     rows = int(subprocess.check_output(["wc", "-l", filename]).split()[0]) - 1
-    chunks = math.ceil(rows / chunk_size)
+    batches = math.ceil(rows / batch_size)
     while start <= rows:
-        print(f"    - Chunk {i} of {chunks}")
-        chunk = parse(filename, start, chunk_size)
+        print(f"    - Batch {i} of {batches}")
+        chunk = parse(filename, start, batch_size)
         for fn in pipeline:
             # print(f'      - {fn.__name__}')
             chunk = fn(
@@ -136,7 +131,7 @@ GRANT SELECT ON TABLE public.vehicles TO web_anon;"""
             )
         chunk.to_sql(TABLE, conn, index=False, if_exists="append")
         i += 1
-        start += chunk_size
+        start += batch_size
 
     # Remove duplicates across chunks.
     conn.execute(

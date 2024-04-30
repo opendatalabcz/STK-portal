@@ -6,9 +6,9 @@ def stations_dissapearing_failures(db: Connection):
     # Counts by station
     db.conn.execute(
         text(
-            """DROP MATERIALIZED VIEW IF EXISTS public.stations_dissapearing_failures_by_station_histogram;
-DROP MATERIALIZED VIEW IF EXISTS public.stations_dissapearing_failures_inspection_list;
-DROP MATERIALIZED VIEW IF EXISTS public.stations_dissapearing_failures_by_station;
+            """DROP MATERIALIZED VIEW IF EXISTS public.stations_dissapearing_failures_by_station CASCADE;
+DROP MATERIALIZED VIEW IF EXISTS public.stations_dissapearing_failures_inspection_list CASCADE;
+DROP MATERIALIZED VIEW IF EXISTS public.stations_dissapearing_failures_by_station_histogram CASCADE;
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.stations_dissapearing_failures_by_station
 TABLESPACE pg_default
@@ -35,7 +35,7 @@ COMMENT ON MATERIALIZED VIEW public.stations_dissapearing_failures_by_station
 GRANT ALL ON TABLE public.stations_dissapearing_failures_by_station TO postgres;
 GRANT SELECT ON TABLE public.stations_dissapearing_failures_by_station TO web_anon;"""
         )
-    ).all()
+    )
 
     # Inspection list
     db.conn.execute(
@@ -63,7 +63,7 @@ COMMENT ON MATERIALIZED VIEW public.stations_dissapearing_failures_inspection_li
 GRANT ALL ON TABLE public.stations_dissapearing_failures_inspection_list TO postgres;
 GRANT SELECT ON TABLE public.stations_dissapearing_failures_inspection_list TO web_anon;"""
         )
-    ).all()
+    )
 
     # Histogram
     db.conn.execute(
@@ -71,7 +71,7 @@ GRANT SELECT ON TABLE public.stations_dissapearing_failures_inspection_list TO w
             """CREATE MATERIALIZED VIEW IF NOT EXISTS public.stations_dissapearing_failures_by_station_histogram
 TABLESPACE pg_default
 AS
- SELECT trunc((stations_dissapearing_failures_by_station.count / 10)::double precision) AS hundreds,
+ SELECT trunc((stations_dissapearing_failures_by_station.count / 10)::double precision) AS tens,
     count(*) AS count
    FROM stations_dissapearing_failures_by_station
   GROUP BY (trunc((stations_dissapearing_failures_by_station.count / 10)::double precision))
@@ -87,4 +87,5 @@ COMMENT ON MATERIALIZED VIEW public.stations_dissapearing_failures_by_station_hi
 GRANT ALL ON TABLE public.stations_dissapearing_failures_by_station_histogram TO postgres;
 GRANT SELECT ON TABLE public.stations_dissapearing_failures_by_station_histogram TO web_anon;"""
         )
-    ).all()
+    )
+    db.conn.commit()

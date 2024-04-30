@@ -184,7 +184,7 @@ def predict(X: pd.DataFrame, model_paths: list[str]):
     preds = []
 
     for model_path in model_paths:
-        print("    " + model_path)
+        print("      - Defect category " + model_path[-1])
         model = CatBoostClassifier()
         model.load_model(model_path)
 
@@ -201,7 +201,6 @@ def pipeline(
     # Load batch.
     df = load_data(conn, offset, limit)
 
-    # print("  preprocess")
     # Preprocess data.
     df = add_drive_type_features(df)
     df = impute_missing_values(df)
@@ -210,11 +209,9 @@ def pipeline(
     df = df.drop(columns=["vin", "drive_type"])
 
     print("    - Predicting")
-    # Predict.
     preds = predict(df, model_paths)
 
     # Assemble dataframe with predictions and write to DB.
-    # print("  assemble")
     result = pd.concat(
         [vin] + [pd.Series(np.array(pred)[:, 1]) for pred in preds], axis=1
     )
@@ -223,7 +220,6 @@ def pipeline(
     result.to_sql(
         con=conn, name="vehicles_defect_prediction", if_exists="append", index=False
     )
-    # print("  commit")
     conn.commit()
 
 
@@ -232,11 +228,7 @@ def vehicles_defect_prediction(conn: Connection):
     conn.conn.commit()
 
     # Get model paths.
-    data_dir = (
-        os.environ["PRECOMPUTED_DATA"] + "/defect_prediction/"
-        if "PRECOMPUTED_DATA" in os.environ
-        else "data/precomputed/defect_prediction/"
-    )
+    data_dir = os.environ["PRECOMPUTED_DATA"] + "/defect_prediction/"
     model_paths = [data_dir + f"model_{i}" for i in range(0, 7)]
 
     # Clear table.
@@ -252,7 +244,7 @@ def vehicles_defect_prediction(conn: Connection):
     processed = 0
     batch_size = 1000000
     while processed < total_data:
-        print(f"  - Processed {processed} out of {total_data} records")
+        print(f"  - Processed {processed} out of {total_data} vehicles")
         pipeline(
             conn=conn.conn, offset=processed, limit=batch_size, model_paths=model_paths
         )

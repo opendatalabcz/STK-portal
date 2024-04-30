@@ -21,4 +21,5 @@ ALTER TABLE IF EXISTS public.models
 GRANT ALL ON TABLE public.models TO postgres;
 GRANT SELECT ON TABLE public.models TO web_anon;"""
         )
-    ).all()
+    )
+    db.conn.commit()

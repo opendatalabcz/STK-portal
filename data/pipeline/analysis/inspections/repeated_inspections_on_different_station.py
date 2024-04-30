@@ -6,9 +6,9 @@ def stations_repeated_inspections_on_different_station(db: Connection):
     # Counts by station
     db.conn.execute(
         text(
-            """DROP MATERIALIZED VIEW IF EXISTS public.stations_repeated_inspections_on_different_station_histogram;
-DROP MATERIALIZED VIEW IF EXISTS public.stations_repeated_inspections_on_different_station_list;
-DROP MATERIALIZED VIEW IF EXISTS public.stations_repeated_inspections_on_different_station;
+            """DROP MATERIALIZED VIEW IF EXISTS public.stations_repeated_inspections_on_different_station CASCADE;
+DROP MATERIALIZED VIEW IF EXISTS public.stations_repeated_inspections_on_different_station_histogram CASCADE;
+DROP MATERIALIZED VIEW IF EXISTS public.stations_repeated_inspections_on_different_station_list CASCADE;
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.stations_repeated_inspections_on_different_station
 TABLESPACE pg_default
@@ -32,7 +32,7 @@ COMMENT ON MATERIALIZED VIEW public.stations_repeated_inspections_on_different_s
 GRANT ALL ON TABLE public.stations_repeated_inspections_on_different_station TO postgres;
 GRANT SELECT ON TABLE public.stations_repeated_inspections_on_different_station TO web_anon;"""
         )
-    ).all()
+    )
 
     # Inspection list
     db.conn.execute(
@@ -56,7 +56,7 @@ COMMENT ON MATERIALIZED VIEW public.stations_repeated_inspections_on_different_s
 GRANT ALL ON TABLE public.stations_repeated_inspections_on_different_station_list TO postgres;
 GRANT SELECT ON TABLE public.stations_repeated_inspections_on_different_station_list TO web_anon;"""
         )
-    ).all()
+    )
 
     # Histogram
     db.conn.execute(
@@ -80,4 +80,5 @@ COMMENT ON MATERIALIZED VIEW public.stations_repeated_inspections_on_different_s
 GRANT ALL ON TABLE public.stations_repeated_inspections_on_different_station_histogram TO postgres;
 GRANT SELECT ON TABLE public.stations_repeated_inspections_on_different_station_histogram TO web_anon;"""
         )
-    ).all()
+    )
+    db.conn.commit()

@@ -27,4 +27,5 @@ COMMENT ON MATERIALIZED VIEW public.vehicles_average_mileage_by_age
 GRANT ALL ON TABLE public.vehicles_average_mileage_by_age TO postgres;
 GRANT SELECT ON TABLE public.vehicles_average_mileage_by_age TO web_anon;"""
         )
-    ).all()
+    )
+    db.conn.commit()

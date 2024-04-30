@@ -5,10 +5,7 @@ import os
 import sys
 
 current = os.path.dirname(os.path.realpath(__file__))
-# parent = os.path.dirname(current)
 sys.path.append(current)
-print(current)
-
 
 from .common.db import Connection
 from .ingestion.main import ingest
@@ -28,8 +25,9 @@ async def main():
     ingest(conn)
 
     print()
-    print("# Analysis")
-    analyze(conn)
+    if "SKIP_ANALYSIS" not in os.environ or os.environ["SKIP_ANALYSIS"] != "1":
+        print("# Analysis")
+        analyze(conn)
 
 
 if __name__ == "__main__":

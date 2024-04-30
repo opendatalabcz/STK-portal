@@ -1,7 +1,9 @@
 import os
-from sqlalchemy import Connection, text
+from sqlalchemy import text
 import pandas as pd
 from xml.etree import ElementTree as ET
+
+from common.db import Connection
 
 
 TABLE = "defects"
@@ -17,12 +19,7 @@ def ingest(conn: Connection):
 
     print("Importing defects metadata")
 
-    data_dir = (
-        os.environ["INGESTION_SOURCES"] + "/defects"
-        if "INGESTION_SOURCES" in os.environ
-        else "../sources/defect_list/data"
-    )
-    filename = f"{data_dir}/defect_list.xml"  # TODO: Change
+    filename = os.environ["DEFECTS_SOURCE"]
 
     # Cols for a table of concrete issues
     code = []
@@ -55,7 +52,6 @@ def ingest(conn: Connection):
 
     defects = defects.dropna(how="any", axis=0)
 
-    conn.execute(text(f"TRUNCATE TABLE {TABLE}"))
-    conn.commit()
-
-    defects.to_sql(TABLE, conn, index=False, if_exists="append")
+    conn.conn.execute(text(f"DROP TABLE IF EXISTS {TABLE}"))
+    defects.to_sql(TABLE, conn.conn, index=False, if_exists="append")
+    conn.grant_api_rights(TABLE)

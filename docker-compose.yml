@@ -20,20 +20,33 @@ services:
       timeout: 2s
       retries: 10
 
-  pgadmin:
-    image: dpage/pgadmin4
+  data:
+    build: data
     depends_on:
       - postgres
     restart: unless-stopped
     volumes:
-      - pgadmin:/var/lib/pgadmin
-    ports:
-      - 5050:80
+      - ./data/sources:/app/data/sources
+      - ./data/precomputed:/app/data/precomputed:ro
     networks:
       - backend
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL?PgAdmin email}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD?PgAdmin password}
+      POSTGRES_HOST: postgres:5432
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Postgres password}
+      POSTGRES_USER: ${POSTGRES_USER:?Postgres username}
+      POSTGRES_DB: ${POSTGRES_DB:?Postgres DB name}
+      
+      # Uncomment to skip analysis and only perform ingestion.
+      # SKIP_ANALYSIS: 1
+      
+      # Data source directories, comment out to skip ingestion.
+      DEFECTS_SOURCE: ${DEFECTS_SOURCE}
+      INSPECTIONS_SOURCE_DIR: ${INSPECTIONS_SOURCE_DIR}
+      STATIONS_SOURCE: ${STATIONS_SOURCE}
+      # VEHICLES_SOURCE: ${VEHICLES_SOURCE}
+
+      # Precomputed models directory
+      PRECOMPUTED_DATA: /app/data/precomputed
 
   api:
     image: postgrest/postgrest:latest

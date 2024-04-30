@@ -6,8 +6,8 @@ def stations_total_anomalies(db: Connection):
     # Counts by station
     db.conn.execute(
         text(
-            """DROP MATERIALIZED VIEW IF EXISTS public.stations_total_anomalies_by_station_histogram;
-            DROP MATERIALIZED VIEW IF EXISTS public.stations_total_anomalies_by_station;
+            """DROP MATERIALIZED VIEW IF EXISTS public.stations_total_anomalies_by_station;
+DROP MATERIALIZED VIEW IF EXISTS public.stations_total_anomalies_by_station_histogram;
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.stations_total_anomalies_by_station
 TABLESPACE pg_default
@@ -33,7 +33,7 @@ COMMENT ON MATERIALIZED VIEW public.stations_total_anomalies_by_station
 GRANT ALL ON TABLE public.stations_total_anomalies_by_station TO postgres;
 GRANT SELECT ON TABLE public.stations_total_anomalies_by_station TO web_anon;"""
         )
-    ).all()
+    )
 
     # Histogram
     db.conn.execute(
@@ -57,4 +57,5 @@ COMMENT ON MATERIALIZED VIEW public.stations_total_anomalies_by_station_histogra
 GRANT ALL ON TABLE public.stations_total_anomalies_by_station_histogram TO postgres;
 GRANT SELECT ON TABLE public.stations_total_anomalies_by_station_histogram TO web_anon;"""
         )
-    ).all()
+    )
+    db.conn.commit()

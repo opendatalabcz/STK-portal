@@ -49,11 +49,7 @@ def get_record_files() -> OrderedDict[datetime.date, str]:
 
     Expects a directory with `<whatever>/Data_Prohlidek_<year>_<month>.xml` files."""
 
-    data_dir = (
-        os.environ["INGESTION_SOURCES"] + "/inspections"
-        if "INGESTION_SOURCES" in os.environ
-        else "data/sources/inspections/data/nosync/data_raw"
-    )  # TODO: Remove in production.
+    data_dir = os.environ["INSPECTIONS_SOURCE_DIR"]
 
     files = {}
 
@@ -89,7 +85,12 @@ def ingest(conn: Connection):
     # Prepare table
     conn.conn.execute(
         text(
-            """CREATE TABLE IF NOT EXISTS public.inspections
+            """CREATE SEQUENCE IF NOT EXISTS public.inspections_id_seq;
+
+ALTER SEQUENCE public.inspections_id_seq
+    OWNER TO postgres;
+            
+            CREATE TABLE IF NOT EXISTS public.inspections
 (
     station_id text COLLATE pg_catalog."default" NOT NULL,
     date date NOT NULL,

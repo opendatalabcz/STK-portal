@@ -6,9 +6,9 @@ def stations_inspections_on_frequent_days(db: Connection):
     # Inspection list.
     db.conn.execute(
         text(
-            """DROP MATERIALIZED VIEW IF EXISTS public.inspections_on_frequent_days_by_station_histogram;
-DROP MATERIALIZED VIEW IF EXISTS public.inspections_on_frequent_days_by_station;
-DROP MATERIALIZED VIEW IF EXISTS public.inspections_on_frequent_days;
+            """DROP MATERIALIZED VIEW IF EXISTS public.inspections_on_frequent_days CASCADE;
+DROP MATERIALIZED VIEW IF EXISTS public.inspections_on_frequent_days_by_station CASCADE;
+DROP MATERIALIZED VIEW IF EXISTS public.inspections_on_frequent_days_by_station_histogram CASCADE;
 
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.inspections_on_frequent_days
 TABLESPACE pg_default
@@ -62,7 +62,7 @@ COMMENT ON MATERIALIZED VIEW public.inspections_on_frequent_days
 GRANT ALL ON TABLE public.inspections_on_frequent_days TO postgres;
 GRANT SELECT ON TABLE public.inspections_on_frequent_days TO web_anon;"""
         )
-    ).all()
+    )
 
     # Count by stations.
     db.conn.execute(
@@ -85,7 +85,7 @@ COMMENT ON MATERIALIZED VIEW public.inspections_on_frequent_days_by_station
 GRANT ALL ON TABLE public.inspections_on_frequent_days_by_station TO postgres;
 GRANT SELECT ON TABLE public.inspections_on_frequent_days_by_station TO web_anon;"""
         )
-    ).all()
+    )
 
     # Histogram of counts by stations.
     db.conn.execute(
@@ -109,4 +109,5 @@ COMMENT ON MATERIALIZED VIEW public.inspections_on_frequent_days_by_station_hist
 GRANT ALL ON TABLE public.inspections_on_frequent_days_by_station_histogram TO postgres;
 GRANT SELECT ON TABLE public.inspections_on_frequent_days_by_station_histogram TO web_anon;"""
         )
-    ).all()
+    )
+    db.conn.commit()

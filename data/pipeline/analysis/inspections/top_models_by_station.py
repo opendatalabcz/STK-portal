@@ -22,4 +22,5 @@ GRANT ALL ON TABLE public.stations_top_models_by_station TO postgres;
 GRANT SELECT ON TABLE public.stations_top_models_by_station TO web_anon;
 """
         )
-    ).all()
+    )
+    db.conn.commit()
