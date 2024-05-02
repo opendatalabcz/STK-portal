@@ -22,15 +22,23 @@ export default function Footer() {
           >
             OpenDataLab
           </a>{" "}
-          2024, portál vznikl jako{" "}
+          2024,{" "}
           <a
+            href="https://www.linkedin.com/in/daniel-brotz/"
+            target="_blank"
+            className="underline underline-offset-2 decoration-dotted decoration-1"
+          >
+            Daniel Brotz
+          </a>
+          . Portál vznikl jako{" "}
+          {/* <a
             href=""
             target="_blank"
             className="underline underline-offset-2 decoration-dotted decoration-1"
           >
             diplomová práce
-          </a>{" "}
-          na{" "}
+          </a>{" "} */}
+          diplomová práce na{" "}
           <a
             href="https://fit.cvut.cz/"
             target="_blank"

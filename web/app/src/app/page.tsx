@@ -69,7 +69,7 @@ export default function Home() {
                 vozového parku a prohlídek na STK. Portál nabízí také srovnávač
                 konkrétních vozidel i značek a modelů celkově. To vše na základě
                 dat z registru silničních vozidel a záznamů o prohlídkách na STK
-                zveřejněných Ministerstvem dopravy ČR a dalšími subjekty.{" "}
+                zveřejněných Ministerstvem dopravy ČR.{" "}
                 <Link href="/about">Více o portálu a datech...</Link>
               </p>
 
