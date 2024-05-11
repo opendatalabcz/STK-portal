@@ -41,6 +41,7 @@ export default function MileageChart({ vehicle }: { vehicle: string }) {
       async (key) => {
         const res = await fetch(key);
         const data: Inspection[] = await res.json();
+        console.log(data);
         return data;
       }
     );
@@ -62,9 +63,7 @@ export default function MileageChart({ vehicle }: { vehicle: string }) {
     }
 
     if (inspectionData == undefined || mileagePredictionData == undefined) {
-      return (
-        <p>Predikce není k dispozici kvůli chybějícím datům o prohlídkách.</p>
-      );
+      return <p>Predikce není k dispozici kvůli nedostatku dat.</p>;
     }
 
     const options = {
@@ -104,6 +103,10 @@ export default function MileageChart({ vehicle }: { vehicle: string }) {
     const regularInspections = inspectionData.filter(
       (e) => e.inspection_type == "regular"
     );
+
+    if (regularInspections.length == 0) {
+      return <p>Predikce není k dispozici kvůli nedostatku dat.</p>;
+    }
 
     const data = {
       labels: [
