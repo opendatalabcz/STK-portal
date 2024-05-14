@@ -70,13 +70,7 @@ export default function StationDetailPage({
                   {/* <p>
                   Kód {data.id.substring(0, 2)}.{data.id.substring(2, 5)}
                 </p> */}
-                  <p>
-                    Kontroluje{" "}
-                    {data.inspection_types
-                      .substring(1, data.inspection_types.length - 1)
-                      .split(",")
-                      .join(", ")}
-                  </p>
+                  <p>Kontroluje {data.inspection_types.join(", ")}</p>
                 </div>
               </div>
               <hr className="my-2"></hr>
@@ -93,27 +87,21 @@ export default function StationDetailPage({
               <div className="flex items-start space-x-2">
                 <PhoneOutlined className="mt-1" />
                 <div>
-                  {data.phones
-                    .substring(1, data.phones.length - 1)
-                    .split(",")
-                    .map((p) => (
-                      <p key={p}>
-                        <a href={`tel:${p}`}>{p}</a>
-                      </p>
-                    ))}
+                  {data.phones.map((p) => (
+                    <p key={p}>
+                      <a href={`tel:${p}`}>{p}</a>
+                    </p>
+                  ))}
                 </div>
               </div>
               <div className="flex items-start space-x-2">
                 <MailOutlined className="mt-1" />
                 <div>
-                  {data.emails
-                    .substring(1, data.emails.length - 1)
-                    .split(",")
-                    .map((m) => (
-                      <p key={m}>
-                        <a href={`mailto:${m}`}>{m}</a>
-                      </p>
-                    ))}
+                  {data.emails.map((m) => (
+                    <p key={m}>
+                      <a href={`mailto:${m}`}>{m}</a>
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>
