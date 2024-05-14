@@ -37,7 +37,6 @@ export default function StationDetailPage({
     async (key) => {
       const res = await fetch(key);
       const data: Station[] = await res.json();
-      console.log(data);
       return data[0];
     }
   );

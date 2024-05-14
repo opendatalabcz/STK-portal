@@ -10,6 +10,8 @@ const nextConfig = {
     },
     env: {
         api: process.env.API_URL ?? 'http://127.0.0.1:5052',
+        MATOMO_URL: process.env.MATOMO_URL,
+        MATOMO_SITE_ID: process.env.MATOMO_SITE_ID,
     },
     // Docker configuration
     output: "standalone",

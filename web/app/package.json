@@ -11,6 +11,7 @@
   "dependencies": {
     "@ant-design/colors": "^7.0.0",
     "@react-leaflet/core": "^2.1.0",
+    "@socialgouv/matomo-next": "^1.9.0",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",

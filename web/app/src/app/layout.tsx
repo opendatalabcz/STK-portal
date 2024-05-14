@@ -2,6 +2,7 @@ import "./globals.css";
 import StyledComponentsRegistry from "./AntdRegistry";
 import { IBM_Plex_Sans } from "next/font/google";
 import App from "antd/es/app";
+import Matomo from "./Matomo";
 
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ["500", "700"],
@@ -58,6 +59,7 @@ export default function RootLayout({
           <App className="flex min-h-screen">{children}</App>
           {/* </ConfigProvider> */}
         </StyledComponentsRegistry>
+        <Matomo />
       </body>
     </html>
   );

@@ -29,7 +29,7 @@ services:
     build: data
     depends_on:
       - postgres
-    restart: unless-stopped
+    restart: no
     volumes:
       - ./data/sources:/app/data/sources
       - ./data/precomputed:/app/data/precomputed:ro
@@ -76,10 +76,12 @@ services:
     build:
       context: web/app
       args:
-        # This env variable used in next.config.js can only be set during build.
+        # These env variables used in next.config.js can only be set during build.
         # But since you can't access the running api at this URL while building,
         # SSG at build time is not usable in Next.js 
         - API_URL=http://api:3000
+        - MATOMO_URL=${MATOMO_URL:?Matomo URL}
+        - MATOMO_SITE_ID=${MATOMO_SITE_ID:?Matomo site ID}
       network: host
     depends_on:
       - api

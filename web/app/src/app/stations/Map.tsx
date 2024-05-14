@@ -15,7 +15,6 @@ export default function LazyMap() {
     async (key) => {
       const res = await fetch(key);
       const data: Station[] = await res.json();
-      console.log(data);
       return data;
     }
   );

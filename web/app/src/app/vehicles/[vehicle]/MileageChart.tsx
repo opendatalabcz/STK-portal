@@ -41,7 +41,6 @@ export default function MileageChart({ vehicle }: { vehicle: string }) {
       async (key) => {
         const res = await fetch(key);
         const data: Inspection[] = await res.json();
-        console.log(data);
         return data;
       }
     );

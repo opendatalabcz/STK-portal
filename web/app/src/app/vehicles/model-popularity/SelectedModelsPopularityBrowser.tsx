@@ -182,7 +182,6 @@ export default function SelectedModelsPopularityBrowser() {
     async (key) => {
       const res = await fetch(key);
       const data: ModelPopularityData[] = await res.json();
-      console.log(data);
       return data;
     }
   );
