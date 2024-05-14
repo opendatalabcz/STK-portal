@@ -33,8 +33,8 @@ export default function DriveTypePage() {
             <a href="https://portal.sda-cia.cz/stat.php?v#rok=2023&mesic=12&kat=stav&vyb=&upr=&obd=m&jine=false&lang=CZ&str=vpp">
               Svazu dovozců automobilů
             </a>{" "}
-            bylo průměrné stáří osobního automobilu činilo v roce 2022 15,93
-            roku. Tato významná odchylka může být zapříčiněná dvěma faktory.
+            průměrné stáří osobního automobilu činilo v roce 2022 15,93 roku.
+            Tato významná odchylka může být zapříčiněná dvěma faktory.
           </p>
 
           <p>

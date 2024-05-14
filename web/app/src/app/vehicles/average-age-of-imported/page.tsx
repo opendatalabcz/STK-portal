@@ -51,7 +51,7 @@ export default function DriveTypePage() {
 
           <p>
             Pokud bychom snížili požadovaný rozdíl mezi daty registrace na 90
-            dní, hodnoty by se snížila zhruba o 0,2 roku. Přidali-li bychom
+            dní, hodnoty by se snížily zhruba o 0,2 roku. Přidali-li bychom
             požadavek na minimální zjištěný nájezd při evidenční kontrole na
             1000 kilometrů, hodnota by se mírně zvýšila zhruba o setinu roku
             &ndash; přiblížili bychom se tak &quot;správnému&quot; poměru

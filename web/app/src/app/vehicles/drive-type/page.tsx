@@ -28,7 +28,7 @@ export default function DriveTypePage() {
 
           <p>
             Graf ukazuje celkový počet vozidel nově registrovaných v ČR v každém
-            roce, rozdělený podle typu pohonu. Vidíme tedy změnu v popularitě
+            roce rozdělený podle typu pohonu. Vidíme tedy změnu v popularitě
             pohonů u nových či importovaných ojetých vozidel v historii.
             Nepřekvapivě dominoval v devadesátých letech benzín, který se
             později rozdělil o tržní podíl s dieselovými motory. V posledních
