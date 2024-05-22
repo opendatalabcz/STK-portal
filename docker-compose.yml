@@ -31,8 +31,11 @@ services:
       - postgres
     restart: no
     volumes:
-      - ./data/sources:/app/data/sources
-      - ./data/precomputed:/app/data/precomputed:ro
+      - ./${DEFECTS_SOURCE:?Data source}:/app/data/sources/defects/data.xml
+      - ./${INSPECTIONS_SOURCE_DIR:?Data source}:/app/data/sources/inspections
+      - ./${STATIONS_SOURCE:?Data source}:/app/data/sources/stations/data.xlsx
+      - ./${VEHICLES_SOURCE:?Data source}:/app/data/sources/vehicles/data.csv
+      - ./${PRECOMPUTED_DATA:?Data source}:/app/data/precomputed:ro
     networks:
       - backend
     environment:
@@ -45,10 +48,10 @@ services:
       # SKIP_ANALYSIS: 1
       
       # Data source directories, comment out to skip ingestion.
-      DEFECTS_SOURCE: ${DEFECTS_SOURCE}
-      INSPECTIONS_SOURCE_DIR: ${INSPECTIONS_SOURCE_DIR}
-      STATIONS_SOURCE: ${STATIONS_SOURCE}
-      # VEHICLES_SOURCE: ${VEHICLES_SOURCE}
+      DEFECTS_SOURCE: /app/data/sources/defects/data.xml
+      INSPECTIONS_SOURCE_DIR: /app/data/sources/inspections
+      STATIONS_SOURCE: /app/data/sources/stations/data.xlsx
+      VEHICLES_SOURCE: /app/data/sources/vehicles/data.csv
 
       # Precomputed models directory
       PRECOMPUTED_DATA: /app/data/precomputed
