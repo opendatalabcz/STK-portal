@@ -12,7 +12,7 @@ from .ingestion.main import ingest
 from .analysis.main import analyze
 
 
-async def main():
+def main():
     # Set up database connection.
     print("Connecting to the database\n")
     try:
@@ -32,4 +32,4 @@ async def main():
 
 if __name__ == "__main__":
 
-    asyncio.run(main())
+    main()

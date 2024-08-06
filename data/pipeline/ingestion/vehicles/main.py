@@ -159,12 +159,4 @@ ADD CONSTRAINT vin_unique UNIQUE (vin);
         )
     )
 
-    # Remove 2023 data as it's incomplete
-    conn.execute(
-        text(
-            """DELETE FROM vehicles
-WHERE date_part('year', first_registration) = 2023 OR date_part('year', first_registration_cz) = 2023"""
-        )
-    )
-
     conn.commit()
