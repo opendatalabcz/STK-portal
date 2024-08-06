@@ -12,40 +12,6 @@ TABLE = "vehicles_average_age_by_drive_type"
 
 
 def vehicles_average_age_by_drive_type(db: Connection):
-    # Create index table to assing each drive type to its group.
-    # Grouping is identical to the one used in drive type ratio analysis.
-    # - pouze benzin
-    # - pouze nafta nebo bio nafta
-    # - obsahuje elektro
-    # - obsahuje plyn (CNG, LPG, LNG) ale ne elektro
-    # - ostatni
-    drive_types_index = {
-        "Benzin": "benzin",
-        "Nafta": "nafta",
-        "BIO Nafta": "nafta",
-        "Elektropohon": "elektrifikovane",
-        "(Elektropohon,Nafta)": "elektrifikovane",
-        "(Benzin,Elektropohon,LPG)": "elektrifikovane",
-        "(Benzin,Elektropohon)": "elektrifikovane",
-        "LPG": "plyn",
-        "(Benzin,LPG)": "plyn",
-        "(Benzin,CNG,LPG)": "plyn",
-        "(Benzin,CNG,Etanol)": "plyn",
-        '(Benzin,"Etanol 85%",LPG)': "plyn",
-        "(Benzin,LNG)": "plyn",
-        "(Etanol,LPG)": "plyn",
-        "(CNG,Nafta)": "plyn",
-        "(LNG,Nafta)": "plyn",
-        "(LPG,Nafta)": "plyn",
-        "Vodík": "plyn",
-        "CNG": "plyn",
-        "BIO Metan": "plyn",
-        "(Benzin,CNG)": "plyn",
-        "(Benzin,Etanol,LPG)": "plyn",
-        "LNG": "plyn",
-        # ostatni
-    }
-
     means = {
         "benzin": [],
         "nafta": [],
@@ -98,7 +64,28 @@ WHERE v.primary_type = 'OSOBNÍ AUTOMOBIL'
             "ostatni": [],
         }
         for record in records:
-            drive_type_group = drive_types_index.get(record[0], "ostatni")
+            # Grouping is identical to the one used in drive type ratio analysis.
+            # - pouze benzin
+            # - pouze nafta nebo bio nafta
+            # - obsahuje elektro
+            # - obsahuje plyn (CNG, LPG, LNG) ale ne elektro
+            # - ostatni
+            if "Elektropohon" in record:
+                drive_type_group = "elektrifikovane"
+            elif (
+                "LPG" in record
+                or "CNG" in record
+                or "LNG" in record
+                or "Vodík" in record
+                or "Metan" in record
+            ):
+                drive_type_group = "plyn"
+            elif "Benzin" in record:
+                drive_type_group = "benzin"
+            elif "Nafta" in record:
+                drive_type_group = "nafta"
+            else:
+                drive_type_group = "ostatni"
 
             ages[drive_type_group].append((end_of_year - record[1]).days / 365.25)
 
