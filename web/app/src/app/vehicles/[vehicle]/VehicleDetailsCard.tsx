@@ -56,10 +56,6 @@ export default function VehicleDetailsCard({
         <table className="table-auto">
           <tbody>
             <tr>
-              <td className="pr-2 font-bold">Stav prohlídky</td>
-              <td className="px-2">{vehicleData.inspection_state}</td>
-            </tr>
-            <tr>
               <td className="pb-2 pr-2 font-bold">Stav vozidla</td>
               <td className="px-2 pb-2 ">{vehicleData.operating_state}</td>
             </tr>
@@ -73,16 +69,6 @@ export default function VehicleDetailsCard({
                   vehicleData.motor_power &&
                   ", "}
                 {vehicleData.motor_power && vehicleData.motor_power + " kW"}
-              </td>
-            </tr>
-            <tr>
-              <td className="pb-2 pr-2 font-bold">Převodovka</td>
-              <td className="px-2 pb-2">
-                {vehicleData.gearbox != null ? (
-                  vehicleData.gearbox.toLowerCase()
-                ) : (
-                  <span className="text-gray-500">&mdash;</span>
-                )}
               </td>
             </tr>
             <tr className="border-t border-gray-200">

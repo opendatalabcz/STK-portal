@@ -5,8 +5,6 @@ import pandas as pd
 
 
 def vehicles_drive_type(db: Connection):
-    pass
-
     # Load data from DB.
     records = db.conn.execute(
         text(
@@ -79,5 +77,7 @@ GROUP BY year, drive_type"""
 
     general_df = pd.DataFrame(general_table)
     db.write("vehicles_drive_type", general_df)
+    electric_df = pd.DataFrame(electric_table)
+    db.write("vehicles_electric_drive_type", electric_df)
 
     db.conn.commit()

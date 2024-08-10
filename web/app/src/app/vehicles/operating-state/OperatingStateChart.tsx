@@ -29,7 +29,7 @@ ChartJS.register(
 type OperatingStateData = {
   year: number;
   PROVOZOVANÉ: number;
-  VÝVOZ: number;
+  "ODHLÁŠENO-CIZINA": number;
   ZÁNIK: number;
   "VYŘAZENO Z PROVOZU": number;
 }[];
@@ -108,7 +108,11 @@ export default function OperatingStateChart({
 
     const sums = rawData.map(
       (e) =>
-        (e.PROVOZOVANÉ + e["VYŘAZENO Z PROVOZU"] + e.VÝVOZ + e.ZÁNIK) / 99.99
+        (e.PROVOZOVANÉ +
+          e["VYŘAZENO Z PROVOZU"] +
+          e["ODHLÁŠENO-CIZINA"] +
+          e.ZÁNIK) /
+        99.99
     );
 
     const data = {
@@ -121,7 +125,7 @@ export default function OperatingStateChart({
         },
         {
           label: "Vývoz",
-          data: rawData.map((e, i) => e.VÝVOZ / sums[i]),
+          data: rawData.map((e, i) => e["ODHLÁŠENO-CIZINA"] / sums[i]),
           backgroundColor: cyan[7],
         },
         {

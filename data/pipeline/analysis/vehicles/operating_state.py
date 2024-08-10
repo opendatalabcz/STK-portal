@@ -47,3 +47,4 @@ ORDER BY year"""
     df = pd.DataFrame(table)
 
     db.write("vehicles_operating_state", df)
+    db.conn.commit()
